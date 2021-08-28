@@ -9,23 +9,22 @@
 
 [Receipts](https://github.com/astreuos/astreuos-specifications/blob/main/blockchain/receipts.md)
 
+[Mining](https://github.com/astreuos/astreuos-specifications/blob/main/blockchain/mining.md)
+
 ### The State
 
 [Accounts](https://github.com/astreuos/astreuos-specifications/blob/main/state/accounts.md)
 
 ### Network Protocol
 
-[Communication](https://github.com/astreuos/astreuos-specifications/blob/main/state/accounts.md)
-
-### Mining Protocol
-
-[Mining Procedure](https://github.com/astreuos/astreuos-specifications/blob/main/state/accounts.md)
+[Communication](https://github.com/astreuos/astreuos-specifications/blob/main/network/communication.md)
 
 ### Rewards
 
-[Current Rewards](https://github.com/astreuos/astreuos-specifications/blob/main/state/accounts.md)
+[Mining Rewards](https://github.com/astreuos/astreuos-specifications/blob/main/rewards/mining.md)
 
-### Future
+### Future Topics
 
 - Smart Contracts
-- P2P Storage
+- Decentralized Storage
+- Proof of Stake Mining
