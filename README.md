@@ -7,44 +7,25 @@
 
 [Transactions](https://github.com/astreuos/astreuos-specifications/blob/main/blockchain/transactions.md)
 
+[Receipts](https://github.com/astreuos/astreuos-specifications/blob/main/blockchain/receipts.md)
+
 ### The State
 
 [Accounts](https://github.com/astreuos/astreuos-specifications/blob/main/state/accounts.md)
 
-## Network Protocol
+### Network Protocol
 
-<!-- finding peers -->
-<!-- syncing blocks -->
-<!-- tx propagation -->
+[Communication](https://github.com/astreuos/astreuos-specifications/blob/main/state/accounts.md)
 
-## File Storage
+### Mining Protocol
 
-<!-- file protocol -->
+[Mining Procedure](https://github.com/astreuos/astreuos-specifications/blob/main/state/accounts.md)
 
-## Mining Protocol
+### Rewards
 
-<!-- consensus -->
-<!-- beneficiaries -->
-<!-- difficulty -->
-<!-- solar pricing -->
-<!-- solar limits -->
+[Current Rewards](https://github.com/astreuos/astreuos-specifications/blob/main/state/accounts.md)
 
-## Virtual Machine
+### Future
 
-<!-- instruction set -->
-
-## Client Design
-
-<!-- explorer -->
-<!-- sending txs -->
-
-## Governance
-
-<!-- rewards -->
-<!-- protocols -->
-<!-- services -->
-
-## Rewards
-
-<!-- miners -->
-<!-- storage providers -->
+- Smart Contracts
+- P2P Storage
