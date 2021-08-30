@@ -1,11 +1,10 @@
 
 # Blocks
 
-1. Block Header(Block Hash, StellarObjects)
-2. Transactions(Block Hash, StellarObjects)
+Key: String;
+- Hash(Block Hash)
 
-## Block Header 
-
+Value: Stellar Objects;
 1. Number
 2. Previous Block Hash
 3. Timestamp
@@ -20,7 +19,20 @@
 12. Receipts Root Hash
 13. Miner
 
-## Transactions
+## Block Transactions
 
+Key: String;
+- Hash(Transactions Root Hash)
+
+Value: Stellar Objects;
 1. Index
-2. [StellarObjects](https://github.com/astreuos/astreuos-specifications/blob/main/blockchain/transactions.md)
+2. [Transaction Hash](https://github.com/astreuos/astreuos-specifications/blob/main/blockchain/transactions.md)
+
+## Block Receipts
+
+Key: String;
+- Hash(Receipts Root Hash)
+
+Value: Stellar Objects
+1. Transaction Hash
+2. [Receipt Hash](https://github.com/astreuos/astreuos-specifications/blob/main/blockchain/receipts.md)
