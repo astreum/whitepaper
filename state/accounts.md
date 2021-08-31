@@ -2,10 +2,21 @@
 
 ## Structure
 
-1. Address
-2. Account Information
+Key: String;
+- Address
+
+Value: String;
+- Account Details Hash
+
+## Account Details
+
+Key: String;
+- Account Details Hash
+
+Value: Stellar Objects;
     1. Counter
     2. Balance
+
 
 ### Balance
 

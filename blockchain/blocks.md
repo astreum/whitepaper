@@ -2,7 +2,7 @@
 # Blocks
 
 Key: String;
-- Hash(Block Hash)
+- Hash of Value(Block Hash)
 
 Value: Stellar Objects;
 1. Number
@@ -22,7 +22,7 @@ Value: Stellar Objects;
 ## Block Transactions
 
 Key: String;
-- Hash(Transactions Root Hash)
+- Hash of Value(Transactions Root Hash)
 
 Value: Stellar Objects;
 1. Index
@@ -31,7 +31,7 @@ Value: Stellar Objects;
 ## Block Receipts
 
 Key: String;
-- Hash(Receipts Root Hash)
+- Hash of Value(Receipts Root Hash)
 
 Value: Stellar Objects
 1. Transaction Hash

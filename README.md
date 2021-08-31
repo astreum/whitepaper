@@ -1,5 +1,5 @@
 
-# Astreuos v1 Specifications
+# Astreuos Original Specification
 
 ### The Blockchain
 
