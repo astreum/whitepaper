@@ -1,7 +1,7 @@
 
-# Astreuos Original Specs
+# Astreuos Specs
 
-## Technical Specs
+## Technicals
 
 ### The Blockchain
 
