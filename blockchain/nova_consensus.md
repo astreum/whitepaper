@@ -3,7 +3,7 @@
 
 ### Stake Ranking
 
-The Ranking formula is Staked Amount * Time Staked. Ranking is evaluated by accumulating the staked amount at every Epoch (60,480 blocks).
+The Ranking formula is Staked Amount x Time Staked. Ranking is evaluated by accumulating the staked amount at every Epoch (60,480 blocks).
 
 Withdrawls reduce Ranking proportionally to the address total stake. Rankings are then reset at every Era (3,144,960 blocks).
 
