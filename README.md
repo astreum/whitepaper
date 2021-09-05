@@ -1,13 +1,9 @@
 
 # Astreuos Specs
 
-## Technicals
+### Blockchain
 
-### The Blockchain
-
-[Minting](https://github.com/astreuos/astreuos-specs/blob/main/blockchain/minting.md)
-
-[Nova Consensus](https://github.com/astreuos/astreuos-specs/blob/main/blockchain/nova_consesnsus.md)
+[Nova Protocol (Consensus)](https://github.com/astreuos/astreuos-specs/blob/main/blockchain/nova_protocol.md)
 
 [Blocks](https://github.com/astreuos/astreuos-specs/blob/main/blockchain/blocks.md)
 
@@ -15,13 +11,15 @@
 
 [Receipts](https://github.com/astreuos/astreuos-specs/blob/main/blockchain/receipts.md)
 
-### The State
-
-[Virtual Machine](https://github.com/astreuos/astreuos-specs/blob/main/state/virtual_machine.md)
+### State
 
 [Accounts](https://github.com/astreuos/astreuos-specs/blob/main/state/accounts.md)
 
 [Files](https://github.com/astreuos/astreuos-specs/blob/main/state/files.md)
+
+[State Transition](https://github.com/astreuos/astreuos-specs/blob/main/state/state_transition.md)
+
+[Virtual Machine](https://github.com/astreuos/astreuos-specs/blob/main/state/virtual_machine.md)
 
 ### Network Protocol
 
@@ -30,10 +28,12 @@
 ## Roadmap
 | Project | Description | Delivery |
 |---|---|---|
-| Stellar Notation | Data Serialization | Q3 2021 |
-| NeutronDB | Key Value Store | Q3 2021 |
+| Stellar Notation | Data Serialization | ✅ |
+| NeutronDB | Key Value Store | ✅ |
+| Pulsar | P2P Network | |
 | AVM | Virtual Machine | In Progress |
-| Fusion | Smart Contracts | TBD |
+| Fusion | Decentralized Applications | TBD |
 | Nova | Staking Protocol | TBD |
 | Nebula | Storage Protocol | TBD |
-| Mainnet Launch | | Q4 2021 |
+| Testnet Launch | | Q4 2021 |
+| Mainnet Launch | | Q1 2022 |
