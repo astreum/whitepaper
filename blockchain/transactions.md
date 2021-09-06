@@ -1,13 +1,12 @@
 # Transactions
 
-Key: String;
-- Hash of Value
+Key: Hash, String
 
-Value: Stellar Objects;
-1. Data: Stellar Objects
+Value: Stellar Group,
+1. Data: Stellar Group,
     1. To: String
-    2. Value : UInt128
-    3. Counter: UInt128
-    4. Solar Price: UInt128
-    5. Solar Limit: UInt128
+    2. Value : u128
+    3. Counter: u64
+    4. Solar Price: u128
+    5. Solar Limit: u64
 2. Signature: String
