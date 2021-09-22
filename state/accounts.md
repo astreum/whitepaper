@@ -1,18 +1,11 @@
-# Accounts
-
-Key: Address, String
-
-Value: Account Hash, String
-
 # Account
 
-Key: Hash, String
+### Structure
 
-Value: Stellar Group,
-    1. Counter, u64
-    2. Balance, u128
-    3. Code Hash, String
-    4. Store Hash, String
+1. Counter
+2. Balance
+3. Code ID
+4. Storage ID
 
 
 ## Balance
@@ -30,20 +23,3 @@ Value magnitudes:-
 - 10^6: Megaquark
 - 10^3: Kiloquark
 - 10^0: Quark
-
-## Code
-
-Key: Hash, String
-
-Value: Stellar Group,
-    1. Key, String
-    2. Value, String
-
-## Stores
-
-Key: Hash, String
-
-Value: Stellar Group,
-    1. Key, String
-    2. Value, String
-

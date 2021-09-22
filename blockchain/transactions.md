@@ -1,12 +1,11 @@
 # Transactions
 
-Key: Hash, String
+### Structure
 
-Value: Stellar Group,
-1. Data: Stellar Group,
-    1. To: String
-    2. Value : u128
-    3. Counter: u64
-    4. Solar Price: u128
-    5. Solar Limit: u64
-2. Signature: String
+1. Data
+    1. Recipient
+    2. Value
+    3. Counter
+    4. Solar Price
+    5. Solar Limit
+2. Sender Signature

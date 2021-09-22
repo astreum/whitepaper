@@ -15,14 +15,16 @@
 
 [Accounts](https://github.com/astreuos/astreuos-specs/blob/main/state/accounts.md)
 
+[Storage](https://github.com/astreuos/astreuos-specs/blob/main/state/storage.md)
+
 [Virtual Machine](https://github.com/astreuos/astreuos-specs/blob/main/state/virtual_machine.md)
 
 ## Roadmap
 | Project | Description | Delivery |
 |---|---|---|
-| Stellar Notation | Data Serialization | ✅ |
-| NeutronDB | Key Value Store | ✅ |
-| Pulsar Network | Messaging System | |
+| [Stellar Notation](https://github.com/seg-software/rust-stellar-notation) | Data Encoding | ✅ |
+| [NeutronDB](https://github.com/seg-software/rust-neutrondb) | Key Value Store | ✅ |
+| Pulsar Network | Messaging System | 🏗 |
 | Nova Protocol| Consensus Mechanism | TBD |
 | Fusion | Decentralized Applications | TBD |
 | Nebula | Storage Protocol | TBD |
