@@ -25,7 +25,7 @@
 | [Stellar Notation](https://github.com/seg-software/rust-stellar-notation) | Data Encoding | ✅ |
 | [NeutronDB](https://github.com/seg-software/rust-neutrondb) | Key Value Store | ✅ |
 | Pulsar Network | Messaging System | 🏗 |
-| Nova Protocol| Consensus Mechanism | TBD |
+| Nova Protocol| Proof of Stake Consensus | TBD |
 | Fusion | Decentralized Applications | TBD |
 | Nebula | Storage Protocol | TBD |
 | Testnet Launch | | Q4 2021 |
