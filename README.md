@@ -24,6 +24,7 @@
 |---|---|---|
 | [Stellar Notation](https://github.com/seg-software/rust-stellar-notation) | Data Encoding | ✅ |
 | [NeutronDB](https://github.com/seg-software/rust-neutrondb) | Key Value Store | ✅ |
+| [Opis](https://github.com/seg-software/rust-opis) | Big Integer Arithmetic | ✅ |
 | [Fides](https://github.com/seg-software/rust-fides) | Digital Signature Library | 🚧 |
 | Pulsar Network | Messaging System |  TBD |
 | Nova Protocol| Proof of Stake Consensus | TBD |
