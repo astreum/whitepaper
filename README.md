@@ -1,14 +1,17 @@
 
 # Astreuos Whitepaper
 
-# A New Autonomous Blockchain that manages Transaction Fees, Block Limits and Currency Volume to Maintain Network Stability & Maximize Network Utilization.
+# A Next Generation Autonomous Blockchain that manages Transaction Fees, Block Limits and Currency Volume to Maintain Network Stability & Maximize Network Utilization.
 
 ## History
 
 ### Blockchain
+
 ### Bitcoin
+
 ### Ethereum
 
+### Web 3.0
 
 ## Astreuos
 
@@ -82,6 +85,7 @@ Structure:
     4. Counter
     5. Solar Price
     6. Solar Limit
+    7. Data
 2. Sender Signature
 
 ### Receipts
@@ -91,30 +95,39 @@ Structure:
 2. Status
 3. Solar Used
 
-### Pulsar - Peer to Peer Network
+### Pulsar
 
-### Fusion - Decentralized Application Platform
+A Peer to Peer Messaging Protocol
 
-#### Reactor - Stack Machine
-#### Plasma - Compiler
-#### Helium - App Manager
+### Fusion
 
-### Nova - Proof of Stake Consensus
+A Decentralized Application Platform
 
-### Nebula - Decentralized Storage
+- Reactor - Stack Machine
+- Plasma - Compiler
+- Helium - App Manager
+
+### Nova
+
+A Proof of Stake Consensus Protocol
+
+### Nebula
+
+A Decentralized Storage Platform
 
 ## Applications
 
 ### Smart Contracts
 
-### Digital Tokens
+### Digital Tokens (Virtual Currencies & NFTs)
 
-#### Virtual Currencies
-#### NFTs
+### Oracles
 
 ### DAOs
 
-### Oracles
+### Distributed Storage
+
+### Decentralized Containers
 
 ## Roadmap
 | Project | Description | Delivery |
@@ -131,4 +144,4 @@ Structure:
 | Testnet Launch | | Q4 2021 |
 | Mainnet Launch | | Q1 2022 |
 
-2021-11-05
+2021-11-23
