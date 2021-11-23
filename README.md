@@ -1,21 +1,21 @@
 
 # Astreuos Whitepaper
 
-# A Next Generation Autonomous Blockchain that manages Transaction Fees, Block Limits and Currency Volume to Maintain Network Stability & Maximize Network Utilization.
+## A Next Generation Autonomous Blockchain that manages Transaction Fees, Block Limits and Currency Volume to Maintain Network Stability & Maximize Network Utilization.
 
-## History
+# History
 
-### Blockchain
+## Blockchain
 
-### Bitcoin
+## Bitcoin
 
-### Ethereum
+## Ethereum
 
-### Web 3.0
+## Web 3.0
 
-## Astreuos
+# Astreuos
 
-### Blocks
+## Blocks
 
 Structure:
 1. Data
@@ -33,7 +33,7 @@ Structure:
     12. Reward
 2. Minter Signature
 
-### Accounts
+## Accounts
 
 Types:
 1. User
@@ -70,7 +70,7 @@ Value magnitudes:-
 - 10^3: Kiloquark
 - 10^0: Quark
 
-### Transactions
+## Transactions
 
 Types:
 1. Standard
@@ -88,48 +88,62 @@ Structure:
     7. Data
 2. Sender Signature
 
-### Receipts
+## Receipts
 
 Structure:
 1. Transaction Hash
 2. Status
 3. Solar Used
 
-### Pulsar
+## Pulsar
 
 A Peer to Peer Messaging Protocol
 
-### Fusion
+## Fusion
 
 A Decentralized Application Platform
 
-- Reactor - Stack Machine
+### Reactor
+
+The Stack Machine
+
+#### Arithmetic
+| Instructions | Code |
+|---|---|
+| Add | |
+| Sub | |
+
+#### Account Manipulation
+
+#### Memory & Storage Manipulation
+
+
 - Plasma - Compiler
 - Helium - App Manager
 
-### Nova
+## Nova
 
 A Proof of Stake Consensus Protocol
 
-### Nebula
+## Nebula
 
 A Decentralized Storage Platform
 
-## Applications
+# Applications
 
-### Smart Contracts
+## Smart Contracts
 
-### Digital Tokens (Virtual Currencies & NFTs)
+## Digital Tokens (Virtual Currencies & NFTs)
 
-### Oracles
+## Oracles
 
-### DAOs
+## DAOs
 
-### Distributed Storage
+## Distributed Storage
 
-### Decentralized Containers
+## Decentralized Containers
 
-## Roadmap
+# Roadmap
 | Project | Description | Delivery |
 |---|---|---|
 | [Stellar Notation](https://github.com/seg-software/rust-stellar-notation) | Data Encoding | ✅ |
