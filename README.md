@@ -1,7 +1,7 @@
 
 # Astreuos Whitepaper
 
-## A Next Generation Autonomous Blockchain that manages Transaction Fees, Block Limits and Currency Volume to Maintain Network Stability & Maximize Network Utilization.
+## A Next Generation Blockchain that adjusts Transaction Fees, Block Limits and Storage Fees to Maintain Network Sustainability & Maximize Network Utilization.
 
 # History
 
@@ -103,42 +103,67 @@ A Peer to Peer Messaging Protocol
 
 A Decentralized Application Platform
 
-### Reactor
+### Fusion Language
 
-The Stack Machine
+### Reactor - Virtual Stack Machine
 
-There are 3 types of Stack Machine Operation Codes:-
-1. Arithmetic
-2. Account Manipulation
-3. Memory & Storage Manipulation
+#### Machine State
+1. Pointer
+2. Current Address
 
-#### Arithmetic
-| Operation | Instruction | Code |
+#### Op Codes
+| Operation | Instruction | Code | Format |
 |---|---|---|
-| Addition | 1 | 0x01 |
-| Subtraction | 2| |
-| Multiplication | 3 | |
-| Division | 4 | |
-| Remainder | 5 | |
-| Modulo | 6 | |
-| Exponentiation | 7 | |
-| Modular Inverse | 8 | |
+| Stop | 00 | |
 
-#### Account Manipulation
+| Memory PUT | 03 | | BYTE LENGTH + BYTES |
+| Memory GET | 04 | | MEMORY ID |
 
-#### Memory & Storage Manipulation
+| Create Account | 05 | 0x01 | ADDRESS |
+| Account Balance GET | 06 | | ADDRESS |
+| Account Storage PUT | 07 | | |
+| Account Storage GET | 08 | | |
+| Account Storage DELETE | 09 | | |
+
+| Addition | 10 | 0x01 | |
+| Subtraction | 11 | | |
+| Multiplication | 12 | | |
+| Division | 13 | | |
+| Remainder | 14 | | |
+| Modulo | 15 | | |
+| Exponentiation | 16 | | |
+| Modular Inverse | 16 | | |
+
+| Less Than | | | |
+| Greater Than | | | |
+| Equal To | | | |
 
 
-- Plasma - Compiler
-- Helium - App Manager
+### Plasma - Fusion Language to Reactor Code Compiler
 
-## Nova
+### Helium - Code Manager
 
-A Proof of Stake Consensus Protocol
+## Nova - Proof of Stake Consensus Protocol
 
-## Nebula
+### Validator Selection
 
-A Decentralized Storage Platform
+### Block Reward
+The block reward is proportianal to the Solar Limit of the block.
+Every 1 Billon Solar Limit earns the validator 1 Quanta.
+
+## Nebula - Storage Platform
+
+### Storage Fee
+Applies to the storage of 256Kb chunks of data. 
+The Initial Storage Fee is 130 Yottaquarks for 3 Months.
+
+### Standard Storage Contract
+Features
+1. 3 Month Period
+
+### Retrieval Fee
+Applies to the transfer of 256Kb chunks of data. 
+The Initial Retrieval Fee is 21.6 Yottaquarks.
 
 # Applications
 
@@ -151,8 +176,6 @@ A Decentralized Storage Platform
 ## DAOs
 
 ## Distributed Storage
-
-## Decentralized Containers
 
 # Roadmap
 | Project | Description | Delivery |
@@ -169,4 +192,4 @@ A Decentralized Storage Platform
 | Testnet Launch | | Q4 2021 |
 | Mainnet Launch | | Q1 2022 |
 
-2021-11-24
+2021-11-29
