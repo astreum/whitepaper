@@ -19,19 +19,19 @@
 
 Structure:
 1. Data
-    1. Number
-    2. Previous Block Hash
-    3. Timestamp
-    4. Solar Limit
-    5. Solar Used
-    6. Solar Price
-    7. Solar Fees
-    8. Accounts Root Hash
-    9. Transactions Root Hash
-    10. Receipts Root Hash
-    11. Storage Root Hash
-    12. Reward
-2. Minter Signature
+    - Number
+    - Previous Block Hash
+    - Timestamp
+    - Solar Limit
+    - Solar Used
+    - Solar Price
+    - Solar Fees
+    - Accounts Root Hash
+    - Transactions Root Hash
+    - Receipts Root Hash
+    - Storage Root Hash
+    - Reward
+2. Validator Signature
 
 ## Accounts
 
@@ -79,13 +79,13 @@ Types:
 
 Structure:
 1. Data
-    1. Type
-    2. Recipient
-    3. Value
-    4. Counter
-    5. Solar Price
-    6. Solar Limit
-    7. Data
+    - Type
+    - Recipient
+    - Value
+    - Counter
+    - Solar Price
+    - Solar Limit
+    - Data
 2. Sender Signature
 
 ## Receipts
@@ -120,9 +120,13 @@ Types:-
 
 Operators:-
 1. Arithmetic
-    - Add
-    - Sub
-2. 
+    - Addition (+)
+    - Subtraction (-)
+    - Multiplication (*)
+    - Division (/)
+    - Remainder (//)
+    - Modulo (%)
+    - Exponentiation (^)
 
 ### Reactor - Virtual Stack Machine
 
