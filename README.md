@@ -107,36 +107,32 @@ A Decentralized Application Platform
 
 ### Reactor - Virtual Stack Machine
 
-#### Machine State
-1. Pointer
-2. Current Address
-
 #### Op Codes
-| Operation | Instruction | Code | Format |
-|---|---|---|
-| Stop | 00 | |
 
-| Memory PUT | 03 | | BYTE LENGTH + BYTES |
-| Memory GET | 04 | | MEMORY ID |
-
-| Create Account | 05 | 0x01 | ADDRESS |
-| Account Balance GET | 06 | | ADDRESS |
-| Account Storage PUT | 07 | | |
-| Account Storage GET | 08 | | |
-| Account Storage DELETE | 09 | | |
-
-| Addition | 10 | 0x01 | |
-| Subtraction | 11 | | |
-| Multiplication | 12 | | |
-| Division | 13 | | |
-| Remainder | 14 | | |
-| Modulo | 15 | | |
-| Exponentiation | 16 | | |
-| Modular Inverse | 16 | | |
-
-| Less Than | | | |
-| Greater Than | | | |
-| Equal To | | | |
+1. General
+    1. Stop
+2. Memory
+    1. Put
+    2. Get
+3. Account
+    1. Create
+    2. Balance
+    3. Storage Put
+    4. Storage Get
+    5. Storage Delete
+4. Arithmetic
+    1. Addition
+    2. Subtraction
+    3. Multiplication
+    4. Division
+    5. Remainder
+    6. Modulo
+    7. Exponentiation
+    8. Modular Inverse
+5. Comparison
+    1. Less Than
+    2. Greater Than
+    3. Equal To
 
 
 ### Plasma - Fusion Language to Reactor Code Compiler
@@ -144,6 +140,8 @@ A Decentralized Application Platform
 ### Helium - Code Manager
 
 ## Nova - Proof of Stake Consensus Protocol
+
+### Slot Allocation
 
 ### Validator Selection
 
