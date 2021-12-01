@@ -143,6 +143,8 @@ Control Flow :-
 
 Standard Library (std) :-
 1. Mathematics (math)
+    - From String -> from_str(string, radix)
+    - Into String -> into_str(number, radix)
     - Addition -> add(a, b)
     - Subtraction -> sub(a, b)
     - Multiplication -> mul(a, b)
@@ -151,7 +153,13 @@ Standard Library (std) :-
     - Modulo -> mod(a, b)
     - Exponentiation -> pow(a, e)
 
-2. String (str) :-
+2. String (string) :-
+    - Bytes -> bytes(string)
+    - Hexadecimal -> hex(string)
+    - Lowercase -> lower(string)
+    - Merge -> merge(string, string)
+    - Replace -> replace(string, old string, new string)
+    - Uppercase -> upper(string)
 
 3. List (list) :-
     - Any -> any(list, condition)
