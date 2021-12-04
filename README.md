@@ -229,9 +229,14 @@ Op Codes :-
 ### Block Time
 1 second.
 
+### Validation Round Time
+1 minute ~ 60 blocks.
+
 ### Slot Allocation
+Weekly allocated.
 
 ### Validator Selection
+The first blockhash in a validation round provides the seed for randomness to determine the validators in the next round through linear-feedback shift register.
 
 ### Block Reward
 1 quanta for every billion solar limit on the block.
@@ -274,4 +279,4 @@ The initial retrieval fee is 21.6 yottaquarks per 256Kb chunk of data.
 | Testnet Launch | | Q4 2021 |
 | Mainnet Launch | | Q1 2022 |
 
-2021-12-01
+2021-12-04
