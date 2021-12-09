@@ -242,6 +242,7 @@ The first blockhash in a validation round provides the seed for randomness to de
 1 quanta for every billion solar limit on the block.
 
 ## Nebula - Storage Platform
+### 
 
 ### Storage Fee
 The initial storage fee is 130 yottaquarks for 3 months per 256Kb chunk of data.
@@ -254,15 +255,17 @@ The initial retrieval fee is 21.6 yottaquarks per 256Kb chunk of data.
 
 # Applications
 
-## Smart Contracts
+## Smart Contracts & DeFi
 
-## Digital Tokens (Virtual Currencies & NFTs)
+## Digital Tokens
+### Fungible Token Spec
+### Non Fungible Token Spec
 
 ## Oracles
+### Spec
 
-## DAOs
-
-## Distributed Storage
+## Decentralized Autonomous Organization
+### Spec
 
 # Roadmap
 | Project | Description | Delivery |
@@ -279,4 +282,4 @@ The initial retrieval fee is 21.6 yottaquarks per 256Kb chunk of data.
 | Testnet Launch | | Q4 2021 |
 | Mainnet Launch | | Q1 2022 |
 
-2021-12-04
+2021-12-05
