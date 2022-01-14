@@ -4,8 +4,8 @@
 #### A Next Generation Blockchain Network that delivers on Decentralization, Security and Sustainability.
 
 Strategies: -
-1. All users earn quanta by providing validation or storage for the network.
-2. Auto-adjustments on transaction fees, block limits and storage fees for sustainability & maximum network utilization.
+1. All users earn Astre by providing validation or storage for the network.
+2. Auto-adjustments on transaction fees, block solar limits and storage fees for sustainability & maximum network utilization.
 3. Secure the network through digital signatures, proof of work on messages and proof of stake on blocks.
 
 ### Table of Contents
@@ -35,16 +35,16 @@ Strategies: -
 ### Roadmap
 | Project | Description | Delivery |
 |---|---|---|
-| [Stellar Notation](https://github.com/seg-software/rust-stellar-notation) | Data Encoding | ✅ |
-| [NeutronDB](https://github.com/seg-software/rust-neutrondb) | Key Value Store | ✅ |
-| [Opis](https://github.com/seg-software/rust-opis) | Integer Arithmetic | ✅ |
-| [Pulsar Network](https://github.com/seg-software/rust-pulsar-network)  | Messaging System |  🚧 |
+| [Astro Notation](https://github.com/stelar-software/rust-astro-notation) | Data Encoding | ✅ |
+| [NeutronDB](https://github.com/stelar-software/rust-neutrondb) | Key Value Store | ✅ |
+| [Opis](https://github.com/stelar-software/rust-opis) | Integer Arithmetic | ✅ |
 | [Fides](https://github.com/seg-software/rust-fides) | Digital Signature Library | 🚧 |
+| [Pulsar Network](https://github.com/seg-software/rust-pulsar-network)  | Messaging System |  🚧 |
 | Nova | Proof of Stake Consensus Mechanism | TBD |
 | Nebula | Storage Protocol | TBD |
 | Fusion | Decentralized Applications | TBD |
 | [Terminal](https://github.com/astreuos/astreuos-terminal) | Network Interface | TBD |
-| Testnet Launch | | Q4 2021 |
-| Mainnet Launch | | Q1 2022 |
+| Testnet Launch | | Q1 2022 |
+| Mainnet Launch | | Q2 2022 |
 
-2021-12-09
+2022-01-14
