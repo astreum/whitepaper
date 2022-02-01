@@ -1,13 +1,39 @@
 
 # Astreuos
 
-### A Next Generation Blockchain Network for Storage and Compute that's Decentralized, Secure and Sustainable.
+### A Next Generation Blockchain Network for Apps, Storage and Compute that's Decentralized, Secure and Sustainable.
 
 ## Structure
 
 ### Accounts
+- Structure: Address & Details Hash
+- Details: Counter, Balance & Storage Hash.
+- The Standard Unit of Value is an Astre while the Smallest Unit is a Quark.
+- Value magnitudes:
+    - 10^24: Yottaquark / Astre
+    - 10^21: Zettaquark
+    - 10^18: Exaquark
+    - 10^15: Petaquark
+    - 10^12: Teraquark
+    - 10^9: Gigaquark
+    - 10^6: Megaquark
+    - 10^3: Kiloquark
+    - 10^0: Quark
+- Nova Special Account Address is 0xNOVA.
 
 ### Blocks
+- Structure:
+    - Number
+    - Previous Block Hash
+    - Timestamp
+    - Solar Limit
+    - Solar Used
+    - Solar Price
+    - Solar Fees
+    - Accounts Hash
+    - Transactions Hash
+    - Receipts Hash
+    - Reward
 
 ### Transactions
 
