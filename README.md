@@ -1,7 +1,7 @@
 
 # Astreuos
 
-### A Next Generation Blockchain Network for Apps, Storage and Compute that's Decentralized, Secure and Sustainable.
+### A Next Generation Blockchain Platform for Apps, Storage and Compute that's Decentralized, Secure and Sustainable.
 
 ## Structure
 
@@ -22,8 +22,8 @@
 - Nova Special Account Address is 0xNOVA.
 
 ### Blocks
-- Structure:
-    - Version
+- Spec 1 Structure:
+    - Spec
     - Number
     - Previous Block Hash
     - Time
@@ -35,18 +35,15 @@
     - Transactions Hash
     - Receipts Hash
     - Reward
+- Current Solar Limit is 1,000,000.
 
 ### Transactions
-- Structure: Version, Body & Signature
+- Spec 1 Structure: Spec, Body & Signature.
 - Transaction Body
-    - Recipient
-    - Value
-    - Counter
-    - Solar Price
-    - Solar Limit
+    - Spec 1 Structure: Recipient, Value, Counter, Solar Price & Solar Limit.
 
 ### Receipts
-- Structure: Version, Transaction Hash, Status & Solar Used.
+- Spec 1 Structure: Spec, Transaction Hash, Status & Solar Used.
 
 ### Nova
 
