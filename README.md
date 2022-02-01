@@ -6,7 +6,7 @@
 ## Structure
 
 ### Accounts
-- Structure: Address & Details Hash
+- Structure: Address & Details Hash.
 - Details: Counter, Balance & Storage Hash.
 - The Standard Unit of Value is an Astre while the Smallest Unit is a Quark.
 - Value magnitudes:
@@ -23,9 +23,10 @@
 
 ### Blocks
 - Structure:
+    - Version
     - Number
     - Previous Block Hash
-    - Timestamp
+    - Time
     - Solar Limit
     - Solar Used
     - Solar Price
@@ -36,8 +37,21 @@
     - Reward
 
 ### Transactions
+- Structure: Version, Body & Signature
+- Transaction Body
+    - Recipient
+    - Value
+    - Counter
+    - Solar Price
+    - Solar Limit
+
+### Receipts
+- Structure: Version, Transaction Hash, Status & Solar Used.
 
 ### Nova
+
+### Solar Stability Mechanism
+- Maximum Daily Solar Price Deviation is 10%.
 
 ## Roadmap
 
