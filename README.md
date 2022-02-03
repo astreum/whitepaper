@@ -7,7 +7,11 @@
 
 ### Accounts
 - Structure: Address & Details Hash.
-- Details: Counter, Balance & Storage Hash.
+- Details: Astro Notation List Format.
+    - Spec
+    - Counter
+    - Balance
+    - Storage Hash
 - The Standard Unit of Value is an Astr while the Smallest Unit is a Quark.
 - Value magnitudes:
     - 10^24: Yottaquark / Astr
@@ -22,42 +26,62 @@
 - Nova Special Account Address is 0xNOVA.
 
 ### Blocks
-- Structure:
+- Structure: Astro Notation List Format.
     - Spec
+    - Body
+    - Signature
+- Body: Astro Notation List Format.
     - Number
     - Previous Block Hash
     - Time
     - Solar Limit
     - Solar Used
     - Solar Price
-    - Solar Fees
     - Accounts Hash
     - Transactions Hash
     - Receipts Hash
     - Reward
-- Current Solar Limit is 1,000,000.
 
 ### Transactions
-- Structure: Spec, Body & Signature.
-- Transaction Body
-    - Structure: Recipient, Value, Counter, Solar Price & Solar Limit.
+- Structure: Astro Notation List Format.
+    - Spec
+    - Body
+    - Signature
+- Body: Astro Notation List Format.
+    - Recipient
+    - Value
+    - Counter
+    - Solar Price
+    - Solar Limit
 
 ### Receipts
-- Structure: Spec, Transaction Hash, Status & Solar Used.
+- Structure: Astro Notation List Format.
+    - Spec
+    - Status
+    - Solar Used
 
 ### Nova
-- The Block Time Target is One Second.
-- A Slot is The One Second period where new Blocks are Minted.
-- An Epoch lasts one week.
-- Slots are allocated to Validators every Epoch & removed after Minting a Block.
+- An Epoch lasts One Week.
+- The Block Time Target is Three Seconds.
+- A Slot is a three seconds period when new Blocks are created.
+- Slots are allocated to Validators every Epoch & removed after Slot Selection.
 - Slots are distributed pro rata with a Validator's Stake.
-- A Round is One Minute.
+- A Validator can miss using their Slot when they do not create a new Block when selected if too slow or offline.
+- Slot Selection:-
+    - Get Addresses with allocated Slots.
+    - Check missed Slots from the last Block.
+    - If no Slots were missed the nearest Address XOR to the last Block hash is selected.
+    - If Slots were missed the nearest Address XOR to the Linear-feedback shift register, shifted to the number of slots missed, of the last Block hash is selected.
+- A Validator who misses all Slots within an Epoch gets their Stake refunded.
+- The Base Solar Limit is 1,000,000.
+- The Base Block Reward is 1 Astr.
+
 
 ### Solar Stability Mechanism
-- The Solar Price is fixed for every Block.
-- When the previous Block Limit is reached
-- Maximum Daily Solar Price Deviation is 10%.
-- The Base Solar Price is 0.0001 Astr.
+- The Solar price is fixed for every Block.
+- The Solar price varies by 0.01%.
+- The Solar price increases when more than 90% and decreases when less than 10% of the Solar Limit of the previous Block was used.
+- The Base Solar Price is set at 1 Exaquark / 0.000001 Astr.
 
 ## Roadmap
 
@@ -103,4 +127,4 @@
 | Testnet Launch | | Q1 2022 |
 | Mainnet Launch | | Q2 2022 |
 
-2022-02-01
+2022-02-03
