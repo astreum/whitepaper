@@ -8,9 +8,8 @@
 ### Accounts
 - Structure: Address & Details Hash.
 - Details: Astro Notation List Format.
-    - Spec
-    - Counter
     - Balance
+    - Counter
     - Storage Hash
 - The Standard Unit of Value is an Astr while the Smallest Unit is a Quark.
 - Value magnitudes:
@@ -27,38 +26,35 @@
 
 ### Blocks
 - Structure: Astro Notation List Format.
-    - Spec
     - Body
     - Signature
 - Body: Astro Notation List Format.
+    - Accounts Hash
     - Number
     - Previous Block Hash
-    - Time
-    - Solar Limit
-    - Solar Used
-    - Solar Price
-    - Accounts Hash
-    - Transactions Hash
     - Receipts Hash
     - Reward
+    - Solar Limit
+    - Solar Price
+    - Solar Used
+    - Time
+    - Transactions Hash
 
 ### Transactions
 - Structure: Astro Notation List Format.
-    - Spec
     - Body
     - Signature
 - Body: Astro Notation List Format.
-    - Recipient
-    - Value
     - Counter
+    - Recipient
     - Solar Price
     - Solar Limit
+    - Value
 
 ### Receipts
 - Structure: Astro Notation List Format.
-    - Spec
-    - Status
     - Solar Used
+    - Status
 
 ### Nova, Proof of Stake Consensus Mechanism.
 - An Epoch lasts One Week.
@@ -125,4 +121,4 @@
 | Testnet Launch | | Q1 2022 |
 | Mainnet Launch | | Q2 2022 |
 
-2022-02-03
+2022-02-14
