@@ -120,10 +120,10 @@
 | [Astro Notation](https://github.com/stelar-software/rust-astro-notation) | Data Transcoding | ✅ |
 | [NeutronDB](https://github.com/stelar-software/rust-neutrondb) | Key Value Store | ✅ |
 | [Opis](https://github.com/stelar-software/rust-opis) | Integer Arithmetic | ✅ |
-| [Fides](https://github.com/stelar-software/rust-fides) | Digital Security & Hashing | 🚧 |
+| [Fides](https://github.com/stelar-software/rust-fides) | Asymmetric & Symmetric Cryptography | 🚧 |
 | [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network)  | Distributed Messaging |  🚧 |
 | Nova | Proof of Stake Consensus Mechanism | FEB 2022 |
-| [Node](https://github.com/astreuos/rust-astreuos) | Blockchain Interface | FEB 2022 |
+| [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Blockchain Node | FEB 2022 |
 | Stelar Terminal | Browser Interface | Q1 2022 |
 | Testnet Launch | | Q1 2022 |
 | Mainnet Launch | | Q2 2022 |
