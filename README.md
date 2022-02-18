@@ -96,13 +96,16 @@
 
 ### Astreuos v3
 - Nebula, Distributed File Storage System.
+- Proof of Storage Mechanism for sizing.
 - Storage Contract.
 - Retrieval Contract.
 - Removal Contract.
 
 ### Astreuos v4
 - Reactor, Distributed Compute System.
+- Proof of Work Mechanism for sizing.
 - Compute Contract.
+- Automation Contract.
 
 ### Astreuos v5
 - Token Standards.
@@ -117,7 +120,7 @@
 | [Astro Notation](https://github.com/stelar-software/rust-astro-notation) | Data Transcoding | ✅ |
 | [NeutronDB](https://github.com/stelar-software/rust-neutrondb) | Key Value Store | ✅ |
 | [Opis](https://github.com/stelar-software/rust-opis) | Integer Arithmetic | ✅ |
-| [Fides](https://github.com/stelar-software/rust-fides) | Digital Security | 🚧 |
+| [Fides](https://github.com/stelar-software/rust-fides) | Digital Security & Hashing | 🚧 |
 | [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network)  | Distributed Messaging |  🚧 |
 | Nova | Proof of Stake Consensus Mechanism | FEB 2022 |
 | [Node](https://github.com/astreuos/rust-astreuos) | Blockchain Interface | FEB 2022 |
@@ -125,4 +128,4 @@
 | Testnet Launch | | Q1 2022 |
 | Mainnet Launch | | Q2 2022 |
 
-2022-02-17
+2022-02-18
