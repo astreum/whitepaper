@@ -3,7 +3,7 @@
 
 ### A Next Generation Blockchain Platform for Apps, Storage and Compute that's Decentralized, Secure and Sustainable.
 
-## Specification(v1)
+## Specification(V1)
 
 ### Accounts
 - Structure
@@ -81,33 +81,33 @@
 
 ## Roadmap
 
-### Astreuos v1
+### Astreuos V1
 - Value Transactions.
 - Nova, Proof of Stake Consensus Mechanism.
 - Nova Deposit Contract.
 - Solar Stability Mechanism.
 
-### Astreuos v2
+### Astreuos V2
 - Fusion, Blockchain Application Platform.
 - Language.
 - Virtual Machine.
 - Compiler & Code Manager.
 - App Creation & Call Transactions.
 
-### Astreuos v3
+### Astreuos V3
 - Nebula, Distributed File Storage System.
 - Proof of Storage Sizing Mechanism.
 - Storage Contract.
 - Retrieval Contract.
 - Removal Contract.
 
-### Astreuos v4
+### Astreuos V4
 - Reactor, Distributed Compute System.
 - Proof of Work Sizing Mechanism.
 - Compute Contract.
 - Automation Contract.
 
-### Astreuos v5
+### Astreuos V5
 - Token Standards.
 - Oracle Standards.
 - DAO Standards.
@@ -121,11 +121,11 @@
 | [NeutronDB](https://github.com/stelar-software/rust-neutrondb) | Key Value Store | ✅ |
 | [Opis](https://github.com/stelar-software/rust-opis) | Integer Arithmetic | ✅ |
 | [Fides](https://github.com/stelar-software/rust-fides) | Asymmetric & Symmetric Cryptography | 🚧 |
-| [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network)  | Distributed Messaging |  🚧 |
+| [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network) | P2P Messaging Protocol |  🚧 |
 | Nova | Proof of Stake Consensus Mechanism | FEB 2022 |
 | [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Blockchain Node | FEB 2022 |
 | Stelar Terminal | Browser Interface | Q1 2022 |
-| Testnet Launch | | Q1 2022 |
-| Mainnet Launch | | Q2 2022 |
+| V1 Testnet Launch | | Q1 2022 |
+| V1 Mainnet Launch | | Q2 2022 |
 
 2022-02-18
