@@ -86,7 +86,7 @@
 - Nova, Proof of Stake Consensus Mechanism.
 - Nova Deposit Contract.
 - Solar Stability Mechanism.
-- Astreuos File Tree for storing Account Details, Blocks & Transactions.
+- Nebula File Tree for storing Account Details, Blocks & Transactions.
 
 ### Astreuos V2
 - Fusion, Application Platform.
@@ -101,7 +101,7 @@
 - DAO Standards.
 
 ### Astreuos V3
-- Nebula, Distributed File Storage System.
+- Nebula, Distributed File System.
 - Proof of Storage Staking Mechanism.
 - Storage Contract.
 - Retrieval Contract.
