@@ -13,9 +13,9 @@
     - Balance
     - Counter
     - Storage
-- The Standard Unit of Value is an Astr while the Smallest Unit is a Quark.
+- The Standard Unit of Value is an Astre while the Smallest Unit is a Quark.
 - Value magnitudes:
-    - 10^24: Yottaquark / Astr
+    - 10^24: Yottaquark / Astre
     - 10^21: Zettaquark
     - 10^18: Exaquark
     - 10^15: Petaquark
@@ -63,21 +63,21 @@
 - The Block Time Target is Three Seconds.
 - A Slot is a three seconds period when new Blocks are created.
 - Slots are allocated pro rata with Stake every Epoch and removed after Slot Selection.
-- A Validator can miss using their Slot when they do not create a new Block or create a malicious Block when selected.
+- A Slot Miss occurs when a validator does not create a new Block or creates a malicious Block when selected.
 - Slot Selection determines the Validator of the next Block at any time:-
     - Get Addresses with Slot Allocations.
-    - Check missed Slots from the last Block to the current time.
-    - If no Slots were missed the nearest Address XOR to the last Block hash is selected.
-    - If Slots were missed the nearest Address XOR to the Linear-feedback shift register, shifted to the number of slots missed, of the last Block hash is selected.
+    - Check Slot Misses from the last Block to the current time.
+    - If no Slot Miss, the nearest Address XOR to the last Block hash is selected.
+    - If Slot Misses, the nearest Address XOR to the Linear-feedback shift register, shifted to the number of Slot Misses, of the last Block hash is selected.
 - The Base Solar Limit is 1,000,000.
-- The Base Block Reward is 1 Astr.
+- The Base Block Reward is 1 Astre.
 
 
 ### Solar Stability Mechanism
 - The Solar price is fixed for every Block.
 - The Solar price varies by 0.01%.
 - The Solar price increases when more than 90%, and decreases when less than 10%, of the previous Solar Limit was used.
-- The Base Solar Price is set at 1 Exaquark / 0.000001 Astr.
+- The Base Solar Price is set at 1 Exaquark / 0.000001 Astre.
 
 ## Roadmap
 
@@ -125,7 +125,6 @@
 | [Opis](https://github.com/stelar-software/rust-opis) | Integer Arithmetic | ✅ |
 | [Fides](https://github.com/stelar-software/rust-fides) | Hashing & Asymmetric/Symmetric Cryptography | 🚧 |
 | [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network) | P2P Messaging Protocol |  🚧 |
-| Nova | Proof of Stake Consensus Mechanism | FEB 2022 |
 | [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Blockchain Node | FEB 2022 |
 | V1 Testnet Launch | | FEB 2022 |
 | Stelar Terminal | Browser Interface | MAR 2022 |
