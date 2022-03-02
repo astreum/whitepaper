@@ -70,27 +70,27 @@ Receipt.
 - status
 
 ### Nova, Proof of Stake Consensus Protocol.
-The consensus protocol is the mechanism for creating new blocks and validating the blockchain.
-A validator must be staked to participate in the protocol.
-Staking is done by sending astre to the nova account.
-The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
-An epoch lasts approximately one week.
-The block time target is three seconds.
-A slot is a three seconds period when new blocks are created.
-Slots are allocated pro rata with a validator's stake every epoch and are removed after slot selection.
-A slot miss occurs when a validator does not create a new block or created a malicious block when selected.
-Slot selection determines the validator for the next block at any time:-
+- The consensus protocol is the mechanism for creating new blocks and validating the blockchain.
+- A validator must be staked to participate in the protocol.
+- Staking is done by sending astre to the nova account.
+- The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
+- An epoch lasts approximately one week.
+- The block time target is three seconds.
+- A slot is a three seconds period when new blocks are created.
+- Slots are allocated pro rata with a validator's stake every epoch and are removed after slot selection.
+- A slot miss occurs when a validator does not create a new block or created a malicious block when selected.
+- Slot selection determines the validator for the next block at any time:-
     - Get validator addresses with slot allocations.
     - Check slot misses from the last block to the current time.
     - If no slot miss, the nearest address xor to the last block hash is selected.
     - If slot misses, the nearest address xor to the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is selected.
-All transactions in a block are ordered ascending by the xor distance of the transaction hash and the previuos block transactions hash.
-A validator that misses all of their slots in an epoch will be refunded their stake.
-The base solar limit is set at 1,000,000.
-The base block reward is set at 1 astre.
+- All transactions in a block are ordered ascending by the xor distance of the transaction hash and the previuos block transactions hash.
+- A validator that misses all of their slots in an epoch will be refunded their stake.
+- The base solar limit is set at 1,000,000.
+- The base block reward is set at 1 astre.
 
 
-### Solar Stability Mechanism
+### Solar Pricing Protocol
 - The solar price is fixed for every block.
 - The solar price varies by 0.01%.
 - The solar price increases when more than 90%, and decreases when less than 10%, of the previous solar limit was used.
@@ -100,12 +100,12 @@ The base block reward is set at 1 astre.
 
 ### Astreuos V1
 - Value Transactions.
-- Nova, Proof of Stake Consensus Mechanism.
+- Nova, Proof of Stake Consensus Protocol.
+- Solar Pricing Protocol.
 - Nova Deposit Contract.
-- Solar Stability Mechanism.
 
 ### Astreuos V2
-- Fusion, Application Platform.
+- Fusion, Application System.
 - Language.
 - Virtual Machine.
 - Compiler & Code Manager.
@@ -116,10 +116,12 @@ The base block reward is set at 1 astre.
 - Token Standards.
 - Oracle Standards.
 - DAO Standards.
+- Insurance Standards.
 
 ### Astreuos V3
 - Nebula, Distributed File System.
-- Proof of Storage Staking Mechanism.
+- Proof of Storage Staking Protocol.
+- Storage Pricing Protocol.
 - Storage Contract.
 - Retrieval Contract.
 - Removal Contract.
@@ -128,6 +130,7 @@ The base block reward is set at 1 astre.
 ### Astreuos V4
 - Reactor, Distributed Compute System.
 - Proof of Work Staking Mechanism.
+- Compute Pricing Protocol.
 - Compute Contract.
 - Automation Contract.
 
