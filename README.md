@@ -8,13 +8,13 @@
 ### Accounts
 
 Account.
-- Address (32bytes)
-- Details Hash (32bytes)
+- address
+- details hash
 
 Account Details.
-- Balance (32bytes)
-- Counter (32bytes)
-- Storage Hash (32bytes)
+- balance
+- counter
+- storage hash
 
 The standard unit of value is an Astre while the smallest unit is a Quark.
 Value magnitudes:
@@ -31,66 +31,63 @@ Value magnitudes:
 
 ### Blocks
 
-### Transactions
+Block.
+- body
+- signature
 
-## Specification(V1)
-
-    
-
-
-### Blocks
-- Structure
-    - Body
-    - Signature
-- Body
-    - Accounts Hash
-    - Chain
-    - Number
-    - Previous Block Hash
-    - Receipts Hash
-    - Reward
-    - Solar Limit
-    - Solar Price
-    - Solar Used
-    - Time
-    - Transactions Hash
+Body.
+- accounts hash
+- chain
+- number
+- previous block hash
+- receipts hash
+- solar limit
+- solar price
+- solar used
+- time
+- transactions hash
+- validator
 
 ### Transactions
-- Structure
-    - Body
-    - Signature
-- Body
-    - Chain
-    - Counter
-    - Recipient
-    - Solar Price
-    - Solar Limit
-    - Value
+
+Transaction.
+- body
+- signature
+
+Body.
+- chain
+- counter
+- recipient
+- sender
+- solar limit
+- solar price
+- value
 
 ### Receipts
-- Structure
-    - Solar Used
-    - Status
 
-### Nova, Proof of Stake Consensus Mechanism.
-- A validator must be staked to participate.
-- Staking is done by sending astre to the nova account. 
-- The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
-- The validation process of creating new blocks is detailed below,
-- An epoch lasts approximately one week.
-- The block time target is three seconds.
-- A slot is a three seconds period when new blocks are created.
-- Slots are allocated pro rata with a validator's stake every epoch and are removed after slot selection.
-- A slot miss occurs when a validator does not create a new block or created a malicious block when selected.
-- Slot selection determines the validator for the next block at any time:-
+Receipt.
+- solar used
+- status
+
+### Nova, Proof of Stake Consensus Protocol.
+The consensus protocol is the mechanism for creating new blocks and validating the blockchain.
+A validator must be staked to participate in the protocol.
+Staking is done by sending astre to the nova account.
+The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
+An epoch lasts approximately one week.
+The block time target is three seconds.
+A slot is a three seconds period when new blocks are created.
+Slots are allocated pro rata with a validator's stake every epoch and are removed after slot selection.
+A slot miss occurs when a validator does not create a new block or created a malicious block when selected.
+Slot selection determines the validator for the next block at any time:-
     - Get validator addresses with slot allocations.
     - Check slot misses from the last block to the current time.
     - If no slot miss, the nearest address xor to the last block hash is selected.
     - If slot misses, the nearest address xor to the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is selected.
-- All transactions in a block are ordered ascending by the xor distance of the transaction hash and the previuos block transactions hash.
-- A validator that misses all of their slots in an epoch will be refunded their stake.
-- The base solar limit is set at 1,000,000.
-- The base block reward is set at 1 astre.
+All transactions in a block are ordered ascending by the xor distance of the transaction hash and the previuos block transactions hash.
+A validator that misses all of their slots in an epoch will be refunded their stake.
+The base solar limit is set at 1,000,000.
+The base block reward is set at 1 astre.
 
 
 ### Solar Stability Mechanism
