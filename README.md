@@ -98,27 +98,26 @@ Receipt.
 
 ## Roadmap
 
-### Astreuos V1
+### v1: Genesis
 - Value Transactions.
 - Nova, Proof of Stake Consensus Protocol.
 - Solar Pricing Protocol.
 - Nova Deposit Contract.
 
-### Astreuos V2
+### v2: Fusion Upgrade
 - Fusion, Application System.
 - Language.
 - Virtual Machine.
 - Compiler & Code Manager.
 - App Creation & Call Transactions.
-- Nova Withdrawl Contract.
 
-### Astreuos V2+
+### v2+: Standards Upgrade
 - Token Standards.
 - Oracle Standards.
 - DAO Standards.
 - Insurance Standards.
 
-### Astreuos V3
+### v3: Nebula Upgrade
 - Nebula, Distributed File System.
 - Proof of Storage Staking Protocol.
 - Storage Pricing Protocol.
@@ -127,14 +126,14 @@ Receipt.
 - Removal Contract.
 - Nebula File Tree for storing Account Details, Blocks & Transactions.
 
-### Astreuos V4
+### v4: Reactor Upgrade
 - Reactor, Distributed Compute System.
 - Proof of Work Staking Mechanism.
 - Compute Pricing Protocol.
 - Compute Contract.
 - Automation Contract.
 
-### Astreuos V5
+### v5: Governance Upgrade
 - Nova Reserve System.
 - Nova Governance Protocol.
 
