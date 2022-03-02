@@ -3,27 +3,40 @@
 
 ### A Next Generation Blockchain for Apps, Storage and Compute that's Decentralized, Secure and Sustainable.
 
-## Specification(V1)
+## Elements
 
 ### Accounts
-- Structure
-    - Address
-    - Details
-- Details
-    - Balance
-    - Counter
-    - Storage
-- The standard unit of value is an Astre while the smallest unit is a Quark.
-- Value magnitudes:
-    - 10^24: Yottaquark / Astre (AST)
-    - 10^21: Zettaquark (ZQ)
-    - 10^18: Exaquark (EQ)
-    - 10^15: Petaquark (PQ)
-    - 10^12: Teraquark (TQ)
-    - 10^9: Gigaquark (GQ)
-    - 10^6: Megaquark (MQ)
-    - 10^3: Kiloquark (KQ)
-    - 10^0: Quark (Q)
+
+Account.
+- Address (32bytes)
+- Details Hash (32bytes)
+
+Account Details.
+- Balance (32bytes)
+- Counter (32bytes)
+- Storage Hash (32bytes)
+
+The standard unit of value is an Astre while the smallest unit is a Quark.
+Value magnitudes:
+- 10^24: Yottaquark / Astre (AST)
+- 10^21: Zettaquark (ZQ)
+- 10^18: Exaquark (EQ)
+- 10^15: Petaquark (PQ)
+- 10^12: Teraquark (TQ)
+- 10^9: Gigaquark (GQ)
+- 10^6: Megaquark (MQ)
+- 10^3: Kiloquark (KQ)
+- 10^0: Quark (Q)
+
+
+### Blocks
+
+### Transactions
+
+## Specification(V1)
+
+    
+
 
 ### Blocks
 - Structure
@@ -72,9 +85,9 @@
 - Slot selection determines the validator for the next block at any time:-
     - Get validator addresses with slot allocations.
     - Check slot misses from the last block to the current time.
-    - If no slot miss, the nearest address XOR to the last block hash is selected.
-    - If slot misses, the nearest address XOR to the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is selected.
-- All transactions in a block are ordered ascending by the XOR distance of the transaction hash and the previuos block transactions hash.
+    - If no slot miss, the nearest address xor to the last block hash is selected.
+    - If slot misses, the nearest address xor to the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is selected.
+- All transactions in a block are ordered ascending by the xor distance of the transaction hash and the previuos block transactions hash.
 - A validator that misses all of their slots in an epoch will be refunded their stake.
 - The base solar limit is set at 1,000,000.
 - The base block reward is set at 1 astre.
@@ -134,8 +147,7 @@
 | [Fides](https://github.com/stelar-software/rust-fides) | Hashing & Asymmetric/Symmetric Cryptography | ✅ |
 | [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network) | P2P Messaging Protocol | ✅ |
 | [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Blockchain Node | ✅ |
-| V1 Testnet Launch | | 2022-03-01 |
-| Stelar Terminal | Browser Interface | MAR 2022 |
+| V1 Testnet Launch | | MAR 2022 |
 | V1 Mainnet Launch | | 2022-04-01 |
 
-2022-02-27
+2022-03-02
