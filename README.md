@@ -3,7 +3,7 @@
 
 ### A Next Generation Blockchain for Apps, Storage and Compute that's Decentralized, Secure and Sustainable.
 
-## Elements
+## Components
 
 ### Accounts
 
@@ -16,17 +16,17 @@ Account Details.
 - counter
 - storage hash
 
-The standard unit of value is an Astre while the smallest unit is a Quark.
-Value magnitudes:
-- 10^24: Yottaquark / Astre (AST)
-- 10^21: Zettaquark (ZQ)
-- 10^18: Exaquark (EQ)
-- 10^15: Petaquark (PQ)
-- 10^12: Teraquark (TQ)
-- 10^9: Gigaquark (GQ)
-- 10^6: Megaquark (MQ)
-- 10^3: Kiloquark (KQ)
-- 10^0: Quark (Q)
+- The standard unit of value is an astre while the smallest unit is a quark.
+- Value magnitudes:
+    - 10^24: Yottaquark / Astre (AST)
+    - 10^21: Zettaquark (ZQ)
+    - 10^18: Exaquark (EQ)
+    - 10^15: Petaquark (PQ)
+    - 10^12: Teraquark (TQ)
+    - 10^9: Gigaquark (GQ)
+    - 10^6: Megaquark (MQ)
+    - 10^3: Kiloquark (KQ)
+    - 10^0: Quark (Q)
 
 
 ### Blocks
