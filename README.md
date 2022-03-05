@@ -88,8 +88,16 @@ Receipt.
     - If slot misses, the nearest address xor to the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is selected.
 - All transactions in a block are ordered ascending by the xor distance of the transaction hash and the previuos block transactions hash.
 - A validator that misses all of their slots in an epoch will be refunded their stake.
-- The solar limit is set at 1,000,000.
-- The block reward is set at 1 astre.
+- The reward for creating a new block is 1 astre.
+
+### Solar, Work Currency.
+- Solar is the unit for paying for work done on the astreuos blockchain
+- The solar limit in every block is 1,000,000,000.
+| Service | Fees |
+|---|---|
+| Transaction Processing | 1,000 |
+| Account Creation | 1,000 |
+* fees in solar
 
 
 ### solar pricing mechanism
