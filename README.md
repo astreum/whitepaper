@@ -92,7 +92,7 @@ Receipt.
 
 ### Solar, Work Currency.
 - Solar is the unit for paying for work done on the astreuos blockchain
-- The solar limit in every block is 1,000,000,000.
+- The solar limit in every block is 1,000,000.
 
 | Fee | Cost |
 |---|---|
@@ -118,32 +118,59 @@ costs in solar
 - nova deposit contract
 
 ### v2: Fusion Upgrade
-- Fusion, Application Platform
-- language
-- virtual machine
-- compiler & code manager
-- app creation & call transactions
+
+This upgrade will add an application platform called Fusion.
+
+The Fusion Language is a multi-paradigm statically-typed programming language for building Fusion Applications.
+
+The Fusion Virtual Machine is the native runtime for Fusion Bytecode and has a direct interface to the Astreuos Accounts.
+
+Helium is the Fusion package manager. Helium downloads your Fusion Application's dependencies and compiles your application into Fusion Bytecode.
+
+New transaction types will be added for App Creation and App Calls.
 
 ### v2+: Standards Upgrade
-- token standards
-- oracle standards
-- governance standards
-- insurance standards
+
+This upgrade adds a series of standards to guide application builders.
+
+Fungible and Non-Fungible Token standards.
+
+Oracle standards
+
+Governance standards
+
+Insurance standards
 
 ### v3: Nebula Upgrade
-- Nebula, Distributed File Protocol
-- proof of storage staking
-- storage pricing mechanism
-- put contract
-- get contract
-- delete contract
+
+This upgrade will add a distributed file protocol called Nebula.
+
+Puslar network will also be upgraded with index and storage routes with complementary object message types for get, put and delete.
+
+The index route stores the index of the object hash and storage provider's id.
+
+The route is updated every five minutes.
+
+An indexer must prove they are storing their part of the index.
+
+A node can use the returned id to query the storage route for the storage provider to retrieve the object.
+
+The storage provider is paid storage fees for the storage period and retrival fees for serving an object.
+
+A stoage provider must prove they are storing their assigned objects.
+
+Indexers are incentivized to cache objects by earning retrival fees for returning objects instead of storage provider's id.
+
+An indexer also earns a commission for facilitating a put contract and indexing.
+
+A delete contract can be made directly to a blockchain validator.
+
+Storage pricing mechanism will involve the available protocol space.
 
 ### v4: Reactor Upgrade
 - Reactor, Distributed Compute Protocol
 - proof of work staking
 - compute pricing mechanism
-- compute contract
-- automation contract
 
 ### v5: Governance Upgrade
 - nova reserve system
