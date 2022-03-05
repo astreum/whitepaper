@@ -93,6 +93,7 @@ Receipt.
 ### Solar, Work Currency.
 - Solar is the unit for paying for work done on the astreuos blockchain
 - The solar limit in every block is 1,000,000,000.
+
 | Service | Fees |
 |---|---|
 | Transaction Processing | 1,000 |
