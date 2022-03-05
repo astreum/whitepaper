@@ -3,6 +3,8 @@
 
 ### A Next Generation Blockchain for Apps, Storage and Compute that's Decentralized, Secure and Sustainable.
 
+- Astreuos is a general purpose account based blockchain with protocols for consensus, distributed file & compute.
+
 ## Components
 
 ### Accounts
@@ -69,7 +71,7 @@ Receipt.
 - solar used
 - status
 
-### Nova, Proof of Stake Consensus Protocol.
+### Nova, Consensus Protocol.
 - The consensus protocol is the mechanism for creating new blocks and validating the blockchain.
 - A validator must be staked to participate in the protocol.
 - Staking is done by sending astre to the nova account.
@@ -90,7 +92,7 @@ Receipt.
 - The block reward is set at 1 astre.
 
 
-### Solar Pricing Protocol
+### solar pricing mechanism
 - The solar price is fixed for every block.
 - The solar price varies by 0.01%.
 - The solar price increases when more than 90%, and decreases when less than 10%, of the previous solar limit was used.
@@ -99,43 +101,43 @@ Receipt.
 ## Roadmap
 
 ### v1: Genesis
-- Value Transactions.
-- Nova, Proof of Stake Consensus Protocol.
-- Solar Pricing Protocol.
-- Nova Deposit Contract.
+- Nova, Consensus Protocol
+- value transactions
+- proof of value staking
+- solar pricing mechanism
+- nova deposit contract
 
 ### v2: Fusion Upgrade
-- Fusion, Application System.
+- Fusion, Application Platform.
 - Language.
 - Virtual Machine.
 - Compiler & Code Manager.
 - App Creation & Call Transactions.
 
 ### v2+: Standards Upgrade
-- Token Standards.
-- Oracle Standards.
-- DAO Standards.
-- Insurance Standards.
+- token standards
+- oracle standards
+- DAO standards
+- insurance standards
 
 ### v3: Nebula Upgrade
-- Nebula, Distributed File System.
-- Proof of Storage Staking Protocol.
-- Storage Pricing Protocol.
-- Storage Contract.
-- Retrieval Contract.
-- Removal Contract.
-- Nebula File Tree for storing Account Details, Blocks & Transactions.
+- Nebula, Distributed File Protocol
+- proof of storage staking
+- storage pricing mechanism
+- put contract
+- get contract
+- delete contract
 
 ### v4: Reactor Upgrade
-- Reactor, Distributed Compute System.
-- Proof of Work Staking Mechanism.
-- Compute Pricing Protocol.
-- Compute Contract.
-- Automation Contract.
+- Reactor, Distributed Compute Protocol
+- proof of work staking
+- compute pricing mechanism
+- compute contract
+- automation contract
 
 ### v5: Governance Upgrade
-- Nova Reserve System.
-- Nova Governance Protocol.
+- nova reserve system
+- nova governance mechanism
 
 ### Projects
 | Project | Description | Delivery |
@@ -149,4 +151,4 @@ Receipt.
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-03-02
+2022-03-05
