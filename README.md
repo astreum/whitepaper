@@ -98,6 +98,7 @@ Receipt.
 |---|---|
 | Transaction Processing | 1,000 |
 | Account Creation | 1,000 |
+
 costs in solar
 
 
