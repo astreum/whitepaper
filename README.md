@@ -3,41 +3,35 @@
 
 ### A Next Generation Blockchain for Apps, Storage and Compute that's Decentralized, Secure and Sustainable.
 
-- Astreuos is a general purpose account based blockchain with protocols for consensus, distributed file & compute.
+## Contents
 
-## Components
+1. About
+2. Mission
+3. Roadmap
+4. Projects
 
-### Accounts
+### About
 
-Account.
-- address
-- details hash
+Astreuos is a account based blockchain with scripting capabilities and protocols for consensus, distributed file and distributed compute.
 
-Account Details.
-- balance
-- counter
-- storage hash
+The blockchain keeps track of an account's details such as the balance and number of transactions.
 
-The standard unit of value is an astre while the smallest unit is a quark.
-- Value magnitudes:
-    - 10^24: yottaquark / astre (AST)
-    - 10^21: zettaquark (ZQ)
-    - 10^18: exaquark (EQ)
-    - 10^15: petaquark (PQ)
-    - 10^12: teraquark (TQ)
-    - 10^9: gigaquark (GQ)
-    - 10^6: megaquark (MQ)
-    - 10^3: kiloquark (KQ)
-    - 10^0: quark (Q)
+The standard unit of value is an `Astre` while the smallest unit is a `quark`.
 
+Value magnitudes are:-
+- 10^24: yottaquark / astre (AST)
+- 10^21: zettaquark (ZQ)
+- 10^18: exaquark (EQ)
+- 10^15: petaquark (PQ)
+- 10^12: teraquark (TQ)
+- 10^9: gigaquark (GQ)
+- 10^6: megaquark (MQ)
+- 10^3: kiloquark (KQ)
+- 10^0: quark (Q)
 
-### Blocks
+A Block consists of the block body and the validator's signature.
 
-Block.
-- body
-- signature
-
-Body.
+The block body has:-
 - accounts hash
 - chain
 - number
@@ -131,7 +125,7 @@ New transaction types will be added for App Creation and App Calls.
 
 ### v2+: Standards Upgrade
 
-This upgrade adds a series of standards to guide application builders.
+This upgrade adds a series of standards to help builders create trusted Fusion Applications.
 
 Fungible and Non-Fungible Token standards.
 
@@ -145,7 +139,7 @@ Insurance standards
 
 This upgrade will add a distributed file protocol called Nebula.
 
-Puslar network will also be upgraded with index and storage routes with complementary object message types for get, put and delete.
+Puslar network will also be upgraded with index and storage routes with complementary object message types for get and put.
 
 The index route stores the index of the object hash and storage provider's id.
 
