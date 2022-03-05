@@ -94,11 +94,11 @@ Receipt.
 - Solar is the unit for paying for work done on the astreuos blockchain
 - The solar limit in every block is 1,000,000,000.
 
-| Service | Fees |
+| Fee | Cost |
 |---|---|
 | Transaction Processing | 1,000 |
 | Account Creation | 1,000 |
-* fees in solar
+costs in solar
 
 
 ### solar pricing mechanism
