@@ -5,10 +5,16 @@
 
 ## Contents
 
-1. About
-2. Mission
-3. Roadmap
-4. Projects
+1. Why?
+2. About
+3. Vision
+4. Roadmap
+5. Open Source
+
+### Why?
+
+- Provide standards for tokens, oracles, governance and insurance to provide a better and secure crypto experience.
+- To be a viable backbone to web 3 by offering combined value, storage and compute in a single blockchain and currency.
 
 ### About
 
@@ -29,11 +35,12 @@ Value magnitudes are:-
 - 10^3: kiloquark (KQ)
 - 10^0: quark (Q)
 
-A Block consists of the block body and the validator's signature.
+A Block consists of the block body and the validator's ed25519 signature of the body's tree hash.
 
 The block body has:-
 - accounts hash
 - chain
+- nova hash
 - number
 - previous block hash
 - receipts hash
@@ -44,13 +51,9 @@ The block body has:-
 - transactions hash
 - validator
 
-### Transactions
+A Transaction consists of the transaction body and the sender's ed25519 signature of the body's tree hash.
 
-Transaction.
-- body
-- signature
-
-Body.
+The transaction body has:-
 - chain
 - counter
 - recipient
@@ -59,71 +62,58 @@ Body.
 - solar price
 - value
 
-### Receipts
+The Receipt is the result from the application of a transaction to the Astreuos Account State.
 
-Receipt.
-- solar used
-- status
+A receipt consists of the solar used and status of the applied transaction.
 
-### Nova, Consensus Protocol.
-- The consensus protocol is the mechanism for creating new blocks and validating the blockchain.
-- A validator must be staked to participate in the protocol.
-- Staking is done by sending astre to the nova account.
-- The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
-- An epoch lasts approximately one week.
-- The block time target is three seconds.
-- A slot is a three seconds period when new blocks are created.
-- Slots are allocated pro rata with a validator's stake every epoch and are removed after slot selection.
-- A slot miss occurs when a validator does not create a new block or created a malicious block when selected.
-- Slot selection determines the validator for the next block at any time:-
-    - Get validator addresses with slot allocations.
-    - Check slot misses from the last block to the current time.
-    - If no slot miss, the nearest address xor to the last block hash is selected.
-    - If slot misses, the nearest address xor to the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is selected.
-- All transactions in a block are ordered ascending by the xor distance of the transaction hash and the previuos block transactions hash.
-- A validator that misses all of their slots in an epoch will be refunded their stake.
-- The reward for creating a new block is 1 astre.
+`Solar` is the currency for work done on the blockchain. The solar limit in a block is 1,000,000.
 
-### Solar, Work Currency.
-- Solar is the unit for paying for work done on the astreuos blockchain
-- The solar limit in every block is 1,000,000.
-
-| Fee | Cost |
+| Fee | Solar |
 |---|---|
 | Transaction Processing | 1,000 |
 | Account Creation | 1,000 |
 
-costs in solar
+### Vision
 
+Web 3 builders can create browser terminals that interface with an astreuos node to provide transactions and object queries.
 
-### solar pricing mechanism
+### Roadmap
+
+#### V1: Genesis
+
+`Nova` is the consensus protocol for creating new blocks and validating the blockchain. A validator must stake value to participate in the protocol. Staking is done by sending `Astre` to the nova account. The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
+
+An epoch lasts approximately one week. The block time target is three seconds. A slot is a three seconds period when new blocks are created.
+
+Slots are allocated pro rata with a validator's stake every epoch and are removed after slot selection. A slot miss occurs when a validator does not create a new block or created a malicious block when selected. A validator that misses all of their slots in an epoch will be refunded their stake.
+
+Slot selection determines the validator for the next block at any time:-
+- Get validator addresses with slot allocations.
+- Check slot misses from the last block to the current time.
+- If no slot miss, the nearest address xor to the last block hash is selected.
+- If slot misses, the nearest address xor to the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is selected.
+
+All transactions in a block are ordered ascending by the xor distance of the transaction hash and the previuos block transactions hash. The reward for creating a new block is 1 `Astre`.
+
+Solar pricing mechanism:-
 - The solar price is fixed for every block.
 - The solar price varies by 0.01%.
 - The solar price increases when more than 90%, and decreases when less than 10%, of the previous solar limit was used.
 - The base solar price is set at 1 exaquark / 0.000001 astre.
 
-## Roadmap
-
-### v1: Genesis
-- Nova, Consensus Protocol
-- value transactions
-- proof of value staking
-- solar pricing mechanism
-- nova deposit contract
-
-### v2: Fusion Upgrade
+#### V2: Fusion Upgrade
 
 This upgrade will add an application platform called Fusion.
 
 The Fusion Language is a multi-paradigm statically-typed programming language for building Fusion Applications.
 
-The Fusion Virtual Machine is the native runtime for Fusion Bytecode and has a direct interface to the Astreuos Accounts.
+The Fusion Virtual Machine is the native runtime for Fusion Bytecode and has a direct interface to the Astreuos Account State.
 
 Helium is the Fusion package manager. Helium downloads your Fusion Application's dependencies and compiles your application into Fusion Bytecode.
 
 New transaction types will be added for App Creation and App Calls.
 
-### v2+: Standards Upgrade
+#### V2+: Standards Upgrade
 
 This upgrade adds a series of standards to help builders create trusted Fusion Applications.
 
@@ -135,7 +125,7 @@ Governance standards
 
 Insurance standards
 
-### v3: Nebula Upgrade
+#### V3: Nebula Upgrade
 
 This upgrade will add a distributed file protocol called Nebula.
 
@@ -143,7 +133,7 @@ Puslar network will also be upgraded with index and storage routes with compleme
 
 The index route stores the index of the object hash and storage provider's id.
 
-The route is updated every five minutes.
+The route is updated every five minutes to remove deleted objects and redistribute indexes adding new objects.
 
 An indexer must prove they are storing their part of the index.
 
@@ -157,21 +147,25 @@ Indexers are incentivized to cache objects by earning retrival fees for returnin
 
 An indexer also earns a commission for facilitating a put contract and indexing.
 
-A delete contract can be made directly to a blockchain validator.
+A delete contract can be made directly to a blockchain validator and refunded the contract's remainder period.
 
 Storage pricing mechanism will involve the available protocol space.
 
-### v4: Reactor Upgrade
+#### V4: Reactor Upgrade
 - Reactor, Distributed Compute Protocol
 - proof of work staking
-- compute pricing mechanism
 
-### v5: Governance Upgrade
+#### V5: Governance Upgrade
+- nova withdrawl contract
 - nova reserve system
+- token index
 - nova governance mechanism
 
-### Projects
-| Project | Description | Delivery |
+### Open Source
+
+The Astreuos Blockchain is a fully open source project and is powered by several open source libraries.
+
+| Library | Description | Status |
 |---|---|---|
 | [Astro Notation](https://github.com/stelar-software/rust-astro-notation) | Encoding Format | ✅ |
 | [NeutronDB](https://github.com/stelar-software/rust-neutrondb) | Key Value Store | ✅ |
@@ -182,4 +176,4 @@ Storage pricing mechanism will involve the available protocol space.
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-03-05
+2022-03-06
