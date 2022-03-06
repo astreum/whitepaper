@@ -8,7 +8,7 @@
 1. Why?
 2. About
 3. Vision
-4. Roadmap
+4. Upgrades
 5. Open Source
 
 ### Why?
@@ -18,9 +18,9 @@
 
 ### About
 
-Astreuos is a account based blockchain with scripting capabilities and protocols for consensus, distributed file and distributed compute.
+Astreuos is an account based blockchain with scripting capabilities and protocols for distributed file and distributed compute.
 
-The blockchain keeps track of an account's details such as the balance and number of transactions.
+The blockchain keeps track of an account's details such as the balance, number of transactions and storage.
 
 The standard unit of value is an `Astre` while the smallest unit is a `quark`.
 
@@ -40,11 +40,9 @@ A Block consists of the block body and the validator's ed25519 signature of the 
 The block body has:-
 - accounts hash
 - chain
-- nova hash
 - number
 - previous block hash
 - receipts hash
-- solar limit
 - solar price
 - solar used
 - time
@@ -75,9 +73,9 @@ A receipt consists of the solar used and status of the applied transaction.
 
 ### Vision
 
-Web 3 builders can create browser terminals that interface with an astreuos node to provide transactions and object queries.
+Web 3 builders can create browser terminals that interface with an astreuos node to provide transactions, object queries and compute queries.
 
-### Roadmap
+### Upgrades
 
 #### V1: Genesis
 
@@ -131,9 +129,11 @@ This upgrade will add a distributed file protocol called Nebula.
 
 Puslar network will also be upgraded with index and storage routes with complementary object message types for get and put.
 
-The index route stores the index of the object hash and storage provider's id.
+An object is a node or leaf of a merkle tree of a file or folder.
 
-The route is updated every five minutes to remove deleted objects and redistribute indexes adding new objects.
+The index route stores the index of the object hash and the storage provider's id.
+
+The route is updated every five minutes to remove deleted objects and redistribute indexes adding new object indexes.
 
 An indexer must prove they are storing their part of the index.
 
@@ -151,9 +151,11 @@ A delete contract can be made directly to a blockchain validator and refunded th
 
 Storage pricing mechanism will involve the available protocol space.
 
+Proof of Space-Time staking.
+
 #### V4: Reactor Upgrade
-- Reactor, Distributed Compute Protocol
-- proof of work staking
+
+This upgrade adds a distributed compute protocol called Reactor with proof of work staking.
 
 #### V5: Governance Upgrade
 - nova withdrawl contract
