@@ -74,7 +74,7 @@ A receipt consists of the solar used and status of the application procedure.
 
 #### V1: Genesis
 
-`Nova` is the consensus protocol for creating new blocks and validating the blockchain. A validator must stake value to participate in the protocol. Staking is done by sending `Astre` to the nova account. The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
+`Nova` is the consensus protocol for creating new blocks and validating the blockchain. A validator must stake value to participate in the protocol. Staking is done by sending at least 1 `Astre` to the nova account. The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
 
 An epoch lasts approximately one week. The block time target is three seconds. A slot is a three seconds period when new blocks are created.
 
@@ -156,7 +156,7 @@ The standard put contract is for a period of 3 months.
 
 A delete contract can be made directly to the validator route and refunded the contract's remainder period.
 
-Storage `Solar` cost will involve the available protocol storage space.
+Storage `Solar` costing mechanism will involve the available protocol storage space.
 
 Proof of Space-Time staking.
 
