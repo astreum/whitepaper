@@ -31,9 +31,26 @@ Viable backbone to web 3 services by offering combined value, storage and comput
 
 ### About
 
-Astreuos is an account based blockchain with scripting capabilities and protocols for distributed file and distributed compute.
+Astreuos is an accounts based blockchain with scripting capabilities and protocols for distributed file and distributed compute.
 
 The blockchain maintains a state of all the accounts keeping track of an account's details such as the balance, number of transactions and storage.
+
+`Accounts State Transition`
+
+```
+
+        Block #1                                Block #2
+    + - - - - - - - +                       + - - - - - - - +
+    |               |                       |               | 
+    |      Old      |      Transactions     |      New      |
+    |   Accounts    |   ----------------->  |   Accounts    |
+    |     State     |                       |     State     |
+    |               |                       |               |
+    + - - - - - - - +                       + - - - - - - - +
+
+```
+
+
 
 The account balance is in the native standard unit of value which is an `Astre` while the smallest unit of value is a `quark`.
 
@@ -47,8 +64,6 @@ Value magnitudes are:-
 - 10^6: megaquark (MQ)
 - 10^3: kiloquark (KQ)
 - 10^0: quark (Q)
-
-Blocks represent the current state of the blockchain and any transformation of the state, in the form of transactions, from the previous block.
 
 A Block consists of the block body and the validator's ed25519 signature of the body's merkle tree hash.
 
@@ -87,6 +102,26 @@ A receipt consists of the solar used and status of the application procedure.
 | Account Creation | 1,000 |
 
 #### V1: Genesis
+
+`Nova Account Storage`
+
+```
+
+                                        + - - - - - - - +
+                                        |               |
+                                        |  Storage Hash |
+                                        |               |
+                                        + - - - - - - - +
+                                                |
+                            + - - - - - - - - - + - - - - - - - - - +
+                            |                                       |
+                + - - - - - + - - - - - +               + - - - - - + - - - - - +
+                |                       |               |                       |
+                |   Slots Store Hash    |               |    Stake Store Hash   |
+                |                       |               |                       |
+                + - - - - - - - - - - - +               + - - - - - - - - - - - +
+
+```
 
 `Nova` is the consensus protocol for creating new blocks and validating the blockchain. A validator must stake value to participate in the protocol. Staking is done by sending at least 1 `Astre` to the nova account. The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
 
@@ -207,4 +242,4 @@ The Astreuos Blockchain is a fully open source project and is powered by several
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-03-14
+2022-03-16
