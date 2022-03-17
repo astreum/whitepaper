@@ -42,12 +42,12 @@ The blockchain maintains a state of all the accounts keeping track of an account
                                                         + - - - - - - - +
                                                         |  Storage Hash |
                                                         + - - - - - - - +
-                                                                |
+                                                                ^
                                             . - - - - - - - - - - - - - - - - - - - .
                                             ^                                       ^
-                                + - - - - - - - - - - - +
-                                |   Store ID  + Hash    |
-                                + - - - - - - - - - - - +
+                                + - - - - - - - - - - - +               + - - - - - - - - - - - +
+                                |   Store 1 ID  + Hash  |               |   Store 2 ID  + Hash  |
+                                + - - - - - - - - - - - +               + - - - - - - - - - - - +
                                             ^
                                 + - - - - - - - - - - - +
                                 |       Store Hash      |
@@ -56,7 +56,7 @@ The blockchain maintains a state of all the accounts keeping track of an account
                             . - - - - - - - - - - - - - - - .
                             ^                               ^
                 + - - - - - - - - - - - +       + - - - - - - - - - - - +
-                |       Key + Value     |       |       Key + Value     |
+                |   Key 1 + Value Hash  |       |   Key 2 + Value Hash  |
                 + - - - - - - - - - - - +       + - - - - - - - - - - - +
 
 ```
