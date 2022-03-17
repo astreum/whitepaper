@@ -35,6 +35,32 @@ Astreuos is an accounts based blockchain with scripting capabilities and protoco
 
 The blockchain maintains a state of all the accounts keeping track of an account's details such as the balance, number of transactions and storage.
 
+`Accounts State`
+
+```
+
+                        + - - - - - - - - - - - +
+                        |     Accounts Hash     |
+                        + - - - - - - - - - - - +
+                                    ^
+                  . - - - - - - - - - - - - - - - - - - - .
+                  ^                                       ^
+        + - - - - - - - - - +                   + - - - - - - - - - +
+        |Address 1 + Details|                   |Address 2 + Details|
+        + - - - - - - - - - +                   + - - - - - - - - - +
+                  ^
+        + - - - - - - - - - +
+        |   Details Hash    |
+        + - - - - - - - - - +
+                  ^
+        + - - - - - - - - - +
+        |      Balance      |
+        |      Counter      |
+        |      Storage      |
+        + - - - - - - - - - +
+
+```
+
 `Account Storage`
 
 ```
