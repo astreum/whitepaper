@@ -27,13 +27,39 @@ Currency stability through price and cost mechanisms for the `Solar`.
 
 Accomodate external value through a native reserve system.
 
-Viable backbone to web 3 services by offering combined value, storage and compute on a single blockchain priced in a single currency.
+Viable backbone to web3 services by offering combined value, storage and compute on a single blockchain priced in a single currency.
 
 ### About
 
 Astreuos is an accounts based blockchain with scripting capabilities and protocols for distributed file and distributed compute.
 
 The blockchain maintains a state of all the accounts keeping track of an account's details such as the balance, number of transactions and storage.
+
+`Account Storage`
+
+```
+
+                                                        + - - - - - - - +
+                                                        |  Storage Hash |
+                                                        + - - - - - - - +
+                                                                |
+                                            . - - - - - - - - - - - - - - - - - - - .
+                                            ^                                       ^
+                                + - - - - - - - - - - - +
+                                |   Store ID  + Hash    |
+                                + - - - - - - - - - - - +
+                                            ^
+                                + - - - - - - - - - - - +
+                                |       Store Hash      |
+                                + - - - - - - - - - - - +
+                                            ^
+                            . - - - - - - - - - - - - - - - .
+                            ^                               ^
+                + - - - - - - - - - - - +       + - - - - - - - - - - - +
+                |       Key + Value     |       |       Key + Value     |
+                + - - - - - - - - - - - +       + - - - - - - - - - - - +
+
+```
 
 `Accounts State Transition`
 
@@ -94,7 +120,7 @@ The Receipt is the result from the application of a transaction to the Astreuos 
 
 A receipt consists of the solar used and status of the application procedure.
 
-`Solar` is the currency for work done on the blockchain. The solar limit of a block is 1,000,000.
+`Solar` is the internal currency for work done on the blockchain. The solar limit of a block is 1,000,000.
 
 | Fee | Solar |
 |---|---|
@@ -103,25 +129,7 @@ A receipt consists of the solar used and status of the application procedure.
 
 #### V1: Genesis
 
-`Nova Account Storage`
 
-```
-
-                                        + - - - - - - - +
-                                        |               |
-                                        |  Storage Hash |
-                                        |               |
-                                        + - - - - - - - +
-                                                |
-                            + - - - - - - - - - + - - - - - - - - - +
-                            |                                       |
-                + - - - - - + - - - - - +               + - - - - - + - - - - - +
-                |                       |               |                       |
-                |   Slots Store Hash    |               |    Stake Store Hash   |
-                |                       |               |                       |
-                + - - - - - - - - - - - +               + - - - - - - - - - - - +
-
-```
 
 `Nova` is the consensus protocol for creating new blocks and validating the blockchain. A validator must stake value to participate in the protocol. Staking is done by sending at least 1 `Astre` to the nova account. The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
 
@@ -145,7 +153,7 @@ Solar pricing mechanism:-
 
 ### Vision
 
-The Astreuos Blockchain empowers web 3 builders to:-
+The Astreuos Blockchain empowers web3 builders to:-
 - create next generation applications and experiences that interface with Astreuos Node APIs for transactions, storage & compute.
 - create powerful on-chain applications such as tokens, exchanges and DAOs.
 - host web applications, static sites and media content on Nebula Storage.
@@ -215,7 +223,7 @@ This upgrade adds a distributed compute protocol called Reactor with proof of wo
 
 Reactor allows for Private & Public Computations.
 
-Private Computations have restrictions on users allowed to call functions and run in an obfuscated mode to keep code private.
+Private Computations have restrictions on users allowed to call functions and run obfuscated to keep code private.
 
 Public Computations run on functions stored on Nebula and can be called by anyone.
 
@@ -223,8 +231,6 @@ Public Computations run on functions stored on Nebula and can be called by anyon
 
 #### V5: Governance Upgrade
 - nova withdrawl contract
-- nova reserve system
-- token index
 - nova governance system
 
 ### Open
@@ -242,4 +248,4 @@ The Astreuos Blockchain is a fully open source project and is powered by several
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-03-16
+2022-03-17
