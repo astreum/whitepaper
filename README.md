@@ -168,11 +168,19 @@ The solar limit of a block is 1,000,000,000.
 
 
 
-`Nova` is the consensus protocol for creating new blocks and validating the blockchain. A validator must stake value to participate in the protocol. Staking is done by sending at least 1 `Astre` to the nova account. The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
+`Nova` is the consensus protocol for creating new blocks and validating the blockchain.
+
+A validator must staked, by sending & maintaing at least 1 `Astre` to the nova account, to participate in the protocol.
+
+The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
 
 An epoch lasts approximately one week. The block time target is three seconds. A slot is a three seconds period when new blocks are created.
 
-Slots are allocated pro rata with a validator's stake every epoch and are removed after slot selection. A slot miss occurs when a validator does not create a new block or created a malicious block when selected. A validator that misses all of their slots in an epoch will be refunded their stake.
+Slots are allocated pro rata with a validator's stake every epoch and are removed after slot selection.
+
+A slot miss occurs when a validator does not create a new block or created a malicious block when selected.
+
+A validator that misses all of their slots in an epoch will be refunded their stake.
 
 Slot selection determines the validator for the next block at any time:-
 - Get validator addresses with slot allocations in the nova account storage.
