@@ -194,7 +194,7 @@ The reward for creating a new block is 1 `Astre`.
 
 Solar pricing mechanism:-
 - The solar price is fixed for every block.
-- The solar price varies by 1 `Quark`.
+- The solar price varies by 1 `quark`.
 - The solar price increases when more than 75%, and decreases when less than 25%, of the previous solar limit was used.
 - The base solar price is set at 1 `quark`.
 
