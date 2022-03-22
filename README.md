@@ -11,7 +11,7 @@ We built this project as a blockchain for the benefit of achieving trustless con
 
 The blockchain primarily works by keeping track of all the accounts and details such as the balance, number of transactions and storage.
 
-Astreuos aims to be a competitive and viable layer1 platform for advanced web3 services by offering a combined value, storage and compute on a single blockchain priced in a single currency.
+Astreuos aims to be a competitive and viable platform for powerful web3 services by offering a combined value, storage and compute on a single blockchain priced in a single currency.
 
 ## Contents
 
@@ -161,8 +161,6 @@ The solar limit of a block is 1,000,000,000.
 | Account Creation | 1,000,000 |
 
 ### Nova Consensus
-
-
 
 `Nova` is the consensus protocol for creating new blocks and validating the blockchain.
 
