@@ -5,9 +5,9 @@
 
 ## Introduction
 
-A new accounts based blockchain with storage and compute protocols is presented in this paper. A motivation for such a blockchain is to build a better crypto experience with standards and price mechanisms. 
+A new accounts based blockchain with storage and compute protocols is presented in this paper. A motivation for such a blockchain is to build a better crypto experience with standards for building tokens, oracles, insurance, DAOs  and price mechanisms for currency stability. 
 
-We built this project as a blockchain for the benefit of achieving trustless consensus. Additional we benefit from the use of cryptography with permissionless access and great security for users. This empowers anyone in the world with uncensored access to use and benefit from the blockchain.
+As a blockchain, we benefit from trustless consensus and from the use of cryptography with permissionless access and great security for users. This empowers anyone in the world with uncensored access to use and benefit from the blockchain.
 
 The blockchain primarily works by keeping track of all the accounts and details such as the balance, number of transactions and storage.
 
@@ -21,7 +21,7 @@ Astreuos aims to be a competitive and viable platform for powerful web3 services
 2. Nova Consensus
 3. Vision
 4. Future
-5. Open
+5. Roadmap
 
 ### Accounts
 
