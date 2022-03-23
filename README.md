@@ -13,7 +13,7 @@ The blockchain primarily works by keeping track of all the accounts and details 
 
 Astreuos aims to be a competitive and viable platform for powerful web3 services by offering a combined value, storage and compute on a single blockchain priced in a single currency.
 
-Astreuos empowers web3 developers to create powerful applications and experiences that interface with node APIs for transactions, storage & compute; to host browser applications, static sites and media content on Nebula and create compute intensive applications using Reactor Private & Open Compute.
+Astreuos empowers web3 developers to create powerful applications and experiences that interface with node APIs for transactions, storage & compute; to host applications, static sites and media content on Nebula and create compute intensive applications using Reactor Private & Open Compute.
 
 ## Contents
 
@@ -21,8 +21,10 @@ Astreuos empowers web3 developers to create powerful applications and experience
 2. Blocks
 3. Transactions
 4. Nova Consensus
-5. Future
-6. Roadmap
+5. Fusion Upgrade
+6. Nebula Upgrade
+7. Reactor Upgrade
+8. Roadmap
 
 ### Accounts
 
@@ -193,12 +195,7 @@ Solar pricing mechanism:-
 - The solar price increases when more than 75%, and decreases when less than 25%, of the previous solar limit was used.
 - The base solar price is set at 1 `quark`.
 
-### Vision
-
-
-### Future
-
-#### V2: Fusion Upgrade
+### V2: Fusion Upgrade
 
 This upgrade will add an application platform called Fusion.
 
@@ -210,19 +207,14 @@ Helium is the Fusion package manager. Helium downloads your Fusion Application's
 
 New transaction types will be added for App Creation and App Calls.
 
-#### V2+: Standards Upgrade
+Standards to help builders create trusted Fusion Applications.
 
-This upgrade adds a series of standards to help builders create trusted Fusion Applications.
+- Tokens.
+- Oracles.
+- Governance.
+- Insurance.
 
-Fungible and Non-Fungible Token standards
-
-Oracle standards
-
-Governance standards
-
-Insurance standards
-
-#### V3: Nebula Upgrade
+### V3: Nebula Upgrade
 
 This upgrade will add a distributed file protocol called Nebula.
 
@@ -239,8 +231,8 @@ A Nebula Object is a data structure with two fields:
 
 A Link structure has three data fields:
 
-- Name — the name of the Link.
 - Hash — the hash of the linked Nebula Object.
+- Name — the name of the Link.
 - Size — the cumulative size of the link.
 
 The index route stores the index of the object hash and the storage provider's id.
@@ -270,19 +262,17 @@ The Retrieval Fees for 256KB is 1,600,000.
  | 1mo | 3,000,000|
  | 1yr | 36,400,000 |
 
-#### V4: Reactor Upgrade
+### V4: Reactor Upgrade
 
 This upgrade adds a distributed compute protocol called Reactor with proof of work staking.
 
 Reactor allows for Private & Open Compute.
 
-Open Compute run on functions stored on Nebula and can be called by anyone.
+Open Compute is calling Fusion Applications stored on Nebula and are callable by anyone on the blockchain.
 
-Private Compute are based off confidential computing to allow users to use private data and protect software ip on the protocol while allowing for open and restricted access to calls.
+Private Compute is confidential computing enabling users to use private data and protect software ip on the protocol while allowing for open or restricted access to app calls.
 
-*research in progress
-
-#### V5: Governance Upgrade
+### V5: Governance Upgrade
 - nova withdrawl contract
 - nova governance system
 
