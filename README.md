@@ -224,20 +224,22 @@ Insurance standards
 
 This upgrade will add a distributed file protocol called Nebula.
 
-Puslar network will also be upgraded with index and storage routes with complementary object message types for get and put.
+Puslar network will also be upgraded with index and storage routes with complementary Nebula Object message types for get and put.
 
-Nebula Objects are a clone of IPFS objects because of the benefit of having two files with different names and the same content with the same Nebula object representation and hence the same hash and reducing duplication.
+Nebula is a protocol for storing and retrieving Nebula Objects.
 
-Nebula is a protocol for storing and retrieving Nebula Objects. A Nebula Objects is a data structure with two fields:
+Nebula Objects are a clone of IPFS objects. The benefit from cloning is having two files with different names and the same content with the same Nebula object representation and hence the same hash, reducing duplication.
 
-Data — a blob of binary data of size < 256 KB.
-Links — A List of Links.
+A Nebula Object is a data structure with two fields:
+
+- Data — a blob of binary data of size < 256 KB.
+- Links — A List of Links.
 
 A Link structure has three data fields:
 
-Name — the name of the Link.
-Hash — the hash of the linked Nebula Object.
-Size — the cumulative size of the link.
+- Name — the name of the Link.
+- Hash — the hash of the linked Nebula Object.
+- Size — the cumulative size of the link.
 
 The index route stores the index of the object hash and the storage provider's id.
 
@@ -294,6 +296,5 @@ Private Computations are based off confidential computing to allow users to use 
 | [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Blockchain Node | ✅ |
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
-
 
 2022-03-23
