@@ -31,6 +31,8 @@ Astreuos empowers web3 developers to:
 
 ### Accounts
 
+An Astreuos Account is a makeup of an address and details associated to that account. Each account has a balance, a counter and storage.
+
 `Accounts State`
 
 ```
@@ -109,7 +111,7 @@ Astreuos empowers web3 developers to:
 
 ```
 
-An Astreuos Account is a makeup of an address and details associated to that account. Each account has a balance, a counter and storage.
+
 
 The account balance is in the native unit of value which is an `Astre` while the smallest unit of value is a `Quark`.
 
