@@ -38,25 +38,25 @@ An Astreuos Account is a makeup of an address and details associated to that acc
 ```
 
                                         + - - - - - - - - - - - +
-                                        |     Accounts Hash     |
+                                        |     accounts hash     |
                                         + - - - - - - - - - - - +
                                                     ^
                                 . - - - - - - - - - - - - - - - - - - - .
                                 ^                                       ^
                         + - - - - - - - - +                   + - - - - - - - - - +
-                        | Account 1 Hash  |                   |   Account 2 Hash  |
+                        | account 1 hash  |                   |   account 2 hash  |
                         + - - - - - - - - +                   + - - - - - - - - - +
                                 ^
                   . - - - - - - - - - - - - - .
                   ^                           ^
         + - - - - - - - - - +       + - - - - - - - - - +
-        |   Address Hash    |       |   Details Hash    |
+        |   address hash    |       |   details hash    |
         + - - - - - - - - - +       + - - - - - - - - - +
                                               ^
                   . - - - - - - - - - - - - - + - - - - - - - - - - - - - .
                   ^                           ^                           ^
           + - - - - - - - - +       + - - - - - - - - - +       + - - - - - - - - - +
-          |  Balance Hash   |       |   Counter Hash    |       |   Storage Hash    |
+          |  balance hash   |       |   counter hash    |       |   storage hash    |
           + - - - - - - - - +       + - - - - - - - - - +       + - - - - - - - - - +
 
 ```
@@ -217,11 +217,11 @@ New transaction types will be added for App Creation and App Calls.
 
 Standards to help developers create trusted Fusion Applications.
 
-- Fungible & Non Fungible Tokens.
+- Tokens
+        - Fungibility
+        - Exchange
 - Oracles.
 - Governance.
-- Token Custody.
-- Token Insurance.
 
 ### V3: Nebula Upgrade
 
