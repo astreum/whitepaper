@@ -202,23 +202,29 @@ New transaction types will be added for App Creation and App Calls.
 
 #### Syntax & Standard Library
 
-`Variables Operations`
+`Assigning Variables` - assigns variable with the two words on top of the stack
 ```
-LET: assign variable with value on top of the stack as the data; expects two words
+2 balance LET
+balance LET
+LET
 ```
 `Integer Operations`
 ```
-ADD: add the two value on top of the stack; expects two words
+ADD: adds the two words on top of the stack
+
+2 2 ADD
+2 ADD
+ADD
 ```
 `Account Operations`
 ```
-ACCOUNT_ADDRESS: get current account address; expects one word
+ACCOUNT_ADDRESS: get current account address
 
-ACCOUNT_BALANCE: get current account balance; expects one word
+ACCOUNT_BALANCE: get current account balance
 
 STORE: saves into the current account storage; expects two words
 
-FETCH: loads from the current account storage; expects two words
+FETCH: loads from the current account storage; expects one word
 ```
 
 Standards to help developers create trusted Fusion Applications.
@@ -250,7 +256,7 @@ Puslar network will also be upgraded with index and storage routes with compleme
 
 The index route stores the index of the object hash and the storage provider's id.
 
-The route is updated every five minutes to remove deleted objects and redistribute indexes adding new object indices.
+The route is updated every five minutes to remove deleted objects and redistribute indexes adding new objects.
 
 An indexer must prove they are storing their part of the index.
 
