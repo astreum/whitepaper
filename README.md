@@ -217,6 +217,7 @@ New transaction types will be added for App Creation and App Calls.
 - Modules
 - Functions
 - Conditionals: if, while
+- Variables
 - Operators
 
 #### Standard Library
@@ -237,6 +238,8 @@ type Language { Rust, Erlang, Javascript, Python }
 
 type Coder { language: Language }
 
+let r3ystar = Coder { language: Language::Rust };
+
 ```
 
 Standards to help developers create trusted Fusion Applications.
@@ -249,13 +252,9 @@ Standards to help developers create trusted Fusion Applications.
 
 ### V3: Nebula Upgrade
 
-This upgrade will add a distributed file protocol called Nebula.
-
-Puslar network will also be upgraded with index and storage routes with complementary Nebula Object message types for get and put.
-
 Nebula is a protocol for storing and retrieving Nebula Objects.
 
-Nebula Objects are a clone of IPFS objects. The benefit from cloning is having two files with different names and the same content with the same Nebula object representation and hence the same hash, reducing duplication.
+Nebula Objects are a clone of IPFS objects. The benefits of using IPFS Object format is having two files with different names and the same content with the same Nebula object representation and hence the same hash, preventing unnecessary duplication of data.
 
 A Nebula Object is a data structure with two fields:
 
@@ -267,6 +266,8 @@ A Link structure has three data fields:
 - Hash — the hash of the linked Nebula Object.
 - Name — the name of the Link.
 - Size — the cumulative size of the link.
+
+Puslar network will also be upgraded with index and storage routes with complementary Nebula Object message types for get and put.
 
 The index route stores the index of the object hash and the storage provider's id.
 
@@ -297,9 +298,7 @@ Storage Fees for 256KB.
 
 ### V4: Reactor Upgrade
 
-This upgrade adds a distributed compute protocol called Reactor with proof of work staking.
-
-Reactor allows for Private & Open Compute.
+Reactor is a protocol for distributed private and open computation with proof of work staking.
 
 Open Compute is calling Fusion Applications stored on Nebula and are callable by anyone on the blockchain.
 
@@ -322,4 +321,4 @@ Private Compute is confidential computing enabling users to use private data and
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-03-26
+2022-03-27
