@@ -66,32 +66,31 @@ An Astreuos Account is a makeup of an address and details associated to that acc
 
 ```
 
-                                                + - - - - - - - +
-                                                |  Storage Hash |
-                                                + - - - - - - - +
+                                                                        + - - - - - - - +
+                                                                        |  Storage Hash |
+                                                                        + - - - - - - - +
+                                                                                ^
+                                                        . - - - - - - - - - + - - - - - - - - - .
+                                                        ^                                       ^
+                                                + - - - - - - - - - - - +               + - - - - - - - - - - - +
+                                                |      Store 1 Hash     |               |      Store 2 Hash     |
+                                                + - - - - - - - - - - - +               + - - - - - - - - - - - +
                                                         ^
-                                    . - - - - - - - - - + - - - - - - - - - .
-                                    ^                                       ^
-                        + - - - - - - - - - - - +               + - - - - - - - - - - - +
-                        |      Store 1 Hash     |               |      Store 2 Hash     |
-                        + - - - - - - - - - - - +               + - - - - - - - - - - - +
-                                    ^
-                  . - - - - - - - - + - - - - - - - - - .
-                  ^                                     ^
-        + - - - - - - - - - +               + - - - - - - - - - - - +
-        |   Store ID Hash   |               |   Store Records Hash  |
-        + - - - - - - - - - +               + - - - - - - - - - - - +
-                                                        ^
-                                        . - - - - - - - + - - - - - - - .
-                                        ^                               ^
-                            + - - - - - - - - - - - +       + - - - - - - - - - - - +
-                            |     Record 1 Hash     |       |     Record 2 Hash     |
-                            + - - - - - - - - - - - +       + - - - - - - - - - - - +
+                                        . - - - - - - - - + - - - - - - - - - .
+                                        ^                                     ^
+                                + - - - - - - - - - +               + - - - - - - - - - - - +
+                                |   Record 1 Hash   |               |     Record 2 Hash     |
+                                + - - - - - - - - - +               + - - - - - - - - - - - +
                                         ^
                         . - - - - - - - + - - - - - - - .
                         ^                               ^
                 + - - - - - - - +               + - - - - - - - +
                 |  Key 1 Hash   |               |  Value 1 Hash |
+                + - - - - - - - +               + - - - - - - - +
+                        ^                               ^
+                        |                               |
+                + - - - - - - - +               + - - - - - - - +
+                |  256bit Key   |               |  Value Bytes  |
                 + - - - - - - - +               + - - - - - - - +
 
 ```
@@ -212,35 +211,15 @@ Helium is the Fusion package manager. Helium downloads your Fusion Application's
 
 New transaction types will be added for App Creation and App Calls.
 
-#### Syntax
+#### Syntax & Standard Library
 - Types: boolean, integers, floating point, string, list, records, custom
 - Modules
 - Functions
 - Conditionals: if, while
 - Variables
 - Operators
-
-#### Standard Library
 - Math: modulo, modulars
 - Crypto: hash, asymmetric verify, bulletproofs verify
-- Integer
-- Floating Point
-- String
-- List
-- Records
-- Custom Types
-
-`Custom Types`
-
-```
-
-type Language { Rust, Erlang, Javascript, Python }
-
-type Coder { language: Language }
-
-let r3ystar = Coder { language: Language::Rust };
-
-```
 
 Standards to help developers create trusted Fusion Applications.
 
