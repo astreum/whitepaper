@@ -5,7 +5,7 @@
 
 ## Introduction
 
-An accounts based blockchain with storage and compute protocols is presented in this paper. A motivation for such a blockchain is to build a better crypto experience with standards for building tokens, oracles, insurance, DAOs  and price mechanisms for currency stability. 
+An accounts based blockchain with storage and compute protocols is presented in this paper. A motivation for such a blockchain is to build a better crypto experience with standards for building trusted smart contracts and price mechanisms for currency stability. 
 
 As a blockchain, we benefit from trustless consensus and from the use of cryptography with permissionless access and great security for users. This empowers anyone in the world with uncensored access and benefit from the blockchain.
 
@@ -14,8 +14,8 @@ The blockchain primarily works by keeping track of all the accounts and details 
 Astreuos aims to be a competitive and viable platform for powerful web3 services by offering a combined value, storage and compute on a single blockchain priced in a single currency.
 
 Astreuos empowers web3 developers to:
-- create powerful applications and experiences that interface with node APIs for transactions, storage & compute
-- host applications, static sites and media content on Nebula
+- create powerful experiences that interface with blockchain node apis for transactions, storage and compute.
+- host applications, static sites and media content on Nebula.
 - perform compute intensive applications using Reactor Private & Open Compute.
 
 ## Contents
@@ -213,27 +213,39 @@ Helium is the Fusion package manager. Helium downloads your Fusion Application's
 New transaction types will be added for App Creation and App Calls.
 
 #### Syntax
-- Types; boolean, integers, floating point, string, list, records
+- Types: boolean, integers, floating point, string, list, records, custom
 - Modules
 - Functions
-- Conditionals; if and loop
+- Conditionals: if, while
 - Operators
 
 #### Standard Library
-- Math; Modulo, Modulars
-- Crypto; Hashing, Asymmetric & Symmetric Cryptography, Bulletproofs
+- Math: modulo, modulars
+- Crypto: hash, asymmetric verify, bulletproofs verify
 - Integer
 - Floating Point
 - String
 - List
 - Records
+- Custom Types
+
+`Custom Types`
+
+```
+
+type Language { Rust, Erlang, Javascript, Python }
+
+type Coder { language: Language }
+
+```
 
 Standards to help developers create trusted Fusion Applications.
 
-- Tokens.
+- Fungible & Non Fungible Tokens.
 - Oracles.
 - Governance.
-- Insurance.
+- Token Custody.
+- Token Insurance.
 
 ### V3: Nebula Upgrade
 
@@ -295,7 +307,7 @@ Private Compute is confidential computing enabling users to use private data and
 
 ### V5: Governance Upgrade
 - nova withdrawl contract
-- nova governance system
+- improvement protocol system
 
 ### Roadmap
 
