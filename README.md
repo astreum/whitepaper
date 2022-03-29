@@ -200,27 +200,6 @@ Helium is the Fusion package manager. Helium downloads your Fusion Application's
 
 New transaction types will be added for App Creation and App Calls.
 
-#### Syntax & Standard Library
-
-`Variables Operations`
-```
-2 balance LET
-```
-`Integer Operations`
-```
-2 2 ADD
-```
-`Account Operations`
-```
-ACCOUNT_ADDRESS: get current account address
-
-ACCOUNT_BALANCE: get current account balance
-
-value key STORE: saves into the current account storage
-
-key FETCH: loads from the current account storage
-```
-
 Standards to help developers create trusted Fusion Applications.
 
 - Tokens
@@ -299,4 +278,4 @@ Private Compute is confidential computing enabling users to use private data and
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-03-28
+2022-03-29
