@@ -224,6 +224,7 @@ All FVM operations cost 1 Solar apart from Storage Put and Get.
 Costs for Storage operations:
 
 | Code | Cost |
+|---|---|
 | STG_PUT | 8,000 |
 | STG_GET | 160 |
 
