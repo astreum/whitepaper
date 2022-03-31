@@ -209,24 +209,15 @@ Helium is the Fusion package manager.
 New transaction types:
 
 - App Creation
-- App Calls.
+- App Calls
 
-All FVM operations cost 1 Solar apart from Storage Put and Get.
-
-Costs for Storage operations:
-
-| Code | Cost |
-|---|---|
-| STG_PUT | 8,000 |
-| STG_GET | 160 |
+A Storage Put costs 8,000 Solar, Storage Get costs 160 Solar and all other Stack Operations cost 1 Solar.
 
 Standards to help developers create trusted Fusion Applications.
 
 - Tokens
-        - Fungibility
-        - Exchange
-- Oracles.
-- Governance.
+- Oracles
+- Governance
 
 ### V3: Nebula Upgrade
 
@@ -238,7 +229,16 @@ A Nebula Object is a data structure with three fields:
 - Data: a blob of binary data of size < 32KB.
 - Size: the cumulative size of the object.
 
-Puslar network will also be upgraded with index and storage routes with complementary Nebula Object message types for get and put.
+Puslar Network Upgrade:
+
+- indexing route
+- message types for get and put on nebula objects.
+
+`Object Put Flow`
+
+- index file as storage provider
+- send put contract to the blockchain nebula account
+- storage provider gets file from user and starts proofing storage
 
 `Object Get Flow`
 
