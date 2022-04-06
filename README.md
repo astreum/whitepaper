@@ -9,13 +9,13 @@ As a blockchain, we benefit from trustless consensus and from the use of cryptog
 
 The blockchain primarily works by keeping track of all the accounts and details such as the balance, number of transactions and storage.
 
-Astreuos aims to be a competitive and viable platform for powerful web3 services by offering a combined value, storage and compute on a single blockchain priced in a single currency.
+Astreuos aims to be a competitive and viable platform for powerful Web 3.0 services by offering a combined value, storage and compute on a single blockchain priced in a single currency.
 
-Astreuos empowers web3 developers to:
+Astreuos empowers Web 3.0 developers to:
 
-- create powerful experiences that interface with blockchain node apis for transactions, storage and compute.
-- host applications, static sites and media content on Nebula.
-- perform compute intensive applications using Reactor Private and Open Compute.
+- create powerful experiences that interface with astreuos nodes for transactions, storage and compute.
+- host applications, static sites and media content on the `Nebula` protocol.
+- perform compute workflows on the `Reactor` protocol.
 
 ## Contents
 
@@ -65,10 +65,10 @@ An Astreuos Account is a makeup of an address and details associated to that acc
 
 ```
 
-                                                + - - - - - - - +
-                                                |  storage hash |
-                                                + - - - - - - - +
-                                                        ^
+                                                  + - - - - - - - +
+                                                  |  storage hash |
+                                                  + - - - - - - - +
+                                                          ^
                                         . - - - - - - - - + - - - - - - - - - .
                                         ^                                     ^
                                 + - - - - - - - - - +               + - - - - - - - - - - - +
@@ -294,11 +294,13 @@ The Storage Fees for 32KB/mo is 200,000 Solar.
 
 ### V4: Reactor Upgrade
 
-Reactor is a protocol for distributed private and open computation with proof of work staking.
+Reactor is a protocol for distributed serverless computation with proof of work staking.
 
-Open Compute is calling Fusion Applications stored on Nebula and are callable by anyone on the blockchain.
+Reactor computations can be Open or Private.
 
-Private Compute is confidential computing enabling users to use private data and protect software ip on the protocol while allowing for open or restricted access to app calls.
+Open Computation works by processing Fusion Applications stored on Nebula and are callable by anyone on the blockchain.
+
+Private Compute is confidential computing enabling users to use private data and protect software intellectual property on the protocol while allowing for restricted access to calls.
 
 ### V5: Governance Upgrade
 
@@ -317,4 +319,4 @@ Private Compute is confidential computing enabling users to use private data and
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-04-05
+2022-04-06
