@@ -332,7 +332,7 @@ Astreuos for Developers.
 
 | Projects | Description | Status |
 |---|---|---|
-| [Astro Notation](https://github.com/stelar-software/rust-astro-notation) | Encoding Format | ✅ |
+| [Astro Format](https://github.com/stelar-software/rust-astro-format) | Encoding Format | ✅ |
 | [NeutronDB](https://github.com/stelar-software/rust-neutrondb) | Key Value Store | ✅ |
 | [Opis](https://github.com/stelar-software/rust-opis) | Integer Arithmetic | ✅ |
 | [Fides](https://github.com/stelar-software/rust-fides) | Hashing & Asymmetric/Symmetric Cryptography | ✅ |
