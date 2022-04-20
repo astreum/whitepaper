@@ -7,13 +7,15 @@ A Next Generation Blockchain for Apps, Storage and Compute that's Distributed, S
 
 Astreuos is an accounts based blockchain which primarily works by keeping track of all the accounts and their details such as the balance, number of transactions and storage.
 
-Astreuos includes storage and compute protocols which are essential to the digital services.
+Astreuos includes storage and compute protocols.
 
 The motivation for building Astreuos is to build a better blockchain for creating trusted smart contracts and price mechanisms for currency stability.
 
 Astreuos features trust-less consensus, permission-less access and great security for users.
 
-These features empower anyone in the world with uncensored access and benefit from the platform.
+These features provide everyone in the world with uncensored access of financial and digital empowerment from the platform.
+
+digital empowerment
 
 Astreuos aims to be a competitive platform for digital services by:
 
@@ -192,9 +194,9 @@ Slot selection determines the validator for the next block at any time:
 - If no slot miss, the latest block hash is used as the seed in the weighted random address selector.
 - If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is used as the seed in the weighted random address selector.
 
-Transactions are ordered by the validator.
+Transactions are ordered by the ascending value and the ascending xor from the previous transaction hash.
 
-The creator of a new block is payed a fee 1,000,000,000 Solar at the current Solar Price.
+The creator of a new block is payed a fee 1,000,000,000 Solar at the current block's solar price.
 
 ### Fusion Contracts
 
