@@ -38,7 +38,7 @@ An Astreuos Account is a makeup of an address and details associated to that acc
 
 `Accounts State`
 
-```
+```text
 
                                         + - - - - - - - - - - - +
                                         |     accounts hash     |
@@ -67,7 +67,7 @@ An Astreuos Account is a makeup of an address and details associated to that acc
 `Account Storage`
 
 
-```
+```text
 
                                                   + - - - - - - - +
                                                   |  storage hash |
@@ -89,7 +89,7 @@ An Astreuos Account is a makeup of an address and details associated to that acc
 
 `Accounts State Transition`
 
-```
+```text
 
             Block #1                                Block #2
         + - - - - - - - +                       + - - - - - - - +
@@ -106,15 +106,15 @@ The account balance is in the native unit of value which is a `Quark`.
 
 Value magnitudes are:
 
-- 10^24: YottaQuark (YQ)
-- 10^21: ZettaQuark (ZQ)
-- 10^18: ExaQuark (EQ)
-- 10^15: PetaQuark (PQ)
-- 10^12: TeraQuark (TQ)
-- 10^9: GigaQuark (GQ)
-- 10^6: MegaQuark (MQ)
-- 10^3: KiloQuark (KQ)
-- 10^0: Quark (Q)
+- 10^24 `YottaQuark` `[YQ]`
+- 10^21 `ZettaQuark` `[ZQ]`
+- 10^18 `ExaQuark` `[EQ]`
+- 10^15 `PetaQuark` `[PQ]`
+- 10^12 `TeraQuark` `[TQ]`
+- 10^9  `GigaQuark` `[GQ]`
+- 10^6  `MegaQuark` `[MQ]`
+- 10^3  `KiloQuark` `[KQ]`
+- 10^0  `Quark` `[Q]`
 
 ### Blocks
 
@@ -155,9 +155,9 @@ The transaction body has:
 
 `Solar` is the currency for work done on the blockchain, in contrast with `Quark` with is the currency for value.
 
-The solar limit of a block is set at 1,000,000,000,000.
+The solar limit of a block is set at 10^12 `Solar`.
 
-Transaction Processing costs 1,000,000 `Solar`.
+Transaction Processing costs 10^6 `Solar`.
 
 Solar pricing mechanism:
 
@@ -189,7 +189,7 @@ Slot selection determines the validator for the next block at any time:
 
 Transactions are ordered by their hash.
 
-The creator of a new block is payed a fee 1,000,000,000,000 `Solar` at the current block's solar price.
+The creator of a new block is payed a fee of 10^12 `Solar` at the current block's solar price.
 
 ### Fusion Contracts
 
@@ -241,29 +241,27 @@ Puslar Network Upgrade:
         Client                                          Nebula
         + - - - +                                       
         |       |             object hash               + - - - - - - - +
-        |       | - - - - - - - - - - - - - - - - - - > |    Nearest    |
-        |       | < - - - - - - - - - - - - - - - - - - |     Node      |
-        |       |       Nearer Node Pubkey & Adr        + - - - - - - - +
+        |       | - - - - - - - - - - - - - - - - - - > |    nearest    |
+        |       | < - - - - - - - - - - - - - - - - - - |     node      |
+        |       |       nearer node or object           + - - - - - - - +
         |       |
         |       |
         |       |             object hash               + - - - - - - - +
-        |       | - - - - - - - - - - - - - - - - - - > |    Nearer     |
-        |       | < - - - - - - - - - - - - - - - - - - |     Node      |
-        |       |       Index Node Pubkey & Adr         + - - - - - - - +
-        |       |                  or
-        |       |           Object if cached
+        |       | - - - - - - - - - - - - - - - - - - > |    nearer     |
+        |       | < - - - - - - - - - - - - - - - - - - |     node      |
+        |       |         index node or object          + - - - - - - - +
+        |       |
+        |       |
+        |       |               object hash             + - - - - - - - +
+        |       | - - - - - - - - - - - - - - - - - - > |    index      |
+        |       | < - - - - - - - - - - - - - - - - - - |     node      |
+        |       |        storage node or object         + - - - - - - - +
         |       |
         |       |
         |       |             object hash               + - - - - - - - +
-        |       | - - - - - - - - - - - - - - - - - - > |    Index      |
-        |       | < - - - - - - - - - - - - - - - - - - |     Node      |
-        |       |      Storage Node Pubkey & Adr        + - - - - - - - +
-        |       |
-        |       |
-        |       |             object hash               + - - - - - - - +
-        |       | - - - - - - - - - - - - - - - - - - > |    Storage    |
-        |       | < - - - - - - - - - - - - - - - - - - |     Node      |
-        |       |               Object                  + - - - - - - - +
+        |       | - - - - - - - - - - - - - - - - - - > |    storage    |
+        |       | < - - - - - - - - - - - - - - - - - - |     node      |
+        |       |               object                  + - - - - - - - +
         |       |
         + - - - +
 
