@@ -18,7 +18,7 @@ The motivation for building Astreuos is to build a better blockchain for creatin
 
 Blockchains benefit from trust-less consensus, permission-less access and great security for users.
 
-Astreuos improves on blockchain by intergrating distributed layers for storage and compute.
+The Astreuos blockchain intergrates distributed layers for storage and compute.
 
 Astreuos aims to be a competitive platform for digital services by:
 
@@ -319,7 +319,7 @@ Private Reaction is confidential computing enabling users to use private data an
 
 ## Roadmap
 
-| Project | Description | Status |
+| Milestones | ETA |
 |---|---|
 | Genesis Testing | Q2 22 |
 | Genesis Launch | Q2 22 |
