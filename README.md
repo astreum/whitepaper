@@ -3,6 +3,13 @@
 
 A Next Generation Blockchain for Apps, Storage and Compute that's Distributed, Secure and Sustainable.
 
+## Contents
+
+- Introduction
+- Components
+- Applications
+- Roadmap
+
 ## Introduction
 
 Astreuos is an accounts based blockchain which primarily works by keeping track of all the accounts and their details such as the balance, number of transactions and storage.
@@ -11,7 +18,7 @@ The motivation for building Astreuos is to build a better blockchain for creatin
 
 Blockchains benefit from trust-less consensus, permission-less access and great security for users.
 
-Astreuos improves on blockchain by intergrating distributed layers for storage and compute .
+Astreuos improves on blockchain by intergrating distributed layers for storage and compute.
 
 Astreuos aims to be a competitive platform for digital services by:
 
@@ -19,22 +26,20 @@ Astreuos aims to be a competitive platform for digital services by:
 - pricing services in a dynamic currency
 - implementing a pricing mechanism that promotes currency stability
 
-## Contents
+## Components
 
-1. Accounts
-2. Blocks
-3. Transactions
-4. Solar
-5. Nova Consensus
-6. Fusion Applications
-7. Nebula Storage
-8. Reactor Compute
-9. Application
-10. Components
+### Libraries
+
+- [Astro Format](https://github.com/stelar-labs/astro-format-rs) - Data Encoding Format
+- [NeutronDB](https://github.com/stelar-labs/neutrondb-rs) - Key Value Store
+- [Opis](https://github.com/stelar-labs/opis-rs) - Integer Arithmetic
+- [Fides](https://github.com/stelar-labs/fides-rs) - Cryptography
+- [Pulsar Network](https://github.com/stelar-labs/pulsar-network-rs) - Messaging
+- [Rust Astreuos](https://github.com/astreuos/node-rs) - Official Node
 
 ### Accounts
 
-An Astreuos Account is a makeup of an address and details associated to that account. Each account has a balance, a counter and storage.
+An Astreuos Account is a data structure of an address and details associated to that account. Each account has a balance, a counter and storage.
 
 `Accounts State`
 
@@ -65,7 +70,6 @@ An Astreuos Account is a makeup of an address and details associated to that acc
 ```
 
 `Account Storage`
-
 
 ```text
 
@@ -191,11 +195,13 @@ Transactions are ordered by their hash.
 
 The creator of a new block is payed a fee of 10^12 `Solar` at the current block's solar price.
 
-### Fusion Applications
+### Fusion
 
-Fusion is the applications platform on the Astreuos Blockchain.
+Fusion is the applications platform running on the Astreuos Blockchain.
 
-Contracts are applications that run through Transaction calls.
+Contracts are applications that run through Transaction Calls on-chain.
+
+Reactions are applications that run through Computation Contracts off-chain.
 
 The Fusion Language is a dialect of the Lisp programming language for developing Fusion Applications.
 
@@ -208,16 +214,8 @@ Helium is the Fusion code manager.
 
 New transaction types:
 
-- App Creation
-- App Calls
-
-A Storage Put costs 100 `Solar`, Storage Get costs 1 `Solar`.
-
-Standards to help developers create trusted Fusion Contracts.
-
-- Tokens
-- Oracles
-- Governance
+- app creation
+- app calls
 
 ### Nebula Storage
 
@@ -231,8 +229,8 @@ A Nebula Object is a data structure with three fields:
 
 Puslar Network Upgrade:
 
-- Nebula Route
-- Message Kinds for get and put on nebula objects
+- nebula route
+- message contexts for get and put
 
 `Object Get Flow`
 
@@ -287,7 +285,7 @@ The Retrieval Fees for 32KB is 1,000 Solar.
 
 The Storage Fees for 32KB/mo is 2,000 Solar.
 
-### Reactor Compute Layer
+### Reactor
 
 Reactor is a protocol for distributed serverless computation with proof of work staking.
 
@@ -299,35 +297,37 @@ Open Reactions work by processing apps stored on Nebula and are callable by anyo
 
 Private Reaction is confidential computing enabling users to use private data and protect software intellectual property on the protocol while allowing for restricted access to calls.
 
-### Application
+## Applications
 
-#### Global Payments
+### Global Payments
 
-#### Local Exchanges
+### Local Exchanges
 
-#### Smart Contracts
+### Smart Contracts
 
-#### User Powered
+### User Powered
 
-#### Transparency
+### Transparency
 
-#### Self Hosting
+### Content Addressing
 
-#### Serverless
+### Self Hosting
 
-#### Indexing
+### Serverless
 
-### Components
+### Indexing
+
+## Roadmap
 
 | Project | Description | Status |
-|---|---|---|
-| [Astro Format](https://github.com/stelar-labs/astro-format-rs) | Encoding Format | ✅ |
-| [NeutronDB](https://github.com/stelar-labs/neutrondb-rs) | Key Value Store | ✅ |
-| [Opis](https://github.com/stelar-labs/opis-rs) | Integer Arithmetic | ✅ |
-| [Fides](https://github.com/stelar-labs/fides-rs) | Cryptography | ✅ |
-| [Pulsar Network](https://github.com/stelar-labs/pulsar-network-rs) | Messaging | ✅ |
-| [Rust Astreuos](https://github.com/astreuos/node-rs) | Official Node | ✅ |
-| V1 Testnet Launch | Nova Testing | Q2 2022 |
-| V1 Mainnet Launch | Nova Launch | Q2 2022 |
+|---|---|
+| Genesis Testing | Q2 22 |
+| Genesis Launch | Q2 22 |
+| Fusion Testing | Q3 22 |
+| Fusion Launch | Q4 22 |
+| Nebula Testing | Q1 23 |
+| Nebula Launch | Q2 23 |
+| Reactor Testing | Q3 23 |
+| Reactor Launch | Q4 23 |
 
-2022-05-06
+2022-05-08
