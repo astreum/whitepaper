@@ -1,24 +1,40 @@
 
-# Astreuos: A Next Generation Blockchain for Apps, Storage and Compute that's Distributed, Secure and Sustainable
+# Astreuos: A Next Generation Blockchain for Apps, Storage and Compute
 
 Roy Okello
+
 royokello@protonmail.com
 
 ## Introduction
 
-Astreuos is an accounts based blockchain which primarily works by keeping track of all the accounts and their details such as the balance, number of transactions and storage.
+Bitcoin is the first decentralized blockchain which was pseudonymously created by Satoshi Nakamoto.
 
-The motivation for building Astreuos is to build a better blockchain for creating trusted smart contracts and price mechanisms for currency stability.
+It was created as a peer-to-peer electronic cash system built on cryptographic functions.
 
-Blockchains benefit from trust-less consensus, permission-less access and great security for users.
+Bitcoin introduced a privacy model for financial transactions, blockchain proof-of-work mechanism and a node incentive model for decentralized systems.
 
-The Astreuos blockchain intergrates distributed layers for storage and compute.
+This allowed for decentralized and secure electronic funds transfers that is permissionless and trustless. 
 
-Astreuos aims to be a competitive platform for digital services by:
+Etheruem, a next generation smart contract and decentralized application platform, was introduced in 2014 by Vitalik Buterin.
 
-- offering native value, storage and compute on the blockchain
-- pricing services in a dynamic currency
-- implementing a pricing mechanism that promotes currency stability
+Etheruem introduces a new state model and turing complete scripting capability to transactions.
+
+Etheruem's scripting capabilities allowed for the creation of decentralized applications that are trustless.
+
+Astreuos is a next generation blockchain for apps, storage and compute.
+
+- apps: decentralized applications
+- storage: distributed storage
+- compute: distributed compute
+
+Astreuos consensus protocol, Nova Protocol, is Proof of Stake for security and sustainability.
+
+Astreuos primarily works by keeping track of all the accounts and their details such as the balance, code, number of transactions and storage that change with every transaction.
+
+Users are able to :-
+- transfer value & validation
+- storage query & supply
+- compute queries & supply
 
 ## Components
 
@@ -261,25 +277,19 @@ Puslar Network Upgrade:
 
 ```
 
-The index route stores the index of the object hash and the storage provider's id.
+Nodes connected to the Nebula route store the distributed index of the object hashes and their storage provider's id.
 
-The route is updated every five minutes to remove deleted objects and redistribute indexes adding new objects.
+Every index is updated every five minutes to remove deleted objects.
 
 An indexer must prove they are storing their part of the index.
 
-A node can use the returned id to query the storage route for the storage provider to retrieve the object.
-
 The storage provider is paid storage fees for the storage period and retrival fees for serving an object.
 
-A stoage provider must prove they are storing their assigned objects.
+A stoage provider must prove they are storing their objects.
 
-Indexers are incentivized to cache objects by earning retrival fees for returning objects instead of storage provider's id.
+Indexers are incentivized to cache objects by earning retrival fees for returning cached objects.
 
-An indexer also earns a commission for facilitating a put contract and indexing the underlying data.
-
-The Retrieval Fees for 32KB is 1,000 Solar.
-
-The Storage Fees for 32KB/mo is 2,000 Solar.
+An indexer earns a commission for facilitating a put contract and indexing the underlying data.
 
 ### Reactor
 
@@ -291,7 +301,7 @@ Reactions can be Open or Private.
 
 Open Reactions work by processing apps stored on Nebula and are callable by anyone on the blockchain.
 
-Private Reaction is confidential computing enabling users to use private data and protect software intellectual property on the protocol while allowing for restricted access to calls.
+Private Reactions is confidential computing enabling users to use private data and protect software intellectual property on the protocol while allowing for restricted access to calls.
 
 ## Applications
 
@@ -311,8 +321,6 @@ Private Reaction is confidential computing enabling users to use private data an
 
 ### Serverless
 
-### Indexing
-
 ## References
 
 1. Bitcoin: A Peer-to-Peer Electronic Cash System - Satoshi Nakamoto
@@ -322,4 +330,4 @@ Private Reaction is confidential computing enabling users to use private data an
 5. Recursive Functions of Symbolic Expressions and Their Computation by Machine - John McCarthy
 6. High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
 
-2022-05-11
+2022-05-25
