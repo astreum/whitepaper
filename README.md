@@ -1,5 +1,5 @@
 
-# Astreuos: A Next Generation Blockchain for Apps, Storage and Compute
+# Astreum: A Next Generation Blockchain for Apps, Storage and Compute
 
 Roy Okello
 
@@ -15,25 +15,23 @@ Bitcoin introduced a privacy model for financial transactions, blockchain proof-
 
 This allowed for decentralized and secure electronic funds transfers that is permissionless and trustless. 
 
-Etheruem, a next generation smart contract and decentralized application platform, was introduced in 2014 by Vitalik Buterin.
+Ethereum, a next generation smart contract and decentralized application platform, was introduced in 2014 by Vitalik Buterin.
 
-Etheruem introduces a new state model and turing complete scripting capability to transactions.
+Ethereum introduces a new state model and turing complete scripting capability enabling the creation of decentralized applications.
 
-Etheruem's scripting capabilities allowed for the creation of decentralized applications that are trustless.
-
-Astreuos is a next generation blockchain for apps, storage and compute.
+Astreum is a next generation blockchain for apps, storage and compute.
 
 - apps: decentralized applications
 - storage: distributed storage
 - compute: distributed compute
 
-Astreuos introduces a model for pricing, verification and payment for storage and compute in a decentralized system.
+Astreum introduces a model for pricing, verification and payment for storage and compute in a decentralized system.
 
-Astreuos primarily works by keeping track of all the accounts and their details such as the balance, code, number of transactions and storage in a block.
+Astreum primarily works by keeping track of all the accounts and their details such as the balance, code, number of transactions and storage in a block.
 
-Validators create new blocks by applying transactions to the previous state of accounts and add to the blockchain.
+Validators create new blocks by applying transactions to the previous state of accounts and extend the blockchain.
 
-Off Chain nodes negotiate the price for storage and compute services while settle payments On Chain.
+Nodes negotiate the price for storage and compute services and settle payments on the blockchain.
 
 ## Components
 
@@ -44,11 +42,11 @@ Off Chain nodes negotiate the price for storage and compute services while settl
 - [Opis](https://github.com/stelar-labs/opis-rs) - Integer Arithmetic
 - [Fides](https://github.com/stelar-labs/fides-rs) - Cryptography
 - [Pulsar Network](https://github.com/stelar-labs/pulsar-network-rs) - Messaging
-- [Rust Astreuos](https://github.com/astreuos/node-rs) - Official Node
+- [Rust Astreum](https://github.com/Astreum/node-rs) - Official Node
 
 ### Accounts
 
-An Astreuos Account is a data structure of an address and details associated to that account. Each account has a balance, a counter and storage.
+An Astreum Account is a data structure of an address and details associated to that account. Each account has a balance, a counter and storage.
 
 `Accounts State`
 
@@ -115,19 +113,19 @@ An Astreuos Account is a data structure of an address and details associated to 
 
 ```
 
-The account balance is in the native unit of value which is a `Quark`.
+The account balance is in the native unit of value which is an `Astre`.
 
 Value magnitudes are:
 
-- 10^24 `YottaQuark` `[YQ]`
-- 10^21 `ZettaQuark` `[ZQ]`
-- 10^18 `ExaQuark` `[EQ]`
-- 10^15 `PetaQuark` `[PQ]`
-- 10^12 `TeraQuark` `[TQ]`
-- 10^9  `GigaQuark` `[GQ]`
-- 10^6  `MegaQuark` `[MQ]`
-- 10^3  `KiloQuark` `[KQ]`
-- 10^0  `Quark` `[Q]`
+- 10^24 `YottaAstre` `[YA]`
+- 10^21 `ZettaAstre` `[ZA]`
+- 10^18 `ExaAstre` `[EA]`
+- 10^15 `PetaAstre` `[PA]`
+- 10^12 `TeraAstre` `[TA]`
+- 10^9  `GigaAstre` `[GA]`
+- 10^6  `MegaAstre` `[MA]`
+- 10^3  `KiloAstre` `[KA]`
+- 10^0  `Astre` `[A]`
 
 ### Blocks
 
@@ -146,7 +144,7 @@ The block body has:
 9. transactions hash
 10. validator
 
-The Receipt is the result from the application of a transaction to the Astreuos Account State.
+The Receipt is the result from the application of a transaction to the Astreum Account State.
 
 A receipt consists of the solar used and status of the transaction application procedure.
 
@@ -166,7 +164,7 @@ The transaction body has:
 
 ### Solar
 
-`Solar` is the currency for work done on the blockchain, in contrast with `Quark` with is the currency for value.
+`Solar` is the currency for work done on the blockchain, in contrast with `Astre` with is the currency for value.
 
 The solar limit of a block is set at 10^12 `Solar`.
 
@@ -175,15 +173,15 @@ Transaction Processing costs 10^6 `Solar`.
 Solar pricing mechanism:
 
 - The solar price is fixed for every block.
-- The solar price varies by 1 `Quark`.
+- The solar price varies by 1 `Astre`.
 - The solar price increases when more than 0.9, and decreases when less than 0.1, of the previous solar limit was used.
-- The base solar price is set at 1 `Quark`.
+- The base solar price is set at 1 `Astre`.
 
 ### Nova Consensus
 
 Nova is the consensus protocol for creating new blocks and validating the blockchain.
 
-A validator must be staked, by sending `Quarks` to the nova account, to participate in the protocol.
+A validator must be staked, by sending `Astre` to the nova account, to participate in the protocol.
 
 The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
 
@@ -206,7 +204,7 @@ The creator of a new block is payed a fee of 10^12 `Solar` at the current block'
 
 ### Fusion
 
-Fusion is the applications platform running on the Astreuos Blockchain.
+Fusion is the applications platform running on the Astreum Blockchain.
 
 Contracts are applications that run through Transaction Calls on-chain.
 
@@ -214,7 +212,7 @@ Reactions are applications that run through Computation Contracts off-chain.
 
 The Fusion Language is a dialect of the Lisp programming language for developing Fusion Applications.
 
-The Fusion Machine is a stack based native runtime for Fusion Machine Code interfacing with the Astreuos Accounts State.
+The Fusion Machine is a stack based native runtime for Fusion Machine Code interfacing with the Astreum Accounts State.
 
 Helium is the Fusion code manager.
 
@@ -329,4 +327,4 @@ Private Reactions is confidential computing enabling users to use private data a
 5. Recursive Functions of Symbolic Expressions and Their Computation by Machine - John McCarthy
 6. High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
 
-2022-05-25
+2022-05-26
