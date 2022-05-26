@@ -27,14 +27,13 @@ Astreuos is a next generation blockchain for apps, storage and compute.
 - storage: distributed storage
 - compute: distributed compute
 
-Astreuos consensus protocol, Nova Protocol, is Proof of Stake for security and sustainability.
+Astreuos introduces a model for pricing, verification and payment for storage and compute in a decentralized system.
 
-Astreuos primarily works by keeping track of all the accounts and their details such as the balance, code, number of transactions and storage that change with every transaction.
+Astreuos primarily works by keeping track of all the accounts and their details such as the balance, code, number of transactions and storage in a block.
 
-Users are able to :-
-- transfer value & validation
-- storage query & supply
-- compute queries & supply
+Validators create new blocks by applying transactions to the previous state of accounts and add to the blockchain.
+
+Off Chain nodes negotiate the price for storage and compute services while settle payments On Chain.
 
 ## Components
 
