@@ -19,7 +19,7 @@ Ethereum, a next generation smart contract and decentralized application platfor
 
 Ethereum introduces a new state model and turing complete scripting capability enabling the creation of decentralized applications.
 
-Astreum is a next generation blockchain for apps, storage and compute.
+This paper introduces a next generation blockchain for apps, storage and compute.
 
 - apps: decentralized applications
 - storage: distributed storage
@@ -31,7 +31,13 @@ Astreum primarily works by keeping track of all the accounts and their details s
 
 Validators create new blocks by applying transactions to the previous state of accounts and extend the blockchain.
 
-Nodes negotiate the price for storage and compute services and settle payments on the blockchain.
+Nova is the proof of stake consensus protocol that's secure and sustainable.
+
+Applications are written in the Fusion Language, which is a Lisp dialect whose lists are addressable from Nebula.
+
+Nebula is the distributed storage protocol for the blockchain where data can be plain or encrypted off-chain.
+
+Reactor is the distributed compute protocol for running open or private applications off-chain.
 
 ## Components
 
@@ -117,14 +123,14 @@ The account balance is in the native unit of value which is an `Astre`.
 
 Value magnitudes are:
 
-- 10^24 `YottaAstre` `[YA]`
-- 10^21 `ZettaAstre` `[ZA]`
-- 10^18 `ExaAstre` `[EA]`
-- 10^15 `PetaAstre` `[PA]`
-- 10^12 `TeraAstre` `[TA]`
-- 10^9  `GigaAstre` `[GA]`
-- 10^6  `MegaAstre` `[MA]`
-- 10^3  `KiloAstre` `[KA]`
+- 10^24 `YottaAstre` `[yA]`
+- 10^21 `ZettaAstre` `[zA]`
+- 10^18 `ExaAstre` `[eA]`
+- 10^15 `PetaAstre` `[pA]`
+- 10^12 `TeraAstre` `[tA]`
+- 10^9  `GigaAstre` `[gA]`
+- 10^6  `MegaAstre` `[mA]`
+- 10^3  `KiloAstre` `[kA]`
 - 10^0  `Astre` `[A]`
 
 ### Blocks
@@ -173,8 +179,8 @@ Transaction Processing costs 10^6 `Solar`.
 Solar pricing mechanism:
 
 - The solar price is fixed for every block.
-- The solar price varies by 1 `Astre`.
-- The solar price increases when more than 0.9, and decreases when less than 0.1, of the previous solar limit was used.
+- The solar price varies by doubling and halving.
+- The solar price doubles when more than 0.9, and halves when less than 0.1, of the previous solar limit was used.
 - The base solar price is set at 1 `Astre`.
 
 ### Nova Consensus
@@ -189,7 +195,7 @@ The block time target is five seconds. A slot is the five seconds period when ne
 
 Slots are allocated pro-rata to a validator's stake.
 
-A slot miss occurs when a validator does not create a new block or created a malicious block when selected.
+A slot miss occurs when a validator does not create a new block or creates a malicious block when selected.
 
 Slot selection determines the validator for the next block at any time:
 
@@ -197,6 +203,8 @@ Slot selection determines the validator for the next block at any time:
 - Check slot misses from the last block to the current time.
 - If no slot miss, the latest block hash is used as the seed in the weighted random address selector.
 - If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is used as the seed in the weighted random address selector.
+
+Validators who miss a slot get half their stake returned.
 
 Transactions are ordered by their hash.
 
@@ -327,4 +335,4 @@ Private Reactions is confidential computing enabling users to use private data a
 5. Recursive Functions of Symbolic Expressions and Their Computation by Machine - John McCarthy
 6. High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
 
-2022-05-26
+2022-05-27
