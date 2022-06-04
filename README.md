@@ -103,6 +103,18 @@ An Astreum Account is a data structure of an address and details associated to t
 
 The account balance is in the native unit of value which is an `Astre`.
 
+Value magnitudes are:
+
+- 10^24: YottaAstre
+- 10^21: ZettaAstre
+- 10^18: ExaAstre
+- 10^15: PetaAstre
+- 10^12: TeraAstre
+- 10^9:  GigaAstre
+- 10^6:  MegaAstre
+- 10^3:  KiloAstre
+- 10^0:  Astre
+
 ### Blocks
 
 A Block consists of the block body and the validator's ed25519 signature of the body's merkle tree root.
@@ -132,19 +144,21 @@ The transaction body has:
 
 1. chain
 2. counter
-3. recipient
-4. sender
-5. solar limit
-6. solar price
-7. value
+3. data
+4. recipient
+5. sender
+6. solar limit
+7. solar price
+8. type
+9. value
 
 ### Solar
 
-`Solar` is the currency for work done on the blockchain, in contrast with `Astre` with is the currency for value.
+`Solar` is the currency for work done on-chain, in contrast with `Astre` with is the currency for value.
 
-The solar limit of a block is set at 10^6 `Solar`.
+The solar limit of a block is set at 10^15 `Solar`.
 
-Transaction Processing costs 10^3 `Solar`.
+Transaction Processing costs 10^12 `Solar`.
 
 Solar pricing mechanism:
 
@@ -178,7 +192,7 @@ Validators who miss a slot get half their stake returned.
 
 Transactions are ordered by their hash.
 
-The creator of a new block is payed a fee of 10^6 `Solar` at the current block's solar price.
+The creator of a new block is payed a fee of 10^15 `Solar` at the current block's solar price.
 
 ### Fusion
 
