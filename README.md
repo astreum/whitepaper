@@ -163,7 +163,7 @@ Transaction Processing costs 10^3 `Solar`.
 Solar pricing mechanism:
 
 - The solar price is fixed for every block.
-- The solar price varies by doubling and halving.
+- The solar price varies by 1 `Astre`.
 - The solar price doubles when more than 0.9, and halves when less than 0.1, of the previous solar limit was used.
 - The base solar price is set at 1 `Astre`.
 
@@ -183,10 +183,10 @@ A slot miss occurs when a validator does not create a new block or creates a mal
 
 Slot selection determines the validator for the next block at any time:
 
-- Get validator addresses with slot allocations in the nova account storage.
-- Check slot misses from the last block to the current time.
-- If no slot miss, the latest block hash is used as the seed in the weighted random address selector.
-- If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is used as the seed in the weighted random address selector.
+- Check slot misses from the latest block
+- Half the stakes of validators for each of their missed slots
+- If no slot miss, the latest block hash is used as the seed in the weighted random address selector
+- If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is used as the seed in the weighted random address selector
 
 Validators who miss a slot get half their stake returned.
 
