@@ -21,16 +21,113 @@ Applications are written in the Fusion Language, which is a Lisp dialect whose l
 
 Applications can run through Transactions or Reactor, Distributed Compute Protocol.
 
+## Protocols
+
+### Pulsar
+
+### Nova
+
+Nova is the protocol for executing transactions and creating new blocks.
+
+The participants of the protocol are Provers and Verifiers.
+
+| | Role | Rewards |
+|---|---|---|
+| Provers | Execute Transactions | Transaction Fees |
+| Verifiers | Create Blocks | Block Fee |
+
+Provers propose new blocks to Verifiers.
+
+A Verifier must be staked, by sending `Astre` to the nova account, to participate in the protocol.
+
+The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
+
+The block time target is three seconds. A slot is the three seconds period when new blocks are created.
+
+Slots are allocated pro-rata to a Verifier's stake.
+
+A slot miss occurs when a Verifier does not create a new block or creates a malicious block when selected.
+
+Slot selection determines the Verifier for the next block at any time:
+
+- Check slot misses from the latest block
+- Half the stakes of Verifier for each of their missed slots
+- If no slot miss, the latest block time proof is used as the seed in the weighted random address selector
+- If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the latest block time proof is used as the seed in the weighted random address selector
+
+Verifiers who miss a slot get half their stake returned.
+
+Transactions are ordered by their hash.
+
+The creator of a new block is payed a fee of 10^9 `Solar` at the current block's solar price.
+
+### Nebula
+
+Nebula is a protocol for storing and retrieving Nebula Objects.
+
+Users pay the present value of the perpetual storage cost of the object.
+
+Astreum pays storage providers in perpetuity for proofs of storage.
+
+The storage cost is derived from the current supply and demand.
+
+A Nebula Object is a data structure with two fields:
+
+- Leaf: True/False
+- Data: a blob of binary data of size &lt 32KB
+
+All data is erasure coded as a method of data protection in which data is encoded and fragments stored across the nodes on the network.
+
+When nodes go offline, data can be reconstructed from the fragments on the nodes that are online.
+
+`Object Get Flow`
+
+```text
+
+        Client                                          Nebula
+        + - - - +                                       
+        |       |             object hash               + - - - - - - - +
+        |       | - - - - - - - - - - - - - - - - - - > |    nearest    |
+        |       | < - - - - - - - - - - - - - - - - - - |     node      |
+        |       |       nearer node or object           + - - - - - - - +
+        |       |
+        |       |
+        |       |             object hash               + - - - - - - - +
+        |       | - - - - - - - - - - - - - - - - - - > |    nearer     |
+        |       | < - - - - - - - - - - - - - - - - - - |     node      |
+        |       |         index node or object          + - - - - - - - +
+        |       |
+        |       |
+        |       |               object hash             + - - - - - - - +
+        |       | - - - - - - - - - - - - - - - - - - > |    index      |
+        |       | < - - - - - - - - - - - - - - - - - - |     node      |
+        |       |        storage node or object         + - - - - - - - +
+        |       |
+        |       |
+        |       |             object hash               + - - - - - - - +
+        |       | - - - - - - - - - - - - - - - - - - > |    storage    |
+        |       | < - - - - - - - - - - - - - - - - - - |     node      |
+        |       |               object                  + - - - - - - - +
+        |       |
+        + - - - +
+
+```
+
+Storage Nodes store the distributed index of the object hashes and their storage provider's id.
+
+The storage provider is paid by providing proofs of storage.
+
+An indexer earns a commission for indexing the underlying data and forwarding storage proofs to validators.
+
+### Reactor
+
+Reactor is a protocol for distributed computation.
+
+Applications can be confidential enabling users to use private data, preserving privacy and use proprietary software, protecting intellectual property.
+
+The compute cost is derived from the current supply and demand.
+
 ## Components
-
-### Libraries
-
-- [Astro Format](https://github.com/stelar-labs/astro-format-rs) - Data Encoding Format
-- [NeutronDB](https://github.com/stelar-labs/neutrondb-rs) - Key Value Store
-- [Opis](https://github.com/stelar-labs/opis-rs) - Integer Arithmetic
-- [Fides](https://github.com/stelar-labs/fides-rs) - Cryptography
-- [Pulsar Network](https://github.com/stelar-labs/pulsar-network-rs) - Messaging
-- [Rust Astreum](https://github.com/astreum/node-rs) - Official Node
 
 ### Accounts
 
@@ -125,15 +222,16 @@ The block body has:
 2. chain
 3. number
 4. previous block hash
-5. receipts hash
-6. solar price
-7. solar used
-8. time
-9. time output
+5. prover
+6. receipts hash
+7. solar price
+8. solar used
+9. time
+10. time output
 10. time proof
 11. transactions hash
 12. transactions proof
-13. validator
+13. verifier
 
 Receipts are the result from the application of a transactions, consisting of the solar used and status of the application.
 
@@ -166,34 +264,7 @@ Solar pricing mechanism:
 - The solar price is fixed for every block.
 - The solar price varies by 1 `Astre`.
 - The solar price doubles when more than 0.9, and halves when less than 0.1, of the previous solar limit was used.
-- The base solar price is set at 1 `Astre`.
-
-### Nova Consensus
-
-Nova is the consensus protocol for creating new blocks and validating the blockchain.
-
-A validator must be staked, by sending `Astre` to the nova account, to participate in the protocol.
-
-The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
-
-The block time target is three seconds. A slot is the three seconds period when new blocks are created.
-
-Slots are allocated pro-rata to a validator's stake.
-
-A slot miss occurs when a validator does not create a new block or creates a malicious block when selected.
-
-Slot selection determines the validator for the next block at any time:
-
-- Check slot misses from the latest block
-- Half the stakes of validators for each of their missed slots
-- If no slot miss, the latest block time proof is used as the seed in the weighted random address selector
-- If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the latest block time proof is used as the seed in the weighted random address selector
-
-Validators who miss a slot get half their stake returned.
-
-Transactions are ordered by their hash.
-
-The creator of a new block is payed a fee of 10^9 `Solar` at the current block's solar price.
+- The base solar price is set at 10^6 `Astre`.
 
 ### Fusion
 
@@ -217,72 +288,6 @@ New transaction types:
 - app creation
 - app calls
 
-### Nebula
-
-Nebula is a protocol for storing and retrieving Nebula Objects.
-
-Users pay the present value of the perpetual storage cost of the object.
-
-Astreum pays storage providers in perpetuity for proofs of storage.
-
-The storage cost is derived from the current supply and demand.
-
-A Nebula Object is a data structure with two fields:
-
-- Leaf: True/False
-- Data: a blob of binary data of size &lt 32KB
-
-All data is erasure coded as a method of data protection in which data is encoded and fragments stored across the nodes on the network.
-
-When nodes go offline, data can be reconstructed from the fragments on the nodes that are online.
-
-`Object Get Flow`
-
-```text
-
-        Client                                          Nebula
-        + - - - +                                       
-        |       |             object hash               + - - - - - - - +
-        |       | - - - - - - - - - - - - - - - - - - > |    nearest    |
-        |       | < - - - - - - - - - - - - - - - - - - |     node      |
-        |       |       nearer node or object           + - - - - - - - +
-        |       |
-        |       |
-        |       |             object hash               + - - - - - - - +
-        |       | - - - - - - - - - - - - - - - - - - > |    nearer     |
-        |       | < - - - - - - - - - - - - - - - - - - |     node      |
-        |       |         index node or object          + - - - - - - - +
-        |       |
-        |       |
-        |       |               object hash             + - - - - - - - +
-        |       | - - - - - - - - - - - - - - - - - - > |    index      |
-        |       | < - - - - - - - - - - - - - - - - - - |     node      |
-        |       |        storage node or object         + - - - - - - - +
-        |       |
-        |       |
-        |       |             object hash               + - - - - - - - +
-        |       | - - - - - - - - - - - - - - - - - - > |    storage    |
-        |       | < - - - - - - - - - - - - - - - - - - |     node      |
-        |       |               object                  + - - - - - - - +
-        |       |
-        + - - - +
-
-```
-
-Storage Nodes store the distributed index of the object hashes and their storage provider's id.
-
-The storage provider is paid by providing proofs of storage.
-
-An indexer earns a commission for indexing the underlying data and forwarding storage proofs to validators.
-
-### Reactor
-
-Reactor is a protocol for distributed computation.
-
-Applications can be confidential enabling users to use private data, preserving privacy and use proprietary software, protecting intellectual property.
-
-The compute cost is derived from the current supply and demand.
-
 ## References
 
 1. Bitcoin: A Peer-to-Peer Electronic Cash System - Satoshi Nakamoto
@@ -292,4 +297,4 @@ The compute cost is derived from the current supply and demand.
 5. Recursive Functions of Symbolic Expressions and Their Computation by Machine - John McCarthy
 6. High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
 
-2022-06-13
+2022-06-16
