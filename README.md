@@ -51,10 +51,10 @@ Slot selection determines the Validators for the next block at any time:
 
 - Check slot misses from the latest block
 - Half the stakes of Validators for each of their missed slots
-- If no slot miss, the latest block time proof is used as the seed in the weighted random address selector
-- If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the latest block time proof is used as the seed in the weighted random address selector
+- If no slot miss, the latest block time output is used as the seed in the weighted random address selector
+- If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the latest block time output is used as the seed in the weighted random address selector
 
-Validators who miss a slot get half their stake returned.
+Validators who miss a slot get half their stake returned until 1 `Astre` is left.
 
 Transactions are ordered by their hash.
 
@@ -225,8 +225,11 @@ The block body has:
 7. solar price
 8. solar used
 9. time
-10. transactions hash
-11. validator
+10. time output
+11. time proof
+12. transactions hash
+13. transactions proof
+14. validator
 
 ### Transactions
 
@@ -246,7 +249,7 @@ The transaction body has:
 
 ### Solar
 
-`Solar` is the currency for work done on-chain, in contrast with `Astre` with is the currency for value.
+`Solar` is the currency for work, in contrast with `Astre` with is the currency for value.
 
 The solar limit of a block is set at 10^9 `Solar`.
 
@@ -263,11 +266,15 @@ Solar pricing mechanism:
 
 Fusion is the applications platform running on the Astreum Blockchain.
 
-Applications can run through transaction calls on-chain, computation contracts off-chain and natively on nodes.
+Applications can run through transaction, computation contracts and natively on nodes.
 
 The Fusion Language is a dialect of the Lisp programming language for developing Fusion Applications.
 
-Fusion capabilities include templating user interfaces that run on nodes.
+Fusion capabilities include:
+
+- open applications
+- confidential applications
+- templating
 
 The Fusion Machine is a stack based native runtime for Fusion Machine Code interfacing with the Astreum Accounts State.
 
@@ -279,5 +286,6 @@ The Fusion Machine is a stack based native runtime for Fusion Machine Code inter
 4. Kademlia: A Peer-to-Peer Information System Based on the XOR Metric - Petar Maymounkov & David Mazières
 5. Recursive Functions of Symbolic Expressions and Their Computation by Machine - John McCarthy
 6. High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
+7. Efficient verifiable delay functions - Benjamin Wesolowski
 
-2022-06-18
+2022-06-20
