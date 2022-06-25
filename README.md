@@ -66,9 +66,9 @@ Nebula is a protocol for storing and retrieving Nebula Objects.
 
 Users pay the present value of the perpetual storage cost of the object.
 
-Astreum pays storage providers in perpetuity for proofs of storage.
+Storage Fee = Storage Fee Function(Solar Price)
 
-The storage cost is derived from the current supply and demand.
+Astreum pays storage providers in perpetuity for proofs of storage.
 
 A Nebula Object is a data structure with two fields:
 
@@ -140,9 +140,7 @@ The compute cost is derived from the current supply and demand.
 
 The Terminal is a specification for building user interfaces.
 
-A terminal has a query bar for querying hashes of Nebula Objects.
-
-The query bar can also be used for querying text from name services.
+A terminal provides querying capabilities for hashes of Nebula Objects and text from name services.
 
 Terminals can natively run Fusion Applications stored as Lists on Nebula.
 
