@@ -13,15 +13,15 @@ Roy R. O. Okello
 
 ## Introduction
 
-This paper introduces a next generation blockchain for apps, storage and compute.
+This paper expresses my vision for a blockchain that embodies the ethos set forth by pioneers of decentralized systems for permissionless and trustless access to value transactions, data storage and confidential computation.
 
-Astreum introduces a model for pricing, verification and payment for storage and compute in a decentralized system.
+Astreum introduces a new model for pricing, verification and payment for transactions, storage and compute.
 
 Astreum primarily works by keeping track of all the accounts and their details such as the balance, code, number of transactions and storage in a block and changes through applying transactions.
 
-Applications are written in the Fusion Language, which is a Lisp dialect whose lists are addressable from Nebula, Distributed Storage Protocol.
+Applications are written in the Fusion Language, which is a Lisp dialect whose lists are addressable from Nebula, the Distributed Storage Protocol.
 
-Applications can run through Transactions or Reactor, Distributed Compute Protocol.
+Applications can run through Transactions or Reactor, the Distributed Compute Protocol.
 
 ## Protocols
 
@@ -31,32 +31,31 @@ Pulsar Network is the distributed hash table peer-to-peer communication protocol
 
 ### Nova
 
-Nova is the proof of stake consensus protocol for executing transactions and creating new blocks through participants named Validators.
+Nova is the proof of stake consensus protocol for executing transactions and creating new blocks through provers and verifiers.
 
-A Validators must be staked, by sending `Astre` to the nova account, to participate in the protocol.
+A Verifier must be staked, by sending `Astre` to the nova account, to participate in the protocol.
 
 The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
 
 The block time target is three seconds. A slot is the three seconds period when new blocks are created.
 
-Slots are allocated pro-rata to a Validators's stake.
+Slots are allocated pro-rata to a Verifier's stake.
 
-A slot miss occurs when a Validators does not create a new block or creates a malicious block when selected.
+A slot miss occurs when a Verifiers does not create a new block or creates a malicious block when selected.
 
-Slot selection determines the Validators for the next block at any time:
+Slot selection determines the Verifier for the next block at any time:
 
 - Check slot misses from the latest block
-- Half the stakes of Validators for each of their missed slots
 - If no slot miss, the latest block time output is used as the seed in the weighted random address selector
 - If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the latest block time output is used as the seed in the weighted random address selector
 
-Validators who miss a slot get half their stake returned until 1 `Astre` is left.
+Verifiers who miss a slot get half their stake returned until 1 `Astre` is left.
 
 Transactions are ordered by their hash.
 
 Transactions proof enable other nodes to efficiently verify the accounts transition.
 
-Validators spend ~1 sec computing a Time Output from a Verifiable Delay Function.
+Verifiers spend ~1 sec computing a Time Output from a Verifiable Delay Function.
 
 The creator of a new block is payed a fee of 10^9 `Solar` at the current block's solar price.
 
@@ -66,7 +65,7 @@ Nebula is a protocol for storing and retrieving Nebula Objects.
 
 Users pay the present value of the perpetual storage cost of the object.
 
-Storage Fee = Storage Fee Function(Solar Price)
+Storage Fee Function: Solar Price -> Storage Fee
 
 Astreum pays storage providers in perpetuity for proofs of storage.
 
@@ -77,7 +76,7 @@ A Nebula Object is a data structure with two fields:
 
 Nebula supports storage for:
 
-- Lists
+- Lists(Data and Fusion Applications)
 - Files(Plain, Encrypted and Erasure Coded)
 
 `Object Get Flow`
@@ -129,12 +128,13 @@ The compute cost is derived from the current supply and demand.
 
 ### Nodes
 
-| Type | Description |
-|---|---|
-| Navigators | keep genesis block, latest block and aggregate transaction proof |
-| Validators | keep entire account state and create new blocks |
-| Storage | keep index and data |
-| Compute | perform compute requests |
+| Type | Blocks Representation | Accounts Representation | Earning |
+|---|---|---|---|
+| Clients | Accumulator | Hash | - |
+| Provers | Accumulator | Full | Transaction Fees |
+| Verifiers | Accumulator + Latest | Hash | Block Fees |
+| Nebulas | - | - | Storage Fees |
+| Reactors | - | - | Compute Fees |
 
 ### Terminals
 
@@ -207,14 +207,13 @@ Value magnitudes are:
 
 ### Blocks
 
-A Block consists of the block body and the validator's ed25519 signature of the body's merkle tree root.
-
-The block body has:
+A Block has the following fields:
 
 1. accounts hash
 2. chain
 3. number
 4. previous block hash
+5. prover
 6. receipts hash
 7. solar price
 8. solar used
@@ -223,7 +222,7 @@ The block body has:
 11. time proof
 12. transactions hash
 13. transactions proof
-14. validator
+14. verifier
 
 ### Transactions
 
@@ -272,6 +271,18 @@ Fusion capabilities include:
 
 The Fusion Machine is a stack based native runtime for Fusion Machine Code interfacing with the Astreum Accounts State.
 
+## Conclusion
+
+These concepts of protocols around decentralized file storage and computation are not novel. In Ethereum, it is open-ended by design to be a foundational layer for many protocols yet to be imagined.
+
+With Astreum we include a storage and compute layer to create a system that offers the following benefits:
+
+- distribution of financial intermediary and cloud service fees
+- permissionless and pseudonymous(anonymous through private payment channels) access to financial services
+- open and censorship free platform for creators and developers
+- free redistribution of content
+- one language for developing applications and templates, extensible to any current and future use case
+
 ## References
 
 1. Bitcoin: A Peer-to-Peer Electronic Cash System - Satoshi Nakamoto
@@ -282,5 +293,6 @@ The Fusion Machine is a stack based native runtime for Fusion Machine Code inter
 6. High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
 7. Efficient verifiable delay functions - Benjamin Wesolowski
 8. Bulletproofs: Short Proofs for Confidential Transactions and More - Benedikt Bunz, Jonathan Bootle, Dan Boneh, Andrew Poelstra, Pieter Wuille, and Greg Maxwell
+9. PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge - Ariel Gabizon, Zachary J. Williamson and Oana Ciobotaru
 
-2022-06-23
+2022-07-03
