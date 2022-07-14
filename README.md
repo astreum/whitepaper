@@ -233,18 +233,17 @@ Value magnitudes are:
 
 Solar costs for operations on 256 bits:
 
-| Protocol | Operation | Solar |
-|---|---|---|
-| Nebula | put per word per block | 1 |
-| | get per word | 1 |
-| Reactor | 1 word arithmetic | 3 |
-| | 2 words arithmetic | 5 |
+| Operation | Solar |
+|---|---|
+| storage per word per block | 1 |
+| 1 word arithmetic | 3 |
+| 2 words arithmetic | 5 |
 
 ### Fusion
 
 Fusion is the applications platform running on the Astreum Blockchain.
 
-Applications can run through transaction, computation contracts and natively on nodes.
+Applications can run through transactions, compute contracts and natively on nodes.
 
 The Fusion Language is a dialect of the Lisp programming language for developing Fusion applications and templates.
 
