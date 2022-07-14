@@ -57,15 +57,13 @@ Transactions proof enable other nodes to efficiently verify the accounts transit
 
 Verifiers spend ~1 sec computing a Time Output from a Verifiable Delay Function.
 
-The creator of a new block is payed a fee of 10^9 `Solar` at the current block's solar price.
+The creator of a new block is payed a fee of 10^18 `Solar`.
 
 ### Nebula
 
 Nebula is a protocol for storing and retrieving Nebula Objects.
 
 Users pay the present value of the perpetual storage cost of the object.
-
-Storage Fee Function: Solar Price -> Storage Fee
 
 Astreum pays storage providers in perpetuity for proofs of storage.
 
@@ -128,13 +126,13 @@ The compute cost is derived from the current supply and demand.
 
 ### Nodes
 
-| Type | Blocks Representation | Accounts Representation | Earning |
-|---|---|---|---|
-| Clients | Accumulator | Hash | - |
-| Provers | Accumulator | Full | Transaction Fees |
-| Verifiers | Accumulator + Latest | Hash | Block Fees |
-| Nebulas | - | - | Storage Fees |
-| Reactors | - | - | Compute Fees |
+| Type | Role | Fees Paid |
+|---|---|---|
+| Clients | - | - |
+| Provers | Execute Transactions and generate proofs | Transaction |
+| Verifiers | Verify Transaction execution and create blocks | Block |
+| Nebulas | Store and provide access to accounts and contracted data | Storage |
+| Reactors | Provide compute resources on-demand  | Compute |
 
 ### Terminals
 
@@ -176,35 +174,6 @@ An Astreum Account is a data structure of an address and details associated to t
 
 ```
 
-`Accounts State Transition`
-
-```text
-
-            Block #1                                Block #2
-        + - - - - - - - +                       + - - - - - - - +
-        |               |                       |               | 
-        |   Previous    |      Transactions     |     Latest    |
-        |   Accounts    |   - - - - - - - - ->  |    Accounts   |
-        |     State     |                       |     State     |
-        |               |                       |               |
-        + - - - - - - - +                       + - - - - - - - +
-
-```
-
-The account balance is in the native unit of value which is an `Astre`.
-
-Value magnitudes are:
-
-- 10^24: YottaAstre
-- 10^21: ZettaAstre
-- 10^18: ExaAstre
-- 10^15: PetaAstre
-- 10^12: TeraAstre
-- 10^9:  GigaAstre
-- 10^6:  MegaAstre
-- 10^3:  KiloAstre
-- 10^0:  Astre
-
 ### Blocks
 
 A Block has the following fields:
@@ -226,7 +195,13 @@ A Block has the following fields:
 
 ### Transactions
 
-A Transaction consists of the transaction body and the sender's ed25519 signature of the body's merkle tree root.
+A Transaction consists of:
+
+1. body
+2. dilithium3 public key
+3. dilithium3 signature
+4. ed25519 public key
+5. ed25519 signature
 
 The transaction body has:
 
@@ -234,26 +209,35 @@ The transaction body has:
 2. counter
 3. data
 4. recipient
-5. sender
-6. solar limit
-7. solar price
-8. type
-9. value
+5. solar limit
+6. type
+7. value
 
 ### Solar
 
-`Solar` is the currency for work, in contrast with `Astre` with is the currency for value.
+`Solar` is the unit of value in the Astreum Blockchain.
 
-The solar limit of a block is set at 10^9 `Solar`.
+The account balance, storage and compute costs are denominated in `Solar`.
 
-Transaction Processing costs 10^3 `Solar`.
+Value magnitudes are:
 
-Solar pricing mechanism:
+- 10^24: YottaSolar
+- 10^21: ZettaSolar
+- 10^18: ExaSolar
+- 10^15: PetaSolar
+- 10^12: TeraSolar
+- 10^9:  GigaSolar
+- 10^6:  MegaSolar
+- 10^3:  KiloSolar
+- 10^0:  Solar
 
-- The solar price is fixed for every block.
-- The solar price varies by 1 `Astre`.
-- The solar price doubles when more than 0.9, and halves when less than 0.1, of the previous solar limit was used.
-- The base solar price is set at 10^6 `Astre`.
+Solar costs for operations on 256 bits:
+
+| Protocol | Operation | Solar |
+| Nebula | put per word per block | 1 |
+| | get per word | 1 |
+| Reactor | 1 word arithmetic | 3 |
+| | 2 words arithmetic | 5 |
 
 ### Fusion
 
@@ -261,26 +245,17 @@ Fusion is the applications platform running on the Astreum Blockchain.
 
 Applications can run through transaction, computation contracts and natively on nodes.
 
-The Fusion Language is a dialect of the Lisp programming language for developing Fusion Applications.
-
-Fusion capabilities include:
-
-- open applications
-- confidential applications
-- templating
+The Fusion Language is a dialect of the Lisp programming language for developing Fusion applications and templates.
 
 The Fusion Machine is a stack based native runtime for Fusion Machine Code interfacing with the Astreum Accounts State.
 
 ## Conclusion
 
-These concepts of protocols around decentralized file storage and computation are not novel. In Ethereum, it is open-ended by design to be a foundational layer for many protocols yet to be imagined.
-
-With Astreum we include a storage and compute layer to create a system that offers the following benefits:
+With Astreum we create a system that offers the following benefits:
 
 - distribution of financial intermediary and cloud service fees
-- permissionless and pseudonymous(anonymous through private payment channels) access to financial services
+- permissionless and pseudonymous(anonymous through private payment channels such as mixers) access to financial services
 - open and censorship free platform for creators and developers
-- free redistribution of content
 - one language for developing applications and templates, extensible to any current and future use case
 
 ## References
@@ -291,8 +266,8 @@ With Astreum we include a storage and compute layer to create a system that offe
 4. Kademlia: A Peer-to-Peer Information System Based on the XOR Metric - Petar Maymounkov & David Mazières
 5. Recursive Functions of Symbolic Expressions and Their Computation by Machine - John McCarthy
 6. High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
-7. Efficient verifiable delay functions - Benjamin Wesolowski
-8. Bulletproofs: Short Proofs for Confidential Transactions and More - Benedikt Bunz, Jonathan Bootle, Dan Boneh, Andrew Poelstra, Pieter Wuille, and Greg Maxwell
+7. CRYSTALS-Dilithium Algorithm Specifications and Supporting Documentation - Shi Bai, Léo Ducas, Eike Kiltz, Tancrède Lepoint,Vadim Lyubashevsky, Peter Schwabe, Gregor Seiler and Damien Stehlé
+8. Efficient verifiable delay functions - Benjamin Wesolowski
 9. PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge - Ariel Gabizon, Zachary J. Williamson and Oana Ciobotaru
 
-2022-07-03
+2022-07-15
