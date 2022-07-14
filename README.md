@@ -131,8 +131,8 @@ The compute cost is derived from the current supply and demand.
 | Clients | - | - |
 | Provers | Execute Transactions and generate proofs | Transaction |
 | Verifiers | Verify Transaction execution and create blocks | Block |
-| Nebulas | Store and provide access to accounts and contracted data | Storage |
-| Reactors | Provide compute resources on-demand  | Compute |
+| Nebula | Store and provide access to accounts and contracted data | Storage |
+| Reactor | Provide compute resources on-demand  | Compute |
 
 ### Terminals
 
@@ -234,6 +234,7 @@ Value magnitudes are:
 Solar costs for operations on 256 bits:
 
 | Protocol | Operation | Solar |
+|---|---|---|
 | Nebula | put per word per block | 1 |
 | | get per word | 1 |
 | Reactor | 1 word arithmetic | 3 |
