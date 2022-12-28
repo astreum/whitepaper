@@ -18,9 +18,9 @@
 ### Basic Arithmetic(10-19)
 
 | Name | Code | Arguments | Solar |
-|---|---|---|
-| iADD | 10 | [AMOUNT] [AMOUNT]
-| iSUB | 11 | [AMOUNT] [AMOUNT]
+|---|---|---|---|
+| iADD | 10 | [AMOUNT] [AMOUNT] |
+| iSUB | 11 | [AMOUNT] [AMOUNT] |
 
 ### Accounts Interface(20-29)
 
@@ -28,5 +28,5 @@
 |---|---|---|---|
 | SHOW BAL | 0X0A | [ADDRESS] |
 | EDIT BAL | 0X0B | [ADDRESS] [AMOUNT] |
-| SHOW CNTR | 0X0A | [ADDRESS]
-| INCR CNTR| 0X0B | [ADDRESS]
+| SHOW CNTR | 0X0A | [ADDRESS] |
+| INCR CNTR| 0X0B | [ADDRESS] |
