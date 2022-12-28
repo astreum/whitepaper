@@ -231,8 +231,8 @@ A Nebula Object is a data structure with three fields:
 
 Puslar Network Upgrade:
 
-- indexing route
-- message types for get and put on nebula objects.
+- Nebula Route
+- Message Kinds for get and put on nebula objects.
 
 `Object Put Flow`
 
