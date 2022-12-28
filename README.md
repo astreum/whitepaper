@@ -8,12 +8,13 @@
 1. Why?
 2. About
 3. Vision
-4. Upgrades
-5. Open Source
+4. Future
+5. Open
 
 ### Why?
 
 - To build a trusted and secure crypto experience by providing solid standards for tokens, oracles, governance and insurance.
+- To explore currency stability through pricing mechanisms and a reserve system.
 - To be a viable backbone to web 3 services by offering combined value, storage and compute in a single blockchain and priced in the stable `Solar`.
 
 ### About
@@ -38,33 +39,33 @@ Value magnitudes are:-
 A Block consists of the block body and the validator's ed25519 signature of the body's tree hash.
 
 The block body has:-
-- accounts hash
-- chain
-- number
-- previous block hash
-- receipts hash
-- solar price
-- solar used
-- time
-- transactions hash
-- validator
+1. accounts hash
+2. chain
+3. number
+4. previous block hash
+5. receipts hash
+6. solar price
+7. solar used
+8. time
+9. transactions hash
+10. validator
 
 A Transaction consists of the transaction body and the sender's ed25519 signature of the body's tree hash.
 
 The transaction body has:-
-- chain
-- counter
-- recipient
-- sender
-- solar limit
-- solar price
-- value
+1. chain
+2. counter
+3. recipient
+4. sender
+5. solar limit
+6. solar price
+7. value
 
 The Receipt is the result from the application of a transaction to the Astreuos Account State.
 
 A receipt consists of the solar used and status of the application procedure.
 
-`Solar` is the currency for work done on the blockchain. The solar limit in a block is 1,000,000.
+`Solar` is the currency for work done on the blockchain. The solar limit of a block is 1,000,000.
 
 | Fee | Solar |
 |---|---|
@@ -95,13 +96,13 @@ Solar pricing mechanism:-
 
 ### Vision
 
-Empower web 3 builders:-
+Empower web 3 builders to:-
 - create browser extensions that interface with an astreuos node to enhance user experiences
 - create blockchain applications
-- host web app and data on Nebula
+- host web applications and media content on Nebula
 - create compute applications on Reactor
 
-### Upgrades
+### Future
 
 #### V2: Fusion Upgrade
 
@@ -169,7 +170,7 @@ This upgrade adds a distributed compute protocol called Reactor with proof of wo
 - token index
 - nova governance mechanism
 
-### Open Source
+### Open
 
 The Astreuos Blockchain is a fully open source project and is powered by several open source libraries.
 
