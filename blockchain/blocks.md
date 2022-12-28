@@ -8,16 +8,16 @@ Value: Stellar Objects;
 1. Number
 2. Previous Block Hash
 3. Timestamp
-4. Nonce
-5. Difficulty
-6. Solar Limit
-7. Solar Used
-8. Solar Price
-9. Solar Fees
-10. Accounts Root Hash
-11. Transactions Root Hash
-12. Receipts Root Hash
-13. Miner
+4. Solar Limit
+5. Solar Used
+6. Solar Price
+7. Solar Fees
+8. Accounts Root Hash
+9. Files Root Hash
+10. Transactions Root Hash
+11. Receipts Root Hash
+12. Miner
+13. Reward
 
 ## Block Transactions
 
