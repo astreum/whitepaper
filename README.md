@@ -69,11 +69,11 @@ Roy R. O. Okello
         |    address    |       |    details    |
         + - - - - - - - +       + - - - - - - - +
                                         ^
-                                . - - - - - - - - - - - .
-                                ^                       ^
-                        + - - - - - - - +       + - - - - - - - +   
-                        |    balance    |       |    counter    |
-                        + - - - - - - - +       + - - - - - - - +
+                                . - - - - - - - - - - - - - - - - - - - - - - - .
+                                ^                       ^                       ^
+                        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
+                        |    balance    |       |    counter    |       |    storage    |
+                        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
 
 ### Blocks
 
@@ -94,6 +94,10 @@ Roy R. O. Okello
                 |
                 |       + - - - - - - - +
                 | - - - |     chain     |
+                |       + - - - - - - - +
+                |
+                |       + - - - - - - - +
+                | - - - |     data      |
                 |       + - - - - - - - +
                 |
                 |       + - - - - - - - +
@@ -150,6 +154,10 @@ Roy R. O. Okello
                         |       + - - - - - - - +
                         |
                         |       + - - - - - - - +
+                        + - - - |     data      |
+                                + - - - - - - - +
+                        |
+                        |       + - - - - - - - +
                         | - - - |   recipient   |
                         |       + - - - - - - - +
                         |
@@ -158,7 +166,7 @@ Roy R. O. Okello
                         |       + - - - - - - - +
                         |
                         |       + - - - - - - - +
-                        | - - - |     value     |
+                        + - - - |     value     |
                                 + - - - - - - - +
 
 
@@ -250,10 +258,10 @@ The valid chain has the most blocks and with the most solar spent in the latest 
 
 Astreum aims to fully realize an ideal cryptographic network with the following features:
 
-- Permissionless: Astreum Accounts and Services, such as financial intermediation, data storage, serverless computation and networking are open and censorship free to all users, creators and developers.
+- Permissionless: Astreum Accounts and Services, such as financial intermediation, data storage, serverless computation and networking are open and censorship-free to all users, creators and developers.
 - Trustless: Astreum Validation is performed by all nodes on the network efficiently through zero knowledge allowing billions of nodes to synchronize the state of the blockchain in seconds.
-- Private: Pulsar communication is protected by encrypting all data including message topics to protect against eavesdropping and mix routing to prevent fingerprinting through metadata analysis.
-- Secure: Astreum Accounts and communication through Pulsar are protected from future attacks from quantum computers by using post quantum secure digital signature algorithm dilithium and public key exchange algorithm kyber.
+- Private: Relay Protocol is protected by encrypting all data including message topics to protect against eavesdropping and mix routing to prevent fingerprinting through metadata analysis.
+- Secure: Astreum Accounts and communication through Relay Protocol are protected from future attacks from quantum computers by using post quantum secure digital signature algorithm dilithium and public key exchange algorithm kyber.
 - Extensible: the Fusion Language and Machine provide developers with the ability to build any kind of template and application.
 
 ## References
