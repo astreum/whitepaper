@@ -53,11 +53,11 @@ The blockchain maintains a state of all the accounts keeping track of an account
         |   Address Hash    |       |   Details Hash    |
         + - - - - - - - - - +       + - - - - - - - - - +
                                               ^
-                                    + - - - - - - - - - +
-                                    |      Balance      |
-                                    |      Counter      |
-                                    |      Storage      |
-                                    + - - - - - - - - - +
+                  . - - - - - - - - - - - - - + - - - - - - - - - - - - - .
+                  ^                           ^                           ^
+          + - - - - - - - - +       + - - - - - - - - - +       + - - - - - - - - - +
+          |  Balance Hash   |       |   Counter Hash    |       |   Storage Hash    |
+          + - - - - - - - - +       + - - - - - - - - - +       + - - - - - - - - - +
 
 ```
 
