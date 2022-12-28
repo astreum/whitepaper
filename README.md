@@ -6,11 +6,13 @@
 ## Specification(v1)
 
 ### Accounts
-- Structure: Address & Details Hash.
-- Details: Astro Notation List Format.
+- Structure
+    - Address
+    - Details
+- Details
     - Balance
     - Counter
-    - Storage Hash
+    - Storage
 - The Standard Unit of Value is an Astr while the Smallest Unit is a Quark.
 - Value magnitudes:
     - 10^24: Yottaquark / Astr
@@ -25,10 +27,10 @@
 - Nova Special Account Address is 0xNOVA.
 
 ### Blocks
-- Structure: Astro Notation List Format.
+- Structure
     - Body
     - Signature
-- Body: Astro Notation List Format.
+- Body
     - Accounts Hash
     - Number
     - Previous Block Hash
@@ -41,10 +43,10 @@
     - Transactions Hash
 
 ### Transactions
-- Structure: Astro Notation List Format.
+- Structure
     - Body
     - Signature
-- Body: Astro Notation List Format.
+- Body
     - Counter
     - Recipient
     - Solar Price
@@ -52,7 +54,7 @@
     - Value
 
 ### Receipts
-- Structure: Astro Notation List Format.
+- Structure
     - Solar Used
     - Status
 
@@ -118,7 +120,8 @@
 | [Fides](https://github.com/stelar-software/rust-fides) | Digital Security | 🚧 |
 | [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network)  | Distributed Messaging |  🚧 |
 | Nova | Proof of Stake Consensus Mechanism | FEB 2022 |
-| [Node](https://github.com/astreuos/rust-astreuos) | Network Interface | FEB 2022 |
+| [Node](https://github.com/astreuos/rust-astreuos) | Blockchain Interface | FEB 2022 |
+| Stelar Terminal | Browser Interface | Q1 2022 |
 | Testnet Launch | | Q1 2022 |
 | Mainnet Launch | | Q2 2022 |
 
