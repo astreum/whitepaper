@@ -13,8 +13,8 @@
 
 ### Why?
 
-- Provide standards for tokens, oracles, governance and insurance to provide a better and secure crypto experience.
-- To be a viable backbone to web 3 by offering combined value, storage and compute in a single blockchain and currency.
+- To build a trusted and secure crypto experience by providing solid standards for tokens, oracles, governance and insurance.
+- To be a viable backbone to web 3 services by offering combined value, storage and compute in a single blockchain and priced in the stable `Solar`.
 
 ### About
 
@@ -62,7 +62,7 @@ The transaction body has:-
 
 The Receipt is the result from the application of a transaction to the Astreuos Account State.
 
-A receipt consists of the solar used and status of the applied transaction.
+A receipt consists of the solar used and status of the application procedure.
 
 `Solar` is the currency for work done on the blockchain. The solar limit in a block is 1,000,000.
 
@@ -70,12 +70,6 @@ A receipt consists of the solar used and status of the applied transaction.
 |---|---|
 | Transaction Processing | 1,000 |
 | Account Creation | 1,000 |
-
-### Vision
-
-Web 3 builders can create browser terminals that interface with an astreuos node to provide transactions, object queries and compute queries.
-
-### Upgrades
 
 #### V1: Genesis
 
@@ -96,8 +90,18 @@ All transactions in a block are ordered ascending by the xor distance of the tra
 Solar pricing mechanism:-
 - The solar price is fixed for every block.
 - The solar price varies by 0.01%.
-- The solar price increases when more than 90%, and decreases when less than 10%, of the previous solar limit was used.
-- The base solar price is set at 1 exaquark / 0.000001 astre.
+- The solar price increases when more than 75%, and decreases when less than 25%, of the previous solar limit was used.
+- The base solar price is set at 1 `exaquark` / 0.000001 `Astre` to incentivise validators to fill a block and at the least double their reward.
+
+### Vision
+
+Empower web 3 builders:-
+- create browser extensions that interface with an astreuos node to enhance user experiences
+- create blockchain applications
+- host web app and data on Nebula
+- create compute applications on Reactor
+
+### Upgrades
 
 #### V2: Fusion Upgrade
 
@@ -133,7 +137,7 @@ An object is a node or leaf of a merkle tree of a file or folder.
 
 The index route stores the index of the object hash and the storage provider's id.
 
-The route is updated every five minutes to remove deleted objects and redistribute indexes adding new object indexes.
+The route is updated every five minutes to remove deleted objects and redistribute indexes adding new object indices.
 
 An indexer must prove they are storing their part of the index.
 
@@ -145,11 +149,13 @@ A stoage provider must prove they are storing their assigned objects.
 
 Indexers are incentivized to cache objects by earning retrival fees for returning objects instead of storage provider's id.
 
-An indexer also earns a commission for facilitating a put contract and indexing.
+An indexer also earns a commission for facilitating a put contract and indexing the underlying data.
 
-A delete contract can be made directly to a blockchain validator and refunded the contract's remainder period.
+The standard put contract is for a period of 3 months. 
 
-Storage pricing mechanism will involve the available protocol space.
+A delete contract can be made directly to the validator route and refunded the contract's remainder period.
+
+Storage `Solar` cost will involve the available protocol storage space.
 
 Proof of Space-Time staking.
 
