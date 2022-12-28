@@ -15,10 +15,6 @@ Roy R. O. Okello
 
 This paper introduces a next generation blockchain for apps, storage and compute.
 
-- apps: decentralized applications
-- storage: distributed storage
-- compute: distributed compute
-
 Astreum introduces a model for pricing, verification and payment for storage and compute in a decentralized system.
 
 Astreum primarily works by keeping track of all the accounts and their details such as the balance, code, number of transactions and storage in a block and changes through applying transactions.
@@ -58,6 +54,10 @@ Validators who miss a slot get half their stake returned until 1 `Astre` is left
 
 Transactions are ordered by their hash.
 
+Transactions proof enable other nodes to efficiently verify the accounts transition.
+
+Validators spend ~1 sec computing a Time Output and Time Proof from a Verifiable Delay Function.
+
 The creator of a new block is payed a fee of 10^9 `Solar` at the current block's solar price.
 
 ### Nebula
@@ -75,9 +75,10 @@ A Nebula Object is a data structure with two fields:
 - Leaf: True/False
 - Data: a blob of binary data of size < 32KB
 
-All data is erasure coded as a method of data protection in which data is encoded and fragments stored across the nodes on the network.
+Nebula supports storage for:
 
-When nodes go offline, data can be reconstructed from the fragments on the nodes that are online.
+- Lists
+- Files(Plain, Encrypted and Erasure Coded)
 
 `Object Get Flow`
 
@@ -112,11 +113,9 @@ When nodes go offline, data can be reconstructed from the fragments on the nodes
 
 ```
 
-Storage Nodes store the distributed index of the object hashes and their storage provider's id.
+Storage Nodes store the distributed index of the object hashes and their storage provider's address.
 
 The storage provider is paid by providing proofs of storage.
-
-An indexer earns a commission for indexing the underlying data and forwarding storage proofs to validators.
 
 ### Reactor
 
@@ -157,28 +156,6 @@ An Astreum Account is a data structure of an address and details associated to t
           + - - - - - - - - +       + - - - - - - - - - +       + - - - - - - - - - +       + - - - - - - - - - +
           |  balance hash   |       |     code hash     |       |   counter hash    |       |   storage hash    |
           + - - - - - - - - +       + - - - - - - - - - +       + - - - - - - - - - +       + - - - - - - - - - +
-
-```
-
-`Account Storage`
-
-```text
-
-                                                  + - - - - - - - +
-                                                  |  storage hash |
-                                                  + - - - - - - - +
-                                                          ^
-                                        . - - - - - - - - + - - - - - - - - - .
-                                        ^                                     ^
-                                + - - - - - - - - - +               + - - - - - - - - - - - +
-                                |  key-value 1 hash |               |   key-value 2 hash    |
-                                + - - - - - - - - - +               + - - - - - - - - - - - +
-                                        ^
-                        . - - - - - - - + - - - - - - - .
-                        ^                               ^
-                + - - - - - - - +               + - - - - - - - +
-                |  key 1 hash   |               |  value 1 hash |
-                + - - - - - - - +               + - - - - - - - +
 
 ```
 
@@ -287,5 +264,6 @@ The Fusion Machine is a stack based native runtime for Fusion Machine Code inter
 5. Recursive Functions of Symbolic Expressions and Their Computation by Machine - John McCarthy
 6. High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
 7. Efficient verifiable delay functions - Benjamin Wesolowski
+8. Bulletproofs: Short Proofs for Confidential Transactions and More - Benedikt Bunz, Jonathan Bootle, Dan Boneh, Andrew Poelstra, Pieter Wuille, and Greg Maxwell
 
-2022-06-20
+2022-06-21
