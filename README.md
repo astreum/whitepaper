@@ -60,19 +60,17 @@
     - Status
     - Solar Used
 
-### Nova
+### Nova, Proof of Stake Consensus Mechanism.
 - An Epoch lasts One Week.
 - The Block Time Target is Three Seconds.
 - A Slot is a three seconds period when new Blocks are created.
-- Slots are allocated to Validators every Epoch & removed after Slot Selection.
-- Slots are distributed pro rata with a Validator's Stake.
-- A Validator can miss using their Slot when they do not create a new Block when selected if too slow or offline.
-- Slot Selection:-
-    - Get Addresses with allocated Slots.
-    - Check missed Slots from the last Block.
+- Slots are allocated pro rata with Stake every Epoch and removed after Slot Selection.
+- A Validator can miss using their Slot when they do not create a new Block or create a malicious Block when selected.
+- Slot Selection determines the Validator of the next Block at any time:-
+    - Get Addresses with Slot Allocations.
+    - Check missed Slots from the last Block to the current time.
     - If no Slots were missed the nearest Address XOR to the last Block hash is selected.
     - If Slots were missed the nearest Address XOR to the Linear-feedback shift register, shifted to the number of slots missed, of the last Block hash is selected.
-- A Validator who misses all Slots within an Epoch gets their Stake refunded.
 - The Base Solar Limit is 1,000,000.
 - The Base Block Reward is 1 Astr.
 
