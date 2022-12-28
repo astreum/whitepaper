@@ -18,16 +18,16 @@ This paper introduces a blockchain for zero knowledge apps, perpetual storage an
 Features: 
 
 - trustless and permissionless access
+- quantum secure
 - value transactions
 - programmable accounts
-- distributed & perpetual storage
-- distributed, no config & confidential compute
-- a language for developing zero knowledge apps
-- rewards for providing storage and compute
+- Nebula, a distributed storage protocol
+- Fusion, a language for developing zero knowledge and confidential applications
+- Reactor, a distributed computation protocol for Fusion Applications
 
 Astreum primarily works by keeping track of all the accounts and their details such as the balance, code, number of transactions and storage in a block and changes through applying transactions.
 
-Astreum has a standard model for pricing and verification of transactions, storage and compute.
+Astreum introduces a standard model for pricing and verification of transactions, storage, compute and networking.
 
 Applications are written in the Fusion Language, which is a Lisp dialect whose lists are addressable from Nebula, the Distributed Storage Protocol.
 
@@ -196,7 +196,9 @@ The storage provider is paid by providing proofs of storage.
 
 Reactor is a protocol for distributed computation.
 
-Applications are confidential enabling users to use private data, preserve privacy and protect intellectual property.
+Applications can be confidential enabling users to use private data, preserve privacy and protect intellectual property.
+
+Users use account channels to pay for services.
 
 ## Components
 
@@ -238,31 +240,65 @@ Account Types:
 - private; controlled by private keys
 - contract; controlled by account code
 
-`Accounts State`
+`Accounts`
 
 ```text
 
-                                            + - - - - - - - +
-                                            |   accounts    |
-                                            + - - - - - - - +
+                                                        + - - - - - - - +
+                                                        |   accounts    |
+                                                        + - - - - - - - +
+                                                                ^
+                                                    . - - - - - - - - - - - .
+                                                    ^                       ^
+                                            + - - - - - - - +       + - - - - - - - +
+                                            |   account 1   |       |   account 2   |
+                                            + - - - - - - - +       + - - - - - - - +
                                                     ^
                                         . - - - - - - - - - - - .
                                         ^                       ^
                                 + - - - - - - - +       + - - - - - - - +
-                                |   account 1   |       |   account 2   |
+                                |    address    |       |    details    |
                                 + - - - - - - - +       + - - - - - - - +
-                                        ^
-                            . - - - - - - - - - - - .
-                            ^                       ^
-                    + - - - - - - - +       + - - - - - - - +
-                    |    address    |       |    details    |
-                    + - - - - - - - +       + - - - - - - - +
-                                                    ^
-                . - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .
-                ^                       ^                       ^                       ^
-        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +   
-        |    balance    |       |     code      |       |    counter    |       |    storage    |
-        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
+                                                                ^
+                . - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .
+                ^                       ^                       ^                       ^                       ^
+        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +   
+        |    balance    |       |   channels    |       |     code      |       |    counter    |       |    storage    |
+        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
+
+```
+
+### Channels
+
+A channel provides a way of making micropayments for storage, compute and networking off-chain.
+
+A channel consists of a counterparty address, balance, counter and timelock.
+
+`Channel Transactions`
+
+```text
+
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|               | fund          | approve       | withdraw      | close         |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+
+| chain         | XX            | XX            | XX            | XX            |
+
+| counter       | XX            | CH. COUNTER   | XX            | XX            |
+
+| data          | CH. TIMELOCK  | 00            | CH. APPROVE   | 00            |
+|               |               |               | TX HASH       |               |
+
+| recipient     | COUNTERPARTY  | COUNTERPARTY  | PRIMARY       | COUNTERPARTY  |
+
+| solar limit   | XX            | 00            | XX            | XX            |
+
+| type          | CH. FUND      | CH. APPROVE   | CH. WITHDRAW  | CH. CLOSE     |
+
+| value         | ADDITIONAL    | NEW CHANNEL   | 00            | 00            |
+|               | BALANCE       | BALANCE       |               |               |
+
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
 
 ```
 
@@ -289,32 +325,36 @@ A Block has the following fields:
 A Transaction consists of:
 
 1. body
-2. dilithium3 public keys
-3. dilithium3 signatures
-4. ed25519 public keys
-5. ed25519 signatures
+2. dilithium3 public key
+3. dilithium3 signature
+4. ed25519 public key
+5. ed25519 signature
 
 The transaction body has:
 
 1. chain
 2. counter
 3. data
-4. recipient (empty for contract creation)
+4. recipient
 5. solar limit
 6. type
 7. value
 
 Transaction types:
 
-- contract call
-- contract creation
 - value transfer
+- channel fund
+- channel approve
+- channel withdraw
+- channel close
+- contract create
+- contract call
 
 ### Solar
 
 `Solar` is the unit of value in the Astreum Blockchain.
 
-The account balance, storage and compute costs are denominated in `Solar`.
+The account balance, storage, compute and networking costs are denominated in `Solar`.
 
 Value magnitudes are:
 
@@ -328,32 +368,42 @@ Value magnitudes are:
 - 10^3:  Kilo Solar
 - 10^0:  Solar
 
-Solar costs for operations on 256 bits:
+Solar costs for basic operations on 256 bits:
 
-| Type | Words | Solar |
-|---|---|---|
-| storage | 1 | 1 |
-| compute | 1 | 3 |
-| | 2 | 4 |
+```text
+
++ - - - - - - - - - - - - - - - +
+|               | words | solar |
++ - - - - - - - - - - - - - - - +
+| storage       | 1     | 1     |
+| compute       | 1     | 3     |
+|               | 2     | 4     |
++ - - - - - - - - - - - - - - - +
+
+```
 
 ### Fusion
 
-Fusion is the applications platform running on the Astreum Blockchain.
+Fusion is the applications platform running on the Astreum.
 
 Applications can run through transactions, compute contracts and natively on nodes.
 
 The Fusion Language is a dialect of the Lisp programming language for developing Fusion applications and templates.
 
-The Fusion Machine is a stack based native runtime for Fusion Machine Code interfacing with the Astreum Accounts State.
+Developers create Fusion Scripts that are compiled into Fusion Machine Code.
+
+The Fusion Machine is the stack based native runtime for Fusion Machine Code. 
+
+The Astreum Machine is a Fusion Machine that interfaces with Astreum Blocks and Accounts.
 
 ## Conclusion
 
-With Astreum we create a system that offers the following benefits:
+Astreum is a next generation blockchain that offers the following benefits:
 
-- distribution of financial intermediary and cloud service fees
-- permissionless and pseudonymous(anonymous through private payment channels such as mixers) access to financial services
-- open and censorship free platform for creators and developers
-- one language for developing applications and templates, extensible to any current and future use case
+- distribution and decentralization of digital services such as financial intermediation, data storage, computation and networking through its trust-less models
+- permission-less and pseudonymous or anonymous access to digital services
+- open and censorship free platform for content creators and application developers
+- one language for developing applications and templates, while still extensible to any use case
 
 ## References
 
@@ -367,4 +417,4 @@ With Astreum we create a system that offers the following benefits:
 8. Efficient verifiable delay functions - Benjamin Wesolowski
 9. PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge - Ariel Gabizon, Zachary J. Williamson and Oana Ciobotaru
 
-2022-09-01
+2022-09-18
