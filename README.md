@@ -254,7 +254,7 @@ Standards to help developers create trusted Fusion Applications.
 
 Nebula is a protocol for storing and retrieving Nebula Objects.
 
-Nebula Objects are a clone of IPFS objects. The benefits of using IPFS Object format is having two files with different names and the same content with the same Nebula object representation and hence the same hash, preventing unnecessary duplication of data.
+Nebula Objects are a clone of IPFS objects. One benefit of using IPFS Object format is having two files with different names and the same content with the same Nebula object representation and hence the same hash, preventing unnecessary duplication of data.
 
 A Nebula Object is a data structure with two fields:
 
