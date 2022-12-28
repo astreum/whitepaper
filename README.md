@@ -1,7 +1,7 @@
 
 # Astreuos
 
-#### A Next Generation Blockchain Network for Storage and Compute that is Decentralized, Secure and Sustainable.
+### A Next Generation Blockchain Network for Storage and Compute that's Decentralized, Secure and Sustainable.
 
 ## Structure
 
@@ -10,8 +10,6 @@
 ### Blocks
 
 ### Transactions
-
-### Pulsar Network
 
 ### Nova
 
@@ -40,6 +38,8 @@
 - Compute Contract.
 
 ### Astreuos v5
+- Token Standards.
+- Oracle Standards.
 - Nova Reserve System.
 
 ### Projects
