@@ -15,7 +15,6 @@
 ### Blocks
 
 Structure:
-
 1. Data
     1. Number
     2. Previous Block Hash
@@ -33,15 +32,26 @@ Structure:
 
 ### Accounts
 
-Structure:
+Types:
+1. User
+2. Application
 
+Structure:
 1. Counter
 2. Balance
 3. Code ID
 4. Storage ID
 
+#### Special Accounts
 
-Balance:
+| Account | Address |
+|---|---|
+| Nova | 0x0000nova |
+| Nebula | 0x0000nebula |
+| Burn | 0x0000burn |
+
+
+#### Balance
 
 The standard unit of value is a Quanta while the smallest unit is a Quark.
 
@@ -57,30 +67,26 @@ Value magnitudes:-
 - 10^3: Kiloquark
 - 10^0: Quark
 
-Special Addresses
-
-| Service | Address |
-|---|---|
-| Nova | 0x0000nova |
-| Nebula | 0x0000nebula |
-| Burn | 0x0000burn |
-
 ### Transactions
 
-Structure:
+Types:
+1. Standard
+2. App Creation
+3. App Call
 
+Structure:
 1. Data
-    1. Recipient
-    2. Value
-    3. Counter
-    4. Solar Price
-    5. Solar Limit
+    1. Type
+    2. Recipient
+    3. Value
+    4. Counter
+    5. Solar Price
+    6. Solar Limit
 2. Sender Signature
 
 ### Receipts
 
 Structure:
-
 1. Transaction Hash
 2. Status
 3. Solar Used
@@ -96,6 +102,19 @@ Structure:
 ### Nova - Proof of Stake Consensus
 
 ### Nebula - Decentralized Storage
+
+## Applications
+
+### Smart Contracts
+
+### Digital Tokens
+
+#### Virtual Currencies
+#### NFTs
+
+### DAOs
+
+### Oracles
 
 ## Roadmap
 | Project | Description | Delivery |
