@@ -1,19 +1,19 @@
 
-# Astreum: A Next Generation Blockchain for Zero Knowledge Apps, Perpetual Storage and Serverless Compute
+# Astreum: A Next Generation Blockchain for Apps, Storage and Compute
 
 ## Author
 
 Roy R. O. Okello
 
-[Email](mailto:0xR3y@protonmail.com)
+[Email](mailto:royokello@protonmail.com)
 
-[Github](https://github.com/0xR3y)
+[Github](https://github.com/royokello)
 
-[Twitter](https://twitter.com/0xR3y)
+[Twitter](https://twitter.com/RealOkello)
 
 ## Introduction
 
-This paper introduces a blockchain for zero knowledge apps, perpetual storage and serverless compute that's decentralized and secure.
+This paper introduces a blockchain for zero knowledge apps, perpetual storage and confidential compute that's decentralized and secure.
 
 Features: 
 
@@ -43,47 +43,46 @@ Nodes communicate by passing envelopes with messages.
 
 Envelope:
 
-- kyber public key
-- message(empty for key exchange)
+- message
+- ping
 - nonce
 - time
-- x25519 public key
 
 Message:
 
 - body
 - topic
 
-#### Topics
+#### Routes & Topics
 
-Standard Topics:
+General:
 
-- Join Request
-- Join Response
-- Ping Request
-- Ping Response
-- Bootstrap
+- Ping; capabilities, difficulty, x25519 & kyber public keys
+- Join Request; route
+- Join Response; list of nearest nodes in the route
 
-Nova Topics:
+Execution:
 
 - Cancel Transaction
 - Transaction
+
+Consensus:
+
 - Transactions
 - Block
 - Block Request
 
-Storage Topics:
+Nebula:
 
 - Get Request
 - Get Response
 - Put Request
 - Put Response
 
-Reactor Topics:
+Reactor:
 
 - Compute Request
 - Compute Response
-
 
 ### Nova
 
@@ -115,7 +114,7 @@ Verifiers spend ~1 sec computing a time output from a verifiable delay function.
 
 The creator of a new block is payed a fee of 10^12 `Solar`.
 
-The latest block is the highest and most solar spent.
+The valid chain has the most blocks and with the most solar spent in the latest block.
 
 ### Nebula
 
@@ -127,8 +126,8 @@ Astreum pays storage providers in perpetuity for proofs of storage.
 
 A Nebula Object is a data structure with two fields:
 
-- Leaf: True/False
-- Data: a blob of binary data of size < 32KB
+- Leaf; True/False
+- Data; a blob of binary data of size < 32KB
 
 Nebula supports storage for:
 
@@ -182,13 +181,13 @@ Applications can be confidential enabling users to use private data, preserve pr
 
 ### Nodes
 
-| Type | Role | Fees Paid |
+| type | role | revenue |
 |---|---|---|
-| Clients | - | - |
-| Provers | Execute transactions and generate transactions proofs | Transaction |
-| Verifiers | Verify transaction execution and create blocks | Block |
-| Nebula | Store and provide access to accounts and contracted data | Storage |
-| Reactor | Provide compute resources on-demand  | Compute |
+| clients | - | - |
+| execution | execute transactions | transaction fees |
+| consensus | create blocks | block fees |
+| nebula | store data | storage & retreival fees |
+| reactor | on-demand compute | compute fees |
 
 ### Terminals
 
@@ -199,7 +198,7 @@ A terminal provides:
 - querying capabilities for hashes of nebula objects and text from name services
 - account management
 
-Terminals can natively run Fusion applications and render templates stored on Nebula.
+Terminals can natively run fusion applications and render templates stored on Nebula.
 
 ### Accounts
 
@@ -213,31 +212,36 @@ Each account has:
 4. counter
 5. storage
 
+Account Types:
+
+- private; controlled by private keys
+- contract; controlled by account code
+
 `Accounts State`
 
 ```text
 
-                                                        + - - - - - - - - - - - +
-                                                        |       accounts        |
-                                                        + - - - - - - - - - - - +
-                                                                    ^
-                                                    . - - - - - - - - - - - - - - - .
-                                                    ^                               ^
-                                        + - - - - - - - - - - - +       + - - - - - - - - - - - +
-                                        |       account 1       |       |       account 2       |
-                                        + - - - - - - - - - - - +       + - - - - - - - - - - - +
+                                            + - - - - - - - +
+                                            |   accounts    |
+                                            + - - - - - - - +
                                                     ^
                                         . - - - - - - - - - - - .
                                         ^                       ^
                                 + - - - - - - - +       + - - - - - - - +
-                                |    address    |       |    details    |
+                                |   account 1   |       |   account 2   |
                                 + - - - - - - - +       + - - - - - - - +
-                                                                ^
-                . - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .
-                ^                       ^                       ^                       ^                       ^
-        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +   
-        |    balance    |       |    channels   |       |     code      |       |    counter    |       |    storage    |
-        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
+                                        ^
+                            . - - - - - - - - - - - .
+                            ^                       ^
+                    + - - - - - - - +       + - - - - - - - +
+                    |    address    |       |    details    |
+                    + - - - - - - - +       + - - - - - - - +
+                                                    ^
+                . - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .
+                ^                       ^                       ^                       ^
+        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +   
+        |    balance    |       |     code      |       |    counter    |       |    storage    |
+        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
 
 ```
 
@@ -274,15 +278,17 @@ The transaction body has:
 1. chain
 2. counter
 3. data
-4. recipient
+4. recipient (empty for contract creation)
 5. solar limit
 6. type
 7. value
 
-The Transaction types are:
+Transaction types:
 
-- app call
-- app creation
+- channel open
+- channel close
+- contract call
+- contract creation
 - value transfer
 
 ### Solar
@@ -342,4 +348,4 @@ With Astreum we create a system that offers the following benefits:
 8. Efficient verifiable delay functions - Benjamin Wesolowski
 9. PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge - Ariel Gabizon, Zachary J. Williamson and Oana Ciobotaru
 
-2022-08-03
+2022-08-18
