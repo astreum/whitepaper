@@ -86,7 +86,7 @@ An epoch lasts approximately one week. The block time target is three seconds. A
 Slots are allocated pro rata with a validator's stake every epoch and are removed after slot selection. A slot miss occurs when a validator does not create a new block or created a malicious block when selected. A validator that misses all of their slots in an epoch will be refunded their stake.
 
 Slot selection determines the validator for the next block at any time:-
-- Get validator addresses with slot allocations.
+- Get validator addresses with slot allocations in the nova account storage.
 - Check slot misses from the last block to the current time.
 - If no slot miss, the nearest address xor to the last block hash is selected.
 - If slot misses, the nearest address xor to the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is selected.
