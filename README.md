@@ -39,47 +39,68 @@ Applications can run through Transactions or Reactor, the Distributed Compute Pr
 
 Pulsar Network is the distributed hash table peer-to-peer communication protocol for the Astreum Blockchain.
 
-Nodes communicate by passing envelopes with messages.
+Nodes communicate by passing envelopes with messages through routes.
 
-Envelope:
+An Envelope has four fields:
 
 - message
-- ping
 - nonce
+- sender
 - time
 
-Message:
+A message contains two fields:
 
 - body
 - topic
 
-#### Routes & Topics
+#### Pings
 
-General:
+Pings are used for initial communication setup and updating peer liveness.
 
-- Ping; capabilities, difficulty, x25519 & kyber public keys
-- Join Request; route
-- Join Response; list of nearest nodes in the route
+The initiating node (Node A) sends an envelope without a message and the kyber & x25519 public keys in the sender field.
 
-Execution:
+`ping: ip address -> Envelope`
+
+The receiving node (Node B) responds if Node A is in its init list or not in its peer list. 
+
+```
+
+ping_response: Envelope ->
+
+        if sender is in init list: add to peer list and send handshake
+
+        elif sender is in peer list: maybe update keys and timestamp
+
+        else: send handshake
+
+```
+
+#### Routing Messages
+
+- Join Request
+- Routing Request
+- Routing Response
+
+#### Execution Messages
 
 - Cancel Transaction
 - Transaction
+- Transaction Proof
 
-Consensus:
+#### Consensus Messages
 
 - Transactions
 - Block
 - Block Request
 
-Nebula:
+#### Nebula Messages
 
 - Get Request
 - Get Response
 - Put Request
 - Put Response
 
-Reactor:
+#### Reactor Messages
 
 - Compute Request
 - Compute Response
@@ -175,7 +196,7 @@ The storage provider is paid by providing proofs of storage.
 
 Reactor is a protocol for distributed computation.
 
-Applications can be confidential enabling users to use private data, preserve privacy and protect intellectual property.
+Applications are confidential enabling users to use private data, preserve privacy and protect intellectual property.
 
 ## Components
 
@@ -285,8 +306,6 @@ The transaction body has:
 
 Transaction types:
 
-- channel open
-- channel close
 - contract call
 - contract creation
 - value transfer
@@ -348,4 +367,4 @@ With Astreum we create a system that offers the following benefits:
 8. Efficient verifiable delay functions - Benjamin Wesolowski
 9. PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge - Ariel Gabizon, Zachary J. Williamson and Oana Ciobotaru
 
-2022-08-18
+2022-09-01
