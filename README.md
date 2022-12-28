@@ -1,11 +1,9 @@
 
-# Astreuos
-
-### A Next Generation Blockchain for Apps, Storage and Compute that's Decentralized, Secure and Sustainable.
+# Astreuos - A Next Generation Blockchain for Apps, Storage and Compute that's Decentralized, Secure and Sustainable
 
 ## Introduction
 
-An accounts based blockchain with storage and compute protocols is presented in this paper. A motivation for such a blockchain is to build a better crypto experience with standards for building trusted smart contracts and price mechanisms for currency stability. 
+An accounts based blockchain with storage and compute protocols is presented in this paper. A motivation for such a blockchain is to build a better crypto experience with standards for building trusted smart contracts and price mechanisms for currency stability.
 
 As a blockchain, we benefit from trustless consensus and from the use of cryptography with permissionless access and great security for users. This empowers anyone in the world with uncensored access and benefit from the blockchain.
 
@@ -14,6 +12,7 @@ The blockchain primarily works by keeping track of all the accounts and details 
 Astreuos aims to be a competitive and viable platform for powerful web3 services by offering a combined value, storage and compute on a single blockchain priced in a single currency.
 
 Astreuos empowers web3 developers to:
+
 - create powerful experiences that interface with blockchain node apis for transactions, storage and compute.
 - host applications, static sites and media content on Nebula.
 - perform compute intensive applications using Reactor Private and Open Compute.
@@ -99,11 +98,10 @@ An Astreuos Account is a makeup of an address and details associated to that acc
 
 ```
 
-
-
 The account balance is in the native unit of value which is a `Quark`.
 
-Value magnitudes are:-
+Value magnitudes are:
+
 - 10^24: YottaQuark (YQ)
 - 10^21: ZettaQuark (ZQ)
 - 10^18: ExaQuark (EQ)
@@ -118,7 +116,8 @@ Value magnitudes are:-
 
 A Block consists of the block body and the validator's ed25519 signature of the body's merkle tree hash.
 
-The block body has:-
+The block body has:
+
 1. accounts hash
 2. chain
 3. number
@@ -138,7 +137,8 @@ A receipt consists of the solar used and status of the transaction application p
 
 A Transaction consists of the transaction body and the sender's ed25519 signature of the body's merkle tree hash.
 
-The transaction body has:-
+The transaction body has:
+
 1. chain
 2. counter
 3. recipient
@@ -172,7 +172,8 @@ A slot miss occurs when a validator does not create a new block or created a mal
 
 A validator that misses all of their slots in an epoch will be refunded their stake.
 
-Slot selection determines the validator for the next block at any time:-
+Slot selection determines the validator for the next block at any time:
+
 - Get validator addresses with slot allocations in the nova account storage.
 - Check slot misses from the last block to the current time.
 - If no slot miss, the nearest address xor to the last block hash is selected.
@@ -182,7 +183,8 @@ All transactions in a block are ordered ascending by the xor of the transaction 
 
 The creator of a new block is payed a fee 1,000,000,000 Solar at the blocks Solar Price.
 
-Solar pricing mechanism:-
+Solar pricing mechanism:
+
 - The solar price is fixed for every block.
 - The solar price varies by 1 `Quark`.
 - The solar price increases when more than 75%, and decreases when less than 25%, of the previous solar limit was used.
@@ -194,30 +196,20 @@ Fusion is an application platform running on the Astreuos Blockchain.
 
 The Fusion Language is a postfix programming language for developing Fusion Applications.
 
-The Fusion Virtual Machine(FVM) is the native runtime for Fusion Machine Code(FMC) and has an interface to Astreuos Accounts.
+The Fusion Machine is the native runtime for Fusion Machine Code interfacing with the Astreuos Accounts State.
 
-The FVM is a stack based virtual machine with operations for:
-- PUSH
-- POP
-- LOAD
-- STORE
-- ADD
-- SUB
-- MUL
-- DIV
-- REM
-- EQ
-- GT
-- GT_EQ
-- LT
-- LT_EQ
-- DUP
-- SWAP
-- JUMP
+The Fusion Machine is a stack based virtual machine.
 
-Helium is the Fusion package manager. Helium downloads your Fusion Application's dependencies, runs automated tests and compiles your Fusion Script into FMC.
+Helium is the Fusion package manager.
 
-New transaction types will be added for App Creation and App Calls.
+- downloads dependencies during development
+- runs automated tests
+- compiles your Fusion Script into Fusion Machine Code.
+
+New transaction types:
+
+- App Creation
+- App Calls.
 
 All FVM operations cost 1 Solar apart from Storage Put and Get.
 
@@ -241,6 +233,7 @@ Standards to help developers create trusted Fusion Applications.
 Nebula is a protocol for storing and retrieving Nebula Objects.
 
 A Nebula Object is a data structure with three fields:
+
 - Leaf: True/False.
 - Data: a blob of binary data of size < 32KB.
 - Size: the cumulative size of the object.
@@ -313,6 +306,7 @@ Open Compute is calling Fusion Applications stored on Nebula and are callable by
 Private Compute is confidential computing enabling users to use private data and protect software ip on the protocol while allowing for open or restricted access to app calls.
 
 ### V5: Governance Upgrade
+
 - improvement proposal system
 
 ### Roadmap
@@ -328,4 +322,4 @@ Private Compute is confidential computing enabling users to use private data and
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-03-30
+2022-04-01
