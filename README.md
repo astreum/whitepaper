@@ -24,11 +24,12 @@
 |---|---|---|
 | [Stellar Notation](https://github.com/seg-software/rust-stellar-notation) | Data Encoding | ✅ |
 | [NeutronDB](https://github.com/seg-software/rust-neutrondb) | Key Value Store | ✅ |
-| Pulsar Network | Messaging System | 🏗 |
+| Fides | Digital Signature Library | 🚧 |
+| Pulsar Network | Messaging System |  TBD |
 | Nova Protocol| Proof of Stake Consensus | TBD |
 | Fusion | Decentralized Applications | TBD |
 | Nebula | Storage Protocol | TBD |
 | Testnet Launch | | Q4 2021 |
 | Mainnet Launch | | Q1 2022 |
 
-2021-09-22
+2021-09-23
