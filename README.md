@@ -18,11 +18,13 @@ This paper introduces an accounts based blockchain with these feature:
 - zero knowledge and confidential programmable accounts(contracts)
 - distributed storage with perpetual storage contracts
 - confidential, attestable and zero configuration distributed compute
-- secure and private communication with competitive network routing fees
+- secure and private communication with open network routing
 
 Astreum primarily works by keeping track of all the accounts and their details, the balance, channels, code, number of transactions and storage in a block.
 
 Blocks are subseqently added to the chain through validation of new blocks with new transactions that alter the Accounts State of the latest block.
+
+Validation is fully trust-less by implementing a zero knowledge proof system that allows all Astreum Nodes to verify new Blocks and Account States.
 
 Astreum introduces a standard model for pricing and verification of transactions, storage, compute and networking.
 
@@ -223,7 +225,7 @@ Reactor is a protocol for distributed computation.
 
 Applications can be confidential enabling users to use private data, preserve privacy and protect intellectual property.
 
-Users use account channels to pay for services.
+Users use the combination of Account Channels and application attestability to pay for verified services.
 
 ## Components
 
@@ -236,6 +238,7 @@ A Node's roles are:
 - Connect and Message on the Pulsar Network
 - Create, Execute and Transmit Transactions
 - Create and Verify Blocks
+- Request or Provide Compute and Storage Services
 
 ### Terminals
 
@@ -393,6 +396,25 @@ Value magnitudes are:
 - 10^3:  Kilo Solar
 - 10^0:  Solar
 
+#### Protocol Costs
+
+```text
+
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+| Protocol              | Currency      | Price Mechanism       |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+| Pulsar Gateway        | Solar         | Market Determined     |
+| Pulsar Routes         | Work          | Fixed                 |
+| Transaction           | Solar         | Fixed                 |
+| Fusion                | Tokens        | App Specific          |
+| Nebula                | Solar         | Fixed & Market        |
+| Reactor               | Solar         | Market Determined     |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+
+```
+
+#### Fixed Costs
+
 Solar costs for basic operations on 256 bits:
 
 ```text
@@ -417,7 +439,7 @@ The Fusion Language is a dialect of the Lisp programming language for developing
 
 Developers create Fusion Scripts that are compiled into Fusion Machine Code.
 
-The Fusion Machine is the stack based native runtime for Fusion Machine Code. 
+The Fusion Machine is the stack based native runtime for Fusion Machine Code.
 
 The Astreum Machine is a Fusion Machine that interfaces with Astreum Blocks and Accounts.
 
@@ -442,5 +464,6 @@ Astreum aims to fully realize an ideal cryptographic network with the following 
 7. CRYSTALS-Dilithium Algorithm Specifications and Supporting Documentation - Shi Bai, Léo Ducas, Eike Kiltz, Tancrède Lepoint,Vadim Lyubashevsky, Peter Schwabe, Gregor Seiler and Damien Stehlé
 8. Efficient verifiable delay functions - Benjamin Wesolowski
 9. PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge - Ariel Gabizon, Zachary J. Williamson and Oana Ciobotaru
+10. Aurora: Transparent Succinct Arguments for R1CS - Eli Ben-Sasson, Alessandro Chiesa, Michael Riabzev, Nicholas Spooner, Madars Virza and Nicholas P. Ward
 
-2022-10-31
+2022-11-07
