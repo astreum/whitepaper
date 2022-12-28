@@ -3,15 +3,9 @@
 
 ### The Blockchain
 
-## Blocks
+[Blocks](https://github.com/astreuos/astreuos-specifications/blob/main/blockchain/blocks.md)
 
-<!-- structure -->
-<!-- accs, txs & block storage -->
-
-## Transactions
-
-<!-- structure -->
-<!-- solar -->
+[Transactions](https://github.com/astreuos/astreuos-specifications/blob/main/blockchain/transactions.md)
 
 ### The State
 
