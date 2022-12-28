@@ -3,7 +3,7 @@
 
 ### Blockchain
 
-[Nova Protocol (Consensus)](https://github.com/astreuos/astreuos-specs/blob/main/blockchain/nova_protocol.md)
+[Nova Protocol](https://github.com/astreuos/astreuos-specs/blob/main/blockchain/nova_protocol.md)
 
 [Blocks](https://github.com/astreuos/astreuos-specs/blob/main/blockchain/blocks.md)
 
