@@ -20,7 +20,7 @@ Roy R. O. Okello
   - Privacy
   - Usability
   - Extensibility
-  - Decentralization
+  - Trust
 
 - Astreum
   - Accounts
@@ -31,8 +31,8 @@ Roy R. O. Okello
 
 - Roadmap
   - Programmable Accounts
-  - Account Abstraction
-  - Relay Privacy
+  - Signature Abstraction
+  - Relay Privacy & Security
   - Zero Knowledge Validation
   - Storage Protocol
   - Compute Protocol
@@ -41,28 +41,66 @@ Roy R. O. Okello
   - Treasury Protocol
 
 - Applications
-  - User Powered Applications
-  - Terminals
-  - Media Streaming
-  - Perpetual Storage
-
-- Conclusion
 
 - References
 
 ## Introduction
 
+The development of blockchain technology has revolutionized the way that we store and share information. Originally used as a platform for the digital currency Bitcoin, blockchain technology can now been applied to a wide range of applications.
+
+One area where blockchain technology has the potential to make a significant impact is in the field of computing, storage, and networking. By using an accounts-based blockchain, it is possible to create a decentralized and distributed platform that enables users to securely share and access computing, storage, and networking resources.
+
+This white paper presents an overview of the concept of an accounts-based blockchain for computing, storage, and networking. We will describe the key features and benefits of this approach. We will also explore the roadmap to acheive such a network.
+
 ## Why Another Blockchain
+
+There is a growing need for a new blockchain that is secure, private, usable, and extensible. This is because the current generation of blockchain technology has limitations and challenges that make it difficult to use in many real-world applications.
+
+For example, many existing blockchain systems are vulnerable to security attacks, and are not able to protect the privacy of users on the platform. This can make it difficult to trust and use these systems for sensitive applications, such as financial transactions or personal data storage.
+
+In addition, many existing blockchain systems are not user-friendly, and can be difficult for non-technical users to understand and use. This can limit the adoption and use of these systems, and can prevent them from reaching their full potential.
+
+Finally, many existing blockchain systems are not extensible, and do not provide the flexibility and adaptability needed to support the development of new and innovative applications. This can limit the capabilities of these systems, and can prevent them from evolving and adapting to changing needs and requirements.
 
 ### Security
 
+Blockchain technology is often considered to be highly secure, but it is vulnerable to attacks by quantum computers. These powerful machines are capable of performing calculations that are beyond the reach of classical computers, and they could potentially be used to break the cryptographic algorithms that are used to secure blockchain systems.
+
+Post-quantum cryptography is a field of research that is focused on developing cryptographic algorithms that are resistant to attacks by quantum computers. By using post-quantum secure algorithms, it is possible to protect blockchain accounts and messages from being compromised by quantum computers.
+
+By using post-quantum secure algorithms, it is possible to protect blockchain accounts and messages from being compromised by quantum computers. This can help to ensure the long-term security and integrity of the blockchain, and can help to prevent the loss of sensitive information or funds.
+
 ### Privacy
+
+Mix networks are a type of privacy-enhancing technology that can be used to protect the privacy of users on a blockchain. Mix networks work by routing data through a series of intermediate nodes, known as mixers, before it reaches its final destination. This makes it difficult for attackers to track the origin or destination of the data, and can help to protect the privacy of users on the blockchain.
+
+One of the key benefits of mix networks is that they can provide strong privacy guarantees without requiring users to trust any specific party. This is because the mixers in a mix network do not have access to the full end-to-end path of the data, and cannot therefore link the origin and destination of the data.
 
 ### Usability
 
+Signature abstraction improves the usability of the platform by making it easier for users to interact with the blockchain and manage their accounts and assets. This can make the platform more accessible to a wider range of users, which can help drive adoption and increase the value of the platform.
+
 ### Extensibility
 
-### Decentralization
+The Fusion Language is a dialect of Lisp Language. This means that it can be easily extended with new features and capabilities, allowing programmers to tailor the language to their specific needs. Some of the benefits of this extensibility include:
+
+- Increased flexibility: Fusion can be customized to suit a wide range of programming tasks. This makes it a versatile language that can be used for a variety of purposes, including artificial intelligence, natural language processing, and other domains.
+
+- Improved productivity: The ability to easily extend Fusion with new features can help programmers be more productive. For example, they can create custom functions and data structures that are specifically designed to solve the problem at hand, rather than being limited to the features provided by the language itself.
+
+- Greater expressiveness: Fusion's extensibility allows programmers to express their ideas and solutions in a more natural and intuitive way. This can make the code easier to read and understand, and can also help to reduce the amount of time and effort required to write and maintain the code.
+
+- Stronger support for dynamic environments: Fusion can be used in dynamic environments, such as user interfaces, where the structure and behavior of the system can change at runtime. The language's extensibility can make it easier to deal with these changes, allowing programmers to quickly and easily adapt to new requirements and conditions.
+
+### Trust
+
+Zero-knowledge validation is a cryptographic technique that allows one party to prove to another party that a statement is true, without revealing any additional information about the statement or the underlying data.
+
+Benefits of using zero-knowledge validation are:
+
+- Greater scalability: Zero-knowledge validation allows for the verification of data on the blockchain without requiring the entire network to participate in the process. This can help to reduce the computational overhead of the blockchain, and can make it more scalable and efficient.
+
+- Enhanced trust and confidence: By using zero-knowledge validation, it is possible to build trust and confidence in the security and privacy of the blockchain as all nodes validate the blockchain.
 
 ## Astreum
 
@@ -199,19 +237,17 @@ Roy R. O. Okello
 
 `Routes`
 
-1. Consensus
+- Validation
 
 `Topics`
 
-1. Join
-2. Route Request
-3. Route Response
-4. Transaction
-5. New Block
-6. Block Request
-7. Block Response
-8. Account Request
-9. Account Response
+- Block
+- BlockRequest
+- BlockResponse
+- Join
+- RouteRequest
+- RouteResponse
+- Transaction
 
 ### Consensus Protocol
 
@@ -245,33 +281,80 @@ The valid chain has the most blocks and with the most solar spent in the latest 
 
 ### Programmable Accounts
 
-### Account Abstraction
+🍁 Astreum Objects
+📜 Fusion Language
+⚙️ Astreum Machine
+✅ Add Code to Account Details
 
-### Relay Privacy
+### Signature Abstraction
 
-### Zero Knowledge Validation
+🔒 Digital Signature Algorithm Abstraction enables Post Quantum Security and Social Recovery.
+
+`New Address Structure`
+
+```
+                + - - - - - - - +
+                |    Address    |
+                + - - - - - - - +
+                        ^
+                . - - - - - - - - - - - .
+                ^                       ^
+        + - - - - - - - +       + - - - - - - - +
+        |  DSA Fusion   |       |   Public Key  |
+        |  App Object   |       + - - - - - - - +
+        + - - - - - - - +
+```
+
+### Relay Privacy & Security
+
+🔀 Address Mixing
+🔒 Public Key Exchange Abstraction enabling more algorithms including Post Quantum Secure.
+
+`New Sender Structure`
+
+```
+                + - - - - - - - +
+                |    Sender     |
+                + - - - - - - - +
+                        ^
+                . - - - - - - - - - - - .
+                ^                       ^
+        + - - - - - - - +       + - - - - - - - +
+        |  PKE Fusion   |       |   Public Key  |
+        |  App Object   |       + - - - - - - - +
+        + - - - - - - - +
+```
+
+### Zero Knowledge Astreum Machine
+
+✅ Native Zero Knowledge Block Validation
 
 ### Storage Protocol
 
+☁ Add Storage Route
+🤝 Storage Payment Channels
+
 ### Compute Protocol
+
+⚡ Add Compute Route
+🤝 Compute Payment Channels
 
 ### Gateway Protocol
 
+📡 Gateway Search & Connection Procedures
+🤝 Gateway Payment Channels
+
 ### Account & Transaction Privacy
+
+🔒 Confidential Transactions
+👤 Private Accounts
 
 ### Treasury Protocol
 
+💵 Solar Creation Mechanism
+📊 Supply Control Mechanism
+
 ## Applications
-
-## Final
-
-Astreum aims to fully realize an ideal cryptographic network with the following features:
-
-- Permissionless: Astreum Accounts and Services, such as financial intermediation, data storage, serverless computation and networking are open and censorship-free to all users, creators and developers.
-- Trustless: Astreum Validation is performed by all nodes on the network efficiently through zero knowledge allowing billions of nodes to synchronize the state of the blockchain in seconds.
-- Private: Relay Protocol is protected by encrypting all data including message topics to protect against eavesdropping and mix routing to prevent fingerprinting through metadata analysis.
-- Secure: Astreum Accounts and communication through Relay Protocol are protected from future attacks from quantum computers by using post quantum secure digital signature algorithm dilithium and public key exchange algorithm kyber.
-- Extensible: the Fusion Language and Machine provide developers with the ability to build any kind of template and application.
 
 ## References
 
@@ -282,7 +365,8 @@ Astreum aims to fully realize an ideal cryptographic network with the following 
 - Recursive Functions of Symbolic Expressions and Their Computation by Machine - John McCarthy
 - PostScript Language Reference Manual - John Warnock, Charles Geschke, Doug Brotz, Ed Taft and Bill Paxton
 - High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
-- CRYSTALS-Dilithium Algorithm Specifications and Supporting Documentation - Shi Bai, Léo Ducas, Eike Kiltz, Tancrède Lepoint,Vadim Lyubashevsky, Peter Schwabe, Gregor Seiler and Damien Stehlé
+- CRYSTALS-Dilithium - Shi Bai, Léo Ducas, Eike Kiltz, Tancrède Lepoint,Vadim Lyubashevsky, Peter Schwabe, Gregor Seiler and Damien Stehlé
+- CRYSTALS-Kyber - Roberto Avanzi, Joppe Bos, Léo Ducas, Eike Kiltz, Tancrède Lepoint, Vadim Lyubashevsky, John M. Schanck, Peter Schwabe, Gregor Seiler, and Damien Stehlé.
 - Efficient verifiable delay functions - Benjamin Wesolowski
 - PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge - Ariel Gabizon, Zachary J. Williamson and Oana Ciobotaru
 - Aurora: Transparent Succinct Arguments for R1CS - Eli Ben-Sasson, Alessandro Chiesa, Michael Riabzev, Nicholas Spooner, Madars Virza and Nicholas P. Ward
