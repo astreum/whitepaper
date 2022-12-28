@@ -218,10 +218,16 @@ New transaction types:
 
 Nebula is a protocol for storing and retrieving Nebula Objects.
 
+Users pay the present value of the perpetual storage cost of the object.
+
+Astreum pays storage providers in perpetuity for proofs of storage.
+
+The storage cost is derived from the current supply and demand.
+
 A Nebula Object is a data structure with two fields:
 
 - Leaf: True/False
-- Data: a blob of binary data of size < 32KB
+- Data: a blob of binary data of size &lt 32KB
 
 All data is erasure coded as a method of data protection in which data is encoded and fragments stored across the nodes on the network.
 
@@ -262,27 +268,17 @@ When nodes go offline, data can be reconstructed from the fragments on the nodes
 
 Storage Nodes store the distributed index of the object hashes and their storage provider's id.
 
-The storage provider is paid by providing a proof of storage every 5 minutes.
+The storage provider is paid by providing proofs of storage.
 
 An indexer earns a commission for indexing the underlying data and forwarding storage proofs to validators.
 
 ### Reactor
 
-Reactor is a protocol for distributed confidential computation.
+Reactor is a protocol for distributed computation.
 
-Confidential computing enabling users to use private data, preserving privacy and use proprietary software, protecting intellectual property.
+Applications can be confidential enabling users to use private data, preserving privacy and use proprietary software, protecting intellectual property.
 
-## Applications
-
-### Global Payments
-
-### Decentralized Applications
-
-### User Powered Applications
-
-### Content Addressing
-
-### Serverless
+The compute cost is derived from the current supply and demand.
 
 ## References
 
@@ -293,4 +289,4 @@ Confidential computing enabling users to use private data, preserving privacy an
 5. Recursive Functions of Symbolic Expressions and Their Computation by Machine - John McCarthy
 6. High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
 
-2022-06-04
+2022-06-13
