@@ -158,7 +158,7 @@ The solar limit of a block is set at 1,000,000,000.
 | Fee | Solar |
 |---|---|
 | Transaction Processing | 1,000 |
-| Account Creation | 160,000 |
+| Account Creation | 200,000 |
 
 Solar pricing mechanism:
 
@@ -185,8 +185,8 @@ Slot selection determines the validator for the next block at any time:
 
 - Get validator addresses with slot allocations in the nova account storage.
 - Check slot misses from the last block to the current time.
-- If no slot miss, the latest block hash is used as the seed in the weighted random numbers generator.
-- If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is used as the seed in the weighted random numbers generator.
+- If no slot miss, the latest block hash is used as the seed in the weighted random address selector.
+- If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is used as the seed in the weighted random address selector.
 
 Transactions are ordered by the validator.
 
@@ -196,24 +196,23 @@ The creator of a new block is payed a fee 1,000,000,000 Solar at the current Sol
 
 Fusion is an application platform running on the Astreuos Blockchain.
 
-The Fusion Language is a postfix programming language for developing Fusion Applications.
+The Fusion Language is the programming language for developing Fusion Applications.
 
 The Fusion Machine is the native runtime for Fusion Machine Code interfacing with the Astreuos Accounts State.
 
 The Fusion Machine is a stack based virtual machine.
 
-Helium is the Fusion package manager.
+Helium is the Fusion code manager.
 
-- downloads dependencies during development
 - runs automated tests
-- compiles your Fusion Script into Fusion Machine Code.
+- compiles your fusion script into fusion machine code
 
 New transaction types:
 
 - App Creation
 - App Calls
 
-A Storage Put costs 8,000 Solar, Storage Get costs 160 Solar and all other Stack Operations cost 1 Solar.
+A Storage Put costs 100,000 Solar, Storage Get costs 200 Solar and all other Stack Operations cost 1 Solar.
 
 Standards to help developers create trusted Fusion Applications.
 
@@ -227,20 +226,14 @@ Nebula is a protocol for storing and retrieving Nebula Objects.
 
 A Nebula Object is a data structure with three fields:
 
-- Leaf: True/False.
-- Data: a blob of binary data of size < 32KB.
-- Size: the cumulative size of the object.
+- Leaf: True/False
+- Data: a blob of binary data of size < 32KB
+- Size: the cumulative size of the object
 
 Puslar Network Upgrade:
 
 - Nebula Route
-- Message Kinds for get and put on nebula objects.
-
-`Object Put Flow`
-
-- index file as storage provider
-- send put contract to the blockchain nebula account
-- storage provider gets file from user and starts proofing storage
+- Message Kinds for get and put on nebula objects
 
 `Object Get Flow`
 
@@ -295,9 +288,9 @@ An indexer also earns a commission for facilitating a put contract and indexing 
 
 A delete contract can be made directly to the validator route and refunded the contract's remainder period.
 
-The Retrieval Fees for 32KB is 80,000 Solar.
+The Retrieval Fees for 32KB is 100,000 Solar.
 
-The Storage Fees for 32KB/mo is 160,000 Solar.
+The Storage Fees for 32KB/mo is 200,000 Solar.
 
 ### V4: Reactor Upgrade
 
@@ -324,4 +317,4 @@ Private Compute is confidential computing enabling users to use private data and
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-04-02
+2022-04-05
