@@ -34,7 +34,7 @@ Applications can run through Transactions or Reactor, Distributed Compute Protoc
 
 ### Accounts
 
-An Astreum Account is a data structure of an address and details associated to that account. Each account has a balance, a counter and storage.
+An Astreum Account is a data structure of an address and details associated to that account. Each account has a balance, code, counter and storage.
 
 `Accounts State`
 
@@ -129,12 +129,13 @@ The block body has:
 6. solar price
 7. solar used
 8. time
-9. transactions hash
-10. validator
+9. time output
+10. time proof
+11. transactions hash
+12. transactions proof
+13. validator
 
-The Receipt is the result from the application of a transaction to the Astreum Account State.
-
-A receipt consists of the solar used and status of the transaction application procedure.
+Receipts are the result from the application of a transactions, consisting of the solar used and status of the application.
 
 ### Transactions
 
@@ -185,8 +186,8 @@ Slot selection determines the validator for the next block at any time:
 
 - Check slot misses from the latest block
 - Half the stakes of validators for each of their missed slots
-- If no slot miss, the latest block hash is used as the seed in the weighted random address selector
-- If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is used as the seed in the weighted random address selector
+- If no slot miss, the latest block time proof is used as the seed in the weighted random address selector
+- If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the latest block time proof is used as the seed in the weighted random address selector
 
 Validators who miss a slot get half their stake returned.
 
@@ -198,9 +199,11 @@ The creator of a new block is payed a fee of 10^9 `Solar` at the current block's
 
 Fusion is the applications platform running on the Astreum Blockchain.
 
-Applications can run through transaction calls on-chain and computation contracts off-chain.
+Applications can run through transaction calls on-chain, computation contracts off-chain and natively on nodes.
 
 The Fusion Language is a dialect of the Lisp programming language for developing Fusion Applications.
+
+Fusion capabilities include templating user interfaces that run on nodes.
 
 The Fusion Machine is a stack based native runtime for Fusion Machine Code interfacing with the Astreum Accounts State.
 
