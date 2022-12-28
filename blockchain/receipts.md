@@ -2,9 +2,8 @@
 
 ### Structure
 
-Key: String;
-- Transaction Hash
+Key: Transaction Hash, String
 
-Value: Stellar Objects;
-1. Status
-2. Solar Used
+Value: Stellar Group,
+1. Status: u8
+2. Solar Used: u64

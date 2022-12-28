@@ -1,26 +1,21 @@
 # Accounts
 
-## Structure
+Key: Address, String
 
-Key: String;
-- Address: String
+Value: Account Hash, String
 
-Value: String;
-- Account Hash: String
+# Account
 
-## Account
+Key: Hash, String
 
-Key: String;
-- Account Hash: String
-
-Value: Stellar Objects;
-    1. Counter: u64
-    2. Balance: u128
-    3. Code Hash: String
-    4. Store Hash: String
+Value: Stellar Group,
+    1. Counter, u64
+    2. Balance, u128
+    3. Code Hash, String
+    4. Store Hash, String
 
 
-### Balance
+## Balance
 
 The standard unit of value is a Quanta while the smallest unit is a Quark.
 
@@ -36,7 +31,19 @@ Value magnitudes:-
 - 10^3: Kiloquark
 - 10^0: Quark
 
-### Code
+## Code
 
-### Store
+Key: Hash, String
+
+Value: Stellar Group,
+    1. Key, String
+    2. Value, String
+
+## Stores
+
+Key: Hash, String
+
+Value: Stellar Group,
+    1. Key, String
+    2. Value, String
 
