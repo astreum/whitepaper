@@ -1,50 +1,58 @@
 
-## Astreuos Whitepaper
+# Astreuos
 
-#### A Next Generation Blockchain Network that delivers on Decentralization, Security and Sustainability.
+#### A Next Generation Blockchain Network for Storage and Compute that is Decentralized, Secure and Sustainable.
 
-Strategies: -
-1. All users earn Astre by providing validation or storage for the network.
-2. Auto-adjustments on transaction fees, block solar limits and storage fees for sustainability & maximum network utilization.
-3. Secure the network through digital signatures, proof of work on messages and proof of stake on blocks.
+## Structure
 
-### Table of Contents
+### Accounts
 
-1. History
-    1. Blockchain
-    2. Bitcoin
-    3. Ethereum
-    4. Web 3.0
+### Blocks
 
-2. Astreuos
-    - [State](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/state.md)
-    - [Accounts](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/accounts.md)
-    - [Blocks](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/blocks.md)
-    - [Transactions](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/transactions.md)
-    - [Pulsar Network](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/pulsar.md)
-    - [Nova](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/nova.md)
-    - [Nebula](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/nebula.md)
-    - [Fusion](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/fusion.md)
+### Transactions
 
-3. Applications
-    1. Digital Tokens
-    2. Smart Contracts & DeFi
-    3. Oracles
-    4. DAOs
+### Pulsar Network
 
-### Roadmap
+### Nova
+
+## Roadmap
+
+### Astreuos v1
+- Value Transactions.
+- Nova, Proof of Stake Consensus Mechanism.
+- Nova Deposit Contract.
+- Solar Stability Mechanism.
+
+### Astreuos v2
+- Fusion, Application Platform.
+- Language.
+- Virtual Machine.
+- Compiler & Code Manager.
+- App Creation & Call Transactions.
+
+### Astreuos v3
+- Nebula, Distributed File Storage System.
+- Storage Contract.
+- Retrieval Contract.
+
+### Astreuos v4
+- Reactor, Distributed Compute System.
+- Compute Contract.
+
+### Astreuos v5
+- Nova Reserve System.
+
+### Projects
 | Project | Description | Delivery |
 |---|---|---|
 | [Astro Notation](https://github.com/stelar-software/rust-astro-notation) | Data Encoding | ✅ |
 | [NeutronDB](https://github.com/stelar-software/rust-neutrondb) | Key Value Store | ✅ |
 | [Opis](https://github.com/stelar-software/rust-opis) | Integer Arithmetic | ✅ |
-| [Fides](https://github.com/seg-software/rust-fides) | Digital Signature Library | 🚧 |
-| [Pulsar Network](https://github.com/seg-software/rust-pulsar-network)  | Messaging System |  🚧 |
-| Nova | Proof of Stake Consensus Mechanism | TBD |
-| Nebula | Storage Protocol | TBD |
-| Fusion | Decentralized Applications | TBD |
-| [Terminal](https://github.com/astreuos/astreuos-terminal) | Network Interface | TBD |
-| Testnet Launch | | Q1 2022 |
-| Mainnet Launch | | Q2 2022 |
+| [Fides](https://github.com/stelar-software/rust-fides) | Digital Signature Library | 🚧 |
+| [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network)  | Messaging System |  🚧 |
+| Nova | Proof of Stake Consensus Mechanism | FEB 12022 |
+| [Node](https://github.com/astreuos/rust-astreuos) | Network Interface | FEB 12022 |
+| Testnet Launch | | Q1 12022 |
+| Mainnet Launch | | Q2 12022 |
 
-2022-01-14
+12022-02-01
