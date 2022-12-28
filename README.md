@@ -295,7 +295,9 @@ The Astreuos Blockchain is a fully open source project and is powered by several
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 | Fusion Spec | Syntax, Standard Library, Compilation | TBD |
-| Helium | Compiler, Package Manager, Testing | TBD |
+| Helium Compiler | Fusion Script to Bytecode | TBD |
+| Helium Testing | Automated Testing | TBD |
+| Helium | Package Manager | TBD |
 | AVM | Astreuos Virtual Machine | TBD |
 | V2 Testnet Launch | | TBD |
 | V2 Mainet Launch | | TBD |
