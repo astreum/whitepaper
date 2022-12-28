@@ -9,6 +9,8 @@
 
 ### The State
 
+[Accounts](https://github.com/astreuos/astreuos-specifications/blob/main/state/accounts.md)
+
 ## Network Protocol
 
 <!-- finding peers -->
