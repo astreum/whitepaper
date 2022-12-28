@@ -1,14 +1,8 @@
 
-# Astreuos
+# Astreuos: A Next Generation Blockchain for Apps, Storage and Compute that's Distributed, Secure and Sustainable
 
-A Next Generation Blockchain for Apps, Storage and Compute that's Distributed, Secure and Sustainable.
-
-## Contents
-
-- Introduction
-- Components
-- Applications
-- Roadmap
+Roy Okello
+royokello@protonmail.com
 
 ## Introduction
 
@@ -217,9 +211,11 @@ New transaction types:
 - app creation
 - app calls
 
-### Nebula Storage
+### Nebula
 
-Nebula is the distributed layer for storing and retrieving Nebula Objects.
+Nebula is a protocol for storing and retrieving Nebula Objects.
+
+Users can negotiate the `Solar` price for Get and Put contracts.
 
 A Nebula Object is a data structure with three fields:
 
@@ -317,17 +313,13 @@ Private Reaction is confidential computing enabling users to use private data an
 
 ### Indexing
 
-## Roadmap
+## References
 
-| Milestones | ETA |
-|---|---|
-| Genesis Testing | Q2 22 |
-| Genesis Launch | Q2 22 |
-| Fusion Testing | Q3 22 |
-| Fusion Launch | Q4 22 |
-| Nebula Testing | Q1 23 |
-| Nebula Launch | Q2 23 |
-| Reactor Testing | Q3 23 |
-| Reactor Launch | Q4 23 |
+1. Bitcoin: A Peer-to-Peer Electronic Cash System - Satoshi Nakamoto
+2. Ethereum White Paper - Vitalik Buterin
+3. Ethereum Yellow Paper - Gavin Wood
+4. Kademlia: A Peer-to-Peer Information System Based on the XOR Metric - Petar Maymounkov & David Mazières
+5. Recursive Functions of Symbolic Expressions and Their Computation by Machine - John McCarthy
+6. High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
 
-2022-05-08
+2022-05-11
