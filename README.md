@@ -108,16 +108,16 @@ Receipt.
 - nova deposit contract
 
 ### v2: Fusion Upgrade
-- Fusion, Application Platform.
-- Language.
-- Virtual Machine.
-- Compiler & Code Manager.
-- App Creation & Call Transactions.
+- Fusion, Application Platform
+- language
+- virtual machine
+- compiler & code manager
+- app creation & call transactions
 
 ### v2+: Standards Upgrade
 - token standards
 - oracle standards
-- DAO standards
+- governance standards
 - insurance standards
 
 ### v3: Nebula Upgrade
