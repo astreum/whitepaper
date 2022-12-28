@@ -111,13 +111,22 @@ Main Components:-
 ### Fusion Language
 
 Types :-
-1. Integer
-2. Floating Point
-3. Boolean
-4. String
-5. List
-6. Tuple
-7. Record
+1. Integer -> 10
+2. Floating Point -> 10.0
+3. Boolean -> true/false
+4. String -> "string"
+5. List -> [ 1,2,3 ]
+6. Tuple -> ("number", 10)
+7. Record -> { "key_1": 1, "key_2": 2 }
+
+Assignments :-
+1. let -> let a = 10;
+2. const -> let A = 10;
+
+Operators :-
+1. Equal (=)
+2. And (&)
+3. Or (||)
 
 Control Flow :-
 1. Conditional
@@ -129,20 +138,39 @@ Control Flow :-
 
 Standard Library (std) :-
 1. Mathematics (math)
-    - Addition -> add(10, 8)
-    - Subtraction -> sub(10, 8)
-    - Multiplication -> mul(2, 2)
-    - Division -> div(10, 2)
-    - Remainder -> rem(10, 2)
-    - Modulo -> mod(-21, 4)
-    - Exponentiation -> pow(2, 8)
+    - Addition -> add(a, b)
+    - Subtraction -> sub(a, b)
+    - Multiplication -> mul(a, b)
+    - Division -> div(a, b)
+    - Remainder -> rem(a, b)
+    - Modulo -> mod(a, b)
+    - Exponentiation -> pow(a, e)
 
 2. String (str) :-
 
 3. List (list) :-
-    - Dedup
+    - Any -> any(list, condition)
+    - Dedup -> dedup(list)
+    - Delete -> del(list, value)
+    - Each -> each(list, assign, lambda)
+    - Filter -> filter(list, assign, condition)
+    - Get -> get(list, index)
+    - Length -> len(list)
+    - Map -> map(list, assign, lambda)
+    - Merge -> merge(list, list)
+    - Pop -> pop(list, index)
+    - Put -> put(list, value)
+    - Reverse -> reverse(list)
+    - Slice -> slice(list, start index, stop index)
 
-4. Accounts (acc) :-
+4. Record (record) :-
+    - Delete -> del(record, key)
+    - Get -> get(record, key)
+    - Merge -> merge(record, record)
+    - Pop -> pop(record, key)
+    - Put -> put(record, key value pair)
+
+4. Accounts (account) :-
     - Create -> create(0xFFFF)
     - Balance -> balance(0xFFFF)
     - Storage (storage)
@@ -233,4 +261,4 @@ The initial retrieval fee is 21.6 yottaquarks per 256Kb chunk of data.
 | Testnet Launch | | Q4 2021 |
 | Mainnet Launch | | Q1 2022 |
 
-2021-11-30
+2021-12-01
