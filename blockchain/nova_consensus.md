@@ -3,17 +3,13 @@
 
 ### Stake Ranking
 
-Ranking is Staked Amount * Time Staked.
+The Ranking formula is Staked Amount * Time Staked. Ranking is evaluated by accumulating the staked amount at every Epoch (60,480 blocks).
 
-Ranking is evaluated by accumulating the staked amount at every Epoch (60,480 blocks).
-
-Withdrawls reduce Ranking proportionally to the address total stake.
-
-Rankings are then reset at every Era (3,144,960 blocks).
+Withdrawls reduce Ranking proportionally to the address total stake. Rankings are then reset at every Era (3,144,960 blocks).
 
 ### Slot Allocation
 
-60,480 slots are distributed proportionally to the stake ranking of stakers at every Epoch.
+60,480 slots are distributed proportionally to the ranking of stakers at every Epoch.
 
 ### Minter Selection
 
