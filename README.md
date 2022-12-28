@@ -23,9 +23,7 @@ permissionless access and security
 
 To build a better crypto experience by providing solid standards for tokens, oracles, governance and insurance.
 
-Currency stability through price and cost mechanisms for the `Solar`.
-
-Accomodate external value through a native reserve system.
+Currency stability through price and cost mechanisms.
 
 Viable backbone to web3 services by offering combined value, storage and compute on a single blockchain priced in a single currency.
 
@@ -39,51 +37,62 @@ The blockchain maintains a state of all the accounts keeping track of an account
 
 ```
 
-                        + - - - - - - - - - - - +
-                        |     Accounts Hash     |
-                        + - - - - - - - - - - - +
-                                    ^
-                  . - - - - - - - - - - - - - - - - - - - .
-                  ^                                       ^
-        + - - - - - - - - - +                   + - - - - - - - - - +
-        |Address 1 + Details|                   |Address 2 + Details|
-        + - - - - - - - - - +                   + - - - - - - - - - +
-                  ^
-        + - - - - - - - - - +
-        |   Details Hash    |
-        + - - - - - - - - - +
-                  ^
-        + - - - - - - - - - +
-        |      Balance      |
-        |      Counter      |
-        |      Storage      |
-        + - - - - - - - - - +
+                                        + - - - - - - - - - - - +
+                                        |     Accounts Hash     |
+                                        + - - - - - - - - - - - +
+                                                    ^
+                                . - - - - - - - - - - - - - - - - - - - .
+                                ^                                       ^
+                        + - - - - - - - - +                   + - - - - - - - - - +
+                        | Account 1 Hash  |                   |   Account 2 Hash  |
+                        + - - - - - - - - +                   + - - - - - - - - - +
+                                ^
+                  . - - - - - - - - - - - - - .
+                  ^                           ^
+        + - - - - - - - - - +       + - - - - - - - - - +
+        |   Address Hash    |       |   Details Hash    |
+        + - - - - - - - - - +       + - - - - - - - - - +
+                                              ^
+                                    + - - - - - - - - - +
+                                    |      Balance      |
+                                    |      Counter      |
+                                    |      Storage      |
+                                    + - - - - - - - - - +
 
 ```
 
 `Account Storage`
 
+
 ```
 
-                                                        + - - - - - - - +
-                                                        |  Storage Hash |
-                                                        + - - - - - - - +
-                                                                ^
-                                            . - - - - - - - - - - - - - - - - - - - .
-                                            ^                                       ^
-                                + - - - - - - - - - - - +               + - - - - - - - - - - - +
-                                |   Store 1 ID  + Hash  |               |   Store 2 ID  + Hash  |
-                                + - - - - - - - - - - - +               + - - - - - - - - - - - +
-                                            ^
-                                + - - - - - - - - - - - +
-                                |       Store Hash      |
-                                + - - - - - - - - - - - +
-                                            ^
-                            . - - - - - - - - - - - - - - - .
-                            ^                               ^
-                + - - - - - - - - - - - +       + - - - - - - - - - - - +
-                |   Key 1 + Value Hash  |       |   Key 2 + Value Hash  |
-                + - - - - - - - - - - - +       + - - - - - - - - - - - +
+                                                + - - - - - - - +
+                                                |  Storage Hash |
+                                                + - - - - - - - +
+                                                        ^
+                                    . - - - - - - - - - + - - - - - - - - - .
+                                    ^                                       ^
+                        + - - - - - - - - - - - +               + - - - - - - - - - - - +
+                        |      Store 1 Hash     |               |      Store 2 Hash     |
+                        + - - - - - - - - - - - +               + - - - - - - - - - - - +
+                                    ^
+                  . - - - - - - - - + - - - - - - - - - .
+                  ^                                     ^
+        + - - - - - - - - - +               + - - - - - - - - - - - +
+        |   Store ID Hash   |               |   Store Records Hash  |
+        + - - - - - - - - - +               + - - - - - - - - - - - +
+                                                        ^
+                                        . - - - - - - - + - - - - - - - .
+                                        ^                               ^
+                            + - - - - - - - - - - - +       + - - - - - - - - - - - +
+                            |     Record 1 Hash     |       |     Record 2 Hash     |
+                            + - - - - - - - - - - - +       + - - - - - - - - - - - +
+                                        ^
+                        . - - - - - - - + - - - - - - - .
+                        ^                               ^
+                + - - - - - - - +               + - - - - - - - +
+                |  Key 1 Hash   |               |  Value 1 Hash |
+                + - - - - - - - +               + - - - - - - - +
 
 ```
 
@@ -91,20 +100,20 @@ The blockchain maintains a state of all the accounts keeping track of an account
 
 ```
 
-        Block #1                                Block #2
-    + - - - - - - - +                       + - - - - - - - +
-    |               |                       |               | 
-    |      Old      |      Transactions     |      New      |
-    |   Accounts    |   ----------------->  |   Accounts    |
-    |     State     |                       |     State     |
-    |               |                       |               |
-    + - - - - - - - +                       + - - - - - - - +
+            Block #1                                Block #2
+        + - - - - - - - +                       + - - - - - - - +
+        |               |                       |               | 
+        |      Old      |      Transactions     |      New      |
+        |   Accounts    |   ----------------->  |   Accounts    |
+        |     State     |                       |     State     |
+        |               |                       |               |
+        + - - - - - - - +                       + - - - - - - - +
 
 ```
 
 
 
-The account balance is in the native standard unit of value which is an `Astre` while the smallest unit of value is a `quark`.
+The account balance is in the native unit of value which is an `Astre` while the smallest unit of value is a `quark`.
 
 Value magnitudes are:-
 - 10^24: yottaquark / astre (AST)
@@ -169,7 +178,9 @@ Slot selection determines the validator for the next block at any time:-
 - If no slot miss, the nearest address xor to the last block hash is selected.
 - If slot misses, the nearest address xor to the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is selected.
 
-All transactions in a block are ordered ascending by the xor distance of the transaction hash and the previuos block transactions hash. The reward for creating a new block is 1 `Astre`.
+All transactions in a block are ordered ascending by the xor distance of the transaction hash and the previuos block transactions hash.
+
+The reward for creating a new block is 1 `Astre`.
 
 Solar pricing mechanism:-
 - The solar price is fixed for every block.
@@ -181,9 +192,9 @@ Solar pricing mechanism:-
 
 The Astreuos Blockchain empowers web3 builders to:-
 - create next generation applications and experiences that interface with Astreuos Node APIs for transactions, storage & compute.
-- create powerful on-chain applications such as tokens, exchanges and DAOs.
+- create powerful on-chain applications such as tokens, exchanges, oracles and DAOs.
 - host web applications, static sites and media content on Nebula Storage.
-- create compute intensive applications using Reactor Private & Public Computations.
+- create compute intensive applications using Reactor Private & Public Computation.
 
 ### Future
 
