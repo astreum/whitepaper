@@ -99,9 +99,13 @@ Structure:
 
 A Peer to Peer Messaging Protocol
 
-## Fusion
+## Fusion - Blockchain Application Platform
 
-A Decentralized Application Platform
+Main Components:-
+1. Fusion Language, Postfix Programming Language.
+2. Reactor, Virtual Stack Machine.
+3. Plasma, Fusion Language to Reactor Code Compiler.
+4. Helium, Code Manager.
 
 ### Fusion Language
 
@@ -133,11 +137,6 @@ A Decentralized Application Platform
     1. Less Than
     2. Greater Than
     3. Equal To
-
-
-### Plasma - Fusion Language to Reactor Code Compiler
-
-### Helium - Code Manager
 
 ## Nova - Proof of Stake Consensus Protocol
 
