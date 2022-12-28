@@ -95,9 +95,7 @@ Structure:
 2. Status
 3. Solar Used
 
-## Pulsar
-
-A Peer to Peer Messaging Protocol
+## Pulsar - Peer to Peer Messaging Protocol
 
 ### Access Port
 UDP PORT 7577
@@ -109,6 +107,18 @@ Main Components:-
 2. Reactor, Virtual Stack Machine.
 3. Plasma, Fusion Language to Reactor Code Compiler.
 4. Helium, Code Manager.
+
+### Fusion Language
+
+Types:-
+1. Integer
+2. Floating Point
+3. Boolean
+4. String
+5. List
+6. Tuple
+
+#### Operators
 
 ### Reactor - Virtual Stack Machine
 
