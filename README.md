@@ -156,9 +156,9 @@ The transaction body has:
 
 `Solar` is the currency for work done on-chain, in contrast with `Astre` with is the currency for value.
 
-The solar limit of a block is set at 10^15 `Solar`.
+The solar limit of a block is set at 10^9 `Solar`.
 
-Transaction Processing costs 10^12 `Solar`.
+Transaction Processing costs 10^3 `Solar`.
 
 Solar pricing mechanism:
 
@@ -192,7 +192,7 @@ Validators who miss a slot get half their stake returned.
 
 Transactions are ordered by their hash.
 
-The creator of a new block is payed a fee of 10^15 `Solar` at the current block's solar price.
+The creator of a new block is payed a fee of 10^9 `Solar` at the current block's solar price.
 
 ### Fusion
 
