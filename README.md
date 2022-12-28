@@ -361,12 +361,21 @@ The valid chain has the most blocks and with the most solar spent in the latest 
 
 ### Storage Protocol
 
-- ☁ Storage Relay Route
-- 🔁 Perpetual Storage
-- ✅ Storage Verification
-- 💵 Storage Payment Model
-- 🏷️ Storage & Retreival Pricing
+#### Storage Contract
+
+Logic
+- 🗄 Object Put
+- 🗑️ Object Delete
+- ✅ Storage Verification & Payment
+
+Storage
+- 🏷 Object Ownership
+- 📋 Object Metadata
 - 🤝 Retreival Payment Channels
+
+#### Relay
+- ☁ Storage Route
+- 🗃 Get & Object Message Topic
 
 ### Compute Protocol
 
