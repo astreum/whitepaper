@@ -66,31 +66,25 @@ An Astreuos Account is a makeup of an address and details associated to that acc
 
 ```
 
-                                                                        + - - - - - - - +
-                                                                        |  Storage Hash |
-                                                                        + - - - - - - - +
-                                                                                ^
-                                                        . - - - - - - - - - + - - - - - - - - - .
-                                                        ^                                       ^
-                                                + - - - - - - - - - - - +               + - - - - - - - - - - - +
-                                                |      Store 1 Hash     |               |      Store 2 Hash     |
-                                                + - - - - - - - - - - - +               + - - - - - - - - - - - +
+                                                + - - - - - - - +
+                                                |  storage hash |
+                                                + - - - - - - - +
                                                         ^
                                         . - - - - - - - - + - - - - - - - - - .
                                         ^                                     ^
                                 + - - - - - - - - - +               + - - - - - - - - - - - +
-                                |   Record 1 Hash   |               |     Record 2 Hash     |
+                                |  key-value 1 hash |               |   key-value 2 hash    |
                                 + - - - - - - - - - +               + - - - - - - - - - - - +
                                         ^
                         . - - - - - - - + - - - - - - - .
                         ^                               ^
                 + - - - - - - - +               + - - - - - - - +
-                |  Key 1 Hash   |               |  Value 1 Hash |
+                |  key 1 hash   |               |  value 1 hash |
                 + - - - - - - - +               + - - - - - - - +
                         ^                               ^
                         |                               |
                 + - - - - - - - +               + - - - - - - - +
-                |  256bit Key   |               |  Value Bytes  |
+                |  256bit key   |               |  value bytes  |
                 + - - - - - - - +               + - - - - - - - +
 
 ```
