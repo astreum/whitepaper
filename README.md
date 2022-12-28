@@ -1,7 +1,12 @@
 
 # Astreuos Whitepaper
 
-### A Next Generation Blockchain that adjusts Transaction Fees, Block Limits and Storage Fees to Maintain Network Sustainability & Maximize Network Utilization.
+### A Next Generation Blockchain that delivers on Decentralization, Security and Sustainability.
+
+Strategies: -
+1. All users earn quanta by providing validation or storage for the network.
+2. Auto-adjustments on transaction fees, block limits and storage fees for sustainability & maximum network utilization.
+3. Secure the network through digital signatures, proof of work on messages and proof of stake on blocks.
 
 # History
 
