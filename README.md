@@ -99,6 +99,9 @@ Structure:
 
 A Peer to Peer Messaging Protocol
 
+### Access Port
+UDP PORT 7577
+
 ## Fusion - Blockchain Application Platform
 
 Main Components:-
