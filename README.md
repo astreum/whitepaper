@@ -174,7 +174,7 @@ Proof of Space-Time staking.
 
 This upgrade adds a distributed compute protocol called Reactor with proof of work staking.
 
-*research in process
+*research in progress
 
 #### V5: Governance Upgrade
 - nova withdrawl contract
