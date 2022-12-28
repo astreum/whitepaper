@@ -11,7 +11,7 @@ The motivation for building Astreuos is to build a better blockchain for creatin
 
 Blockchains benefit from trust-less consensus, permission-less access and great security for users.
 
-Astreuos improves on blockchain by intergrating storage and compute distributed layers.
+Astreuos improves on blockchain by intergrating distributed layers for storage and compute .
 
 Astreuos aims to be a competitive platform for digital services by:
 
@@ -26,9 +26,9 @@ Astreuos aims to be a competitive platform for digital services by:
 3. Transactions
 4. Solar
 5. Nova Consensus
-6. Fusion Contracts
-7. Nebula Storage Layer
-8. Reactor Compute Layer
+6. Fusion Applications
+7. Nebula Storage
+8. Reactor Compute
 9. Application
 10. Components
 
@@ -163,12 +163,12 @@ Solar pricing mechanism:
 
 - The solar price is fixed for every block.
 - The solar price varies by 1 `Quark`.
-- The solar price increases when more than 75%, and decreases when less than 25%, of the previous solar limit was used.
+- The solar price increases when more than 0.9, and decreases when less than 0.1, of the previous solar limit was used.
 - The base solar price is set at 1 `Quark`.
 
 ### Nova Consensus
 
-`Nova` is the consensus protocol for creating new blocks and validating the blockchain.
+Nova is the consensus protocol for creating new blocks and validating the blockchain.
 
 A validator must be staked, by sending `Quarks` to the nova account, to participate in the protocol.
 
@@ -191,11 +191,11 @@ Transactions are ordered by their hash.
 
 The creator of a new block is payed a fee of 10^12 `Solar` at the current block's solar price.
 
-### Fusion Contracts
+### Fusion Applications
 
 Fusion is the applications platform on the Astreuos Blockchain.
 
-Contracts are applications that run through Transaction calls and Reactions are applications running through Reactor calls.
+Contracts are applications that run through Transaction calls.
 
 The Fusion Language is a dialect of the Lisp programming language for developing Fusion Applications.
 
@@ -219,9 +219,9 @@ Standards to help developers create trusted Fusion Contracts.
 - Oracles
 - Governance
 
-### Nebula Storage Layer
+### Nebula Storage
 
-Nebula is a protocol for storing and retrieving Nebula Objects.
+Nebula is the distributed layer for storing and retrieving Nebula Objects.
 
 A Nebula Object is a data structure with three fields:
 
@@ -236,7 +236,7 @@ Puslar Network Upgrade:
 
 `Object Get Flow`
 
-```
+```text
 
         Client                                          Nebula
         + - - - +                                       
@@ -330,4 +330,4 @@ Private Reaction is confidential computing enabling users to use private data an
 | V1 Testnet Launch | Nova Testing | Q2 2022 |
 | V1 Mainnet Launch | Nova Launch | Q2 2022 |
 
-2022-05-04
+2022-05-06
