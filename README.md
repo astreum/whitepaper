@@ -81,11 +81,6 @@ An Astreuos Account is a makeup of an address and details associated to that acc
                 + - - - - - - - +               + - - - - - - - +
                 |  key 1 hash   |               |  value 1 hash |
                 + - - - - - - - +               + - - - - - - - +
-                        ^                               ^
-                        |                               |
-                + - - - - - - - +               + - - - - - - - +
-                |  256bit key   |               |  value bytes  |
-                + - - - - - - - +               + - - - - - - - +
 
 ```
 
@@ -197,7 +192,7 @@ Solar pricing mechanism:-
 
 Fusion is an application platform running on the Astreuos Blockchain.
 
-The Fusion Language is a functional postfix programming language for developing Fusion Applications.
+The Fusion Language is a postfix programming language for developing Fusion Applications.
 
 The Fusion Virtual Machine(FVM) is the native runtime for Fusion Machine Code(FMC) and has an interface to Astreuos Accounts.
 
@@ -206,14 +201,25 @@ Helium is the Fusion package manager. Helium downloads your Fusion Application's
 New transaction types will be added for App Creation and App Calls.
 
 #### Syntax & Standard Library
-- Types: boolean, integers, floating point, string, list, records, custom
-- Modules
-- Functions
-- Conditionals: if, while
-- Variables
-- Operators
-- Math: modulo, modulars
-- Crypto: hash, asymmetric verify, bulletproofs verify
+
+`Variables Operations`
+```
+LET: assign variable with value on top of the stack as the data; expects two words
+```
+`Integer Operations`
+```
+ADD: add the two value on top of the stack; expects two words
+```
+`Account Operations`
+```
+ACCOUNT_ADDRESS: get current account address; expects one word
+
+ACCOUNT_BALANCE: get current account balance; expects one word
+
+STORE: saves into the current account storage; expects two words
+
+FETCH: loads from the current account storage; expects two words
+```
 
 Standards to help developers create trusted Fusion Applications.
 
@@ -278,7 +284,6 @@ Open Compute is calling Fusion Applications stored on Nebula and are callable by
 Private Compute is confidential computing enabling users to use private data and protect software ip on the protocol while allowing for open or restricted access to app calls.
 
 ### V5: Governance Upgrade
-- nova withdrawl contract
 - improvement protocol system
 
 ### Roadmap
@@ -294,4 +299,4 @@ Private Compute is confidential computing enabling users to use private data and
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-03-27
+2022-03-28
