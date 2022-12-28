@@ -13,29 +13,24 @@ Roy R. O. Okello
 
 ## Introduction
 
-This paper introduces an accounts based blockchain for zero knowledge apps, perpetual storage and confidential compute that's decentralized and secure.
+This paper introduces an accounts based blockchain with these feature:
 
-Features: 
+- zero knowledge and confidential programmable accounts(contracts)
+- distributed storage with perpetual storage contracts
+- confidential, attestable and zero configuration distributed compute
+- secure and private communication with competitive network routing fees
 
-- permissionless accounts access
-- trustless consensus
-- post quantum secure
-- value transactions
-- programmable accounts
-- Nebula, a distributed storage protocol
-- Fusion, a language for developing zero knowledge and confidential applications
-- Reactor, a distributed computation protocol for Fusion Applications
-- Pulsar, an open peer-to-peer communication protocol for Astreum Nodes
+Astreum primarily works by keeping track of all the accounts and their details, the balance, channels, code, number of transactions and storage in a block.
 
-Astreum primarily works by keeping track of all the accounts and their details such as the balance, code, number of transactions and storage in a block and changes through applying transactions.
+Blocks are subseqently added to the chain through validation of new blocks with new transactions that alter the Accounts State of the latest block.
 
 Astreum introduces a standard model for pricing and verification of transactions, storage, compute and networking.
 
 Applications are written in the Fusion Language, which is a Lisp dialect whose lists are addressable from Nebula, the Distributed Storage Protocol.
 
-Applications can run through Transactions or Reactor, the Distributed Compute Protocol.
+Applications can run through Transactions, Reactor(the Distributed Compute Protocol) or natively on the Terminal(a specification for user interfaces).
 
-Astreum Nodes communicate through the Pulsar Network.
+Astreum Nodes communicate with each other through the Pulsar Network through messages securely and privately.
 
 `Overview`
 
@@ -428,12 +423,13 @@ The Astreum Machine is a Fusion Machine that interfaces with Astreum Blocks and 
 
 ## Conclusion
 
-Astreum offers the following benefits:
+Astreum aims to fully realize an ideal cryptographic network with the following features:
 
-- distribution and decentralization of digital services such as financial intermediation, data storage, serverless computation and networking through its trust-less models
-- permission-less and pseudonymous or anonymous access to digital services
-- open and censorship free platform for content creators and application developers
-- one language for developing applications and templates, while still extensible to any use case
+- Permissionless: Astreum Accounts and Services, such as financial intermediation, data storage, serverless computation and networking are open and censorship free to all users, creators and developers.
+- Trustless: Astreum Validation is performed by all nodes on the network efficiently through zero knowledge allowing billions of nodes to synchronize the state of the blockchain in seconds.
+- Private: Pulsar communication is protected by encrypting all data including message topics to protect against eavesdropping and mix routing to prevent fingerprinting through metadata analysis.
+- Secure: Astreum Accounts and communication through Pulsar are protected from future attacks from quantum computers by using post quantum secure digital signature algorithm dilithium and public key exchange algorithm kyber.
+- Extensible: the Fusion Language and Machine provide developers with the ability to build any kind of template and application.
 
 ## References
 
@@ -447,4 +443,4 @@ Astreum offers the following benefits:
 8. Efficient verifiable delay functions - Benjamin Wesolowski
 9. PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge - Ariel Gabizon, Zachary J. Williamson and Oana Ciobotaru
 
-2022-10-08
+2022-10-31
