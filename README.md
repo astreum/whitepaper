@@ -5,15 +5,18 @@
 
 ## Introduction
 
-A new accounts based blockchain with storage and compute protocols is presented in this paper. A motivation for such a blockchain is to build a better crypto experience with standards for building tokens, oracles, insurance, DAOs  and price mechanisms for currency stability. 
+An accounts based blockchain with storage and compute protocols is presented in this paper. A motivation for such a blockchain is to build a better crypto experience with standards for building tokens, oracles, insurance, DAOs  and price mechanisms for currency stability. 
 
-As a blockchain, we benefit from trustless consensus and from the use of cryptography with permissionless access and great security for users. This empowers anyone in the world with uncensored access to use and benefit from the blockchain.
+As a blockchain, we benefit from trustless consensus and from the use of cryptography with permissionless access and great security for users. This empowers anyone in the world with uncensored access and benefit from the blockchain.
 
 The blockchain primarily works by keeping track of all the accounts and details such as the balance, number of transactions and storage.
 
 Astreuos aims to be a competitive and viable platform for powerful web3 services by offering a combined value, storage and compute on a single blockchain priced in a single currency.
 
-Astreuos empowers web3 developers to create powerful applications and experiences that interface with node APIs for transactions, storage & compute; to host applications, static sites and media content on Nebula and create compute intensive applications using Reactor Private & Open Compute.
+Astreuos empowers web3 developers to:
+- create powerful applications and experiences that interface with node APIs for transactions, storage & compute
+- host applications, static sites and media content on Nebula
+- perform compute intensive applications using Reactor Private & Open Compute.
 
 ## Contents
 
@@ -111,15 +114,15 @@ An Astreuos Account is a makeup of an address and details associated to that acc
 The account balance is in the native unit of value which is an `Astre` while the smallest unit of value is a `quark`.
 
 Value magnitudes are:-
-- 10^24: yottaquark / astre (AST)
-- 10^21: zettaquark (ZQ)
-- 10^18: exaquark (EQ)
-- 10^15: petaquark (PQ)
-- 10^12: teraquark (TQ)
-- 10^9: gigaquark (GQ)
-- 10^6: megaquark (MQ)
-- 10^3: kiloquark (KQ)
-- 10^0: quark (Q)
+- 10^24: YottaQuark (YQ) / Astre (AST)
+- 10^21: ZettaQuark (ZQ)
+- 10^18: ExaQuark (EQ)
+- 10^15: PetaQuark (PQ)
+- 10^12: TeraQuark (TQ)
+- 10^9: GigaQuark (GQ)
+- 10^6: MegaQuark (MQ)
+- 10^3: KiloQuark (KQ)
+- 10^0: Quark (Q)
 
 ### Blocks
 
@@ -191,21 +194,37 @@ The reward for creating a new block is 1 `Astre`.
 
 Solar pricing mechanism:-
 - The solar price is fixed for every block.
-- The solar price varies by 1 `quark`.
+- The solar price varies by 1 `Quark`.
 - The solar price increases when more than 75%, and decreases when less than 25%, of the previous solar limit was used.
-- The base solar price is set at 1 `quark`.
+- The base solar price is set at 1 `Quark`.
 
 ### V2: Fusion Upgrade
 
-This upgrade will add an application platform called Fusion.
+Fusion is an application platform running on the Astreuos Blockchain.
 
-The Fusion Language is a multi-paradigm statically-typed programming language for developing Fusion Applications.
+The Fusion Language is a functional postfix programming language for developing Fusion Applications.
 
-The Fusion Virtual Machine is the native runtime for Fusion Bytecode and has a direct interface to the Astreuos Account State.
+The Fusion Virtual Machine(FVM) is the native runtime for Fusion Machine Code(FMC) and has an interface to Astreuos Accounts.
 
-Helium is the Fusion package manager. Helium downloads your Fusion Application's dependencies, runs tests and compiles your application into Fusion Bytecode.
+Helium is the Fusion package manager. Helium downloads your Fusion Application's dependencies, runs tests and compiles your Fusion Script into FMC.
 
 New transaction types will be added for App Creation and App Calls.
+
+#### Syntax
+- Types; boolean, integers, floating point, string, list, records
+- Modules
+- Functions
+- Conditionals; if and loop
+- Operators
+
+#### Standard Library
+- Math; Modulo, Modulars
+- Crypto; Hashing, Asymmetric & Symmetric Cryptography, Bulletproofs
+- Integer
+- Floating Point
+- String
+- List
+- Records
 
 Standards to help developers create trusted Fusion Applications.
 
@@ -253,14 +272,14 @@ An indexer also earns a commission for facilitating a put contract and indexing 
 
 A delete contract can be made directly to the validator route and refunded the contract's remainder period.
 
-The Retrieval Fees for 256KB is 1,600,000.
+The Retrieval Fees for 256KB is 1,600,000 Solar.
 
- Storage Fees for 256KB.
+Storage Fees for 256KB.
 
- | Time | Solar |
- |---|---|
- | 1mo | 3,000,000|
- | 1yr | 36,400,000 |
+| Time | Solar |
+|---|---|
+| 1mo | 3,200,000|
+| 1yr | 32,000,000 |
 
 ### V4: Reactor Upgrade
 
@@ -289,4 +308,4 @@ Private Compute is confidential computing enabling users to use private data and
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-03-23
+2022-03-26
