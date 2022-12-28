@@ -11,17 +11,16 @@ As a blockchain, we benefit from trustless consensus and from the use of cryptog
 
 The blockchain primarily works by keeping track of all the accounts and details such as the balance, number of transactions and storage.
 
-Astreuos aims to be a competitive and viable platform for powerful web3 services by offering a combined value, storage and compute on a single blockchain priced in a single currency.
+Astreuos aims to be a competitive and viable platform for powerful web3 services by offering a combined value, storage and compute on a single blockchain priced in a single currency. Astreuos empowers web3 developers to create powerful applications and experiences that interface with node APIs for transactions, storage & compute; to host browser applications, static sites and media content on Nebula and create compute intensive applications using Reactor Private & Open Computation.
 
 ## Contents
 
 1. Accounts
 2. Blocks
 3. Transactions
-2. Nova Consensus
-3. Vision
-4. Future
-5. Roadmap
+4. Nova Consensus
+5. Future
+6. Roadmap
 
 ### Accounts
 
@@ -194,11 +193,6 @@ Solar pricing mechanism:-
 
 ### Vision
 
-The Astreuos Blockchain empowers web3 builders to:-
-- create next generation applications and experiences that interface with Astreuos Node APIs for transactions, storage & compute.
-- create powerful on-chain applications such as tokens, exchanges, oracles and DAOs.
-- host web applications, static sites and media content on Nebula Storage.
-- create compute intensive applications using Reactor Private & Public Computation.
 
 ### Future
 
@@ -232,7 +226,18 @@ This upgrade will add a distributed file protocol called Nebula.
 
 Puslar network will also be upgraded with index and storage routes with complementary object message types for get and put.
 
-An object is a node or leaf of a merkle tree of a file or folder.
+Nebula Objects are a clone of IPFS objects because of the benefit of having two files with different names and the same content with the same Nebula object representation and hence the same hash and reducing duplication.
+
+Nebula is a protocol for storing and retrieving Nebula Objects. A Nebula Objects is a data structure with two fields:
+
+Data — a blob of binary data of size < 256 KB.
+Links — A List of Links.
+
+A Link structure has three data fields:
+
+Name — the name of the Link.
+Hash — the hash of the linked Nebula Object.
+Size — the cumulative size of the link.
 
 The index route stores the index of the object hash and the storage provider's id.
 
@@ -254,18 +259,10 @@ A delete contract can be made directly to the validator route and refunded the c
 
 The Retrieval Fees for 256KB is 1,600,000.
 
-Storage Contract
- - Root Hash
- - Owner
- - Indexer
- - Provider
-
  Storage Fees for 256KB.
 
  | Time | Solar |
  |---|---|
- | 1day | 100,000 |
- | 1week | 700,000 |
  | 1mo | 3,000,000|
  | 1yr | 36,400,000 |
 
@@ -275,9 +272,9 @@ This upgrade adds a distributed compute protocol called Reactor with proof of wo
 
 Reactor allows for Private & Public Computations.
 
-Private Computations have restrictions on users allowed to call functions and run obfuscated to keep code private.
-
 Public Computations run on functions stored on Nebula and can be called by anyone.
+
+Private Computations are based off confidential computing to allow users to use private data and protect software ip on the protocol while allowing for open and restricted access to calls.
 
 *research in progress
 
@@ -299,4 +296,4 @@ Public Computations run on functions stored on Nebula and can be called by anyon
 | V1 Mainnet Launch | | Q2 2022 |
 
 
-2022-03-22
+2022-03-23
