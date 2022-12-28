@@ -204,24 +204,24 @@ Users use account channels to pay for services.
 
 ### Nodes
 
-| type | role | revenue |
-|---|---|---|
-| clients | - | - |
-| execution | execute transactions | transaction fees |
-| consensus | create blocks | block fees |
-| nebula | store data | storage & retreival fees |
-| reactor | on-demand compute | compute fees |
+Nodes are the primary components of the Astreum Network which all participants operate.
+
+A Node's roles are:
+
+- Connect and Message on the Pulsar Network
+- Create, Execute and Transmit Transactions
+- Create and Verify Blocks
 
 ### Terminals
 
-Terminal is a specification for building user interfaces.
+Terminal is a specification for building user interfaces on top of the Astreum Node.
 
 A terminal provides:
 
 - querying capabilities for hashes of nebula objects and text from name services
 - account management
-
-Terminals can natively run fusion applications and render templates stored on Nebula.
+- run Fusion Applications
+- render Fusion Templates
 
 ### Accounts
 
@@ -295,8 +295,8 @@ A channel consists of a counterparty address, balance, counter and timelock.
 
 | type          | CH. FUND      | CH. APPROVE   | CH. WITHDRAW  | CH. CLOSE     |
 
-| value         | ADDITIONAL    | NEW CHANNEL   | 00            | 00            |
-|               | BALANCE       | BALANCE       |               |               |
+| value         | ADDITIONAL    | WITHDRAWL     | 00            | 00            |
+|               | BALANCE       | AMOUNT        |               |               |
 
 + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
 
@@ -384,11 +384,11 @@ Solar costs for basic operations on 256 bits:
 
 ### Fusion
 
-Fusion is the applications platform running on the Astreum.
+Fusion is the applications platform running on the Astreum Blockchain.
 
-Applications can run through transactions, compute contracts and natively on nodes.
+Applications can run through transactions, compute contracts and natively on Astreum Nodes.
 
-The Fusion Language is a dialect of the Lisp programming language for developing Fusion applications and templates.
+The Fusion Language is a dialect of the Lisp programming language for developing Fusion Applications and Templates.
 
 Developers create Fusion Scripts that are compiled into Fusion Machine Code.
 
@@ -417,4 +417,4 @@ Astreum is a next generation blockchain that offers the following benefits:
 8. Efficient verifiable delay functions - Benjamin Wesolowski
 9. PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge - Ariel Gabizon, Zachary J. Williamson and Oana Ciobotaru
 
-2022-09-18
+2022-09-27
