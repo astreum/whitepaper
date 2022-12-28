@@ -34,7 +34,7 @@
 | NeutronDB | Key Value Store | Completed |
 | AVM | Astreuos Virtual Machine | In Progress |
 | Nova Consensus | Staking Protocol | |
-| Nova Pools | Stake Pool | |
+| Nova Pool | Stake Pool | |
 | Nebula | Storage Protocol | |
 | Fusion | Smart Contracts | |
 | Pulsar | Name Service | |
