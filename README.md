@@ -1,17 +1,19 @@
 
-# Astreuos - A Next Generation Blockchain for Apps, Storage and Compute that's Decentralized, Secure and Sustainable
+# Astreuos - A Next Generation Blockchain for Apps, Storage and Compute that's Distributed, Secure and Sustainable
 
 ## Introduction
 
-An accounts based blockchain with storage and compute protocols is presented in this paper. A motivation for such a blockchain is to build a better blockchain for building trusted smart contracts and price mechanisms for currency stability.
-
-As a blockchain, we benefit from trustless consensus, permissionless access and great security for users, which empowers anyone in the world with uncensored access and benefit from the platform.
+An accounts based blockchain with storage, compute and networking protocols is presented in this paper. The motivation for such a blockchain is to build a better blockchain for building trusted smart contracts and price mechanisms for currency stability.
 
 The blockchain primarily works by keeping track of all the accounts and details such as the balance, number of transactions and storage.
 
-Astreuos aims to be a competitive Layer 1 platform for Web 3.0 services by:
+Astreuos features trust-less consensus, permission-less access and great security for users.
 
-- offering native value, storage and compute services on the blockchain
+These features empowers anyone in the world with uncensored access and benefit from the platform.
+
+Astreuos aims to be a competitive platform for digital services by:
+
+- offering native value, storage and compute on the blockchain
 - pricing services in a single currency
 - implementing a pricing mechanism that promotes currency stability
 
@@ -114,7 +116,7 @@ Value magnitudes are:
 
 ### Blocks
 
-A Block consists of the block body and the validator's ed25519 signature of the body's merkle tree hash.
+A Block consists of the block body and the validator's ed25519 signature of the body's merkle tree root.
 
 The block body has:
 
@@ -135,7 +137,7 @@ A receipt consists of the solar used and status of the transaction application p
 
 ### Transactions
 
-A Transaction consists of the transaction body and the sender's ed25519 signature of the body's merkle tree hash.
+A Transaction consists of the transaction body and the sender's ed25519 signature of the body's merkle tree root.
 
 The transaction body has:
 
@@ -190,9 +192,9 @@ Transactions are ordered by the validator.
 
 The creator of a new block is payed a fee 1,000,000,000 Solar at the current Solar Price.
 
-### V2: Fusion Contracts
+### Fusion Contracts
 
-Fusion is the applications platform running on the Astreuos Blockchain.
+Fusion is the applications platform on the Astreuos Blockchain.
 
 Contracts are applications that run through transaction calls.
 
@@ -218,7 +220,7 @@ Standards to help developers create trusted Fusion Contracts.
 - Oracles
 - Governance
 
-### V3: Nebula Storage Layer
+### Nebula Storage Layer
 
 Nebula is a protocol for storing and retrieving Nebula Objects.
 
@@ -288,7 +290,7 @@ The Retrieval Fees for 32KB is 100,000 Solar.
 
 The Storage Fees for 32KB/mo is 200,000 Solar.
 
-### V4: Reactor Compute Layer
+### Reactor Compute Layer
 
 Reactor is a protocol for distributed serverless computation with proof of work staking.
 
@@ -297,10 +299,6 @@ Reactor computations can be Open or Private.
 Open Computation works by processing Fusion Applications stored on Nebula and are callable by anyone on the blockchain.
 
 Private Compute is confidential computing enabling users to use private data and protect software intellectual property on the protocol while allowing for restricted access to calls.
-
-### V5: Governance Upgrade
-
-- improvement proposal system
 
 ### Application
 
@@ -331,4 +329,4 @@ Private Compute is confidential computing enabling users to use private data and
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-04-16
+2022-04-18
