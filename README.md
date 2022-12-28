@@ -1,7 +1,7 @@
 
 # Astreuos
 
-### A Next Generation Blockchain Platform for Apps, Storage and Compute that's Decentralized, Secure and Sustainable.
+### A Next Generation Blockchain for Apps, Storage and Compute that's Decentralized, Secure and Sustainable.
 
 ## Specification(V1)
 
@@ -86,31 +86,34 @@
 - Nova, Proof of Stake Consensus Mechanism.
 - Nova Deposit Contract.
 - Solar Stability Mechanism.
+- Astreuos File Tree for storing Account Details, Blocks & Transactions.
 
 ### Astreuos V2
-- Fusion, Blockchain Application Platform.
+- Fusion, Application Platform.
 - Language.
 - Virtual Machine.
 - Compiler & Code Manager.
 - App Creation & Call Transactions.
 
+### Astreuos V2+
+- Token Standards.
+- Oracle Standards.
+- DAO Standards.
+
 ### Astreuos V3
 - Nebula, Distributed File Storage System.
-- Proof of Storage Sizing Mechanism.
+- Proof of Storage Staking Mechanism.
 - Storage Contract.
 - Retrieval Contract.
 - Removal Contract.
 
 ### Astreuos V4
 - Reactor, Distributed Compute System.
-- Proof of Work Sizing Mechanism.
+- Proof of Work Staking Mechanism.
 - Compute Contract.
 - Automation Contract.
 
 ### Astreuos V5
-- Token Standards.
-- Oracle Standards.
-- DAO Standards.
 - Nova Reserve System.
 - Nova Governance Protocol.
 
@@ -120,12 +123,12 @@
 | [Astro Notation](https://github.com/stelar-software/rust-astro-notation) | Data Transcoding | ✅ |
 | [NeutronDB](https://github.com/stelar-software/rust-neutrondb) | Key Value Store | ✅ |
 | [Opis](https://github.com/stelar-software/rust-opis) | Integer Arithmetic | ✅ |
-| [Fides](https://github.com/stelar-software/rust-fides) | Asymmetric & Symmetric Cryptography | 🚧 |
+| [Fides](https://github.com/stelar-software/rust-fides) | Hashing & Asymmetric/Symmetric Cryptography | 🚧 |
 | [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network) | P2P Messaging Protocol |  🚧 |
 | Nova | Proof of Stake Consensus Mechanism | FEB 2022 |
 | [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Blockchain Node | FEB 2022 |
-| Stelar Terminal | Browser Interface | Q1 2022 |
-| V1 Testnet Launch | | Q1 2022 |
-| V1 Mainnet Launch | | Q2 2022 |
+| V1 Testnet Launch | | FEB 2022 |
+| Stelar Terminal | Browser Interface | MAR 2022 |
+| V1 Mainnet Launch | | APR 2022 |
 
-2022-02-18
+2022-02-21
