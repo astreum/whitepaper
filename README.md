@@ -111,7 +111,7 @@ Astreuos empowers web3 developers to:
 
 An Astreuos Account is a makeup of an address and details associated to that account. Each account has a balance, a counter and storage.
 
-The account balance is in the native unit of value which is an `Astre` while the smallest unit of value is a `quark`.
+The account balance is in the native unit of value which is an `Astre` while the smallest unit of value is a `Quark`.
 
 Value magnitudes are:-
 - 10^24: YottaQuark (YQ) / Astre (AST)
@@ -140,6 +140,10 @@ The block body has:-
 9. transactions hash
 10. validator
 
+The Receipt is the result from the application of a transaction to the Astreuos Account State.
+
+A receipt consists of the solar used and status of the transaction application procedure.
+
 ### Transactions
 
 A Transaction consists of the transaction body and the sender's ed25519 signature of the body's merkle tree hash.
@@ -153,11 +157,7 @@ The transaction body has:-
 6. solar price
 7. value
 
-The Receipt is the result from the application of a transaction to the Astreuos Account State.
-
-A receipt consists of the solar used and status of the application procedure.
-
-`Solar` is the internal currency for work done on the blockchain.
+`Solar` is the currency for work done on the blockchain, in contrast with `Astre` with is the currency for value.
 
 The solar limit of a block is 1,000,000,000.
 
@@ -170,7 +170,7 @@ The solar limit of a block is 1,000,000,000.
 
 `Nova` is the consensus protocol for creating new blocks and validating the blockchain.
 
-A validator must staked, by sending & maintaing at least 1 `Astre` to the nova account, to participate in the protocol.
+A validator must staked, by sending `Astre` to the nova account, to participate in the protocol.
 
 The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
 
