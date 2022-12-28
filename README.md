@@ -13,9 +13,19 @@
 
 ### Why?
 
-- To build a trusted and secure crypto experience by providing solid standards for tokens, oracles, governance and insurance.
-- To explore currency stability through pricing mechanisms and a reserve system.
-- To be a viable backbone to web 3 services by offering combined value, storage and compute in a single blockchain and priced in the stable `Solar`.
+#### Blockchain
+trustless consensus
+
+#### Cryptography
+permissionless access and security
+
+#### Another blockchain
+
+To build a better crypto experience by providing solid standards for tokens, oracles, governance and insurance.
+
+Currency stability through pricing mechanisms and a reserve system.
+
+Viable backbone to web 3 services by offering combined value, storage and compute in a single blockchain.
 
 ### About
 
@@ -164,6 +174,8 @@ Proof of Space-Time staking.
 
 This upgrade adds a distributed compute protocol called Reactor with proof of work staking.
 
+*research in process
+
 #### V5: Governance Upgrade
 - nova withdrawl contract
 - nova reserve system
@@ -185,4 +197,4 @@ The Astreuos Blockchain is a fully open source project and is powered by several
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-03-06
+2022-03-10
