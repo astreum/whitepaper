@@ -1,7 +1,7 @@
 
 # Astreuos Whitepaper
 
-## A Next Generation Blockchain that adjusts Transaction Fees, Block Limits and Storage Fees to Maintain Network Sustainability & Maximize Network Utilization.
+### A Next Generation Blockchain that adjusts Transaction Fees, Block Limits and Storage Fees to Maintain Network Sustainability & Maximize Network Utilization.
 
 # History
 
@@ -107,8 +107,6 @@ Main Components:-
 3. Plasma, Fusion Language to Reactor Code Compiler.
 4. Helium, Code Manager.
 
-### Fusion Language
-
 ### Reactor - Virtual Stack Machine
 
 #### Op Codes
@@ -137,8 +135,15 @@ Main Components:-
     1. Less Than
     2. Greater Than
     3. Equal To
+6. Bitwise
+    1. Not
+    2. And
+    3. Or
+    4. Xor
 
 ## Nova - Proof of Stake Consensus Protocol
+
+### Block Time
 
 ### Slot Allocation
 
