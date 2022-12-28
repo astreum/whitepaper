@@ -59,25 +59,31 @@
     - Status
 
 ### Nova, Proof of Stake Consensus Mechanism.
-- An Epoch lasts One Week.
-- The Block Time Target is Three Seconds.
-- A Slot is a three seconds period when new Blocks are created.
-- Slots are allocated pro rata with Stake every Epoch and removed after Slot Selection.
-- A Slot Miss occurs when a validator does not create a new Block or creates a malicious Block when selected.
-- Slot Selection determines the Validator of the next Block at any time:-
-    - Get Addresses with Slot Allocations.
-    - Check Slot Misses from the last Block to the current time.
-    - If no Slot Miss, the nearest Address XOR to the last Block hash is selected.
-    - If Slot Misses, the nearest Address XOR to the Linear-feedback shift register, shifted to the number of Slot Misses, of the last Block hash is selected.
-- The Base Solar Limit is 1,000,000.
-- The Base Block Reward is 1 Astre.
+- A validator must be staked to participate.
+- Staking is done by sending astre to the nova account. 
+- The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
+- The validation process of creating new blocks is detailed below,
+- An epoch lasts approximately one week.
+- The block time target is three seconds.
+- A slot is a three seconds period when new blocks are created.
+- Slots are allocated pro rata with a validator's stake every epoch and are removed after slot selection.
+- A slot miss occurs when a validator does not create a new block or created a malicious block when selected.
+- Slot selection determines the validator for the next block at any time:-
+    - Get validator addresses with slot allocations.
+    - Check slot misses from the last block to the current time.
+    - If no slot miss, the nearest address XOR to the last block hash is selected.
+    - If slot misses, the nearest address XOR to the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is selected.
+- All transactions in a block are ordered ascending by the XOR distance of the transaction hash and the previuos block transactions hash.
+- A validator that misses all of their slots in an epoch will be refunded their stake.
+- The base solar limit is set at 1,000,000.
+- The base block reward is set at 1 astre.
 
 
 ### Solar Stability Mechanism
-- The Solar price is fixed for every Block.
-- The Solar price varies by 0.01%.
-- The Solar price increases when more than 90%, and decreases when less than 10%, of the previous Solar Limit was used.
-- The Base Solar Price is set at 1 Exaquark / 0.000001 Astre.
+- The solar price is fixed for every block.
+- The solar price varies by 0.01%.
+- The solar price increases when more than 90%, and decreases when less than 10%, of the previous solar limit was used.
+- The base solar price is set at 1 exaquark / 0.000001 astre.
 
 ## Roadmap
 
@@ -94,6 +100,7 @@
 - Virtual Machine.
 - Compiler & Code Manager.
 - App Creation & Call Transactions.
+- Nova Withdrawl Contract.
 
 ### Astreuos V2+
 - Token Standards.
@@ -130,4 +137,4 @@
 | Stelar Terminal | Browser Interface | MAR 2022 |
 | V1 Mainnet Launch | | APR 2022 |
 
-2022-02-21
+2022-02-24
