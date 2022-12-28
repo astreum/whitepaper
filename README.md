@@ -17,14 +17,14 @@ Strategies: -
     4. Web 3.0
 
 2. Astreuos
-    1. State
-    2. Accounts
-    2. Blocks
-    2. Transactions
-    2. Pulsar
-    3. Nova
-    4. Nebula
-    4. Fusion
+    - [State](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/state.md)
+    - [Accounts](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/accounts.md)
+    - [Blocks](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/blocks.md)
+    - [Transactions](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/transactions.md)
+    - [Pulsar Network](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/pulsar.md)
+    - [Nova](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/nova.md)
+    - [Nebula](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/nebula.md)
+    - [Fusion](https://github.com/astreuos/astreuos-whitepaper/blob/main/astreuos/fusion.md)
 
 3. Applications
     1. Digital Tokens
