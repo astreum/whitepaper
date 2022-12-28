@@ -147,7 +147,11 @@ The transaction body has:
 6. solar price
 7. value
 
+### Solar
+
 `Solar` is the currency for work done on the blockchain, in contrast with `Quark` with is the currency for value.
+
+Services on smart contract can also be priced in `Solar` with access to its current price on The Fusion Machine.
 
 The solar limit of a block is set at 1,000,000,000.
 
@@ -155,6 +159,13 @@ The solar limit of a block is set at 1,000,000,000.
 |---|---|
 | Transaction Processing | 1,000 |
 | Account Creation | 160,000 |
+
+Solar pricing mechanism:
+
+- The solar price is fixed for every block.
+- The solar price varies by 1 `Quark`.
+- The solar price increases when more than 75%, and decreases when less than 25%, of the previous solar limit was used.
+- The base solar price is set at 1 `Quark`.
 
 ### Nova Consensus
 
@@ -164,31 +175,22 @@ A validator must be staked, by sending `Quarks` to the nova account, to particip
 
 The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
 
-An epoch lasts approximately one week. The block time target is three seconds. A slot is a three seconds period when new blocks are created.
+An epoch lasts approximately one week. The block time target is five seconds. A slot is the five seconds period when new blocks are created.
 
 Slots are allocated pro rata with a validator's stake every epoch and are removed after slot selection.
 
 A slot miss occurs when a validator does not create a new block or created a malicious block when selected.
 
-A validator that misses all of their slots in an epoch will be refunded their stake.
-
 Slot selection determines the validator for the next block at any time:
 
 - Get validator addresses with slot allocations in the nova account storage.
 - Check slot misses from the last block to the current time.
-- If no slot miss, the nearest address xor to the last block hash is selected.
-- If slot misses, the nearest address xor to the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is selected.
+- If no slot miss, the latest block hash is used as the seed in the weighted random numbers generator.
+- If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is used as the seed in the weighted random numbers generator.
 
-All transactions in a block are ordered ascending by the xor of the transaction hash and the previuos block transactions hash.
+Transactions are ordered by the validator.
 
-The creator of a new block is payed a fee 1,000,000,000 Solar at the blocks Solar Price.
-
-Solar pricing mechanism:
-
-- The solar price is fixed for every block.
-- The solar price varies by 1 `Quark`.
-- The solar price increases when more than 75%, and decreases when less than 25%, of the previous solar limit was used.
-- The base solar price is set at 1 `Quark`.
+The creator of a new block is payed a fee 1,000,000,000 Solar at the current Solar Price.
 
 ### V2: Fusion Upgrade
 
@@ -322,4 +324,4 @@ Private Compute is confidential computing enabling users to use private data and
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-04-01
+2022-04-02
