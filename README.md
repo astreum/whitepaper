@@ -13,17 +13,19 @@ Roy R. O. Okello
 
 ## Introduction
 
-This paper introduces a blockchain for zero knowledge apps, perpetual storage and confidential compute that's decentralized and secure.
+This paper introduces an accounts based blockchain for zero knowledge apps, perpetual storage and confidential compute that's decentralized and secure.
 
 Features: 
 
-- trustless and permissionless access
-- quantum secure
+- permissionless accounts access
+- trustless consensus
+- post quantum secure
 - value transactions
 - programmable accounts
 - Nebula, a distributed storage protocol
 - Fusion, a language for developing zero knowledge and confidential applications
 - Reactor, a distributed computation protocol for Fusion Applications
+- Pulsar, an open peer-to-peer communication protocol for Astreum Nodes
 
 Astreum primarily works by keeping track of all the accounts and their details such as the balance, code, number of transactions and storage in a block and changes through applying transactions.
 
@@ -32,6 +34,28 @@ Astreum introduces a standard model for pricing and verification of transactions
 Applications are written in the Fusion Language, which is a Lisp dialect whose lists are addressable from Nebula, the Distributed Storage Protocol.
 
 Applications can run through Transactions or Reactor, the Distributed Compute Protocol.
+
+Astreum Nodes communicate through the Pulsar Network.
+
+`Overview`
+
+```text
+        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
+        |  Fusion       |       |  Nebula       |       |  Reactor      |
+        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
+
+        + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+        |  Accounts                                                     |
+        + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+
+        + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+        |  Pulsar Routes                                                |
+        + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+
+        + - - - - - - - - - - - - - - +   + - - - - - - - - - - - - - - +
+        |  Pulsar Gateways            |   |  Internet                   |
+        + - - - - - - - - - - - - - - +   + - - - - - - - - - - - - - - +
+```
 
 ## Protocols
 
@@ -104,6 +128,12 @@ ping_response: Envelope ->
 
 - Compute Request
 - Compute Response
+
+#### Gateway
+
+Pulsar Gateway Protocol provides an open protocol for routing data through out the Pulsar Network as an alternative to the Internet.
+
+Openness is in reference to the transparency of the cost of transmitting data through data paths and the permissionless ability to create a gateway.
 
 ### Nova
 
@@ -263,7 +293,7 @@ Account Types:
                 . - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .
                 ^                       ^                       ^                       ^                       ^
         + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +   
-        |    balance    |       |   channels    |       |     code      |       |    counter    |       |    storage    |
+        |    balance    |       |   channels    |       |     code      |       |    counter    |       |   storage     |
         + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
 
 ```
@@ -398,9 +428,9 @@ The Astreum Machine is a Fusion Machine that interfaces with Astreum Blocks and 
 
 ## Conclusion
 
-Astreum is a next generation blockchain that offers the following benefits:
+Astreum offers the following benefits:
 
-- distribution and decentralization of digital services such as financial intermediation, data storage, computation and networking through its trust-less models
+- distribution and decentralization of digital services such as financial intermediation, data storage, serverless computation and networking through its trust-less models
 - permission-less and pseudonymous or anonymous access to digital services
 - open and censorship free platform for content creators and application developers
 - one language for developing applications and templates, while still extensible to any use case
@@ -417,4 +447,4 @@ Astreum is a next generation blockchain that offers the following benefits:
 8. Efficient verifiable delay functions - Benjamin Wesolowski
 9. PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge - Ariel Gabizon, Zachary J. Williamson and Oana Ciobotaru
 
-2022-09-27
+2022-10-08
