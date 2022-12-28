@@ -23,17 +23,19 @@ permissionless access and security
 
 To build a better crypto experience by providing solid standards for tokens, oracles, governance and insurance.
 
-Currency stability through pricing mechanisms and a reserve system.
+Currency stability through price and cost mechanisms for the `Solar`.
 
-Viable backbone to web 3 services by offering combined value, storage and compute in a single blockchain.
+Accomodate external value through a native reserve system.
+
+Viable backbone to web 3 services by offering combined value, storage and compute on a single blockchain priced in a single currency.
 
 ### About
 
 Astreuos is an account based blockchain with scripting capabilities and protocols for distributed file and distributed compute.
 
-The blockchain keeps track of an account's details such as the balance, number of transactions and storage.
+The blockchain maintains a state of all the accounts keeping track of an account's details such as the balance, number of transactions and storage.
 
-The standard unit of value is an `Astre` while the smallest unit is a `quark`.
+The account balance is in the native standard unit of value which is an `Astre` while the smallest unit of value is a `quark`.
 
 Value magnitudes are:-
 - 10^24: yottaquark / astre (AST)
@@ -46,7 +48,9 @@ Value magnitudes are:-
 - 10^3: kiloquark (KQ)
 - 10^0: quark (Q)
 
-A Block consists of the block body and the validator's ed25519 signature of the body's tree hash.
+Blocks represent the current state of the blockchain and any transformation of the state, in the form of transactions, from the previous block.
+
+A Block consists of the block body and the validator's ed25519 signature of the body's merkle tree hash.
 
 The block body has:-
 1. accounts hash
@@ -60,7 +64,7 @@ The block body has:-
 9. transactions hash
 10. validator
 
-A Transaction consists of the transaction body and the sender's ed25519 signature of the body's tree hash.
+A Transaction consists of the transaction body and the sender's ed25519 signature of the body's merkle tree hash.
 
 The transaction body has:-
 1. chain
@@ -106,11 +110,11 @@ Solar pricing mechanism:-
 
 ### Vision
 
-Empower web 3 builders to:-
-- create browser extensions that interface with an astreuos node to enhance user experiences
-- create blockchain applications
-- host web applications and media content on Nebula
-- create compute applications on Reactor
+The Astreuos Blockchain empowers web 3 builders to:-
+- create next generation applications and experiences that interface with Astreuos Node APIs for transactions, storage & compute.
+- create powerful on-chain applications such as tokens, exchanges and DAOs.
+- host web applications, static sites and media content on Nebula Storage.
+- create compute intensive applications using Reactor Private & Public Computations.
 
 ### Future
 
@@ -174,13 +178,19 @@ Proof of Space-Time staking.
 
 This upgrade adds a distributed compute protocol called Reactor with proof of work staking.
 
+Reactor allows for Private & Public Computations.
+
+Private Computations have restrictions on users allowed to call functions and run in an obfuscated mode to keep code private.
+
+Public Computations run on functions stored on Nebula and can be called by anyone.
+
 *research in progress
 
 #### V5: Governance Upgrade
 - nova withdrawl contract
 - nova reserve system
 - token index
-- nova governance mechanism
+- nova governance system
 
 ### Open
 
@@ -192,9 +202,9 @@ The Astreuos Blockchain is a fully open source project and is powered by several
 | [NeutronDB](https://github.com/stelar-software/rust-neutrondb) | Key Value Store | ✅ |
 | [Opis](https://github.com/stelar-software/rust-opis) | Integer Arithmetic | ✅ |
 | [Fides](https://github.com/stelar-software/rust-fides) | Hashing & Asymmetric/Symmetric Cryptography | ✅ |
-| [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network) | P2P Messaging Protocol | ✅ |
+| [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network) | DHT P2P Messaging Protocol | ✅ |
 | [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Blockchain Node | ✅ |
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-03-10
+2022-03-14
