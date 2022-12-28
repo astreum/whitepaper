@@ -118,41 +118,45 @@ Types:-
 5. List
 6. Tuple
 
-#### Operators
+Operators:-
+1. Arithmetic
+    - Add
+    - Sub
+2. 
 
 ### Reactor - Virtual Stack Machine
 
 #### Op Codes
 
 1. General
-    1. Stop
+    - Stop
 2. Memory
-    1. Put
-    2. Get
+    - Put
+    - Get
 3. Account
-    1. Create
-    2. Balance
-    3. Storage Put
-    4. Storage Get
-    5. Storage Delete
+    - Create
+    - Balance
+    - Storage Put
+    - Storage Get
+    - Storage Delete
 4. Arithmetic
-    1. Addition
-    2. Subtraction
-    3. Multiplication
-    4. Division
-    5. Remainder
-    6. Modulo
-    7. Exponentiation
-    8. Modular Inverse
+    - Addition
+    - Subtraction
+    - Multiplication
+    - Division
+    - Remainder
+    - Modulo
+    - Exponentiation
+    - Modular Inverse
 5. Comparison
-    1. Less Than
-    2. Greater Than
-    3. Equal To
+    - Less Than
+    - Greater Than
+    - Equal To
 6. Bitwise
-    1. Not
-    2. And
-    3. Or
-    4. Xor
+    - Not
+    - And
+    - Or
+    - Xor
 
 ## Nova - Proof of Stake Consensus Protocol
 
