@@ -199,7 +199,7 @@ Solar pricing mechanism:-
 
 This upgrade will add an application platform called Fusion.
 
-The Fusion Language is a multi-paradigm statically-typed programming language for building Fusion Applications.
+The Fusion Language is a multi-paradigm statically-typed programming language for developing Fusion Applications.
 
 The Fusion Virtual Machine is the native runtime for Fusion Bytecode and has a direct interface to the Astreuos Account State.
 
@@ -207,7 +207,7 @@ Helium is the Fusion package manager. Helium downloads your Fusion Application's
 
 New transaction types will be added for App Creation and App Calls.
 
-Standards to help builders create trusted Fusion Applications.
+Standards to help developers create trusted Fusion Applications.
 
 - Tokens.
 - Oracles.
