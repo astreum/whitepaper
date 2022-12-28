@@ -92,7 +92,7 @@ An Astreuos Account is a makeup of an address and details associated to that acc
         + - - - - - - - +                       + - - - - - - - +
         |               |                       |               | 
         |   Previous    |      Transactions     |     Latest    |
-        |   Accounts    |   ----------------->  |    Accounts   |
+        |   Accounts    |   - - - - - - - - ->  |    Accounts   |
         |     State     |                       |     State     |
         |               |                       |               |
         + - - - - - - - +                       + - - - - - - - +
@@ -101,10 +101,10 @@ An Astreuos Account is a makeup of an address and details associated to that acc
 
 
 
-The account balance is in the native unit of value which is an `Astre` while the smallest unit of value is a `Quark`.
+The account balance is in the native unit of value which is a `Quark`.
 
 Value magnitudes are:-
-- 10^24: YottaQuark (YQ) / Astre (AST)
+- 10^24: YottaQuark (YQ)
 - 10^21: ZettaQuark (ZQ)
 - 10^18: ExaQuark (EQ)
 - 10^15: PetaQuark (PQ)
@@ -147,14 +147,14 @@ The transaction body has:-
 6. solar price
 7. value
 
-`Solar` is the currency for work done on the blockchain, in contrast with `Astre` with is the currency for value.
+`Solar` is the currency for work done on the blockchain, in contrast with `Quark` with is the currency for value.
 
-The solar limit of a block is 1,000,000,000.
+The solar limit of a block is set at 1,000,000,000.
 
 | Fee | Solar |
 |---|---|
 | Transaction Processing | 1,000 |
-| Account Creation | 1,000,000 |
+| Account Creation | 160,000 |
 
 ### Nova Consensus
 
@@ -180,7 +180,7 @@ Slot selection determines the validator for the next block at any time:-
 
 All transactions in a block are ordered ascending by the xor distance of the transaction hash and the previuos block transactions hash.
 
-The reward for creating a new block is 1 `Astre`.
+The creator of a new block is payed a fee 1,000,000,000 Solar at the blocks Solar Price.
 
 Solar pricing mechanism:-
 - The solar price is fixed for every block.
@@ -214,7 +214,7 @@ Nebula is a protocol for storing and retrieving Nebula Objects.
 
 A Nebula Object is a data structure with three fields:
 - Leaf: True/False.
-- Data: a blob of binary data of size < 3.2 MB.
+- Data: a blob of binary data of size < 32KB.
 - Size: the cumulative size of the object.
 
 Puslar network will also be upgraded with index and storage routes with complementary Nebula Object message types for get and put.
@@ -225,30 +225,30 @@ Puslar network will also be upgraded with index and storage routes with compleme
 
         Client                                          Nebula
         + - - - +                                       
-        |       |         object hash                   + - - - - - - - +
+        |       |             object hash               + - - - - - - - +
         |       | - - - - - - - - - - - - - - - - - - > |    Nearest    |
         |       | < - - - - - - - - - - - - - - - - - - |     Node      |
         |       |        Nearer Node Pubkey & Ip        + - - - - - - - +
         |       |
         |       |
-        |       |         object hash                   + - - - - - - - +
+        |       |             object hash               + - - - - - - - +
         |       | - - - - - - - - - - - - - - - - - - > |    Nearer     |
         |       | < - - - - - - - - - - - - - - - - - - |     Node      |
         |       |        Index Node Pubkey & Ip         + - - - - - - - +
         |       |                  or
-        |       |  Object if cached, earning Retrieval Fee
+        |       |           Object if cached
         |       |
         |       |
-        |       |         object hash                   + - - - - - - - +
+        |       |             object hash               + - - - - - - - +
         |       | - - - - - - - - - - - - - - - - - - > |    Index      |
         |       | < - - - - - - - - - - - - - - - - - - |     Node      |
         |       |       Storage Node Pubkey & Ip        + - - - - - - - +
         |       |
         |       |
-        |       |         object hash                   + - - - - - - - +
+        |       |             object hash               + - - - - - - - +
         |       | - - - - - - - - - - - - - - - - - - > |    Storage    |
         |       | < - - - - - - - - - - - - - - - - - - |     Node      |
-        |       |     Object, earning Retrieval Fee     + - - - - - - - +
+        |       |               Object                  + - - - - - - - +
         |       |
         + - - - +
 
@@ -272,14 +272,9 @@ An indexer also earns a commission for facilitating a put contract and indexing 
 
 A delete contract can be made directly to the validator route and refunded the contract's remainder period.
 
-The Retrieval Fees for 256KB is 1,600,000 Solar.
+The Retrieval Fees for 32KB is 80,000 Solar.
 
-Storage Fees for 256KB.
-
-| Time | Solar |
-|---|---|
-| 1mo | 3,200,000|
-| 1yr | 32,000,000 |
+The Storage Fees for 32KB/mo is 160,000 Solar.
 
 ### V4: Reactor Upgrade
 
@@ -290,7 +285,7 @@ Open Compute is calling Fusion Applications stored on Nebula and are callable by
 Private Compute is confidential computing enabling users to use private data and protect software ip on the protocol while allowing for open or restricted access to app calls.
 
 ### V5: Governance Upgrade
-- improvement protocol system
+- improvement proposal system
 
 ### Roadmap
 
@@ -305,4 +300,4 @@ Private Compute is confidential computing enabling users to use private data and
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-03-29
+2022-03-30
