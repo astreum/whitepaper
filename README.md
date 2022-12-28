@@ -227,6 +227,41 @@ A Link structure has three data fields:
 
 Puslar network will also be upgraded with index and storage routes with complementary Nebula Object message types for get and put.
 
+`Object Get Flow`
+
+```
+
+        Client                                          Nebula
+        + - - - +                                       
+        |       |         object hash                   + - - - - - - - +
+        |       | - - - - - - - - - - - - - - - - - - > |    Nearest    |
+        |       | < - - - - - - - - - - - - - - - - - - |     Node      |
+        |       |        Nearer Node Pubkey & Ip        + - - - - - - - +
+        |       |
+        |       |
+        |       |         object hash                   + - - - - - - - +
+        |       | - - - - - - - - - - - - - - - - - - > |    Nearer     |
+        |       | < - - - - - - - - - - - - - - - - - - |     Node      |
+        |       |        Index Node Pubkey & Ip         + - - - - - - - +
+        |       |                  or
+        |       |  Object if cached, earning Retrieval Fee
+        |       |
+        |       |
+        |       |         object hash                   + - - - - - - - +
+        |       | - - - - - - - - - - - - - - - - - - > |    Index      |
+        |       | < - - - - - - - - - - - - - - - - - - |     Node      |
+        |       |       Storage Node Pubkey & Ip        + - - - - - - - +
+        |       |
+        |       |
+        |       |         object hash                   + - - - - - - - +
+        |       | - - - - - - - - - - - - - - - - - - > |    Storage    |
+        |       | < - - - - - - - - - - - - - - - - - - |     Node      |
+        |       |     Object, earning Retrieval Fee     + - - - - - - - +
+        |       |
+        + - - - +
+
+```
+
 The index route stores the index of the object hash and the storage provider's id.
 
 The route is updated every five minutes to remove deleted objects and redistribute indexes adding new objects.
