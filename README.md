@@ -332,11 +332,11 @@ Astreuos for Developers.
 
 | Projects | Description | Status |
 |---|---|---|
-| [Astro Format](https://github.com/stelar-software/rust-astro-format) | Encoding Format | ✅ |
-| [NeutronDB](https://github.com/stelar-software/rust-neutrondb) | Key Value Store | ✅ |
-| [Opis](https://github.com/stelar-software/rust-opis) | Integer Arithmetic | ✅ |
-| [Fides](https://github.com/stelar-software/rust-fides) | Hashing & Asymmetric/Symmetric Cryptography | ✅ |
-| [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network) | DHT P2P Messaging Protocol | ✅ |
+| [Astro Format](https://github.com/stelar-labs/rust-astro-format) | Encoding Format | ✅ |
+| [NeutronDB](https://github.com/stelar-labs/rust-neutrondb) | Key Value Store | ✅ |
+| [Opis](https://github.com/stelar-labs/rust-opis) | Integer Arithmetic | ✅ |
+| [Fides](https://github.com/stelar-labs/rust-fides) | Hashing & Asymmetric/Symmetric Cryptography | ✅ |
+| [Pulsar Network](https://github.com/stelar-labs/rust-pulsar-network) | DHT P2P Messaging Protocol | ✅ |
 | [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Blockchain Node | ✅ |
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
