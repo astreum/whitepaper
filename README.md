@@ -3,35 +3,27 @@
 
 ### A Next Generation Blockchain for Apps, Storage and Compute that's Decentralized, Secure and Sustainable.
 
+## Introduction
+
+A new accounts based blockchain with storage and compute protocols is presented in this paper. A motivation for such a blockchain is to build a better crypto experience with standards and price mechanisms. 
+
+We built this project as a blockchain for the benefit of achieving trustless consensus. Additional we benefit from the use of cryptography with permissionless access and great security for users. This empowers anyone in the world with uncensored access to use and benefit from the blockchain.
+
+The blockchain primarily works by keeping track of all the accounts and details such as the balance, number of transactions and storage.
+
+Astreuos aims to be a competitive and viable layer1 platform for advanced web3 services by offering a combined value, storage and compute on a single blockchain priced in a single currency.
+
 ## Contents
 
-1. Why?
-2. About
+1. Accounts
+2. Blocks
+3. Transactions
+2. Nova Consensus
 3. Vision
 4. Future
 5. Open
 
-### Why?
-
-#### Blockchain
-trustless consensus
-
-#### Cryptography
-permissionless access and security
-
-#### Another blockchain
-
-To build a better crypto experience by providing solid standards for tokens, oracles, governance and insurance.
-
-Currency stability through price and cost mechanisms.
-
-Viable backbone to web3 services by offering combined value, storage and compute on a single blockchain priced in a single currency.
-
-### About
-
-Astreuos is an accounts based blockchain with scripting capabilities and protocols for distributed file and distributed compute.
-
-The blockchain works by keeping track of all the accounts and details such as the balance, number of transactions and storage.
+### Accounts
 
 `Accounts State`
 
@@ -111,7 +103,7 @@ The blockchain works by keeping track of all the accounts and details such as th
 
 ```
 
-
+An Astreuos Account is a makeup of an address and details associated to that account. Each account has a balance, a counter and storage.
 
 The account balance is in the native unit of value which is an `Astre` while the smallest unit of value is a `quark`.
 
@@ -126,6 +118,8 @@ Value magnitudes are:-
 - 10^3: kiloquark (KQ)
 - 10^0: quark (Q)
 
+### Blocks
+
 A Block consists of the block body and the validator's ed25519 signature of the body's merkle tree hash.
 
 The block body has:-
@@ -139,6 +133,8 @@ The block body has:-
 8. time
 9. transactions hash
 10. validator
+
+### Transactions
 
 A Transaction consists of the transaction body and the sender's ed25519 signature of the body's merkle tree hash.
 
@@ -164,7 +160,7 @@ The solar limit of a block is 1,000,000,000.
 | Transaction Processing | 1,000 |
 | Account Creation | 1,000,000 |
 
-#### V1: Genesis
+### Nova Consensus
 
 
 
@@ -303,4 +299,4 @@ The Astreuos Blockchain is a fully open source project and is powered by several
 | V2 Mainet Launch | | TBD |
 
 
-2022-03-19
+2022-03-21
