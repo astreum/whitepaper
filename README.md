@@ -56,7 +56,7 @@ Transactions are ordered by their hash.
 
 Transactions proof enable other nodes to efficiently verify the accounts transition.
 
-Validators spend ~1 sec computing a Time Output and Time Proof from a Verifiable Delay Function.
+Validators spend ~1 sec computing a Time Output from a Verifiable Delay Function.
 
 The creator of a new block is payed a fee of 10^9 `Solar` at the current block's solar price.
 
@@ -127,6 +127,25 @@ The compute cost is derived from the current supply and demand.
 
 ## Components
 
+### Nodes
+
+| Type | Description |
+|---|---|
+| Navigators | keep genesis block, latest block and aggregate transaction proof |
+| Validators | keep entire account state and create new blocks |
+| Storage | keep index and data |
+| Compute | perform compute requests |
+
+### Terminals
+
+The Terminal is a specification for building user interfaces.
+
+A terminal has a query bar for querying hashes of Nebula Objects.
+
+The query bar can also be used for querying text from name services.
+
+Terminals can natively run Fusion Applications stored as Lists on Nebula.
+
 ### Accounts
 
 An Astreum Account is a data structure of an address and details associated to that account. Each account has a balance, code, counter and storage.
@@ -138,7 +157,7 @@ An Astreum Account is a data structure of an address and details associated to t
                                                         + - - - - - - - - - - - +
                                                         |     accounts hash     |
                                                         + - - - - - - - - - - - +
-                                                                ^
+                                                                     ^
                                                 . - - - - - - - - - - - - - - - - - - - .
                                                 ^                                       ^
                                         + - - - - - - - - +                   + - - - - - - - - - +
@@ -266,4 +285,4 @@ The Fusion Machine is a stack based native runtime for Fusion Machine Code inter
 7. Efficient verifiable delay functions - Benjamin Wesolowski
 8. Bulletproofs: Short Proofs for Confidential Transactions and More - Benedikt Bunz, Jonathan Bootle, Dan Boneh, Andrew Poelstra, Pieter Wuille, and Greg Maxwell
 
-2022-06-21
+2022-06-23
