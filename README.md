@@ -3,14 +3,14 @@
 
 ### A Next Generation Blockchain Platform for Apps, Storage and Compute that's Decentralized, Secure and Sustainable.
 
-## Structure
+## Specification(v1)
 
 ### Accounts
 - Structure: Address & Details Hash.
 - Details: Counter, Balance & Storage Hash.
-- The Standard Unit of Value is an Astre while the Smallest Unit is a Quark.
+- The Standard Unit of Value is an Astr while the Smallest Unit is a Quark.
 - Value magnitudes:
-    - 10^24: Yottaquark / Astre
+    - 10^24: Yottaquark / Astr
     - 10^21: Zettaquark
     - 10^18: Exaquark
     - 10^15: Petaquark
@@ -22,7 +22,7 @@
 - Nova Special Account Address is 0xNOVA.
 
 ### Blocks
-- Spec 1 Structure:
+- Structure:
     - Spec
     - Number
     - Previous Block Hash
@@ -38,17 +38,26 @@
 - Current Solar Limit is 1,000,000.
 
 ### Transactions
-- Spec 1 Structure: Spec, Body & Signature.
+- Structure: Spec, Body & Signature.
 - Transaction Body
-    - Spec 1 Structure: Recipient, Value, Counter, Solar Price & Solar Limit.
+    - Structure: Recipient, Value, Counter, Solar Price & Solar Limit.
 
 ### Receipts
-- Spec 1 Structure: Spec, Transaction Hash, Status & Solar Used.
+- Structure: Spec, Transaction Hash, Status & Solar Used.
 
 ### Nova
+- The Block Time Target is One Second.
+- A Slot is The One Second period where new Blocks are Minted.
+- An Epoch lasts one week.
+- Slots are allocated to Validators every Epoch & removed after Minting a Block.
+- Slots are distributed pro rata with a Validator's Stake.
+- A Round is One Minute.
 
 ### Solar Stability Mechanism
+- The Solar Price is fixed for every Block.
+- When the previous Block Limit is reached
 - Maximum Daily Solar Price Deviation is 10%.
+- The Base Solar Price is 0.0001 Astr.
 
 ## Roadmap
 
@@ -69,6 +78,7 @@
 - Nebula, Distributed File Storage System.
 - Storage Contract.
 - Retrieval Contract.
+- Removal Contract.
 
 ### Astreuos v4
 - Reactor, Distributed Compute System.
@@ -78,6 +88,7 @@
 - Token Standards.
 - Oracle Standards.
 - Nova Reserve System.
+- Nova Governance Protocol.
 
 ### Projects
 | Project | Description | Delivery |
@@ -87,9 +98,9 @@
 | [Opis](https://github.com/stelar-software/rust-opis) | Integer Arithmetic | ✅ |
 | [Fides](https://github.com/stelar-software/rust-fides) | Digital Security | 🚧 |
 | [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network)  | Distributed Messaging |  🚧 |
-| Nova | Proof of Stake Consensus Mechanism | FEB 12022 |
-| [Node](https://github.com/astreuos/rust-astreuos) | Network Interface | FEB 12022 |
-| Testnet Launch | | Q1 12022 |
-| Mainnet Launch | | Q2 12022 |
+| Nova | Proof of Stake Consensus Mechanism | FEB 2022 |
+| [Node](https://github.com/astreuos/rust-astreuos) | Network Interface | FEB 2022 |
+| Testnet Launch | | Q1 2022 |
+| Mainnet Launch | | Q2 2022 |
 
-12022-02-01
+2022-02-01
