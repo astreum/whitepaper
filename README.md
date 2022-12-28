@@ -76,7 +76,7 @@
 ### Solar Stability Mechanism
 - The Solar price is fixed for every Block.
 - The Solar price varies by 0.01%.
-- The Solar price increases when more than 90% and decreases when less than 10% of the Solar Limit of the previous Block was used.
+- The Solar price increases when more than 90%, and decreases when less than 10%, of the previous Solar Limit was used.
 - The Base Solar Price is set at 1 Exaquark / 0.000001 Astr.
 
 ## Roadmap
@@ -96,14 +96,14 @@
 
 ### Astreuos v3
 - Nebula, Distributed File Storage System.
-- Proof of Storage Mechanism for sizing.
+- Proof of Storage Sizing Mechanism.
 - Storage Contract.
 - Retrieval Contract.
 - Removal Contract.
 
 ### Astreuos v4
 - Reactor, Distributed Compute System.
-- Proof of Work Mechanism for sizing.
+- Proof of Work Sizing Mechanism.
 - Compute Contract.
 - Automation Contract.
 
