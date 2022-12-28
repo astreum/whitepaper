@@ -13,6 +13,8 @@
 
 ### The State
 
+[Virtual Machine](https://github.com/astreuos/astreuos-specifications/blob/main/state/accounts.md)
+
 [Accounts](https://github.com/astreuos/astreuos-specifications/blob/main/state/accounts.md)
 
 ### Network Protocol
