@@ -190,11 +190,13 @@ Transactions are ordered by the validator.
 
 The creator of a new block is payed a fee 1,000,000,000 Solar at the current Solar Price.
 
-### V2: Fusion Application Layer
+### V2: Fusion Contracts
 
-Fusion is an application platform running on the Astreuos Blockchain.
+Fusion is the applications platform running on the Astreuos Blockchain.
 
-The Fusion Language is the programming language for developing Fusion Applications.
+Contracts are applications that run through transaction calls.
+
+The Fusion Language is a dialect of the Lisp programming language for developing Fusion Applications.
 
 The Fusion Machine is a stack based native runtime for Fusion Machine Code interfacing with the Astreuos Accounts State.
 
@@ -210,7 +212,7 @@ New transaction types:
 
 A Storage Put costs 100,000 Solar, Storage Get costs 100 Solar and all other Stack Operations cost 1 Solar.
 
-Standards to help developers create trusted Fusion Applications.
+Standards to help developers create trusted Fusion Contracts.
 
 - Tokens
 - Oracles
