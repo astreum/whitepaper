@@ -105,6 +105,7 @@
 ### Astreuos v5
 - Token Standards.
 - Oracle Standards.
+- DAO Standards.
 - Nova Reserve System.
 - Nova Governance Protocol.
 
@@ -121,4 +122,4 @@
 | Testnet Launch | | Q1 2022 |
 | Mainnet Launch | | Q2 2022 |
 
-2022-02-14
+2022-02-17
