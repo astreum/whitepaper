@@ -28,7 +28,7 @@ Astreuos aims to be a competitive platform for digital services by:
 7. Nebula Storage Layer
 8. Reactor Compute Layer
 9. Application
-10. Roadmap
+10. Components
 
 ### Accounts
 
@@ -316,16 +316,16 @@ Private Compute is confidential computing enabling users to use private data and
 
 #### Serverless
 
-### Roadmap
+### Components
 
-| Projects | Description | Status |
+| Project | Description | Status |
 |---|---|---|
 | [Astro Format](https://github.com/stelar-labs/rust-astro-format) | Encoding Format | ✅ |
 | [NeutronDB](https://github.com/stelar-labs/rust-neutrondb) | Key Value Store | ✅ |
 | [Opis](https://github.com/stelar-labs/rust-opis) | Integer Arithmetic | ✅ |
-| [Fides](https://github.com/stelar-labs/rust-fides) | Hashing & Asymmetric/Symmetric Cryptography | ✅ |
-| [Pulsar Network](https://github.com/stelar-labs/rust-pulsar-network) | DHT P2P Messaging Protocol | ✅ |
-| [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Blockchain Node | ✅ |
+| [Fides](https://github.com/stelar-labs/rust-fides) | Cryptography | ✅ |
+| [Pulsar Network](https://github.com/stelar-labs/rust-pulsar-network) | Messaging | ✅ |
+| [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Official Node | ✅ |
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
