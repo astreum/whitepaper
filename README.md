@@ -13,18 +13,17 @@
     - Balance
     - Counter
     - Storage
-- The Standard Unit of Value is an Astre while the Smallest Unit is a Quark.
+- The standard unit of value is an Astre while the smallest unit is a Quark.
 - Value magnitudes:
-    - 10^24: Yottaquark / Astre
-    - 10^21: Zettaquark
-    - 10^18: Exaquark
-    - 10^15: Petaquark
-    - 10^12: Teraquark
-    - 10^9: Gigaquark
-    - 10^6: Megaquark
-    - 10^3: Kiloquark
-    - 10^0: Quark
-- Nova Special Account Address is 0xNOVA.
+    - 10^24: Yottaquark / Astre (AST)
+    - 10^21: Zettaquark (ZQ)
+    - 10^18: Exaquark (EQ)
+    - 10^15: Petaquark (PQ)
+    - 10^12: Teraquark (TQ)
+    - 10^9: Gigaquark (GQ)
+    - 10^6: Megaquark (MQ)
+    - 10^3: Kiloquark (KQ)
+    - 10^0: Quark (Q)
 
 ### Blocks
 - Structure
@@ -32,6 +31,7 @@
     - Signature
 - Body
     - Accounts Hash
+    - Chain
     - Number
     - Previous Block Hash
     - Receipts Hash
@@ -47,6 +47,7 @@
     - Body
     - Signature
 - Body
+    - Chain
     - Counter
     - Recipient
     - Solar Price
@@ -92,7 +93,6 @@
 - Nova, Proof of Stake Consensus Mechanism.
 - Nova Deposit Contract.
 - Solar Stability Mechanism.
-- Nebula File Tree for storing Account Details, Blocks & Transactions.
 
 ### Astreuos V2
 - Fusion, Application Platform.
@@ -113,6 +113,7 @@
 - Storage Contract.
 - Retrieval Contract.
 - Removal Contract.
+- Nebula File Tree for storing Account Details, Blocks & Transactions.
 
 ### Astreuos V4
 - Reactor, Distributed Compute System.
@@ -130,11 +131,11 @@
 | [Astro Notation](https://github.com/stelar-software/rust-astro-notation) | Encoding Format | ✅ |
 | [NeutronDB](https://github.com/stelar-software/rust-neutrondb) | Key Value Store | ✅ |
 | [Opis](https://github.com/stelar-software/rust-opis) | Integer Arithmetic | ✅ |
-| [Fides](https://github.com/stelar-software/rust-fides) | Hashing & Asymmetric/Symmetric Cryptography | 🚧 |
-| [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network) | P2P Messaging Protocol |  🚧 |
-| [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Blockchain Node | FEB 2022 |
-| V1 Testnet Launch | | FEB 2022 |
+| [Fides](https://github.com/stelar-software/rust-fides) | Hashing & Asymmetric/Symmetric Cryptography | ✅ |
+| [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network) | P2P Messaging Protocol | ✅ |
+| [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Blockchain Node | ✅ |
+| V1 Testnet Launch | | 2022-03-01 |
 | Stelar Terminal | Browser Interface | MAR 2022 |
-| V1 Mainnet Launch | | APR 2022 |
+| V1 Mainnet Launch | | 2022-04-01 |
 
-2022-02-24
+2022-02-27
