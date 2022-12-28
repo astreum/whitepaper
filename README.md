@@ -7,18 +7,6 @@ royokello@protonmail.com
 
 ## Introduction
 
-Bitcoin is the first decentralized blockchain which was pseudonymously created by Satoshi Nakamoto.
-
-It was created as a peer-to-peer electronic cash system built on cryptographic functions.
-
-Bitcoin introduced a privacy model for financial transactions, blockchain proof-of-work mechanism and a node incentive model for decentralized systems.
-
-This allowed for decentralized and secure electronic funds transfers that is permissionless and trustless. 
-
-Ethereum, a next generation smart contract and decentralized application platform, was introduced in 2014 by Vitalik Buterin.
-
-Ethereum introduces a new state model and turing complete scripting capability enabling the creation of decentralized applications.
-
 This paper introduces a next generation blockchain for apps, storage and compute.
 
 - apps: decentralized applications
@@ -27,17 +15,11 @@ This paper introduces a next generation blockchain for apps, storage and compute
 
 Astreum introduces a model for pricing, verification and payment for storage and compute in a decentralized system.
 
-Astreum primarily works by keeping track of all the accounts and their details such as the balance, code, number of transactions and storage in a block.
+Astreum primarily works by keeping track of all the accounts and their details such as the balance, code, number of transactions and storage in a block and changes through applying transactions.
 
-Validators create new blocks by applying transactions to the previous state of accounts and extend the blockchain.
+Applications are written in the Fusion Language, which is a Lisp dialect whose lists are addressable from Nebula, Distributed Storage Protocol.
 
-Nova is the proof of stake consensus protocol that's secure and sustainable.
-
-Applications are written in the Fusion Language, which is a Lisp dialect whose lists are addressable from Nebula.
-
-Nebula is the distributed storage protocol for the blockchain where data can be plain or encrypted off-chain.
-
-Reactor is the distributed compute protocol for running open or private applications off-chain.
+Applications can run through Transactions or Reactor, Distributed Compute Protocol.
 
 ## Components
 
@@ -48,7 +30,7 @@ Reactor is the distributed compute protocol for running open or private applicat
 - [Opis](https://github.com/stelar-labs/opis-rs) - Integer Arithmetic
 - [Fides](https://github.com/stelar-labs/fides-rs) - Cryptography
 - [Pulsar Network](https://github.com/stelar-labs/pulsar-network-rs) - Messaging
-- [Rust Astreum](https://github.com/Astreum/node-rs) - Official Node
+- [Rust Astreum](https://github.com/astreum/node-rs) - Official Node
 
 ### Accounts
 
@@ -58,27 +40,27 @@ An Astreum Account is a data structure of an address and details associated to t
 
 ```text
 
-                                        + - - - - - - - - - - - +
-                                        |     accounts hash     |
-                                        + - - - - - - - - - - - +
-                                                    ^
-                                . - - - - - - - - - - - - - - - - - - - .
-                                ^                                       ^
-                        + - - - - - - - - +                   + - - - - - - - - - +
-                        | account 1 hash  |                   |   account 2 hash  |
-                        + - - - - - - - - +                   + - - - - - - - - - +
-                                ^
-                  . - - - - - - - - - - - - - .
-                  ^                           ^
-        + - - - - - - - - - +       + - - - - - - - - - +
-        |   address hash    |       |   details hash    |
-        + - - - - - - - - - +       + - - - - - - - - - +
-                                              ^
-                  . - - - - - - - - - - - - - + - - - - - - - - - - - - - .
-                  ^                           ^                           ^
-          + - - - - - - - - +       + - - - - - - - - - +       + - - - - - - - - - +
-          |  balance hash   |       |   counter hash    |       |   storage hash    |
-          + - - - - - - - - +       + - - - - - - - - - +       + - - - - - - - - - +
+                                                        + - - - - - - - - - - - +
+                                                        |     accounts hash     |
+                                                        + - - - - - - - - - - - +
+                                                                ^
+                                                . - - - - - - - - - - - - - - - - - - - .
+                                                ^                                       ^
+                                        + - - - - - - - - +                   + - - - - - - - - - +
+                                        | account 1 hash  |                   |   account 2 hash  |
+                                        + - - - - - - - - +                   + - - - - - - - - - +
+                                                ^
+                                . - - - - - - - - - - - - - .
+                                ^                           ^
+                      + - - - - - - - - - +       + - - - - - - - - - +
+                      |   address hash    |       |   details hash    |
+                      + - - - - - - - - - +       + - - - - - - - - - +
+                                                            ^
+                  . - - - - - - - - - - - - - . - - - - - - + - - - - - - . - - - - - - - - - - - - - .
+                  ^                           ^                           ^                           ^
+          + - - - - - - - - +       + - - - - - - - - - +       + - - - - - - - - - +       + - - - - - - - - - +
+          |  balance hash   |       |     code hash     |       |   counter hash    |       |   storage hash    |
+          + - - - - - - - - +       + - - - - - - - - - +       + - - - - - - - - - +       + - - - - - - - - - +
 
 ```
 
@@ -121,18 +103,6 @@ An Astreum Account is a data structure of an address and details associated to t
 
 The account balance is in the native unit of value which is an `Astre`.
 
-Value magnitudes are:
-
-- 10^24 `YottaAstre` `[yA]`
-- 10^21 `ZettaAstre` `[zA]`
-- 10^18 `ExaAstre` `[eA]`
-- 10^15 `PetaAstre` `[pA]`
-- 10^12 `TeraAstre` `[tA]`
-- 10^9  `GigaAstre` `[gA]`
-- 10^6  `MegaAstre` `[mA]`
-- 10^3  `KiloAstre` `[kA]`
-- 10^0  `Astre` `[A]`
-
 ### Blocks
 
 A Block consists of the block body and the validator's ed25519 signature of the body's merkle tree root.
@@ -172,9 +142,9 @@ The transaction body has:
 
 `Solar` is the currency for work done on the blockchain, in contrast with `Astre` with is the currency for value.
 
-The solar limit of a block is set at 10^12 `Solar`.
+The solar limit of a block is set at 10^6 `Solar`.
 
-Transaction Processing costs 10^6 `Solar`.
+Transaction Processing costs 10^3 `Solar`.
 
 Solar pricing mechanism:
 
@@ -191,7 +161,7 @@ A validator must be staked, by sending `Astre` to the nova account, to participa
 
 The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
 
-The block time target is five seconds. A slot is the five seconds period when new blocks are created.
+The block time target is three seconds. A slot is the three seconds period when new blocks are created.
 
 Slots are allocated pro-rata to a validator's stake.
 
@@ -208,15 +178,13 @@ Validators who miss a slot get half their stake returned.
 
 Transactions are ordered by their hash.
 
-The creator of a new block is payed a fee of 10^12 `Solar` at the current block's solar price.
+The creator of a new block is payed a fee of 10^6 `Solar` at the current block's solar price.
 
 ### Fusion
 
 Fusion is the applications platform running on the Astreum Blockchain.
 
-Contracts are applications that run through Transaction Calls on-chain.
-
-Reactions are applications that run through Computation Contracts off-chain.
+Applications can run through transaction calls on-chain and computation contracts off-chain.
 
 The Fusion Language is a dialect of the Lisp programming language for developing Fusion Applications.
 
@@ -236,18 +204,14 @@ New transaction types:
 
 Nebula is a protocol for storing and retrieving Nebula Objects.
 
-Users can negotiate the `Solar` price for Get and Put contracts.
-
-A Nebula Object is a data structure with three fields:
+A Nebula Object is a data structure with two fields:
 
 - Leaf: True/False
 - Data: a blob of binary data of size < 32KB
-- Size: the cumulative number of leaves
 
-Puslar Network Upgrade:
+All data is erasure coded as a method of data protection in which data is encoded and fragments stored across the nodes on the network.
 
-- nebula route
-- message contexts for get and put
+When nodes go offline, data can be reconstructed from the fragments on the nodes that are online.
 
 `Object Get Flow`
 
@@ -282,47 +246,27 @@ Puslar Network Upgrade:
 
 ```
 
-Nodes connected to the Nebula route store the distributed index of the object hashes and their storage provider's id.
+Storage Nodes store the distributed index of the object hashes and their storage provider's id.
 
-Every index is updated every five minutes to remove deleted objects.
+The storage provider is paid by providing a proof of storage every 5 minutes.
 
-An indexer must prove they are storing their part of the index.
-
-The storage provider is paid storage fees for the storage period and retrival fees for serving an object.
-
-A stoage provider must prove they are storing their objects.
-
-Indexers are incentivized to cache objects by earning retrival fees for returning cached objects.
-
-An indexer earns a commission for facilitating a put contract and indexing the underlying data.
+An indexer earns a commission for indexing the underlying data and forwarding storage proofs to validators.
 
 ### Reactor
 
-Reactor is a protocol for distributed serverless computation with proof of work staking.
+Reactor is a protocol for distributed confidential computation.
 
-Fusion Applications running on Reactor are referred to as Reactions.
-
-Reactions can be Open or Private.
-
-Open Reactions work by processing apps stored on Nebula and are callable by anyone on the blockchain.
-
-Private Reactions is confidential computing enabling users to use private data and protect software intellectual property on the protocol while allowing for restricted access to calls.
+Confidential computing enabling users to use private data, preserving privacy and use proprietary software, protecting intellectual property.
 
 ## Applications
 
 ### Global Payments
 
-### Local Exchanges
+### Decentralized Applications
 
-### Smart Contracts
-
-### User Powered
-
-### Transparency
+### User Powered Applications
 
 ### Content Addressing
-
-### Self Hosting
 
 ### Serverless
 
@@ -335,4 +279,4 @@ Private Reactions is confidential computing enabling users to use private data a
 5. Recursive Functions of Symbolic Expressions and Their Computation by Machine - John McCarthy
 6. High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
 
-2022-05-27
+2022-06-04
