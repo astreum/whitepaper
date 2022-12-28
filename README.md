@@ -86,8 +86,8 @@ Receipt.
     - If slot misses, the nearest address xor to the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is selected.
 - All transactions in a block are ordered ascending by the xor distance of the transaction hash and the previuos block transactions hash.
 - A validator that misses all of their slots in an epoch will be refunded their stake.
-- The base solar limit is set at 1,000,000.
-- The base block reward is set at 1 astre.
+- The solar limit is set at 1,000,000.
+- The block reward is set at 1 astre.
 
 
 ### Solar Pricing Protocol
@@ -146,7 +146,7 @@ Receipt.
 | [Fides](https://github.com/stelar-software/rust-fides) | Hashing & Asymmetric/Symmetric Cryptography | ✅ |
 | [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network) | P2P Messaging Protocol | ✅ |
 | [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Blockchain Node | ✅ |
-| V1 Testnet Launch | | MAR 2022 |
-| V1 Mainnet Launch | | 2022-04-01 |
+| V1 Testnet Launch | | Q2 2022 |
+| V1 Mainnet Launch | | Q2 2022 |
 
 2022-03-02
