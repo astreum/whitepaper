@@ -11,7 +11,9 @@ As a blockchain, we benefit from trustless consensus and from the use of cryptog
 
 The blockchain primarily works by keeping track of all the accounts and details such as the balance, number of transactions and storage.
 
-Astreuos aims to be a competitive and viable platform for powerful web3 services by offering a combined value, storage and compute on a single blockchain priced in a single currency. Astreuos empowers web3 developers to create powerful applications and experiences that interface with node APIs for transactions, storage & compute; to host browser applications, static sites and media content on Nebula and create compute intensive applications using Reactor Private & Open Computation.
+Astreuos aims to be a competitive and viable platform for powerful web3 services by offering a combined value, storage and compute on a single blockchain priced in a single currency.
+
+Astreuos empowers web3 developers to create powerful applications and experiences that interface with node APIs for transactions, storage & compute; to host browser applications, static sites and media content on Nebula and create compute intensive applications using Reactor Private & Open Compute.
 
 ## Contents
 
@@ -272,11 +274,11 @@ The Retrieval Fees for 256KB is 1,600,000.
 
 This upgrade adds a distributed compute protocol called Reactor with proof of work staking.
 
-Reactor allows for Private & Public Computations.
+Reactor allows for Private & Open Compute.
 
-Public Computations run on functions stored on Nebula and can be called by anyone.
+Open Compute run on functions stored on Nebula and can be called by anyone.
 
-Private Computations are based off confidential computing to allow users to use private data and protect software ip on the protocol while allowing for open and restricted access to calls.
+Private Compute are based off confidential computing to allow users to use private data and protect software ip on the protocol while allowing for open and restricted access to calls.
 
 *research in progress
 
