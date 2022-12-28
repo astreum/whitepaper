@@ -59,7 +59,7 @@
 - Solar Stability Mechanism.
 
 ### Astreuos v2
-- Fusion, Application Platform.
+- Fusion, Blockchain Application Platform.
 - Language.
 - Virtual Machine.
 - Compiler & Code Manager.
@@ -82,11 +82,11 @@
 ### Projects
 | Project | Description | Delivery |
 |---|---|---|
-| [Astro Notation](https://github.com/stelar-software/rust-astro-notation) | Data Encoding | ✅ |
+| [Astro Notation](https://github.com/stelar-software/rust-astro-notation) | Data Transcoding | ✅ |
 | [NeutronDB](https://github.com/stelar-software/rust-neutrondb) | Key Value Store | ✅ |
 | [Opis](https://github.com/stelar-software/rust-opis) | Integer Arithmetic | ✅ |
-| [Fides](https://github.com/stelar-software/rust-fides) | Digital Signature Library | 🚧 |
-| [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network)  | Messaging System |  🚧 |
+| [Fides](https://github.com/stelar-software/rust-fides) | Digital Security | 🚧 |
+| [Pulsar Network](https://github.com/stelar-software/rust-pulsar-network)  | Distributed Messaging |  🚧 |
 | Nova | Proof of Stake Consensus Mechanism | FEB 12022 |
 | [Node](https://github.com/astreuos/rust-astreuos) | Network Interface | FEB 12022 |
 | Testnet Launch | | Q1 12022 |
