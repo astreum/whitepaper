@@ -24,9 +24,9 @@ Astreuos empowers Web 3.0 developers to:
 3. Transactions
 4. Solar
 5. Nova Consensus
-6. Fusion Upgrade
-7. Nebula Upgrade
-8. Reactor Upgrade
+6. Fusion Application Layer
+7. Nebula Storage Layer
+8. Reactor Compute Layer
 9. Application
 10. Roadmap
 
@@ -194,7 +194,7 @@ Transactions are ordered by the validator.
 
 The creator of a new block is payed a fee 1,000,000,000 Solar at the current Solar Price.
 
-### V2: Fusion Upgrade
+### V2: Fusion Application Layer
 
 Fusion is an application platform running on the Astreuos Blockchain.
 
@@ -222,7 +222,7 @@ Standards to help developers create trusted Fusion Applications.
 - Oracles
 - Governance
 
-### V3: Nebula Upgrade
+### V3: Nebula Storage Layer
 
 Nebula is a protocol for storing and retrieving Nebula Objects.
 
@@ -294,7 +294,7 @@ The Retrieval Fees for 32KB is 100,000 Solar.
 
 The Storage Fees for 32KB/mo is 200,000 Solar.
 
-### V4: Reactor Upgrade
+### V4: Reactor Compute Layer
 
 Reactor is a protocol for distributed serverless computation with proof of work staking.
 
@@ -310,23 +310,14 @@ Private Compute is confidential computing enabling users to use private data and
 
 ### Application
 
-Astreuos for Everyone.
-
-- permission-less
-- trust-less
-- stability
-- transparency
-- earn
-
-Astreuos for Business.
-
+- Permission-less
+- Trust-less
+- Stability
+- Transparency
 - Global payments
 - User powered services
 - Distributed storage and compute
-- Reduces transaction costs by eliminating the need for third parties to verify transactions
-- Automation with “smart contracts”
-
-Astreuos for Developers.
+- Smart Contracts
 
 ### Roadmap
 
@@ -341,4 +332,4 @@ Astreuos for Developers.
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-04-11
+2022-04-15
