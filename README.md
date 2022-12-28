@@ -7,15 +7,11 @@ A Next Generation Blockchain for Apps, Storage and Compute that's Distributed, S
 
 Astreuos is an accounts based blockchain which primarily works by keeping track of all the accounts and their details such as the balance, number of transactions and storage.
 
-Astreuos includes storage and compute protocols.
-
 The motivation for building Astreuos is to build a better blockchain for creating trusted smart contracts and price mechanisms for currency stability.
 
-Astreuos features trust-less consensus, permission-less access and great security for users.
+Blockchains benefit from trust-less consensus, permission-less access and great security for users.
 
-These features provide everyone in the world with uncensored access of financial and digital empowerment from the platform.
-
-digital empowerment
+Astreuos improves on blockchain by intergrating storage and compute distributed layers.
 
 Astreuos aims to be a competitive platform for digital services by:
 
@@ -159,12 +155,9 @@ The transaction body has:
 
 `Solar` is the currency for work done on the blockchain, in contrast with `Quark` with is the currency for value.
 
-The solar limit of a block is set at 1,000,000,000.
+The solar limit of a block is set at 1,000,000,000,000.
 
-| Fee | Solar |
-|---|---|
-| Transaction Processing | 1,000 |
-| Account Creation | 200,000 |
+Transaction Processing costs 1,000,000 `Solar`.
 
 Solar pricing mechanism:
 
@@ -181,9 +174,9 @@ A validator must be staked, by sending `Quarks` to the nova account, to particip
 
 The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
 
-An epoch lasts approximately one week. The block time target is five seconds. A slot is the five seconds period when new blocks are created.
+The block time target is five seconds. A slot is the five seconds period when new blocks are created.
 
-Slots are allocated pro rata with a validator's stake every epoch and are removed after slot selection.
+Slots are allocated pro-rata to a validator's stake.
 
 A slot miss occurs when a validator does not create a new block or created a malicious block when selected.
 
@@ -194,15 +187,15 @@ Slot selection determines the validator for the next block at any time:
 - If no slot miss, the latest block hash is used as the seed in the weighted random address selector.
 - If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is used as the seed in the weighted random address selector.
 
-Transactions are ordered by the ascending value and the ascending xor from the previous transaction hash.
+Transactions are ordered by their hash.
 
-The creator of a new block is payed a fee 1,000,000,000 Solar at the current block's solar price.
+The creator of a new block is payed a fee 1,000,000,000,000 `Solar` at the current block's solar price.
 
 ### Fusion Contracts
 
 Fusion is the applications platform on the Astreuos Blockchain.
 
-Contracts are applications that run through transaction calls.
+Contracts are applications that run through Transaction calls and Reactions are applications running through Reactor calls.
 
 The Fusion Language is a dialect of the Lisp programming language for developing Fusion Applications.
 
@@ -218,7 +211,7 @@ New transaction types:
 - App Creation
 - App Calls
 
-A Storage Put costs 100,000 Solar, Storage Get costs 100 Solar and all other Stack Operations cost 1 Solar.
+A Storage Put costs 100 `Solar`, Storage Get costs 1 `Solar`.
 
 Standards to help developers create trusted Fusion Contracts.
 
@@ -234,7 +227,7 @@ A Nebula Object is a data structure with three fields:
 
 - Leaf: True/False
 - Data: a blob of binary data of size < 32KB
-- Size: the cumulative size of the object
+- Size: the cumulative number of leaves
 
 Puslar Network Upgrade:
 
@@ -250,13 +243,13 @@ Puslar Network Upgrade:
         |       |             object hash               + - - - - - - - +
         |       | - - - - - - - - - - - - - - - - - - > |    Nearest    |
         |       | < - - - - - - - - - - - - - - - - - - |     Node      |
-        |       |        Nearer Node Pubkey & Ip        + - - - - - - - +
+        |       |       Nearer Node Pubkey & Adr        + - - - - - - - +
         |       |
         |       |
         |       |             object hash               + - - - - - - - +
         |       | - - - - - - - - - - - - - - - - - - > |    Nearer     |
         |       | < - - - - - - - - - - - - - - - - - - |     Node      |
-        |       |        Index Node Pubkey & Ip         + - - - - - - - +
+        |       |       Index Node Pubkey & Adr         + - - - - - - - +
         |       |                  or
         |       |           Object if cached
         |       |
@@ -264,7 +257,7 @@ Puslar Network Upgrade:
         |       |             object hash               + - - - - - - - +
         |       | - - - - - - - - - - - - - - - - - - > |    Index      |
         |       | < - - - - - - - - - - - - - - - - - - |     Node      |
-        |       |       Storage Node Pubkey & Ip        + - - - - - - - +
+        |       |      Storage Node Pubkey & Adr        + - - - - - - - +
         |       |
         |       |
         |       |             object hash               + - - - - - - - +
@@ -292,19 +285,21 @@ Indexers are incentivized to cache objects by earning retrival fees for returnin
 
 An indexer also earns a commission for facilitating a put contract and indexing the underlying data.
 
-The Retrieval Fees for 32KB is 100,000 Solar.
+The Retrieval Fees for 32KB is 1,000 Solar.
 
-The Storage Fees for 32KB/mo is 200,000 Solar.
+The Storage Fees for 32KB/mo is 2,000 Solar.
 
 ### Reactor Compute Layer
 
 Reactor is a protocol for distributed serverless computation with proof of work staking.
 
-Reactor computations can be Open or Private.
+Fusion Applications running on Reactor are referred to as Reactions.
 
-Open Computation works by processing Fusion Applications stored on Nebula and are callable by anyone on the blockchain.
+Reactions can be Open or Private.
 
-Private Compute is confidential computing enabling users to use private data and protect software intellectual property on the protocol while allowing for restricted access to calls.
+Open Reactions work by processing apps stored on Nebula and are callable by anyone on the blockchain.
+
+Private Reaction is confidential computing enabling users to use private data and protect software intellectual property on the protocol while allowing for restricted access to calls.
 
 ### Application
 
@@ -322,17 +317,19 @@ Private Compute is confidential computing enabling users to use private data and
 
 #### Serverless
 
+#### Indexing
+
 ### Components
 
 | Project | Description | Status |
 |---|---|---|
-| [Astro Format](https://github.com/stelar-labs/rust-astro-format) | Encoding Format | ✅ |
-| [NeutronDB](https://github.com/stelar-labs/rust-neutrondb) | Key Value Store | ✅ |
-| [Opis](https://github.com/stelar-labs/rust-opis) | Integer Arithmetic | ✅ |
-| [Fides](https://github.com/stelar-labs/rust-fides) | Cryptography | ✅ |
-| [Pulsar Network](https://github.com/stelar-labs/rust-pulsar-network) | Messaging | ✅ |
-| [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Official Node | ✅ |
-| V1 Testnet Launch | | Q2 2022 |
-| V1 Mainnet Launch | | Q2 2022 |
+| [Astro Format](https://github.com/stelar-labs/astro-format-rs) | Encoding Format | ✅ |
+| [NeutronDB](https://github.com/stelar-labs/neutrondb-rs) | Key Value Store | ✅ |
+| [Opis](https://github.com/stelar-labs/opis-rs) | Integer Arithmetic | ✅ |
+| [Fides](https://github.com/stelar-labs/fides-rs) | Cryptography | ✅ |
+| [Pulsar Network](https://github.com/stelar-labs/pulsar-network-rs) | Messaging | ✅ |
+| [Rust Astreuos](https://github.com/astreuos/node-rs) | Official Node | ✅ |
+| V1 Testnet Launch | Nova Testing | Q2 2022 |
+| V1 Mainnet Launch | Nova Launch | Q2 2022 |
 
-2022-04-19
+2022-05-04
