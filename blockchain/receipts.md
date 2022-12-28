@@ -2,6 +2,9 @@
 
 ### Structure
 
-1. Transaction Hash
-2. Status
-3. Solar Used
+Key:-
+- Transaction Hash
+
+Value:-
+1. Status
+2. Solar Used

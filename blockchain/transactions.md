@@ -2,10 +2,12 @@
 
 ### Structure
 
-1. From
-2. To
-3. Value
-4. Counter
-5. Solar Price
-6. Solar Limit
-7. Signature
+1. Data
+    1. From: String
+    2. To: String
+    3. Value : UInt128
+    4. Counter: UInt128
+    5. Solar Price: UInt128
+    6. Solar Limit: UInt128
+    7. Chain: UInt128
+2. Signature: String
