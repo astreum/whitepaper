@@ -281,14 +281,14 @@ The valid chain has the most blocks and with the most solar spent in the latest 
 
 ### Programmable Accounts
 
-🍁 Astreum Objects
-📜 Fusion Language
-⚙️ Astreum Machine
-✅ Add Code to Account Details
+- 🍁 Astreum Objects
+- 📜 Fusion Language
+- ⚙️ Astreum Machine
+- ✅ Add Code to Account Details
 
 ### Signature Abstraction
 
-🔒 Digital Signature Algorithm Abstraction enables Post Quantum Security and Social Recovery.
+- 🔒 Digital Signature Algorithm Abstraction enables Post Quantum Security and Social Recovery.
 
 `New Address Structure`
 
@@ -307,8 +307,8 @@ The valid chain has the most blocks and with the most solar spent in the latest 
 
 ### Relay Privacy & Security
 
-🔀 Address Mixing
-🔒 Public Key Exchange Abstraction enabling more algorithms including Post Quantum Secure.
+- 🔀 Address Mixing
+- 🔒 Public Key Exchange Abstraction enabling more algorithms including Post Quantum Secure.
 
 `New Sender Structure`
 
@@ -327,32 +327,32 @@ The valid chain has the most blocks and with the most solar spent in the latest 
 
 ### Zero Knowledge Astreum Machine
 
-✅ Native Zero Knowledge Block Validation
+- ✅ Native Zero Knowledge Block Validation
 
 ### Storage Protocol
 
-☁ Add Storage Route
-🤝 Storage Payment Channels
+- ☁ Add Storage Route
+- 🤝 Storage Payment Channels
 
 ### Compute Protocol
 
-⚡ Add Compute Route
-🤝 Compute Payment Channels
+- ⚡ Add Compute Route
+- 🤝 Compute Payment Channels
 
 ### Gateway Protocol
 
-📡 Gateway Search & Connection Procedures
-🤝 Gateway Payment Channels
+- 📡 Gateway Search & Connection Procedures
+- 🤝 Gateway Payment Channels
 
 ### Account & Transaction Privacy
 
-🔒 Confidential Transactions
-👤 Private Accounts
+- 🔒 Confidential Transactions
+- 👤 Private Accounts
 
 ### Treasury Protocol
 
-💵 Solar Creation Mechanism
-📊 Supply Control Mechanism
+- 💵 Solar Creation Mechanism
+- 📊 Supply Control Mechanism
 
 ## Applications
 
