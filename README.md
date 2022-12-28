@@ -210,7 +210,7 @@ The Fusion Language is a multi-paradigm statically-typed programming language fo
 
 The Fusion Virtual Machine is the native runtime for Fusion Bytecode and has a direct interface to the Astreuos Account State.
 
-Helium is the Fusion package manager. Helium downloads your Fusion Application's dependencies and compiles your application into Fusion Bytecode.
+Helium is the Fusion package manager. Helium downloads your Fusion Application's dependencies, runs tests and compiles your application into Fusion Bytecode.
 
 New transaction types will be added for App Creation and App Calls.
 
@@ -218,7 +218,7 @@ New transaction types will be added for App Creation and App Calls.
 
 This upgrade adds a series of standards to help builders create trusted Fusion Applications.
 
-Fungible and Non-Fungible Token standards.
+Fungible and Non-Fungible Token standards
 
 Oracle standards
 
@@ -254,9 +254,12 @@ The standard put contract is for a period of 3 months.
 
 A delete contract can be made directly to the validator route and refunded the contract's remainder period.
 
-Storage `Solar` costing mechanism will involve the available protocol storage space.
+The Storage and Retrieval Fees are in Solar
 
-Proof of Space-Time staking.
+| Fee | Solar |
+|---|---|
+| 256KB Storage | 9,800,000 |
+| 256KB Retrieval | 1,640,000 |
 
 #### V4: Reactor Upgrade
 
@@ -274,11 +277,9 @@ Public Computations run on functions stored on Nebula and can be called by anyon
 - nova withdrawl contract
 - nova governance system
 
-### Open
+### Roadmap
 
-The Astreuos Blockchain is a fully open source project and is powered by several open source libraries.
-
-| Library | Description | Status |
+| Projects | Description | Status |
 |---|---|---|
 | [Astro Notation](https://github.com/stelar-software/rust-astro-notation) | Encoding Format | ✅ |
 | [NeutronDB](https://github.com/stelar-software/rust-neutrondb) | Key Value Store | ✅ |
@@ -288,13 +289,6 @@ The Astreuos Blockchain is a fully open source project and is powered by several
 | [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Blockchain Node | ✅ |
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
-| Fusion Spec | Syntax, Standard Library, Virtual Machine, Solar Costs | TBD |
-| Helium Compiler | Fusion Script to Bytecode | TBD |
-| Helium Testing | Automated Testing | TBD |
-| Helium | Package Manager | TBD |
-| AVM | Astreuos Virtual Machine | TBD |
-| V2 Testnet Launch | | TBD |
-| V2 Mainet Launch | | TBD |
 
 
-2022-03-21
+2022-03-22
