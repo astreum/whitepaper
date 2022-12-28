@@ -3,19 +3,19 @@
 ## Structure
 
 Key: String;
-- Address
+- Address (256 bits)
 
 Value: String;
-- Account Details Hash
+- Account Hash (256 bits)
 
-## Account Details
+## Account
 
 Key: String;
-- Account Details Hash
+- Account Hash (256 bits)
 
 Value: Stellar Objects;
-    1. Counter
-    2. Balance
+    1. Counter: u64
+    2. Balance: u128
 
 
 ### Balance
