@@ -3,19 +3,21 @@
 ## Structure
 
 Key: String;
-- Address (256 bits)
+- Address: String
 
 Value: String;
-- Account Hash (256 bits)
+- Account Hash: String
 
 ## Account
 
 Key: String;
-- Account Hash (256 bits)
+- Account Hash: String
 
 Value: Stellar Objects;
     1. Counter: u64
     2. Balance: u128
+    3. Code Hash: String
+    4. Store Hash: String
 
 
 ### Balance
@@ -33,3 +35,8 @@ Value magnitudes:-
 - 10^6: Megaquark
 - 10^3: Kiloquark
 - 10^0: Quark
+
+### Code
+
+### Store
+
