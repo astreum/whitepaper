@@ -107,11 +107,22 @@ A Decentralized Application Platform
 
 The Stack Machine
 
+There are 3 types of Stack Machine Operation Codes:-
+1. Arithmetic
+2. Account Manipulation
+3. Memory & Storage Manipulation
+
 #### Arithmetic
-| Instructions | Code |
-|---|---|
-| Add | |
-| Sub | |
+| Operation | Instruction | Code |
+|---|---|---|
+| Addition | 1 | 0x01 |
+| Subtraction | 2| |
+| Multiplication | 3 | |
+| Division | 4 | |
+| Remainder | 5 | |
+| Modulo | 6 | |
+| Exponentiation | 7 | |
+| Modular Inverse | 8 | |
 
 #### Account Manipulation
 
@@ -158,4 +169,4 @@ A Decentralized Storage Platform
 | Testnet Launch | | Q4 2021 |
 | Mainnet Launch | | Q1 2022 |
 
-2021-11-23
+2021-11-24
