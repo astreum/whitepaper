@@ -17,34 +17,18 @@ Astreuos empowers Web 3.0 developers to:
 - host applications, static sites and media content on the `Nebula` protocol.
 - perform compute workflows on the `Reactor` protocol.
 
-## Why?
-
-Astreuos for Everyone.
-
-- permission-less
-- trust-less
-- stability
-- transparency
-- earn
-
-Astreuos for Business.
-
-- global payments
-- user powered services
-- cloud storage and compute
-
-Astreuos for Developers.
-
 ## Contents
 
 1. Accounts
 2. Blocks
 3. Transactions
-4. Nova Consensus
-5. Fusion Upgrade
-6. Nebula Upgrade
-7. Reactor Upgrade
-8. Roadmap
+4. Solar
+5. Nova Consensus
+6. Fusion Upgrade
+7. Nebula Upgrade
+8. Reactor Upgrade
+9. Application
+10. Roadmap
 
 ### Accounts
 
@@ -323,6 +307,26 @@ Private Compute is confidential computing enabling users to use private data and
 ### V5: Governance Upgrade
 
 - improvement proposal system
+
+### Application
+
+Astreuos for Everyone.
+
+- permission-less
+- trust-less
+- stability
+- transparency
+- earn
+
+Astreuos for Business.
+
+- Global payments
+- User powered services
+- Distributed storage and compute
+- Reduces transaction costs by eliminating the need for third parties to verify transactions
+- Automation with “smart contracts”
+
+Astreuos for Developers.
 
 ### Roadmap
 
