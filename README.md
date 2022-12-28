@@ -332,16 +332,19 @@ The valid chain has the most blocks and with the most solar spent in the latest 
 ### Storage Protocol
 
 - ☁ Add Storage Route
+- 🏷️ Storage & Retreival Pricing Model
 - 🤝 Storage Payment Channels
 
 ### Compute Protocol
 
 - ⚡ Add Compute Route
+- 🏷️ Compute Pricing Model
 - 🤝 Compute Payment Channels
 
 ### Gateway Protocol
 
-- 📡 Gateway Search & Connection Procedures
+- 📡 Gateway Connections
+- 🏷️ Networking Pricing Model
 - 🤝 Gateway Payment Channels
 
 ### Account & Transaction Privacy
