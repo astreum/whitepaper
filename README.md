@@ -1,20 +1,24 @@
 
-# Astreuos - A Next Generation Blockchain for Apps, Storage and Compute that's Distributed, Secure and Sustainable
+# Astreuos
+
+A Next Generation Blockchain for Apps, Storage and Compute that's Distributed, Secure and Sustainable.
 
 ## Introduction
 
-An accounts based blockchain with storage, compute and networking protocols is presented in this paper. The motivation for such a blockchain is to build a better blockchain for building trusted smart contracts and price mechanisms for currency stability.
+Astreuos is an accounts based blockchain which primarily works by keeping track of all the accounts and their details such as the balance, number of transactions and storage.
 
-The blockchain primarily works by keeping track of all the accounts and details such as the balance, number of transactions and storage.
+Astreuos includes storage and compute protocols which are essential to the digital services.
+
+The motivation for building Astreuos is to build a better blockchain for creating trusted smart contracts and price mechanisms for currency stability.
 
 Astreuos features trust-less consensus, permission-less access and great security for users.
 
-These features empowers anyone in the world with uncensored access and benefit from the platform.
+These features empower anyone in the world with uncensored access and benefit from the platform.
 
 Astreuos aims to be a competitive platform for digital services by:
 
 - offering native value, storage and compute on the blockchain
-- pricing services in a single currency
+- pricing services in a dynamic currency
 - implementing a pricing mechanism that promotes currency stability
 
 ## Contents
@@ -329,4 +333,4 @@ Private Compute is confidential computing enabling users to use private data and
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-04-18
+2022-04-19
