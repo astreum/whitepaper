@@ -9,7 +9,7 @@ Roy R. O. Okello
 
 [Github](https://github.com/royokello)
 
-[Twitter](https://twitter.com/RealOkello)
+[Twitter](https://twitter.com/RealOkello) 
 
 ## Content
 
@@ -100,7 +100,7 @@ Benefits of using zero-knowledge validation are:
 
 - Greater scalability: Zero-knowledge validation allows for the verification of data on the blockchain without requiring the entire network to participate in the process. This can help to reduce the computational overhead of the blockchain, and can make it more scalable and efficient.
 
-- Enhanced trust and confidence: By using zero-knowledge validation, it is possible to build trust and confidence in the security and privacy of the blockchain as all nodes validate the blockchain.
+- Enhanced trust and confidence: By using zero-knowledge validation, it is possible to build trust and confidence in the security of the blockchain as all nodes validate the blockchain.
 
 ## Astreum
 
@@ -226,7 +226,7 @@ Benefits of using zero-knowledge validation are:
                         . - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .
                         ^                       ^                       ^                       ^
                 + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
-                |    Message    |       |     Nonce     |       |     Sender    |       |     Time      |
+                |    Message    |       |     Nonce     |       |      Ping     |       |     Time      |
                 + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
                         ^
                 . - - - - - - - - - - - .
@@ -243,8 +243,6 @@ Benefits of using zero-knowledge validation are:
 
 - Block
 - BlockRequest
-- BlockResponse
-- Join
 - RouteRequest
 - RouteResponse
 - Transaction
@@ -279,9 +277,41 @@ The valid chain has the most blocks and with the most solar spent in the latest 
 
 ## Roadmap
 
+`Overview`
+
+```
+        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
+        |  Fusion       |       |  Storage      |       |  Compute      |
+        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
+        + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+        |  Consensus                                                    |
+        + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+        + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+        |  Relay                                                        |
+        + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+        + - - - - - - - - - - - - - - +   + - - - - - - - - - - - - - - +
+        |  Gateway                    |   |  Internet                   |
+        + - - - - - - - - - - - - - - +   + - - - - - - - - - - - - - - +
+```
+
 ### Programmable Accounts
 
-- 🍁 Astreum Objects
+- 🎄 Astreum Objects
+
+`Object Structure`
+
+```
+                + - - - - - - - +
+                |    Object     |
+                + - - - - - - - +
+                        ^
+                . - - - - - - - - - - - .
+                ^                       ^
+        + - - - - - - - +       + - - - - - - - +
+        |     Leaf?     |       |    <= 32kb    |
+        + - - - - - - - +       + - - - - - - - +
+```
+
 - 📜 Fusion Language
 - ⚙️ Astreum Machine
 - ✅ Add Code to Account Details
@@ -327,7 +357,7 @@ The valid chain has the most blocks and with the most solar spent in the latest 
 
 ### Zero Knowledge Astreum Machine
 
-- ✅ Native Zero Knowledge Block Validation
+- ✅ Zero Knowledge Block Validation
 
 ### Storage Protocol
 
@@ -354,8 +384,8 @@ The valid chain has the most blocks and with the most solar spent in the latest 
 
 ### Treasury Protocol
 
-- 💵 Solar Creation Mechanism
-- 📊 Supply Control Mechanism
+- 💵 Solar Creation
+- 📊 Supply Control
 
 ## Applications
 
