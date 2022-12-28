@@ -17,20 +17,18 @@
 
 [Storage](https://github.com/astreuos/astreuos-specs/blob/main/state/storage.md)
 
-[Virtual Machine](https://github.com/astreuos/astreuos-specs/blob/main/state/virtual_machine.md)
-
 ## Roadmap
 | Project | Description | Delivery |
 |---|---|---|
 | [Stellar Notation](https://github.com/seg-software/rust-stellar-notation) | Data Encoding | ✅ |
 | [NeutronDB](https://github.com/seg-software/rust-neutrondb) | Key Value Store | ✅ |
-| [Opis](https://github.com/seg-software/rust-opis) | Big Integer Arithmetic | ✅ |
+| [Opis](https://github.com/seg-software/rust-opis) | Integer Arithmetic | ✅ |
 | [Fides](https://github.com/seg-software/rust-fides) | Digital Signature Library | 🚧 |
 | Pulsar Network | Messaging System |  TBD |
-| Nova Protocol| Proof of Stake Consensus | TBD |
 | Fusion | Decentralized Applications | TBD |
+| Nova Protocol| Proof of Stake Consensus | TBD |
 | Nebula | Storage Protocol | TBD |
 | Testnet Launch | | Q4 2021 |
 | Mainnet Launch | | Q1 2022 |
 
-2021-09-23
+2021-11-02
