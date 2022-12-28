@@ -26,8 +26,9 @@
 | [Fides](https://github.com/seg-software/rust-fides) | Digital Signature Library | 🚧 |
 | Pulsar Network | Messaging System |  TBD |
 | Fusion | Decentralized Applications | TBD |
-| Nova Protocol| Proof of Stake Consensus | TBD |
+| Nova Protocol| Proof of Stake | TBD |
 | Nebula | Storage Protocol | TBD |
+| [Terminal](https://github.com/astreuos/astreuos-terminal) | Network Interface | TBD |
 | Testnet Launch | | Q4 2021 |
 | Mainnet Launch | | Q1 2022 |
 
