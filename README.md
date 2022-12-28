@@ -284,7 +284,7 @@ The valid chain has the most blocks and with the most solar spent in the latest 
         |  Fusion       |       |  Storage      |       |  Compute      |
         + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
         + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-        |  Consensus                                                    |
+        |  Consensus & Accounts                                         |
         + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
         + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
         |  Relay                                                        |
