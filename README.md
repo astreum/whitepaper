@@ -1,5 +1,5 @@
 
-# Astreum: A Next Generation Blockchain for Apps, Storage and Compute
+# Astreum: A Next Generation Blockchain for Computing, Storage and Networking
 
 ## Author
 
@@ -15,14 +15,15 @@ Roy R. O. Okello
 
 This paper introduces an accounts based blockchain with these feature:
 
-- zero knowledge and confidential programmable accounts(contracts)
-- distributed storage with perpetual storage contracts
+- post quantum secure
+- programmable accounts
+- distributed storage with perpetual contracts
 - confidential, attestable and zero configuration distributed compute
 - secure and private communication with open network routing
 
 Astreum primarily works by keeping track of all the accounts and their details, the balance, channels, code, number of transactions and storage in a block.
 
-Blocks are subseqently added to the chain through validation of new blocks with new transactions that alter the Accounts State of the latest block.
+Blocks are subsequently added to the chain through validation of new blocks with new transactions that alter the Accounts State of the latest block.
 
 Validation is fully trust-less by implementing a zero knowledge proof system that allows all Astreum Nodes to verify new Blocks and Account States.
 
@@ -321,8 +322,6 @@ A channel consists of a counterparty address, balance, counter and timelock.
 
 | solar limit   | XX            | 00            | XX            | XX            |
 
-| type          | CH. FUND      | CH. APPROVE   | CH. WITHDRAW  | CH. CLOSE     |
-
 | value         | ADDITIONAL    | WITHDRAWL     | 00            | 00            |
 |               | BALANCE       | AMOUNT        |               |               |
 
@@ -455,15 +454,16 @@ Astreum aims to fully realize an ideal cryptographic network with the following 
 
 ## References
 
-1. Bitcoin: A Peer-to-Peer Electronic Cash System - Satoshi Nakamoto
-2. Ethereum White Paper - Vitalik Buterin
-3. Ethereum Yellow Paper - Gavin Wood
-4. Kademlia: A Peer-to-Peer Information System Based on the XOR Metric - Petar Maymounkov & David Mazières
-5. Recursive Functions of Symbolic Expressions and Their Computation by Machine - John McCarthy
-6. High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
-7. CRYSTALS-Dilithium Algorithm Specifications and Supporting Documentation - Shi Bai, Léo Ducas, Eike Kiltz, Tancrède Lepoint,Vadim Lyubashevsky, Peter Schwabe, Gregor Seiler and Damien Stehlé
-8. Efficient verifiable delay functions - Benjamin Wesolowski
-9. PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge - Ariel Gabizon, Zachary J. Williamson and Oana Ciobotaru
-10. Aurora: Transparent Succinct Arguments for R1CS - Eli Ben-Sasson, Alessandro Chiesa, Michael Riabzev, Nicholas Spooner, Madars Virza and Nicholas P. Ward
+- Bitcoin: A Peer-to-Peer Electronic Cash System - Satoshi Nakamoto
+- Ethereum White Paper - Vitalik Buterin
+- Ethereum Yellow Paper - Gavin Wood
+- Kademlia: A Peer-to-Peer Information System Based on the XOR Metric - Petar Maymounkov & David Mazières
+- Recursive Functions of Symbolic Expressions and Their Computation by Machine - John McCarthy
+- High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
+- CRYSTALS-Dilithium Algorithm Specifications and Supporting Documentation - Shi Bai, Léo Ducas, Eike Kiltz, Tancrède Lepoint,Vadim Lyubashevsky, Peter Schwabe, Gregor Seiler and Damien Stehlé
+- Efficient verifiable delay functions - Benjamin Wesolowski
+- PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge - Ariel Gabizon, Zachary J. Williamson and Oana Ciobotaru
+- Aurora: Transparent Succinct Arguments for R1CS - Eli Ben-Sasson, Alessandro Chiesa, Michael Riabzev, Nicholas Spooner, Madars Virza and Nicholas P. Ward
+- PostScript Language Reference Manual - John Warnock, Charles Geschke, Doug Brotz, Ed Taft and Bill Paxton
 
-2022-11-07
+2022-11-15
