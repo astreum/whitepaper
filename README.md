@@ -250,16 +250,24 @@ Indexers are incentivized to cache objects by earning retrival fees for returnin
 
 An indexer also earns a commission for facilitating a put contract and indexing the underlying data.
 
-The standard put contract is for a period of 3 months. 
-
 A delete contract can be made directly to the validator route and refunded the contract's remainder period.
 
-The Storage and Retrieval Fees are in Solar
+The Retrieval Fees for 256KB is 1,600,000.
 
-| Fee | Solar |
-|---|---|
-| 256KB Storage | 9,800,000 |
-| 256KB Retrieval | 1,640,000 |
+Storage Contract
+ - Root Hash
+ - Owner
+ - Indexer
+ - Provider
+
+ Storage Fees for 256KB.
+
+ | Time | Solar |
+ |---|---|
+ | 1day | 100,000 |
+ | 1week | 700,000 |
+ | 1mo | 3,000,000|
+ | 1yr | 36,400,000 |
 
 #### V4: Reactor Upgrade
 
