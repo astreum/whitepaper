@@ -19,6 +19,8 @@ Roy R. O. Okello
   - Security
   - Privacy
   - Usability
+  - Extensibility
+  - Decentralization
 
 - Astreum
   - Accounts
@@ -41,8 +43,8 @@ Roy R. O. Okello
 - Applications
   - User Powered Applications
   - Terminals
-  - Social Media
   - Media Streaming
+  - Perpetual Storage
 
 - Conclusion
 
@@ -51,9 +53,16 @@ Roy R. O. Okello
 ## Introduction
 
 ## Why Another Blockchain
-  - Security
-  - Privacy
-  - Usability
+
+### Security
+
+### Privacy
+
+### Usability
+
+### Extensibility
+
+### Decentralization
 
 ## Astreum
 
@@ -154,8 +163,8 @@ Roy R. O. Okello
                         |       + - - - - - - - +
                         |
                         |       + - - - - - - - +
-                        + - - - |     data      |
-                                + - - - - - - - +
+                        | - - - |     data      |
+                        |       + - - - - - - - +
                         |
                         |       + - - - - - - - +
                         | - - - |   recipient   |
