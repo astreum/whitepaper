@@ -16,7 +16,7 @@ Astreuos aims to be a competitive and viable platform for powerful web3 services
 Astreuos empowers web3 developers to:
 - create powerful experiences that interface with blockchain node apis for transactions, storage and compute.
 - host applications, static sites and media content on Nebula.
-- perform compute intensive applications using Reactor Private & Open Compute.
+- perform compute intensive applications using Reactor Private and Open Compute.
 
 ## Contents
 
@@ -160,7 +160,7 @@ The solar limit of a block is set at 1,000,000,000.
 
 `Nova` is the consensus protocol for creating new blocks and validating the blockchain.
 
-A validator must staked, by sending `Astre` to the nova account, to participate in the protocol.
+A validator must be staked, by sending `Quarks` to the nova account, to participate in the protocol.
 
 The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
 
@@ -178,7 +178,7 @@ Slot selection determines the validator for the next block at any time:-
 - If no slot miss, the nearest address xor to the last block hash is selected.
 - If slot misses, the nearest address xor to the linear-feedback shift register, shifted to the number of slot misses, of the lastest block hash is selected.
 
-All transactions in a block are ordered ascending by the xor distance of the transaction hash and the previuos block transactions hash.
+All transactions in a block are ordered ascending by the xor of the transaction hash and the previuos block transactions hash.
 
 The creator of a new block is payed a fee 1,000,000,000 Solar at the blocks Solar Price.
 
@@ -196,9 +196,36 @@ The Fusion Language is a postfix programming language for developing Fusion Appl
 
 The Fusion Virtual Machine(FVM) is the native runtime for Fusion Machine Code(FMC) and has an interface to Astreuos Accounts.
 
-Helium is the Fusion package manager. Helium downloads your Fusion Application's dependencies, runs tests and compiles your Fusion Script into FMC.
+The FVM is a stack based virtual machine with operations for:
+- PUSH
+- POP
+- LOAD
+- STORE
+- ADD
+- SUB
+- MUL
+- DIV
+- REM
+- EQ
+- GT
+- GT_EQ
+- LT
+- LT_EQ
+- DUP
+- SWAP
+- JUMP
+
+Helium is the Fusion package manager. Helium downloads your Fusion Application's dependencies, runs automated tests and compiles your Fusion Script into FMC.
 
 New transaction types will be added for App Creation and App Calls.
+
+All FVM operations cost 1 Solar apart from Storage Put and Get.
+
+Costs for Storage operations:
+
+| Code | Cost |
+| STG_PUT | 8,000 |
+| STG_GET | 160 |
 
 Standards to help developers create trusted Fusion Applications.
 
