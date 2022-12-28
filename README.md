@@ -3,19 +3,17 @@
 
 ## Introduction
 
-An accounts based blockchain with storage and compute protocols is presented in this paper. A motivation for such a blockchain is to build a better crypto experience with standards for building trusted smart contracts and price mechanisms for currency stability.
+An accounts based blockchain with storage and compute protocols is presented in this paper. A motivation for such a blockchain is to build a better blockchain for building trusted smart contracts and price mechanisms for currency stability.
 
-As a blockchain, we benefit from trustless consensus and from the use of cryptography with permissionless access and great security for users. This empowers anyone in the world with uncensored access and benefit from the blockchain.
+As a blockchain, we benefit from trustless consensus, permissionless access and great security for users, which empowers anyone in the world with uncensored access and benefit from the platform.
 
 The blockchain primarily works by keeping track of all the accounts and details such as the balance, number of transactions and storage.
 
-Astreuos aims to be a competitive and viable platform for powerful Web 3.0 services by offering a combined value, storage and compute on a single blockchain priced in a single currency.
+Astreuos aims to be a competitive Layer 1 platform for Web 3.0 services by:
 
-Astreuos empowers Web 3.0 developers to:
-
-- create powerful experiences that interface with astreuos nodes for transactions, storage and compute.
-- host applications, static sites and media content on the `Nebula` protocol.
-- perform compute workflows on the `Reactor` protocol.
+- offering native value, storage and compute services on the blockchain
+- pricing services in a single currency
+- implementing a pricing mechanism that promotes currency stability
 
 ## Contents
 
@@ -24,7 +22,7 @@ Astreuos empowers Web 3.0 developers to:
 3. Transactions
 4. Solar
 5. Nova Consensus
-6. Fusion Application Layer
+6. Fusion Contracts
 7. Nebula Storage Layer
 8. Reactor Compute Layer
 9. Application
@@ -153,8 +151,6 @@ The transaction body has:
 
 `Solar` is the currency for work done on the blockchain, in contrast with `Quark` with is the currency for value.
 
-Services on smart contract can also be priced in `Solar` with access to its current price on The Fusion Machine.
-
 The solar limit of a block is set at 1,000,000,000.
 
 | Fee | Solar |
@@ -200,9 +196,7 @@ Fusion is an application platform running on the Astreuos Blockchain.
 
 The Fusion Language is the programming language for developing Fusion Applications.
 
-The Fusion Machine is the native runtime for Fusion Machine Code interfacing with the Astreuos Accounts State.
-
-The Fusion Machine is a stack based virtual machine.
+The Fusion Machine is a stack based native runtime for Fusion Machine Code interfacing with the Astreuos Accounts State.
 
 Helium is the Fusion code manager.
 
@@ -214,7 +208,7 @@ New transaction types:
 - App Creation
 - App Calls
 
-A Storage Put costs 100,000 Solar, Storage Get costs 200 Solar and all other Stack Operations cost 1 Solar.
+A Storage Put costs 100,000 Solar, Storage Get costs 100 Solar and all other Stack Operations cost 1 Solar.
 
 Standards to help developers create trusted Fusion Applications.
 
@@ -288,8 +282,6 @@ Indexers are incentivized to cache objects by earning retrival fees for returnin
 
 An indexer also earns a commission for facilitating a put contract and indexing the underlying data.
 
-A delete contract can be made directly to the validator route and refunded the contract's remainder period.
-
 The Retrieval Fees for 32KB is 100,000 Solar.
 
 The Storage Fees for 32KB/mo is 200,000 Solar.
@@ -310,14 +302,19 @@ Private Compute is confidential computing enabling users to use private data and
 
 ### Application
 
-- Permission-less
-- Trust-less
-- Stability
-- Transparency
-- Global payments
-- User powered services
-- Distributed storage and compute
-- Smart Contracts
+#### Global Payments
+
+#### Local Exchanges
+
+#### Smart Contracts
+
+#### User Powered
+
+#### Transparency
+
+#### Self Hosting
+
+#### Serverless
 
 ### Roadmap
 
@@ -332,4 +329,4 @@ Private Compute is confidential computing enabling users to use private data and
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-04-15
+2022-04-16
