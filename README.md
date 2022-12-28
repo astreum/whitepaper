@@ -17,6 +17,24 @@ Astreuos empowers Web 3.0 developers to:
 - host applications, static sites and media content on the `Nebula` protocol.
 - perform compute workflows on the `Reactor` protocol.
 
+## Why?
+
+Astreuos for Everyone.
+
+- permission-less
+- trust-less
+- stability
+- transparency
+- earn
+
+Astreuos for Business.
+
+- global payments
+- user powered services
+- cloud storage and compute
+
+Astreuos for Developers.
+
 ## Contents
 
 1. Accounts
@@ -319,4 +337,4 @@ Private Compute is confidential computing enabling users to use private data and
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-04-06
+2022-04-11
