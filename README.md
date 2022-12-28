@@ -1,9 +1,15 @@
 
 # Astreum: A Next Generation Blockchain for Apps, Storage and Compute
 
-Roy Okello
+## Author
 
-royokello@protonmail.com
+Roy R. O. Okello
+
+[Email](mailto:0xR3y@protonmail.com)
+
+[Github](https://github.com/0xR3y)
+
+[Twitter](https://twitter.com/0xR3y)
 
 ## Introduction
 
@@ -25,37 +31,30 @@ Applications can run through Transactions or Reactor, Distributed Compute Protoc
 
 ### Pulsar
 
+Pulsar Network is the distributed hash table peer-to-peer communication protocol for the Astreum Blockchain.
+
 ### Nova
 
-Nova is the protocol for executing transactions and creating new blocks.
+Nova is the proof of stake consensus protocol for executing transactions and creating new blocks through participants named Validators.
 
-The participants of the protocol are Provers and Verifiers.
-
-| | Role | Rewards |
-|---|---|---|
-| Provers | Execute Transactions | Transaction Fees |
-| Verifiers | Create Blocks | Block Fee |
-
-Provers propose new blocks to Verifiers.
-
-A Verifier must be staked, by sending `Astre` to the nova account, to participate in the protocol.
+A Validators must be staked, by sending `Astre` to the nova account, to participate in the protocol.
 
 The nova account address is 0x 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 6E 6F 76 61.
 
 The block time target is three seconds. A slot is the three seconds period when new blocks are created.
 
-Slots are allocated pro-rata to a Verifier's stake.
+Slots are allocated pro-rata to a Validators's stake.
 
-A slot miss occurs when a Verifier does not create a new block or creates a malicious block when selected.
+A slot miss occurs when a Validators does not create a new block or creates a malicious block when selected.
 
-Slot selection determines the Verifier for the next block at any time:
+Slot selection determines the Validators for the next block at any time:
 
 - Check slot misses from the latest block
-- Half the stakes of Verifier for each of their missed slots
+- Half the stakes of Validators for each of their missed slots
 - If no slot miss, the latest block time proof is used as the seed in the weighted random address selector
 - If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the latest block time proof is used as the seed in the weighted random address selector
 
-Verifiers who miss a slot get half their stake returned.
+Validators who miss a slot get half their stake returned.
 
 Transactions are ordered by their hash.
 
@@ -74,7 +73,7 @@ The storage cost is derived from the current supply and demand.
 A Nebula Object is a data structure with two fields:
 
 - Leaf: True/False
-- Data: a blob of binary data of size &lt 32KB
+- Data: a blob of binary data of size < 32KB
 
 All data is erasure coded as a method of data protection in which data is encoded and fragments stored across the nodes on the network.
 
@@ -222,18 +221,12 @@ The block body has:
 2. chain
 3. number
 4. previous block hash
-5. prover
 6. receipts hash
 7. solar price
 8. solar used
 9. time
-10. time output
-10. time proof
-11. transactions hash
-12. transactions proof
-13. verifier
-
-Receipts are the result from the application of a transactions, consisting of the solar used and status of the application.
+10. transactions hash
+11. validator
 
 ### Transactions
 
@@ -278,16 +271,6 @@ Fusion capabilities include templating user interfaces that run on nodes.
 
 The Fusion Machine is a stack based native runtime for Fusion Machine Code interfacing with the Astreum Accounts State.
 
-Helium is the Fusion code manager.
-
-- runs automated tests
-- compiles your fusion script into fusion machine code
-
-New transaction types:
-
-- app creation
-- app calls
-
 ## References
 
 1. Bitcoin: A Peer-to-Peer Electronic Cash System - Satoshi Nakamoto
@@ -297,4 +280,4 @@ New transaction types:
 5. Recursive Functions of Symbolic Expressions and Their Computation by Machine - John McCarthy
 6. High-speed high-security signatures - Daniel J. Bernstein, Niels Duif, Tanja Lange, Peter Schwabe and Bo-Yin Yang
 
-2022-06-16
+2022-06-18
