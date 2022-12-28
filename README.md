@@ -294,7 +294,7 @@ The Astreuos Blockchain is a fully open source project and is powered by several
 | [Rust Astreuos](https://github.com/astreuos/rust-astreuos) | Blockchain Node | ✅ |
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
-| Fusion Spec | Syntax, Standard Library, Compilation | TBD |
+| Fusion Spec | Syntax, Standard Library, Virtual Machine, Solar Costs | TBD |
 | Helium Compiler | Fusion Script to Bytecode | TBD |
 | Helium Testing | Automated Testing | TBD |
 | Helium | Package Manager | TBD |
