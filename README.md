@@ -202,19 +202,13 @@ New transaction types will be added for App Creation and App Calls.
 
 #### Syntax & Standard Library
 
-`Assigning Variables` - assigns variable with the two words on top of the stack
+`Variables Operations`
 ```
 2 balance LET
-balance LET
-LET
 ```
 `Integer Operations`
 ```
-ADD: adds the two words on top of the stack
-
 2 2 ADD
-2 ADD
-ADD
 ```
 `Account Operations`
 ```
@@ -222,9 +216,9 @@ ACCOUNT_ADDRESS: get current account address
 
 ACCOUNT_BALANCE: get current account balance
 
-STORE: saves into the current account storage; expects two words
+value key STORE: saves into the current account storage
 
-FETCH: loads from the current account storage; expects one word
+key FETCH: loads from the current account storage
 ```
 
 Standards to help developers create trusted Fusion Applications.
