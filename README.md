@@ -31,7 +31,7 @@ Viable backbone to web3 services by offering combined value, storage and compute
 
 Astreuos is an accounts based blockchain with scripting capabilities and protocols for distributed file and distributed compute.
 
-The blockchain maintains a state of all the accounts keeping track of an account's details such as the balance, number of transactions and storage.
+The blockchain works by keeping track of all the accounts and details such as the balance, number of transactions and storage.
 
 `Accounts State`
 
@@ -103,8 +103,8 @@ The blockchain maintains a state of all the accounts keeping track of an account
             Block #1                                Block #2
         + - - - - - - - +                       + - - - - - - - +
         |               |                       |               | 
-        |      Old      |      Transactions     |      New      |
-        |   Accounts    |   ----------------->  |   Accounts    |
+        |   Previous    |      Transactions     |     Latest    |
+        |   Accounts    |   ----------------->  |    Accounts   |
         |     State     |                       |     State     |
         |               |                       |               |
         + - - - - - - - +                       + - - - - - - - +
@@ -155,12 +155,14 @@ The Receipt is the result from the application of a transaction to the Astreuos 
 
 A receipt consists of the solar used and status of the application procedure.
 
-`Solar` is the internal currency for work done on the blockchain. The solar limit of a block is 1,000,000.
+`Solar` is the internal currency for work done on the blockchain.
+
+The solar limit of a block is 1,000,000,000.
 
 | Fee | Solar |
 |---|---|
 | Transaction Processing | 1,000 |
-| Account Creation | 1,000 |
+| Account Creation | 1,000,000 |
 
 #### V1: Genesis
 
@@ -285,4 +287,4 @@ The Astreuos Blockchain is a fully open source project and is powered by several
 | V1 Testnet Launch | | Q2 2022 |
 | V1 Mainnet Launch | | Q2 2022 |
 
-2022-03-17
+2022-03-19
