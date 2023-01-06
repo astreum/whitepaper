@@ -269,7 +269,9 @@ Validators who miss a slot get half their stake returned until 1 `Solar` is left
 
 Transactions are ordered by the validator.
 
-Validators spend ~1 sec computing a delay output from a verifiable delay function.
+Validators spend 1-3 seconds computing a delay output from a verifiable delay function(vdf).
+
+The vdf difficulty is determined by the time taken to create the previous 100 blocks.
 
 The creator of a new block is payed a fee of 10^12 `Solar`.
 
@@ -370,7 +372,6 @@ Logic
 
 Storage
 - 🏷 Object Ownership
-- 📋 Object Metadata
 - 🤝 Retreival Payment Channels
 
 #### Relay
