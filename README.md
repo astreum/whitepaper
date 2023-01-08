@@ -148,6 +148,10 @@ Benefits of using zero-knowledge validation are:
                 |       + - - - - - - - +
                 |
                 |       + - - - - - - - +
+                | - - - |   difficulty  |
+                |       + - - - - - - - +
+                |
+                |       + - - - - - - - +
                 | - - - |     delay     |
                 |       + - - - - - - - +
                 |
@@ -257,7 +261,7 @@ The block time target is three seconds. A slot is the three seconds period when 
 
 Slots are allocated pro-rata to a validator's stake.
 
-A slot miss occurs when a validator does not create a new block or creates a malicious block when selected.
+A slot miss occurs when a validator does not create or submits a malicious block when selected.
 
 Slot selection determines the validator for the next block at any time:
 
@@ -275,7 +279,11 @@ The vdf difficulty is determined by the time taken to create the previous 100 bl
 
 The creator of a new block is payed a fee of 10^12 `Solar`.
 
-The valid chain has the most blocks and with the most solar spent in the latest block.
+The cost of a new account is 2 * 10^9 `Solar`.
+
+The transaction cost is set at 10^6 `Solar`.
+
+The valid chain is the longest chain.
 
 ## Roadmap
 
@@ -370,8 +378,28 @@ Logic
 - 🗑️ Object Delete
 - ✅ Storage Verification & Payment
 
+```
+        + - - - - - - - +
+        |    Storer     |
+        + - - - - - - - +
+                |
+                |  storage proof
+                |
+               \|/
+        + - - - - - - - +
+        |    Indexer    |
+        + - - - - - - - +
+                |
+                |  index proof
+                |
+               \|/
+        + - - - - - - - +
+        |   Contract    |
+        + - - - - - - - +
+```
+
 Storage
-- 🏷 Object Ownership
+- 🏷 Object Ownership, Storage Type(Perpetual/Limited) & Funding
 - 🤝 Retreival Payment Channels
 
 #### Relay
