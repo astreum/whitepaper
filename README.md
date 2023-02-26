@@ -430,15 +430,15 @@ Storage
 
 ## Applications
 
-Perpetual Archives
-Self Hosting
-Confidential Accounts
-ML Acceleration
-zkML
-Open Networking
-App Acceleration
-User Powered Apps
-Deploy Anything
+- Perpetual Archives
+- Self Hosting
+- Confidential Accounts
+- ML Acceleration
+- zkML
+- Open Networking
+- App Acceleration
+- User Powered Apps
+- Deploy Anything
 
 ## References
 
