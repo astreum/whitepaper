@@ -45,7 +45,7 @@ Roy R. O. Okello
 - References
 
 ## Introduction
-
+ 
 The development of blockchain technology has revolutionized the way that we store and share information. Originally used as a platform for the digital currency Bitcoin, blockchain technology can now been applied to a wide range of applications.
 
 One area where blockchain technology has the potential to make a significant impact is in the field of computing, storage, and networking. By using an accounts-based blockchain, it is possible to create a decentralized and distributed platform that enables users to securely share and access computing, storage, and networking resources.
@@ -383,7 +383,7 @@ Logic
         |    Storer     |
         + - - - - - - - +
                 |
-                |  storage proof
+                |  storage proof & pricing 
                 |
                \|/
         + - - - - - - - +
@@ -429,6 +429,16 @@ Storage
 - 📊 Supply Control
 
 ## Applications
+
+Perpetual Archives
+Self Hosting
+Confidential Accounts
+ML Acceleration
+zkML
+Open Networking
+App Acceleration
+User Powered Apps
+Deploy Anything
 
 ## References
 
