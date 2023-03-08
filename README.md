@@ -45,62 +45,40 @@ Roy R. O. Okello
 - References
 
 ## Introduction
- 
-The development of blockchain technology has revolutionized the way that we store and share information. Originally used as a platform for the digital currency Bitcoin, blockchain technology can now been applied to a wide range of applications.
 
-One area where blockchain technology has the potential to make a significant impact is in the field of computing, storage, and networking. By using an accounts-based blockchain, it is possible to create a decentralized and distributed platform that enables users to securely share and access computing, storage, and networking resources.
-
-This white paper presents an overview of the concept of an accounts-based blockchain for computing, storage, and networking. We will describe the key features and benefits of this approach. We will also explore the roadmap to acheive such a network.
+Astreum is a blockchain-based platform that enables permissionless access, censorship resistance, and trustless interactions by leveraging the power of blockchain technology. Built on the principles of decentralization, Astreum eliminates the need for central authorities, ensuring the distribution of rewards and preventing fraud. The platform includes a storage, compute, and networking layer to take advantage of the benefits of blockchain technology, creating a more equitable and accessible ecosystem for users. With its focus on decentralization, Astreum aims to empower users to take control of their data and interactions in a secure and transparent manner.
 
 ## Why Another Blockchain
 
-There is a growing need for a new blockchain that is secure, private, usable, and extensible. This is because the current generation of blockchain technology has limitations and challenges that make it difficult to use in many real-world applications.
+The blockchain ecosystem has revolutionized many industries, offering a range of benefits including security, transparency, and decentralization. However, there are several challenges that need to be addressed in order to maximize the potential of blockchain technology. One of the most significant challenges is the potential security vulnerability of traditional cryptographic algorithms to attacks by quantum computers. This is a pressing issue, as quantum computing capabilities continue to advance rapidly, and could potentially render current cryptographic algorithms obsolete.
 
-For example, many existing blockchain systems are vulnerable to security attacks, and are not able to protect the privacy of users on the platform. This can make it difficult to trust and use these systems for sensitive applications, such as financial transactions or personal data storage.
+Another key challenge is the lack of account privacy in blockchain. While blockchain technology offers a high degree of transparency, this can also mean that users' personal information and transaction data can be publicly accessible. This poses a significant privacy risk and can make users vulnerable to fraud and identity theft.
 
-In addition, many existing blockchain systems are not user-friendly, and can be difficult for non-technical users to understand and use. This can limit the adoption and use of these systems, and can prevent them from reaching their full potential.
+In addition to these challenges, the complexity of user interfaces can also be a barrier to the adoption of blockchain technology. Many blockchain platforms have complex user interfaces that require technical expertise, which can be a significant hurdle for users with limited technical knowledge.
 
-Finally, many existing blockchain systems are not extensible, and do not provide the flexibility and adaptability needed to support the development of new and innovative applications. This can limit the capabilities of these systems, and can prevent them from evolving and adapting to changing needs and requirements.
+Furthermore, the extensibility of the blockchain is also a critical issue that needs to be addressed. Many blockchain platforms have limitations on the types and formats of data that can be represented on the blockchain, which can limit their usefulness and potential applications.
+
+Finally, trust in the validation of the blockchain is a crucial issue that needs to be addressed. Many blockchain networks rely on a small number of validators, which can create potential vulnerabilities if the validators are compromised. Ensuring trust in the validation of the blockchain is essential to maintaining the integrity and reliability of a blockchain.
 
 ### Security
 
-Blockchain technology is often considered to be highly secure, but it is vulnerable to attacks by quantum computers. These powerful machines are capable of performing calculations that are beyond the reach of classical computers, and they could potentially be used to break the cryptographic algorithms that are used to secure blockchain systems.
-
-Post-quantum cryptography is a field of research that is focused on developing cryptographic algorithms that are resistant to attacks by quantum computers. By using post-quantum secure algorithms, it is possible to protect blockchain accounts and messages from being compromised by quantum computers.
-
-By using post-quantum secure algorithms, it is possible to protect blockchain accounts and messages from being compromised by quantum computers. This can help to ensure the long-term security and integrity of the blockchain, and can help to prevent the loss of sensitive information or funds.
+Currently, one of the major security concerns of blockchains is the potential vulnerability of traditional cryptographic algorithms to attacks by quantum computers. This vulnerability could lead to the compromise of private keys, allowing hackers to access and manipulate the blockchain. To address this issue, Astreum aims to use post-quantum secure algorithms for both account and message security. This means that the cryptographic algorithms used by Astreum are resistant to attacks by both classical and quantum computers. By using these advanced algorithms, Astreum is aiming to provide a higher level of security for its users, making it more resistant to attacks and fraud.
 
 ### Privacy
 
-Mix networks are a type of privacy-enhancing technology that can be used to protect the privacy of users on a blockchain. Mix networks work by routing data through a series of intermediate nodes, known as mixers, before it reaches its final destination. This makes it difficult for attackers to track the origin or destination of the data, and can help to protect the privacy of users on the blockchain.
-
-One of the key benefits of mix networks is that they can provide strong privacy guarantees without requiring users to trust any specific party. This is because the mixers in a mix network do not have access to the full end-to-end path of the data, and cannot therefore link the origin and destination of the data.
+The current lack of privacy in blockchain technology is a major concern for users. Although blockchain transactions are visible to all participants, the transparent nature of these transactions makes it easy to trace and identify users. This is a significant issue as it could lead to the loss of privacy and security for blockchain users. To address this problem, Astreum aims to use private accounts that keep account details such as the balance hidden from other users. Additionally, the platform will incorporate confidential transactions that conceal transaction data, making it difficult for anyone to identify the parties involved in a transaction. Furthermore, Astreum will employ mixing techniques on messages sent on the network to further enhance privacy. By utilizing these features, Astreum is aiming to provide a higher level of privacy for its users, making it a more secure and reliable platform for transactions.
 
 ### Usability
 
-Signature abstraction improves the usability of the platform by making it easier for users to interact with the blockchain and manage their accounts and assets. This can make the platform more accessible to a wider range of users, which can help drive adoption and increase the value of the platform.
+One of the main issues with blockchain technology is the complexity of its user interface, which makes it difficult for many users to manage their accounts effectively. To address this problem, Astreum aims to introduce account signature abstraction. This feature will enable better account management for users, including account recovery and theft mitigation. With account signature abstraction, users will be able to manage multiple accounts with ease, without the need for complex and time-consuming management procedures. Additionally, the feature will enable users to recover lost or stolen accounts more efficiently and securely, reducing the risk of fraudulent activities. This innovative approach to usability could significantly improve the user experience of blockchain technology, making it more accessible and user-friendly for everyone.
 
 ### Extensibility
 
-The Fusion Language is a dialect of Lisp Language. This means that it can be easily extended with new features and capabilities, allowing programmers to tailor the language to their specific needs. Some of the benefits of this extensibility include:
-
-- Increased flexibility: Fusion can be customized to suit a wide range of programming tasks. This makes it a versatile language that can be used for a variety of purposes, including artificial intelligence, natural language processing, and other domains.
-
-- Improved productivity: The ability to easily extend Fusion with new features can help programmers be more productive. For example, they can create custom functions and data structures that are specifically designed to solve the problem at hand, rather than being limited to the features provided by the language itself.
-
-- Greater expressiveness: Fusion's extensibility allows programmers to express their ideas and solutions in a more natural and intuitive way. This can make the code easier to read and understand, and can also help to reduce the amount of time and effort required to write and maintain the code.
-
-- Stronger support for dynamic environments: Fusion can be used in dynamic environments, such as user interfaces, where the structure and behavior of the system can change at runtime. The language's extensibility can make it easier to deal with these changes, allowing programmers to quickly and easily adapt to new requirements and conditions.
+Extensibility is a major concern for blockchain technology as it limits the type and variety of data that can be represented on the blockchain. To address this problem, Astreum aims to represent everything as Astreum Objects. This means that any kind of data or program can be represented on the blockchain, making it more flexible and adaptable to different use cases. Additionally, Astreum uses a Lisp programming language dialect called Fusion, which can be easily extended with new features and capabilities. This allows developers to create smart contracts that are highly customizable and can evolve over time as new requirements emerge. With Astreum's approach to extensibility, the platform has the potential to become a highly versatile and adaptable blockchain technology that can be used in a wide range of applications, including finance, healthcare, supply chain management, and more.
 
 ### Trust
 
-Zero-knowledge validation is a cryptographic technique that allows one party to prove to another party that a statement is true, without revealing any additional information about the statement or the underlying data.
-
-Benefits of using zero-knowledge validation are:
-
-- Greater scalability: Zero-knowledge validation allows for the verification of data on the blockchain without requiring the entire network to participate in the process. This can help to reduce the computational overhead of the blockchain, and can make it more scalable and efficient.
-
-- Enhanced trust and confidence: By using zero-knowledge validation, it is possible to build trust and confidence in the security of the blockchain as all nodes validate the blockchain.
+Another concern with blockchain technology is trust, specifically in the validation of the blockchain. Many blockchain networks rely on a small number of validators, which can lead to centralization and the potential for fraudulent activity. To address this problem, Astreum aims to use zero-knowledge cryptography to enable the validation of the blockchain by every node. This means that every node in the network can validate the authenticity of the transactions on the blockchain without having to process all the transactions. This approach to validation ensures that the blockchain is decentralized, transparent, and secure.
 
 ## Astreum
 
@@ -230,14 +208,14 @@ Benefits of using zero-knowledge validation are:
                         . - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .
                         ^                       ^                       ^                       ^
                 + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
-                |    Message    |       |     Nonce     |       |      Ping     |       |     Time      |
+                |    Encypted   |       |    Message    |       |     Nonce     |       |     Time      |
                 + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
-                        ^
-                . - - - - - - - - - - - .
-                ^                       ^
-        + - - - - - - - +       + - - - - - - - +
-        |     Body      |       |     Topic     |
-        + - - - - - - - +       + - - - - - - - +
+                                                ^
+                                    . - - - - - - - - - - - .
+                                    ^                       ^
+                             + - - - - - - - +       + - - - - - - - +
+                             |     Body      |       |     Topic     |
+                             + - - - - - - - +       + - - - - - - - +
 
 `Routes`
 
@@ -253,37 +231,17 @@ Benefits of using zero-knowledge validation are:
 
 ### Consensus Protocol
 
-Astreum uses a proof of stake consensus protocol for executing transactions and creating new blocks by validators.
+Astreum employs a Proof of Stake (PoS) consensus protocol for executing transactions and creating new blocks. This consensus protocol involves validators who are responsible for creating new blocks and ensuring the validity of transactions. Validators must stake a certain amount of Astreum's native cryptocurrency, Solar, by sending it to the Consensus Account, to participate in the protocol.
 
-A validators must be staked, by sending `Solar` to the `Consensus Account`, to participate in the protocol.
+The target block time for Astreum is three seconds, and this period is divided into slots. Validators are allocated slots based on their stake, with higher stakes receiving a proportionally greater number of slots. In the event that a validator fails to create or submits a malicious block during their allocated slot, a slot miss occurs.
 
-The block time target is three seconds. A slot is the three seconds period when new blocks are created.
+Slot selection for the next block is determined by checking the slot misses from the latest block. If there are no slot misses, the latest block delay output is used as the seed in the weighted random address selector. If slot misses have occurred, the latest block delay output is hashed to the number of slot misses to produce the seed for the weighted random address selector.
 
-Slots are allocated pro-rata to a validator's stake.
+Validators who miss a slot are refunded half their stake until only 1 Solar is left. Transactions are ordered by the validator, and validators spend 1-3 seconds computing a delay output from a verifiable delay function (VDF) to create a new block. The VDF difficulty is determined by the time taken to create the previous 100 blocks.
 
-A slot miss occurs when a validator does not create or submits a malicious block when selected.
+The creator of a new block is paid a fee of 10^12 Solar, and the cost of creating a new account is set at 2 * 10^9 Solar. The transaction cost is fixed at 10^6 Solar.
 
-Slot selection determines the validator for the next block at any time:
-
-- Check slot misses from the latest block
-- If no slot miss, the latest block delay output is used as the seed in the weighted random address selector
-- If slot misses, the linear-feedback shift register, shifted to the number of slot misses, of the latest block delay output is used as the seed in the weighted random address selector
-
-Validators who miss a slot get half their stake returned until 1 `Solar` is left.
-
-Transactions are ordered by the validator.
-
-Validators spend 1-3 seconds computing a delay output from a verifiable delay function(vdf).
-
-The vdf difficulty is determined by the time taken to create the previous 100 blocks.
-
-The creator of a new block is payed a fee of 10^12 `Solar`.
-
-The cost of a new account is 2 * 10^9 `Solar`.
-
-The transaction cost is set at 10^6 `Solar`.
-
-The valid chain is the longest chain.
+The valid chain is determined by the longest chain, and any other chain will be discarded. This ensures that the network will always converge on a single valid chain. The PoS consensus protocol used in Astreum ensures the security and integrity of the network while allowing for efficient transaction processing and block creation.
 
 ## Roadmap
 
@@ -318,8 +276,9 @@ The valid chain is the longest chain.
                 . - - - - - - - - - - - .
                 ^                       ^
         + - - - - - - - +       + - - - - - - - +
-        |     Leaf?     |       |    <= 32kb    |
-        + - - - - - - - +       + - - - - - - - +
+        |     Leaf?     |       |     Data      |
+        + - - - - - - - +       |   (<= 32kb)   |
+                                + - - - - - - - +
 ```
 
 - 📜 Fusion Language
@@ -383,18 +342,18 @@ Logic
         |    Storer     |
         + - - - - - - - +
                 |
-                |  storage proof & pricing 
+                |  storage proof
                 |
                \|/
         + - - - - - - - +
         |    Indexer    |
         + - - - - - - - +
                 |
-                |  index proof
+                |  index & storage proofs
                 |
                \|/
         + - - - - - - - +
-        |   Contract    |
+        |   Validator   |  verification & payment
         + - - - - - - - +
 ```
 
@@ -430,15 +389,27 @@ Storage
 
 ## Applications
 
-- Perpetual Archives
+- Perpetual Storage
+
+Astreum has a unique storage protocol that allows users to pay for data to be stored perpetually on the blockchain. This perpetual storage feature has significant implications for data storage as it enables users to store critical data securely and for an indefinite period. With the perpetual archive feature, users can be assured that their data will be stored safely and securely, without the risk of data loss due to system failure, hacking, or other security breaches. Additionally, the perpetual archive feature has the potential to create new opportunities for data sharing and collaboration, as it provides a secure and reliable platform for the storage of critical information. With the ability to pay for perpetual storage, Astreum's storage protocol has the potential to become a highly attractive solution for businesses and organizations that require secure and reliable data storage for the long term.
+
 - Self Hosting
-- Confidential Accounts
-- ML Acceleration
-- zkML
-- Open Networking
-- App Acceleration
+
+Astreum's storage protocol enables users to host their own data and only pay for indexing. This self-hosting feature is a significant innovation in the field of data storage, as it provides users with greater control over their data while minimizing storage costs. With self-hosting, users can host their data on their own servers and only pay for indexing, which means that the data is searchable and accessible from anywhere in the world. This approach to data storage can provide users with greater security and privacy as their data is stored on their own servers, reducing the risk of data breaches and cyber attacks. Additionally, self-hosting can significantly reduce storage costs, as users only pay for indexing, which is much cheaper than traditional data storage methods. With the ability to self-host and only pay for indexing, Astreum's storage protocol has the potential to become a highly attractive solution for businesses and individuals who require secure and reliable data storage at a lower cost.
+
+- Confidential Apps
+
+Astreum includes confidential apps, which are applications whose procedures are concealed, but their results can be proved. This innovative approach to application development has significant implications for the creation of confidential programmable accounts on the blockchain. Confidential programmable accounts provide users with enhanced privacy and security by enabling them to create accounts with confidential procedures, such as confidential smart contracts. With confidential programmable accounts, users can keep their account details private, including their application code and data, while still being able to conduct transactions and execute smart contracts. This approach to accounts can significantly enhance privacy and security, particularly for users who require greater confidentiality and anonymity in their transactions
+
 - User Powered Apps
-- Deploy Anything
+
+Astreum's blockchain technology has many applications in creating user-powered content, enabling developers and creators to avoid the initial large capital expenditure on hosting and networking fees while scaling distribution automatically. With the Astreum blockchain, developers and creators can build decentralized platforms for content creation and distribution, allowing users to directly contribute and participate in the creation and curation of content. By leveraging the decentralized infrastructure provided by Astreum, developers can build platforms that are scalable and cost-effective, eliminating the need for centralized servers and reducing the associated costs. This makes it easier for creators and developers to bring their content to market, while also enabling a more equitable distribution of rewards to users who contribute to the platform.
+
+- App Acceleration
+
+Astreum, a new blockchain platform, introduces a unique compute protocol that provides application acceleration. With Astreum's compute protocol, all applications are written in the Fusion language, and every node can provide a Fusion virtual machine, which is a runtime for Fusion applications. This innovative approach to application development has significant implications for accelerating large computations on the blockchain. With the ability to use a Fusion virtual machine, users can execute large computations more efficiently and with greater speed, resulting in significant time and cost savings. 
+
+Additionally, the Fusion language is highly versatile and can be easily extended with new features and capabilities, making it an ideal choice for complex computations and sophisticated applications. Fusion language is a Lisp dialect that provides a high level of expressiveness, flexibility, and efficiency. It enables the creation of complex and sophisticated applications that require significant computational power, such as machine learning algorithms, artificial intelligence systems, and financial models. Moreover, the language is highly extensible, which means that new features and capabilities can be easily added to it, making it an ideal choice for a wide range of applications.
 
 ## References
 
