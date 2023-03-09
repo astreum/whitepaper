@@ -41,12 +41,17 @@ Roy R. O. Okello
   - Treasury Protocol
 
 - Applications
+  - Perpetual Storage
+  - Self Hosting
+  - Confidential Apps
+  - User Powered Apps
+  - App Acceleration
 
 - References
 
 ## Introduction
 
-Astreum is a blockchain-based platform that enables permissionless access, censorship resistance, and trustless interactions by leveraging the power of blockchain technology. Built on the principles of decentralization, Astreum eliminates the need for central authorities, ensuring the distribution of rewards and preventing fraud. The platform includes a storage, compute, and networking layer to take advantage of the benefits of blockchain technology, creating a more equitable and accessible ecosystem for users. With its focus on decentralization, Astreum aims to empower users to take control of their data and interactions in a secure and transparent manner.
+Astreum is a next generation blockchain designed to address the challenges of storage, compute, and networking in the modern digital landscape. With the exponential growth of data and the increasing demand for secure, scalable, and decentralized solutions, Astreum offers a unique approach to these issues by leveraging the power of blockchain technology. Astreum provides a fast and secure platform for storing and processing data, while also enabling seamless integration with existing networks. In this white paper, we will explore the technical features and benefits of Astreum, as well as its potential applications.
 
 ## Why Another Blockchain
 
@@ -208,7 +213,7 @@ Another concern with blockchain technology is trust, specifically in the validat
                         . - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .
                         ^                       ^                       ^                       ^
                 + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
-                |    Encypted   |       |    Message    |       |     Nonce     |       |     Time      |
+                |   Encrypted   |       |    Message    |       |     Nonce     |       |     Time      |
                 + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
                                                 ^
                                     . - - - - - - - - - - - .
@@ -223,10 +228,11 @@ Another concern with blockchain technology is trust, specifically in the validat
 
 `Topics`
 
-- Block
-- BlockRequest
+- Ping
 - RouteRequest
-- RouteResponse
+- Route
+- BlockRequest
+- Block
 - Transaction
 
 ### Consensus Protocol
@@ -273,12 +279,12 @@ The valid chain is determined by the longest chain, and any other chain will be 
                 |    Object     |
                 + - - - - - - - +
                         ^
-                . - - - - - - - - - - - .
-                ^                       ^
-        + - - - - - - - +       + - - - - - - - +
-        |     Leaf?     |       |     Data      |
-        + - - - - - - - +       |   (<= 32kb)   |
-                                + - - - - - - - +
+                . - - - - - - - - - - - . - - - - - - - - - - - .
+                ^                       ^                       ^
+        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
+        |     Leaf?     |       |     Size      |       |     Data      |
+        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
+                                
 ```
 
 - 📜 Fusion Language
@@ -287,7 +293,7 @@ The valid chain is determined by the longest chain, and any other chain will be 
 
 ### Signature Abstraction
 
-- 🔒 Digital Signature Algorithm Abstraction enables Post Quantum Security and Social Recovery.
+- 🔒 Digital Signature Algorithm Abstraction enables Post Quantum Security and Account Recovery.
 
 `New Address Structure`
 
