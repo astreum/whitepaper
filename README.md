@@ -282,7 +282,7 @@ The valid chain is determined by the longest chain, and any other chain will be 
                 . - - - - - - - - - - - . - - - - - - - - - - - .
                 ^                       ^                       ^
         + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
-        |     Leaf?     |       |     Size      |       |     Data      |
+        |     Type      |       |     Size      |       |     Data      |
         + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
                                 
 ```
