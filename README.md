@@ -26,19 +26,20 @@ Roy R. O. Okello
   - Accounts
   - Blocks
   - Transactions
-  - Relay Protocol
-  - Consensus Protocol
+  - Relay
+  - Consensus
+  - Synchronization
 
 - Roadmap
   - Programmable Accounts
   - Signature Abstraction
   - Relay Privacy & Security
-  - Zero Knowledge Validation
-  - Storage Protocol
-  - Compute Protocol
-  - Gateway Protocol
+  - Zero Knowledge Synchronization
+  - Storage
+  - Compute
+  - Gateway
   - Account & Transaction Privacy
-  - Treasury Protocol
+  - Treasury
 
 - Applications
   - Perpetual Storage
@@ -204,7 +205,7 @@ Another concern with blockchain technology is trust, specifically in the validat
                                 + - - - - - - - +
 
 
-### Relay Protocol
+### Relay
 
                         + - - - - - - - +
                         |   Envelope    |
@@ -235,7 +236,7 @@ Another concern with blockchain technology is trust, specifically in the validat
 - Block
 - Transaction
 
-### Consensus Protocol
+### Consensus
 
 Astreum employs a Proof of Stake (PoS) consensus protocol for executing transactions and creating new blocks. This consensus protocol involves validators who are responsible for creating new blocks and ensuring the validity of transactions. Validators must stake a certain amount of Astreum's native cryptocurrency, Solar, by sending it to the Consensus Account, to participate in the protocol.
 
@@ -248,6 +249,8 @@ Validators who miss a slot are refunded half their stake until only 1 Solar is l
 The creator of a new block is paid a fee of 10^12 Solar, and the cost of creating a new account is set at 2 * 10^9 Solar. The transaction cost is fixed at 10^6 Solar.
 
 The valid chain is determined by the longest chain, and any other chain will be discarded. This ensures that the network will always converge on a single valid chain. The PoS consensus protocol used in Astreum ensures the security and integrity of the network while allowing for efficient transaction processing and block creation.
+
+### Synchronization
 
 ## Roadmap
 
@@ -330,11 +333,11 @@ The valid chain is determined by the longest chain, and any other chain will be 
         + - - - - - - - +
 ```
 
-### Zero Knowledge Astreum Machine
+### Zero Knowledge Synchronization
 
 - ✅ Zero Knowledge Block Validation
 
-### Storage Protocol
+### Storage
 
 #### Storage Contract
 
@@ -371,13 +374,13 @@ Storage
 - ☁ Storage Route
 - 🗃 Get & Object Message Topic
 
-### Compute Protocol
+### Compute
 
 - ⚡ Compute Relay Route
 - 🏷️ Compute Pricing
 - 🤝 Compute Payment Channels
 
-### Gateway Protocol
+### Gateway
 
 - 📡 Gateway Connections
 - 🏷️ Networking Pricing
@@ -388,7 +391,7 @@ Storage
 - 🔒 Confidential Transactions
 - 👤 Private Accounts
 
-### Treasury Protocol
+### Treasury
 
 - 💵 Solar Creation
 - 📊 Supply Control
