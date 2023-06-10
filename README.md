@@ -3,13 +3,9 @@
 
 ## Author
 
-Roy R. O. Okello
+- Roy R. O. Okello: [Email](mailto:royokello@protonmail.com), [GitHub](https://github.com/royokello) & [Twitter](https://twitter.com/RealOkello)
 
-[Email](mailto:royokello@protonmail.com)
-
-[Github](https://github.com/royokello)
-
-[Twitter](https://twitter.com/RealOkello) 
+## Abstract
 
 ## Content
 
@@ -21,6 +17,7 @@ Roy R. O. Okello
   - Usability
   - Extensibility
   - Trust
+  - Tokenomics
 
 - Astreum
   - Accounts
@@ -47,6 +44,7 @@ Roy R. O. Okello
   - Confidential Apps
   - User Powered Apps
   - App Acceleration
+  - Finance
 
 - References
 
@@ -85,6 +83,8 @@ Extensibility is a major concern for blockchain technology as it limits the type
 ### Trust
 
 Another concern with blockchain technology is trust, specifically in the validation of the blockchain. Many blockchain networks rely on a small number of validators, which can lead to centralization and the potential for fraudulent activity. To address this problem, Astreum aims to use zero-knowledge cryptography to enable the validation of the blockchain by every node. This means that every node in the network can validate the authenticity of the transactions on the blockchain without having to process all the transactions. This approach to validation ensures that the blockchain is decentralized, transparent, and secure.
+
+### Tokenomics
 
 ## Astreum
 
@@ -282,11 +282,11 @@ The valid chain is determined by the longest chain, and any other chain will be 
                 |    Object     |
                 + - - - - - - - +
                         ^
-                . - - - - - - - - - - - . - - - - - - - - - - - .
-                ^                       ^                       ^
-        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
-        |     Type      |       |     Size      |       |     Data      |
-        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
+                . - - - - - - - - - - - .
+                ^                       ^
+        + - - - - - - - +       + - - - - - - - +
+        |     Type      |       |     Data      |
+        + - - - - - - - +       + - - - - - - - +
                                 
 ```
 
@@ -334,8 +334,6 @@ The valid chain is determined by the longest chain, and any other chain will be 
 ```
 
 ### Zero Knowledge Synchronization
-
-- ✅ Zero Knowledge Block Validation
 
 ### Storage
 
@@ -388,7 +386,7 @@ Storage
 
 ### Account & Transaction Privacy
 
-- 🔒 Confidential Transactions
+- 🔒 Confidential Transactions & Account Apps
 - 👤 Private Accounts
 
 ### Treasury
@@ -419,6 +417,8 @@ Astreum's blockchain technology has many applications in creating user-powered c
 Astreum, a new blockchain platform, introduces a unique compute protocol that provides application acceleration. With Astreum's compute protocol, all applications are written in the Fusion language, and every node can provide a Fusion virtual machine, which is a runtime for Fusion applications. This innovative approach to application development has significant implications for accelerating large computations on the blockchain. With the ability to use a Fusion virtual machine, users can execute large computations more efficiently and with greater speed, resulting in significant time and cost savings. 
 
 Additionally, the Fusion language is highly versatile and can be easily extended with new features and capabilities, making it an ideal choice for complex computations and sophisticated applications. Fusion language is a Lisp dialect that provides a high level of expressiveness, flexibility, and efficiency. It enables the creation of complex and sophisticated applications that require significant computational power, such as machine learning algorithms, artificial intelligence systems, and financial models. Moreover, the language is highly extensible, which means that new features and capabilities can be easily added to it, making it an ideal choice for a wide range of applications.
+
+<!-- - Finance -->
 
 ## References
 
