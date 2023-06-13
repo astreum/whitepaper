@@ -100,11 +100,11 @@ Another concern with blockchain technology is trust, specifically in the validat
         |    address    |       |    details    |
         + - - - - - - - +       + - - - - - - - +
                                         ^
-                                . - - - - - - - - - - - - - - - - - - - - - - - .
-                                ^                       ^                       ^
-                        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
-                        |    balance    |       |    counter    |       |    storage    |
-                        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
+                                . - - - - - - - - - - - - - - - - - - - - - - - . - - - - - - - - - - - .
+                                ^                       ^                       ^                       ^
+                        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
+                        |    balance    |       |      code     |       |    counter    |       |    storage    |
+                        + - - - - - - - +       + - - - - - - - +       + - - - - - - - +       + - - - - - - - +
 
 ### Blocks
 
@@ -225,15 +225,18 @@ Another concern with blockchain technology is trust, specifically in the validat
 
 `Routes`
 
+- Peer
 - Validation
 
 `Topics`
 
+- Object Request
+- Object Response
 - Ping
-- RouteRequest
 - Route
-- BlockRequest
-- Block
+- Route Request
+- State
+- State Request
 - Transaction
 
 ### Consensus
@@ -434,3 +437,4 @@ Additionally, the Fusion language is highly versatile and can be easily extended
 - Efficient verifiable delay functions - Benjamin Wesolowski
 - PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge - Ariel Gabizon, Zachary J. Williamson and Oana Ciobotaru
 - Aurora: Transparent Succinct Arguments for R1CS - Eli Ben-Sasson, Alessandro Chiesa, Michael Riabzev, Nicholas Spooner, Madars Virza and Nicholas P. Ward
+
