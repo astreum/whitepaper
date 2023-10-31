@@ -44,7 +44,8 @@
   - Confidential Apps
   - User Powered Apps
   - App Acceleration
-  - Finance
+  - Secure Savings and Earnings
+  - Microtransactions
 
 - References
 
@@ -152,7 +153,7 @@ Another concern with blockchain technology is trust, specifically in the validat
                 |       + - - - - - - - +
                 |
                 |       + - - - - - - - +
-                | - - - |     solar     |
+                | - - - |     aster     |
                 |       + - - - - - - - +
                 |
                 |       + - - - - - - - +
@@ -241,15 +242,15 @@ Another concern with blockchain technology is trust, specifically in the validat
 
 ### Consensus
 
-Astreum employs a Proof of Stake (PoS) consensus protocol for executing transactions and creating new blocks. This consensus protocol involves validators who are responsible for creating new blocks and ensuring the validity of transactions. Validators must stake a certain amount of Astreum's native cryptocurrency, Solar, by sending it to the Consensus Account, to participate in the protocol.
+Astreum employs a Proof of Stake (PoS) consensus protocol for executing transactions and creating new blocks. This consensus protocol involves validators who are responsible for creating new blocks and ensuring the validity of transactions. Validators must stake a certain amount of Astreum's native cryptocurrency, Aster, by sending it to the Consensus Account, to participate in the protocol.
 
 The target block time for Astreum is three seconds, and this period is divided into slots. Validators are allocated slots based on their stake, with higher stakes receiving a proportionally greater number of slots. In the event that a validator fails to create or submits a malicious block during their allocated slot, a slot miss occurs.
 
 Slot selection for the next block is determined by checking the slot misses from the latest block. If there are no slot misses, the latest block delay output is used as the seed in the weighted random address selector. If slot misses have occurred, the latest block delay output is hashed to the number of slot misses to produce the seed for the weighted random address selector.
 
-Validators who miss a slot are refunded half their stake until only 1 Solar is left. Transactions are ordered by the validator, and validators spend 1-3 seconds computing a delay output from a verifiable delay function (VDF) to create a new block. The VDF difficulty is determined by the time taken to create the previous 100 blocks.
+Validators who miss a slot are refunded half their stake until only 1 Aster is left. Transactions are ordered by the validator, and validators spend 1-3 seconds computing a delay output from a verifiable delay function (VDF) to create a new block. The VDF difficulty is determined by the time taken to create the previous 100 blocks.
 
-The creator of a new block is paid a fee of 10^12 Solar, and the cost of creating a new account is set at 2 * 10^9 Solar. The transaction cost is fixed at 10^6 Solar.
+The creator of a new block is paid a fee of 10^12 Aster, and the cost of creating a new account is set at 2 * 10^9 Aster. The transaction cost is fixed at 10^6 Aster.
 
 The valid chain is determined by the longest chain, and any other chain will be discarded. This ensures that the network will always converge on a single valid chain. The PoS consensus protocol used in Astreum ensures the security and integrity of the network while allowing for efficient transaction processing and block creation.
 
@@ -394,7 +395,7 @@ Storage
 
 ### Treasury
 
-- 💵 Solar Creation
+- 💵 Aster Creation
 - 📊 Supply Control
 
 ## Applications
@@ -421,7 +422,13 @@ Astreum, a new blockchain platform, introduces a unique compute protocol that pr
 
 Additionally, the Fusion language is highly versatile and can be easily extended with new features and capabilities, making it an ideal choice for complex computations and sophisticated applications. Fusion language is a Lisp dialect that provides a high level of expressiveness, flexibility, and efficiency. It enables the creation of complex and sophisticated applications that require significant computational power, such as machine learning algorithms, artificial intelligence systems, and financial models. Moreover, the language is highly extensible, which means that new features and capabilities can be easily added to it, making it an ideal choice for a wide range of applications.
 
-<!-- - Finance -->
+- Secure Savings and Earnings
+
+In the Astreum blockchain ecosystem, users have the option to stake their native currency, Aster, providing a secure means for both saving and earning within the network. Staking your Aster not only enhances the security and overall stability of the network but also actively supports the Treasury Protocol, which is designed to maintain the overall price of Aster at a stable level. This staking system offers a more secure alternative to the commonly used practice of storing funds on exchanges. It allows users to safeguard their assets and simultaneously earn rewards, contributing to stabilizing the Aster and providing a secure and sustainable way to save and grow their money.
+
+- Microtransactions
+
+The Aster will be a catalyst for microtransactions in the digital realm. Its inherent stability and minute denomination make it an attractive choice for digital businesses seeking to embrace microtransactions. With Aster, even the smallest units of value can be efficiently transacted, making it the ideal currency for pricing services like the storage and retrieval of minuscule data amounts of just a few bytes. This microtransaction capability has the potential to revolutionize digital commerce, allowing businesses to monetize their content and services at a granular level, while offering their customers a frictionless and cost-effective payment solution. As Aster empowers the growth of the digital economy, it paves the way for businesses to explore new opportunities and thrive in a rapidly evolving online landscape.
 
 ## References
 
